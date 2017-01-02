@@ -1,0 +1,494 @@
+/*
+ * Start Bootstrap - Landing Page (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.topnav {
+    font-size: 14px; 
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner2 {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/banner-bg2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.banner2 h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner2 ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+
+
+
+section {
+  padding: 100px 0;
+}
+section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+section h3.section-subheading {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
+}
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0;
+  }
+}
+
+.bg-light-gray {
+  background-color: #eeeeee;
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.team-member img {
+  margin: 0 auto;
+  border: 7px solid white;
+}
+.team-member h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+.team-member p {
+  margin-top: 0;
+}
+
+/*
+ * Signup Form
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext');
+#mlb2-3873850,
+#mlb2-3873850 *,
+#mlb2-3873850 a:hover,
+#mlb2-3873850 a:visited,
+#mlb2-3873850 a:focus,
+#mlb2-3873850 a:active {
+    overflow: visible;
+    position: static;
+    background: none;
+    border: none;
+    bottom: auto;
+    clear: none;
+    cursor: default;
+    float: none;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    text-indent: 0;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    max-height: none;
+    max-width: none;
+    left: auto;
+    min-height: 0;
+    min-width: 0;
+    right: auto;
+    top: auto;
+    width: auto;
+    z-index: auto;
+    text-shadow: none;
+    box-shadow: none;
+    outline: medium none;
+}
+
+#mlb2-3873850 a:hover {
+    cursor: pointer !important;
+}
+
+#mlb2-3873850 h4 {
+    font-weight: normal;
+}
+
+#mlb2-3873850 .subscribe-form {
+    padding: 20px;
+    border: 0px solid #ffffff !important;
+    border-radius: 0px !important;
+    box-sizing: border-box !important;
+}
+
+#mlb2-3873850 .subscribe-form .form-section {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+#mlb2-3873850 .subscribe-form .form-section.mb10 {
+    margin-bottom: 10px;
+    float: left;
+}
+
+#mlb2-3873850 .subscribe-form .form-section.mb0 {
+    margin-bottom: 0px;
+}
+
+#mlb2-3873850 .subscribe-form .form-section h4 {
+    margin: 0px 0px 10px 0px !important;
+    padding: 0px !important;
+    color: #000000 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 28px !important;
+    line-height: 100%;
+    text-align: left !important;
+}
+
+#mlb2-3873850 .subscribe-form .form-section p,
+#mlb2-3873850 .subscribe-form .form-section li {
+    line-height: 150%;
+    padding: 0px !important;
+    margin: 0px 0px 10px 0px;
+    color: #000000 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px !important;
+}
+
+#mlb2-3873850 .subscribe-form .form-section a {
+    font-size: 14px !important;
+}
+
+#mlb2-3873850 .subscribe-form .form-section .confirmation_checkbox {
+    line-height: 150%;
+    padding: 0px !important;
+    margin: 0px 0px 15px 0px !important;
+    color: #000000 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+}
+
+#mlb2-3873850 .subscribe-form .form-section .confirmation_checkbox input[type="checkbox"] {
+    margin-right: 5px !important;
+}
+
+#mlb2-3873850 .subscribe-form .form-section .form-group {
+    margin-bottom: 15px;
+}
+
+#mlb2-3873850 .subscribe-form .form-section .form-group label {
+    float: left;
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 100%;
+    font-weight: bold;
+    color: #000000 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px !important;
+}
+
+#mlb2-3873850 .subscribe-form .form-section .checkbox {
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+}
+
+#mlb2-3873850 .subscribe-form .form-section .checkbox label {
+    color: #000000 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 14px !important;
+}
+
+#mlb2-3873850 .subscribe-form .form-section .checkbox input {
+    margin: 0px 5px 0px 0px;
+}
+
+#mlb2-3873850 .subscribe-form .form-section .checkbox input[type=checkbox] {
+    -webkit-appearance: checkbox;
+}
+
+#mlb2-3873850.ml-subscribe-form .form-group .form-control {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 10px;
+    height: auto;
+    font-family: Arial;
+    border-radius: 0px;
+    border: 1px solid #cccccc !important;
+    color: #000000 !important;
+    background-color: #FFFFFF !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: left;
+}
+
+#mlb2-3873850.ml-subscribe-form button {
+    border: none !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    border-radius: 0px !important;
+    height: 40px !important;
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+    font-family: 'Arial', sans-serif !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    padding: 0 !important;
+}
+
+#mlb2-3873850.ml-subscribe-form button.gradient-on {
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    background: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+#mlb2-3873850.ml-subscribe-form button.gradient-on:hover {
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+#mlb2-3873850.ml-subscribe-form button[disabled] {
+    cursor: not-allowed!important;
+}
+
+#mlb2-3873850.ml-subscribe-form .form-section.ml-error label {
+    color: red!important;
+}
+
+#mlb2-3873850.ml-subscribe-form .form-group.ml-error label {
+    color: red!important;
+}
+
+#mlb2-3873850.ml-subscribe-form .form-group.ml-error .form-control {
+    border-color: red!important;
+}
+
+#mlb2-3873850 .ml-vertical-align-center {
+    text-align: center;
+}
+
+#mlb2-3873850 .ml-block-success,
+#mlb2-3873850 form.ml-block-form {
+    display: inline-block;
+    width: 50% !important;
+}
+
+@media (max-width: 600px) {
+    #mlb2-3873850 {
+        width: 100% !important;
+    }
+    #mlb2-3873850 form.ml-block-form,
+    #mlb2-3873850 .subscribe-form {
+        width: 100% !important;
+    }
+}
+
+#mlb2-3873850 .subscribe-form.horizontal {
+    padding-bottom: 0px;
+}
+
+#mlb2-3873850 .subscribe-form .form-section.horizontal {
+    float: left;
+    margin-bottom: 5px;
+    width: 70%;
+}
+
+#mlb2-3873850 .subscribe-form .form-section.horizontal .form-group {
+    float: left;
+    width: 100%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+#mlb2-3873850 .subscribe-form .form-section.horizontal .form-group .form-control {
+    height: 40px;
+}
+
+#mlb2-3873850 .subscribe-form .form-section.horizontal.button {
+    width: 30%;
+    padding: 0;
+}
+
+#mlb2-3873850 .subscribe-form .form-section.horizontal.button.top-padding {
+    padding-top: 24px;
+}
+
+@media (max-width: 600px) {
+    #mlb2-3873850 .subscribe-form .form-section.horizontal {
+        float: none;
+    }
+    #mlb2-3873850 .subscribe-form .form-section.horizontal,
+    #mlb2-3873850 .subscribe-form .form-section.horizontal.button,
+    #mlb2-3873850 .subscribe-form .form-section.horizontal .form-group {
+        width: 100%;
+        padding: 0;
+    }
+    #mlb2-3873850 .subscribe-form .form-section.horizontal.button {
+        margin-bottom: 20px;
+    }
+}
