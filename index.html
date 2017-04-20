@@ -125,7 +125,7 @@
 
     <!-- Page Content -->
 
-	<a  name="about"></a>
+  <a  name="about"></a>
     <div class="content-section-a">
 
         <div class="container">
@@ -173,12 +173,27 @@
     <div class="banner2">
         <div class="container">
 
-            <script type="text/javascript" src="http://assets.freshdesk.com/widget/freshwidget.js"></script>
-            <style type="text/css" media="screen, projection">
-                @import url(http://assets.freshdesk.com/widget/freshwidget.css); 
-            </style> 
-            <iframe title="Feedback Form" class="freshwidget-embedded-form" id="freshwidget-embedded-form" src="https://acebusters.freshdesk.com/widgets/feedback_widget/new?&widgetType=embedded&formTitle=Whitepaper&submitTitle=Request&submitThanks=We+will+contact+you+shortly&screenshot=no&attachFile=no&searchArea=no&subject=test" scrolling="no" height="360px" width="100%" frameborder="0" >
-            </iframe>
+            <div class="section-title text-center">
+                <h2>Request the Whitepaper</h2>
+                <hr>
+            </div>
+            <div class="space"></div>
+
+            <form id="contactForm" autocomplete="off" data-toggle="validator">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="name" required class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="email" id="email" name="email" required class="form-control" placeholder="Your Email" data-error="Bruh, that email address is invalid" required>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <textarea class="form-control" id="contact-message" required rows="4" placeholder="I'm interested in mental poker. Send me the whitepaper!"></textarea>
+                <div class="text-right">
+                    <a href="javascript:$( '#contactForm' ).submit();" class="btn send-btn">Send</a>
+                </div>
+            </form>
         </div>
         <!-- /.container -->
 
@@ -246,7 +261,7 @@
     </section>
 
 
-	<a  name="contact"></a>
+  <a  name="contact"></a>
     <div class="banner">
 
         <div class="container">
@@ -308,11 +323,51 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <!-- Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.8/validator.min.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Signup Form -->
     <script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.min.js?v6be3a4e2d3872f68a1a9e8036ceaea6b"></script>
+
+    <!-- Contact Form -->
+    <script>
+      $(function(){
+        $('#contactForm').validator().on('submit', function (e) {
+          if (e.isDefaultPrevented()) {
+
+            console.log('err')
+            // handle the invalid form...
+          } else {
+            e.preventDefault();
+            var $form = $( this );
+            var email = $form.find( "input[name='email']" ).val();
+            var name = $form.find( "input[name='name']" ).val();
+            var subject = name + ' - request whitepaper';
+            var message = $('#contact-message').val();
+            $.ajax({
+              type: "POST",
+              url: 'https://jan81xk8f7.execute-api.eu-central-1.amazonaws.com/v0/contact',
+              data: JSON.stringify({
+                email: email,
+                subject: subject,
+                message: message
+              }),
+              success: function(){
+                console.log('sent');
+              },
+              error: function(req, err){
+                console.dir(err);
+              },
+              contentType:"application/json; charset=utf-8",
+              dataType:"json"
+            });
+          }
+        })
+      });
+    </script>
 
 </body>
 
