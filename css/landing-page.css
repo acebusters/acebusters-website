@@ -17,12 +17,46 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
     font-weight: 700;
+}
+
+a { 
+    color: #9B272C;
 }
 
 .topnav {
     font-size: 14px; 
+    background-color: #080B0F;
+    border-bottom: #080B0F;
+}
+
+.nav-item {
+    font-weight: 400;
+    color: #fff !important; 
+}
+
+.nav-item:hover {
+    border-bottom: 0.2em solid #9B272C;
+}
+
+.nav-item > a {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.428571429;
+}
+
+.nav-item > a:hover {
+    color: #efefef !important;
+}
+
+.newsletter-input {
+    border-bottom-left-radius: 25px !important;
+    border-top-left-radius: 25px !important;
+    background-color: red !important;
 }
 
 .lead {
@@ -30,13 +64,26 @@ h6 {
     font-weight: 400;
 }
 
+.sign-up {
+    padding-right: 0px !important;
+    border-bottom-left-radius: 25px !important;
+    border-top-left-radius: 25px !important;
+}
+
+.btn-sign-up {
+    border-bottom-right-radius: 25px !important;
+    border-top-right-radius: 25px !important;
+    border-bottom-left-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+}
+
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
     font-size: 4em;
-    color: #f8f8f8;
-    background: #49a9ee;
+    color: #FFF;
+    background: #111C26;
     background-size: cover;
 }
 
@@ -104,7 +151,8 @@ h6 {
 
 .content-section-a {
     padding: 50px 0;
-    background-color: #f8f8f8;
+    color: #FFFFFF;
+    background: #111C26;
 }
 
 .content-section-b {
@@ -205,7 +253,7 @@ section h2.section-heading {
 }
 section h3.section-subheading {
   font-size: 16px;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
   text-transform: none;
   font-style: italic;
   font-weight: 400;
@@ -345,8 +393,8 @@ a.btn.send-btn:hover{
 #mlb2-3873850 .subscribe-form {
     padding: 20px;
     border: 0px solid #ffffff !important;
-    border-radius: 0px !important;
     box-sizing: border-box !important;
+    padding-right: 0px !important;
 }
 
 #mlb2-3873850 .subscribe-form .form-section {
@@ -367,7 +415,7 @@ a.btn.send-btn:hover{
     margin: 0px 0px 10px 0px !important;
     padding: 0px !important;
     color: #000000 !important;
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size: 28px !important;
     line-height: 100%;
     text-align: left !important;
@@ -453,7 +501,6 @@ a.btn.send-btn:hover{
     border: none !important;
     cursor: pointer !important;
     width: 100% !important;
-    border-radius: 0px !important;
     height: 40px !important;
     background-color: #000000 !important;
     color: #FFFFFF !important;
