@@ -8,6 +8,8 @@ body,
 html {
     width: 100%;
     height: 100%;
+    background: linear-gradient(135deg, #000000 0%,#1a2d3d 93%);
+    background-attachment: fixed;
 }
 
 body,
@@ -29,6 +31,10 @@ a {
     font-size: 14px; 
     background-color: #080B0F;
     border-bottom: #080B0F;
+}
+
+#team {
+    color: #FFFFFF;
 }
 
 .nav-item {
@@ -56,7 +62,6 @@ a {
 .newsletter-input {
     border-bottom-left-radius: 25px !important;
     border-top-left-radius: 25px !important;
-    background-color: red !important;
 }
 
 .lead {
@@ -83,8 +88,6 @@ a {
     text-align: center;
     font-size: 4em;
     color: #111C26;
-    background: #EEEEEE;
-    background-size: cover;
 }
 
 .newslettet-section {
@@ -92,13 +95,16 @@ a {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: #111C26;
-    background-size: cover;
+}
+
+.icon-big {
+    color: #FFF;
 }
 
 .logo-container {
     padding-left: 25%;
     padding-right: 20%;
+
 }
 
 .intro-message {
@@ -156,7 +162,6 @@ a {
 .content-section-a {
     padding: 50px 0;
     color: #FFFFFF;
-    background: linear-gradient(135deg, #000000 0%,#1a2d3d 93%);
 }
 
 .content-section-b {
@@ -178,9 +183,7 @@ a {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: #111C26;
     text-align: center;
-    background-size: cover;
 }
 
 .banner h2 {
@@ -192,8 +195,6 @@ a {
 .banner2 {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg2.jpg) no-repeat center center;
-    background-size: cover;
 }
 
 .banner2 h2 {
@@ -323,10 +324,6 @@ a.btn.send-btn:hover{
     background: transparent;
     border: 1px solid #c59a6d;
     color: #ffffff;
-}
-
-.bg-light-gray {
-  background-color: #eeeeee;
 }
 
 .team-member {
