@@ -8,7 +8,6 @@ body,
 html {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #000000 0%,#1a2d3d 93%);
     background-attachment: fixed;
 }
 
@@ -30,7 +29,6 @@ a {
 .topnav {
     font-size: 14px; 
     background-color: #080B0F;
-    border-bottom: #080B0F;
 }
 
 #team {
@@ -42,11 +40,19 @@ a {
     color: #fff !important; 
 }
 
-.nav-item:hover {
-    border-bottom: 0.2em solid #FD5E60;
+.navbar-toggle { 
+    border: none;
+    background-color: #080B0F !important;
+}
+
+.navbar-toggle:hover {
+    color: #FD5E60;
 }
 
 .nav-item > a {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -57,6 +63,7 @@ a {
 
 .nav-item > a:hover {
     color: #efefef !important;
+    border-bottom:2px solid #FD5E60;
 }
 
 .newsletter-input {
@@ -87,7 +94,6 @@ a {
     padding-bottom: 50px;
     text-align: center;
     font-size: 4em;
-    color: #111C26;
 }
 
 .newslettet-section {
@@ -109,12 +115,10 @@ a {
 
 .intro-message {
     position: relative;
-    padding-bottom: 20%;
 }
 
 .intro-message > h1 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 5em;
 }
 
@@ -161,7 +165,7 @@ a {
 
 .content-section-a {
     padding: 50px 0;
-    color: #FFFFFF;
+    color:#080B0F;
 }
 
 .content-section-b {
