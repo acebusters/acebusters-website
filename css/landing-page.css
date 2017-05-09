@@ -104,6 +104,14 @@ a:active {
 .newsletter-input {
     border-bottom-left-radius: 25px !important;
     border-top-left-radius: 25px !important;
+    padding-left: 2em !important;
+}
+
+@media(max-width: 600px) {
+    .newsletter-input {
+        border-bottom-right-radius: 25px !important;
+        border-top-right-radius: 25px !important;
+    }
 }
 
 .lead {
@@ -123,6 +131,17 @@ a:active {
     border-top-right-radius: 25px !important;
     border-bottom-left-radius: 0px !important;
     border-top-left-radius: 0px !important;
+}
+
+.btn-sign-up:hover {
+    background-color: #C85C5C !important;
+}
+
+@media(max-width: 600px) {
+    .btn-sign-up {
+        border-bottom-left-radius: 25px !important;
+        border-top-left-radius: 25px !important;
+    }
 }
 
 .intro-header {
@@ -567,7 +586,7 @@ a.btn.send-btn:hover{
     cursor: pointer !important;
     width: 100% !important;
     height: 40px !important;
-    background-color: #FD5E60 !important;
+    background-color: #FD5E60;
     color: #FFFFFF !important;
     font-family: 'Arial', sans-serif !important;
     font-size: 16px !important;
