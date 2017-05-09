@@ -1,0 +1,13 @@
+#clock {
+    color: #FFF;
+    width: 100%;
+}
+
+.countdown {
+    padding: 2em 0 2em 0;
+    background-color: #080B0F;
+}
+
+.countdown > h1 {
+    color: #FFF;
+}
