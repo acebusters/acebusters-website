@@ -22,8 +22,27 @@ h6 {
     font-weight: 700;
 }
 
+h1 { 
+    color: #080B0F;
+}
+
 a { 
     color: #FD5E60;
+}
+
+a:active {  
+    color: #FFF !important;
+}
+
+.bullet {
+    
+    margin-bottom: 5em;
+}
+
+@media(max-width: 768px) {
+    .bullet {
+        text-align: center;
+    }
 }
 
 .topnav {
@@ -33,6 +52,21 @@ a {
 
 #team {
     color: #FFFFFF;
+}
+
+.faq-header:hover {
+    color: #FD5E60;
+}
+
+.img-bullet {
+    max-width: 239px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .img-bullet {
+        margin: 0 25% 0 25%;
+    }
 }
 
 .nav-item {
@@ -57,7 +91,7 @@ a {
     -moz-osx-font-smoothing: grayscale;
     font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
     border-bottom: 2px solid #080B0F;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 14px;
     line-height: 1.428571429;
 }
@@ -75,6 +109,7 @@ a {
 .lead {
     font-size: 18px;
     font-weight: 400;
+    margin-bottom: 0px;
 }
 
 .sign-up {
@@ -243,12 +278,40 @@ a {
 }
 
 footer {
-    padding: 50px 0;
+    padding: 1em 0;
     background-color: #080B0F;
 }
 
+.footer-item {
+    font-size: 5em;
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+}
+
+.footer-item > a:link {
+    color: #FD5E60;
+}
+
+.footer-item > a:visited {
+    color: #FD5E60;
+}
+
+.footer-item > a:hover {
+    color: #FFF;
+}
+
+.footer-item > a:active {
+    color: #FFF !important;
+}
+
+.footer-icon-list {
+    text-align: center;
+}
+
 p.copyright {
-    margin: 15px 0 0;
+    width: 100%;
+    margin-top: 2em;
+    text-align: center;
 }
 
 
@@ -268,11 +331,6 @@ section h3.section-subheading {
   font-style: italic;
   font-weight: 400;
   margin-bottom: 75px;
-}
-@media (min-width: 768px) {
-  section {
-    padding: 150px 0;
-  }
 }
 
 #contactForm input.form-control,
