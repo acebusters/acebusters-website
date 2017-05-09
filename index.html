@@ -220,23 +220,22 @@
                         <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850">
                             <div class="ml-vertical-align-center">
                                 <div class="subscribe-form ml-block-success" style="display:none">
-                                    <div class="form-section mb0">
-                                        <h4></h4>
+                                    <div class="form-section">
                                         <p>Thank you! You have successfully subscribed to our newsletter.</p>
                                     </div>
                                 </div>
                                 <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST" target="_blank">
                                     <div class="subscribe-form horizontal">
                                         <div class="form-section horizontal">
-                                            <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
-                                                <input type="text" name="fields[email]" class="newsletter-input form-control" placeholder="Email*" value="">
+                                            <div class="form-group ml-field-email ml-validate-required ml-validate-email">
+                                                <input type="email" name="fields[email]" class="form-control" placeholder="Email*" value="" autocomplete="email" x-autocompletetype="email" spellcheck="false" autocapitalize="off" autocorrect="off">
                                             </div>
                                         </div>
-                                        <div class="form-section horizontal button">
-                                            <button type="submit" class="primary btn-sign-up">
+                                        <div class="form-section horizontal ml-button-position">
+                                            <button type="submit" class="primary">
                                                 Sign Up
                                             </button>
-                                            <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
+                                            <button disabled="disabled" style="display: none;" type="button" class="loading">
                                                 <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
                                             </button>
                                         </div>
@@ -246,8 +245,10 @@
                                 </form>
                                 <script>
                                     function ml_webform_success_3873850() {
-                                        jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
-                                        jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
+                                        var $ = ml_jQuery || jQuery;
+
+                                        $('.ml-subscribe-form-3873850 .ml-block-success').show();
+                                        $('.ml-subscribe-form-3873850 .ml-block-form').hide();
                                     };
                                 </script>
                             </div>
@@ -296,44 +297,6 @@
 
     <!-- Signup Form -->
     <script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.min.js?v6be3a4e2d3872f68a1a9e8036ceaea6b"></script>
-
-    <!-- Contact Form -->
-    <script>
-      $(function(){
-        $('#contactForm').validator().on('submit', function (e) {
-          if (e.isDefaultPrevented()) {
-
-            console.log('err')
-            // handle the invalid form...
-          } else {
-            e.preventDefault();
-            var $form = $( this );
-            var email = $form.find( "input[name='email']" ).val();
-            var name = $form.find( "input[name='name']" ).val();
-            var subject = name + ' - request whitepaper';
-            var message = $('#contact-message').val();
-            $.ajax({
-              type: "POST",
-              url: 'https://jan81xk8f7.execute-api.eu-central-1.amazonaws.com/v0/contact',
-              data: JSON.stringify({
-                email: email,
-                subject: subject,
-                message: message
-              }),
-              success: function(){
-                console.log('sent');
-              },
-              error: function(req, err){
-                console.dir(err);
-              },
-              contentType:"application/json; charset=utf-8",
-              dataType:"json"
-            });
-          }
-        })
-      });
-    </script>
-
 </body>
 
 </html>
