@@ -36,6 +36,7 @@
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
         ga('create', 'UA-98848213-1', 'auto');
         ga('send', 'pageview');
+
     </script>
 </head>
 
@@ -113,7 +114,7 @@
                         <img src="img/rigged.svg" class="img-responsive img-circle img-bullet" alt="">
                     </div>
                     <div class="col-lg-10 col-sm-10">
-                        <h2 class="section-heading">No more rigged games.</h2>
+                        <h2 class="section-heading">No more rigged games</h2>
                         <p class="lead">The problem of <a target="_blank" href="https://en.wikipedia.org/wiki/Mental_poker">Mental Poker</a> has been driving the research in crypto/privacy protocols for decades. It is now technically feasable to play a fair p2p poker game. No biased shuffle possible and no superusers peaking other players cards. </p>
                     </div>
                 </div>
@@ -133,8 +134,8 @@
                         <img src="img/analytics.svg" class="img-responsive img-circle img-bullet" alt="">
                     </div>
                     <div class="col-lg-10 col-sm-10">
-                        <h2 class="section-heading">Become an affiliate instantly.</h2>
-                        <p class="lead">Everybody will be able to become an affiliate instantly. Earn up to 100% of rakeback for the players you bring to the platform. Complete live tracking of your earnings.</p>
+                        <h2 class="section-heading">Become an affiliate instantly</h2>
+                        <p class="lead">Everybody will be able to become an affiliate instantly. Earn up to 100% of rakeback for the players you bring to the platform. Complete live tracking of your earnings</p>
                     </div>
                 </div>
 
@@ -144,7 +145,7 @@
                     </div>
                     <div class="col-lg-10 col-sm-10">
                         <h2 class="section-heading">Security of funds</h2>
-                        <p class="lead">No banking counterparty. All your funds are controlled by you on the blockchain.</p>
+                        <p class="lead">No banking counterparty. All your funds are controlled by you on the blockchain</p>
                     </div>
                 </div>
 
@@ -154,7 +155,7 @@
                     </div>
                     <div class="col-lg-10 col-sm-10">
                         <h2 class="section-heading">Trustless Staking</h2>
-                        <p class="lead">Smart contracts can act as escrows and are independent by definition. They can be set up for any kind of staking or sidebet scenario. </p>
+                        <p class="lead">Smart contracts can act as escrows and are independent by definition. They can be set up for any kind of staking or sidebet scenario</p>
                     </div>
                 </div>
         </div>
@@ -238,11 +239,11 @@
                                     <div class="subscribe-form horizontal">
                                         <div class="form-section horizontal">
                                             <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
-                                                <input type="text" name="fields[email]" class="newsletter-input form-control" placeholder="Email*" value="">
+                                                <input type="text" name="fields[email]" class="newsletter-input form-control" placeholder="Email*" value="" id="eMail">
                                             </div>
                                         </div>
                                         <div class="form-section horizontal button">
-                                            <button type="submit" class="primary btn-sign-up">
+                                            <button type="submit" class="primary btn-sign-up" id="sign-up">
                                                 Sign Up
                                             </button>
                                             <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
@@ -303,6 +304,18 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <!-- GA Events -->
+    <script>
+        $('#sign-up').click((e) => {
+            console.log$(('#eMail').val());
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Newsletter',
+                eventAction: 'Sign-Up',
+                eventLabel: $('#eMail').val() || "userEmail"
+            });
+        })
+    </script>
     <!-- Signup Form -->
     <script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.min.js?v6be3a4e2d3872f68a1a9e8036ceaea6b"></script>
 </body>
