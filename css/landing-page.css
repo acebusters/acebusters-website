@@ -412,15 +412,21 @@ a.btn.send-btn:hover{
     color: #ffffff;
 }
 
+.team-headline {
+    color: #080B0F;
+}
+
 .team-member {
   text-align: center;
   margin-bottom: 50px;
 }
+
 .team-member img {
   margin: 0 auto;
   max-width: 239px;
   border: 7px solid white;
 }
+
 .team-member h4 {
   margin-top: 25px;
   margin-bottom: 0;
