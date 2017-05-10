@@ -296,6 +296,10 @@ a:active {
     }
 }
 
+.team-heading {
+    color: #080B0F;
+}
+
 footer {
     padding: 1em 0;
     background-color: #080B0F;
