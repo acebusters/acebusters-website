@@ -137,6 +137,19 @@ a:active {
     background-color: #C85C5C !important;
 }
 
+.btn-cta {
+    border: none;
+    padding: 0 5% 0 5%;
+    font-size: 32px;
+    border-radius: 25px;
+    background-color: #FD5E60 !important;
+    color: #FFF;
+}
+
+.btn-cta:hover {
+    background-color: #C85C5C !important;
+}
+
 @media(max-width: 600px) {
     .btn-sign-up {
         border-bottom-left-radius: 25px !important;
