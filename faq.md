@@ -5,40 +5,24 @@ layout: faq
         What are the benefits of Acebusters compared to a traditional poker platform ?
 </h2>
 <div class="collapse" id="faq1">
-    
-    Acebusters uses the Ethereum blockchain to manage player funds. That means you are in complete control of your balance and it is always secure. Our tables are implemented as smart contracts (a piece of code running on the Ethereum blockchain), which means that at no point we have any control over the funds that you play with. You will be able to deposit and withdraw any amount at any time within a couple of minutes. 
-    There is no counterparty risk in this model and events like Black Friday are things of the past.  
-    
-    After our ICO (Initial Coin Offering) we also aim to implement the Mental Poker Protocol. A cryptographic protocol which allows players in a peer to peer network a guaranteed fairly shuffled game as well as the certainty that no one can peek at your cards. Remember the Ultimate-Bet super user scandal ? This is a thing of the past. 
-                
-    <ul>
-        <li>
-            <p class="lead">
-                You want to stake a player or buy a share in a tournament but you are uncertain whether the other party can be trusted and not run with the money at some point? Smart contracts can assure that you can always retrieve your share from the person you staked.    
-            </p>
-        </li>
-        <li>
-            <p class="lead">
-                Everybody can be an affiliate. Once you sign up you will get a referral code which you can send to your friends and peers. You will earn the lion's share of their produced rake.     
-            </p>
-        </li>
-        <li>
-            <p class="lead">
-                A democratic community. Your token share will give you voting rights regarding the Acebusters economy. For example the amount of rake taken and how it is distributed.    
-            </p>
-        </li>
-            
-        <li>
-            <p class="lead">
-                Privacy. We will not collect any personal data.    
-            </p>
-        </li>
-        <li>
-            <p class="lead">
-                Set up your own tables and tournaments and collect the rake.     
-            </p>
-        </li>
-    </ul>
+    <p class="lead">
+        Acebusters uses the Ethereum blockchain to manage player funds. That means you are in complete control of your balance and it is always secure. Our tables are implemented as smart contracts (a piece of code running on the Ethereum blockchain), which means that at no point we have any control over the funds that you play with. You will be able to deposit and withdraw any amount at any time within a couple of minutes. 
+
+        There is no counterparty risk in this model and events like Black Friday are things of the past.  
+        
+        After our ICO (Initial Coin Offering) we also aim to implement the Mental Poker Protocol. A cryptographic protocol which allows players in a peer to peer network a guaranteed fairly shuffled game as well as the certainty that no one can peek at your cards. Remember the Ultimate-Bet super user scandal ? This is a thing of the past. 
+                    
+        You want to stake a player or buy a share in a tournament but you are uncertain whether the other party can be trusted and not run with the money at some point? Smart contracts can assure that you can always retrieve your share from the person you staked.    
+        
+        Everybody can be an affiliate. Once you sign up you will get a referral code which you can send to your friends and peers. You will earn the lion's share of their produced rake.     
+
+        A democratic community. Your token share will give you voting rights regarding the Acebusters economy. For example the amount of rake taken and how it is distributed.    
+
+        Privacy. We will not collect any personal data.    
+
+        Set up your own tables and tournaments and collect the rake.  
+    </p>
+     
 </div>
 
 
