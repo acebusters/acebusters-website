@@ -1,14 +1,46 @@
 ---
 layout: default
 ---
-<!-- Header -->
-<div class="intro-header">
-    <!-- /.container -->
-</div>
-
-<a  name="about"></a>
 <div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="my-nutz">My Nutz in supply</label>
+                    <input type="number" class="form-control" placeholder="My Nutz in supply" id="my-nutz" value="6000000">
+                    <small id="emailHelp" class="form-text text-muted">Nutz that I can use in the economy.</small>
+                </div>
+                <div class="form-group">
+                    <label for="my-nutz">My Nutz in power</label>
+                    <input type="number" class="form-control" placeholder="My Power Nutz" id="my-power-nutz" value="6000000">
+                    <small id="emailHelp" class="form-text text-muted">Nutz that I hold in power (share of the economy).</small>
+                </div>
+                <div class="form-group">
+                    <label for="my-nutz">Total Nutz in the economy</label>
+                    <input type="number" class="form-control" placeholder="Total Nutz" id="total-nutz" value="60000000">
+                    <small id="emailHelp" class="form-text text-muted">The size of the total ecomomy in absolute Nutz.</small>
+                </div>
+                <div class="form-group">
+                    <label for="my-nutz">Max Power</label>
+                    <input type="number" class="form-control" placeholder="Total Power (Power Pool)" id="max-power" value="12000000">
+                    <small id="emailHelp" class="form-text text-muted">The Maximum Amount Nutz allowed in Power.</small>
+                </div> 
+
+                <div class="form-group">
+                    <label for="my-nutz">NTZ / ETH</label>
+                    <input type="number" class="form-control" placeholder="Nutz Price" id="nutz-price" value="100">
+                    <small id="emailHelp" class="form-text text-muted">How much nutz you get for one ETH.</small>
+                </div> 
+            </div>
+            <div class="col-md-8">
+                <div class="canvas-box">
+                    <canvas id="icoChart" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         {{ content }}
     </div>
 </div>
+<script src='../js/ico_chart.js'></script>

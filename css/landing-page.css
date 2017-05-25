@@ -60,6 +60,10 @@ a:active {
     color: #FD5E60;
 }
 
+.canvas-box {
+    padding: 15%;
+}
+
 .img-bullet {
     max-width: 239px;
     text-align: center;

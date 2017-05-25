@@ -42,6 +42,10 @@
         ga('create', 'UA-98848213-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -101,13 +105,9 @@
                 <div class="col-lg-12">
                     <div class="intro-message">
                         <div class="logo-container">
-                            <img src="./img/acebusters-logo.svg" alt="">    
+                            
                         </div> 
                     </div>
-                    <form method="get" action="./files/pitchdeck.pdf">
-                        <button class="primary btn-cta"> Pitchdeck </button>
-                    </form>
-                    
                 </div>
             </div>
         </div>
@@ -117,13 +117,44 @@
 
     <!-- Page Content -->
     
-    <!-- Header -->
-<div class="intro-header">
-    <!-- /.container -->
-</div>
+    <div class="content-section-a">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="my-nutz">My Nutz in supply</label>
+                    <input type="number" class="form-control" placeholder="My Nutz in supply" id="my-nutz" value="6000000">
+                    <small id="emailHelp" class="form-text text-muted">Nutz that I can use in the economy.</small>
+                </div>
+                <div class="form-group">
+                    <label for="my-nutz">My Nutz in power</label>
+                    <input type="number" class="form-control" placeholder="My Power Nutz" id="my-power-nutz" value="6000000">
+                    <small id="emailHelp" class="form-text text-muted">Nutz that I hold in power (share of the economy).</small>
+                </div>
+                <div class="form-group">
+                    <label for="my-nutz">Total Nutz in the economy</label>
+                    <input type="number" class="form-control" placeholder="Total Nutz" id="total-nutz" value="60000000">
+                    <small id="emailHelp" class="form-text text-muted">The size of the total ecomomy in absolute Nutz.</small>
+                </div>
+                <div class="form-group">
+                    <label for="my-nutz">Max Power</label>
+                    <input type="number" class="form-control" placeholder="Total Power (Power Pool)" id="max-power" value="12000000">
+                    <small id="emailHelp" class="form-text text-muted">The Maximum Amount Nutz allowed in Power.</small>
+                </div> 
 
-<a  name="about"></a>
-<div class="content-section-a">
+                <div class="form-group">
+                    <label for="my-nutz">NTZ / ETH</label>
+                    <input type="number" class="form-control" placeholder="Nutz Price" id="nutz-price" value="100">
+                    <small id="emailHelp" class="form-text text-muted">How much nutz you get for one ETH.</small>
+                </div> 
+            </div>
+            <div class="col-md-8">
+                <div class="canvas-box">
+                    <canvas id="icoChart" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <h2>How our ICO works</h2>
 
@@ -163,6 +194,7 @@ We plan to unlock additional ABPs (up to a max of 80% of the total economy) afte
 
     </div>
 </div>
+<script src='../js/ico_chart.js'></script>
 
 
     <!-- Footer -->
@@ -189,9 +221,6 @@ We plan to unlock additional ABPs (up to a max of 80% of the total economy) afte
             </div>
         </div>
     </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
 
     <!-- Validation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.8/validator.min.js"></script>
