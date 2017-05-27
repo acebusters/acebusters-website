@@ -42,8 +42,6 @@
         ga('create', 'UA-98848213-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <!-- Chart JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 </head>
@@ -117,40 +115,180 @@
 
     <!-- Page Content -->
     
-    <div class="content-section-a">
-    <div class="container">
+    <script src='js/ico_chart.js'></script>
+<script src="js/vue.min.js"></script>
+<script src="https://unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js"></script>
+<div class="content-section-a">
+    <div class="container" id="app">
+        <div class="row">    
+            <div class="col-md-6">
+                <div class="well">
+                    <h3>Economy Parameters</h3>
+                    <div class="form-group">
+                        <label for="my-nutz">Total Nutz in the economy</label>
+                        <input type="number" class="form-control" id="total-ntz" v-model="totalNtz" :value="powerPool" disabled>
+                        <small class="form-text text-muted">The size of the total ecomomy in Nutz.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Ceiling Price</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="ceiling" value="100" v-model="ceiling" disabled>
+                        <small class="form-text text-muted">1 ETH / 100 NTZ</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Floor Price</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="floor" value="105" v-model="floor" disabled>
+                        <small class="form-text text-muted">1 ETH / 130 NTZ.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-4">
-                <div class="form-group">
-                    <label for="my-nutz">My Nutz in supply</label>
-                    <input type="number" class="form-control" placeholder="My Nutz in supply" id="my-nutz" value="6000000">
-                    <small id="emailHelp" class="form-text text-muted">Nutz that I can use in the economy.</small>
+                <div class="well">
+                    <h3>Alice's Ether Wallet</h3>
+                    <div class="form-group">
+                        <label for="my-nutz">ETH Balance</label>
+                        <input type="number" class="form-control" placeholder="Alice Ntz" id="alice-eth" v-model="alice.eth" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Amount </label>
+                        <input type="number" class="form-control" placeholder="My Power Nutz" v-model="alice.purNtz">
+                    </div>
+                    <button class="btn btn-primary" id="alice-purchase-ntz" @click="purchaseNtz(alice.purNtz, alice)">Purchase Nutz</button>
                 </div>
-                <div class="form-group">
-                    <label for="my-nutz">My Nutz in power</label>
-                    <input type="number" class="form-control" placeholder="My Power Nutz" id="my-power-nutz" value="6000000">
-                    <small id="emailHelp" class="form-text text-muted">Nutz that I hold in power (share of the economy).</small>
-                </div>
-                <div class="form-group">
-                    <label for="my-nutz">Total Nutz in the economy</label>
-                    <input type="number" class="form-control" placeholder="Total Nutz" id="total-nutz" value="60000000">
-                    <small id="emailHelp" class="form-text text-muted">The size of the total ecomomy in absolute Nutz.</small>
-                </div>
-                <div class="form-group">
-                    <label for="my-nutz">Max Power</label>
-                    <input type="number" class="form-control" placeholder="Total Power (Power Pool)" id="max-power" value="12000000">
-                    <small id="emailHelp" class="form-text text-muted">The Maximum Amount Nutz allowed in Power.</small>
-                </div> 
-
-                <div class="form-group">
-                    <label for="my-nutz">NTZ / ETH</label>
-                    <input type="number" class="form-control" placeholder="Nutz Price" id="nutz-price" value="100">
-                    <small id="emailHelp" class="form-text text-muted">How much nutz you get for one ETH.</small>
-                </div> 
             </div>
-            <div class="col-md-8">
-                <div class="canvas-box">
-                    <canvas id="icoChart" width="300" height="300"></canvas>
+            <div class="col-md-4">
+                <div class="well">
+                    <h3>Alice's Nutz Wallet</h3>
+                    <div class="form-group">
+                        <label for="my-nutz">NTZ Balance</label>
+                        <input type="number" class="form-control" placeholder="Alice Ntz" id="alice-ntz" v-model="alice.ntz" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Amount </label>
+                        <input type="number" class="form-control" placeholder="Amount Nutz to power up" id="alice-power-up-val" v-model="alice.powerUp">
+                    </div>
+                    <button class="btn btn-primary" id="alice-power-up" @click="powerUp(alice.powerUp, alice)">Power Up</button>
+                    <div class="form-group">
+                        <label for="my-nutz">Amount </label>
+                        <input type="number" class="form-control" placeholder="Amount Ntz to sell" id="alice-sell-ntz-val" v-model="alice.sellNtz">
+                    </div>
+                    <button class="btn btn-primary" id="alice-sell-ntz" @click="sellNtz(alice.sellNtz, alice)">Sell Nutz</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="well">
+                    <h3>Alice's Power Wallet</h3>
+                    <div class="form-group">
+                        <label for="my-nutz">ABP Balance</label>
+                        <input type="number" class="form-control" placeholder="Alice ABPs" id="alice-abp" v-model="alice.abp" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Amount </label>
+                        <input type="number" class="form-control" placeholder="ABP" id="alice-power-down-val" v-model="alice.powerDown">
+                    </div>
+                    <button class="btn btn-primary" id="alice-power-down" @click="powerDown(alice.powerDown, alice)">Power Down</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well">
+                    <h3>Nutz Contract</h3>
+                    <div class="form-group">
+                        <label for="my-nutz">Active Suppply</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="active-supply-ntz" v-model="activeSupply" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Power Pool</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="power-pool-ntz" v-model="powerPool" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Burn Pool</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="burn-pool-ntz" v-model="burnPool" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Total Reserve</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="total-reserve-eth" v-model="totalReserve" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Needed Reserve</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="needed-reserve-eth" v-model="needReserve" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <nutz-pie :chart-data="dataNtzPie"></power-pie>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well">
+                    <h3>Power Contract</h3>
+                    <div class="form-group">
+                        <label for="my-nutz">Authorized Shares</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="authorized-power" v-model="authorizedPower" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Issued Shares</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="issued-power" v-model="issuedPower" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Outstanding Shares</label>
+                        <input type="number" class="form-control" placeholder="Total Nutz" id="outstanding-power" v-model="outstandingPower" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <power-pie :chart-data="dataPowerPie"></power-pie>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="well">
+                    <h3>Bob's Ether Wallet</h3>
+                    <div class="form-group">
+                        <label for="my-nutz">ETH Balance</label>
+                        <input type="number" class="form-control" placeholder="Bobs ETH" id="bob-eth" v-model="bob.eth" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Amount </label>
+                        <input type="number" class="form-control" placeholder="ETH" id="bob-purchase-ntz-val" v-model="bob.purNtz">
+                    </div>
+                    <button class="btn btn-primary" id="bob-purchase-ntz" @click="purchaseNtz(bob.purNtz, bob)">Purchase Nutz</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="well">
+                    <h3>Bob's Nutz Wallet</h3>
+                    <div class="form-group">
+                        <label for="my-nutz">NTZ Balance</label>
+                        <input type="number" class="form-control" placeholder="Bobs Nutz" id="bob-ntz" v-model="bob.ntz" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Amount </label>
+                        <input type="number" class="form-control" placeholder="NTZ" id="bob-power-up-val" v-model="bob.powerUp">
+                    </div>
+                    <button class="btn btn-primary" id="bob-power-up" @click="powerUp(bob.powerUp, bob)">Power Up</button>
+                    <div class="form-group">
+                        <label for="my-nutz">Amount </label>
+                        <input type="number" class="form-control" placeholder="NTZ" id="bob-sell-ntz-val" v-model="bob.sellNtz">
+                    </div>
+                    <button class="btn btn-primary" id="bob-sell-ntz" @click="sellNtz(bob.sellNtz, bob)">Sell Nutz</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="well">
+                    <h3>Bob's Power Wallet</h3>
+                    <div class="form-group">
+                        <label for="my-nutz">ABP Balance</label>
+                        <input type="number" class="form-control" placeholder="ABP" id="bob-abp" v-model="bob.abp" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="my-nutz">Amount </label>
+                        <input type="number" class="form-control" placeholder="ABP" id="bob-power-down-val" v-model="bob.powerDown">
+                    </div>
+                    <button class="btn btn-primary" id="bob-power-down" @click="powerDown(bob.powerDown, bob)">Power Down</button>
                 </div>
             </div>
         </div>
@@ -194,7 +332,7 @@ We plan to unlock additional ABPs (up to a max of 80% of the total economy) afte
 
     </div>
 </div>
-<script src='js/ico_chart.js'></script>
+
 
 
     <!-- Footer -->
