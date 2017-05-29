@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
             },
             dataNtzPie: function() {
                 return { 
-                    labels: ['Alice Ntz', 'Bobs Ntz', 'PowerPool', 'BurnPool'],
+                    labels: ['Alice Ntz', 'Bobs Ntz', 'PowerPool'],
                     datasets: [{
-                        label: 'Data One',
+                        label: 'Data Nutz',
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                             'rgba(153, 102, 255, 1)',
                             'rgba(255, 159, 64, 1)'
                         ],
-                        data: [this.alice.ntz, this.bob.ntz, this.powerPool, this.burnPool]
+                        data: [this.alice.ntz, this.bob.ntz, this.powerPool + this.burnPool]
                     }]
                 }
             },
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 return { 
                     labels: ['Alice ABP', 'Bobs ABP', 'Rest'],
                     datasets: [{
-                        label: 'Data One',
+                        label: 'Data Power',
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                     return;
                 }
                 if (amount > user.ntz) {
-                    alert('Not enough Nutz to power up!');
+                    alert('Not enough Nutz!');
                     return;
                 }
                 user.ntz -= amount;
@@ -158,6 +158,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 amount = parseInt(amount);
             },
             powerDown: function(amount, user) {
+                if (user.abp <= 0) {
+                    alert('No more ABP to power down');
+                    return;
+                }
+                if (amount > user.abp) {
+                    alert('Not enough ABP');
+                    return;
+                }
                 user.ntz += this.totalNtz * (amount / 100);
                 user.abp -= user.abp
             },

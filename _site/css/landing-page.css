@@ -210,6 +210,15 @@ a:active {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 }
 
+.ico-users {
+    margin-bottom: 2em;
+}
+
+.ico-tab-content {
+    background-color: #FFF; 
+    padding: 2em 2em 2em 2em;
+}
+
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
