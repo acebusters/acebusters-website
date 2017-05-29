@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
             burnPool: 2400000,
             ceiling: 100,
             floor: 130,
+            authorizedPower: 100,
+            issuedPower: 60,
+            outstandingPower: 40,
             alice: {
                 eth: 6000,
                 purNtz: 1200,
@@ -47,9 +50,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 sellNtz: 0,
                 powerDown: 0,
             },
-            authorizedPower: 100,
-            issuedPower: 60,
-            outstandingPower: 40,
         },
         computed: {
             totalNtz: function() {
@@ -70,17 +70,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
                             'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
                         ],
                         borderColor: [
                             'rgba(255,99,132,1)',
                             'rgba(54, 162, 235, 1)',
                             'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
                         ],
                         data: [this.alice.ntz, this.bob.ntz, this.powerPool + this.burnPool]
                     }]
@@ -88,26 +82,20 @@ document.addEventListener("DOMContentLoaded", function(e) {
             },
             dataPowerPie: function() {
                 return { 
-                    labels: ['Alice ABP', 'Bobs ABP', 'Rest'],
+                    labels: ['Alice ABP', 'Bobs ABP','Foundes Share', 'Rest'],
                     datasets: [{
                         label: 'Data Power',
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(54, 162, 235, 0.2)',
                             'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
                         ],
                         borderColor: [
                             'rgba(255,99,132,1)',
                             'rgba(54, 162, 235, 1)',
                             'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
                         ],
-                        data: [this.alice.abp, this.bob.abp, this.authorizedPower - this.alice.abp - this.bob.abp]
+                        data: [this.alice.abp, this.bob.abp, this.outstandingPower, this.authorizedPower - this.outstandingPower - this.alice.abp - this.bob.abp]
                     }]
                 }
             },
