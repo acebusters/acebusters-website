@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
             totalNtz: function() {
                 return this.activeSupply + this.powerPool + this.burnPool;
             },
-            needReserve: function() {
-                return this.activeSupply * floor;
+            neededReserve: function() {
+                return this.activeSupply / this.floor;
             },
-            totalReserbe: function() {
-
+            totalReserve: function() {
+                return (this.bob.ntz + this.alice.ntz) / this.ceiling;
             },
             dataNtzPie: function() {
                 return { 

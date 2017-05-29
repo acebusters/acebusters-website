@@ -50,13 +50,16 @@ document.addEventListener("DOMContentLoaded", function(e) {
             authorizedPower: 100,
             issuedPower: 60,
             outstandingPower: 40,
-            totalReserve: 1,
-            needReserve: 0,
-            chart:{},
         },
         computed: {
             totalNtz: function() {
                 return this.activeSupply + this.powerPool + this.burnPool;
+            },
+            neededReserve: function() {
+                return this.activeSupply / this.floor;
+            },
+            totalReserve: function() {
+                return (this.bob.ntz + this.alice.ntz) / this.ceiling;
             },
             dataNtzPie: function() {
                 return { 
