@@ -143,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 this.activeSupply -= amount;
                 this.powerPool += amount;
                 user.abp = user.abp + (amount / this.totalNtz) * 100;
+                this.outstandingPower += user.abp;
                 amount = parseInt(amount);
             },
             powerDown: function(amount, user) {
@@ -155,7 +156,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
                     return;
                 }
                 user.ntz += this.totalNtz * (amount / 100);
-                user.abp -= user.abp
+                this.outstandingPower -= amount;
+                user.abp -= amount;
             },
         }
     });    
