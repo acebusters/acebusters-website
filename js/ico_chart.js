@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                             'rgba(54, 162, 235, 1)',
                             'rgba(255, 206, 86, 1)',
                         ],
-                        data: [this.alice.abp, this.bob.abp, this.outstandingPower, this.authorizedPower - this.outstandingPower - this.alice.abp - this.bob.abp]
+                        data: [this.alice.abp, this.bob.abp, 40, this.authorizedPower - this.outstandingPower - this.alice.abp - this.bob.abp]
                     }]
                 }
             },
