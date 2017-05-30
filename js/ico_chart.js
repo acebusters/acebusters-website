@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
             issuedPower: 60,
             outstandingPower: 40,
             alice: {
-                eth: 6000,
-                purNtz: 1200,
+                eth: 12000,
+                purNtz: 6000,
                 ntz: 0,
                 powerUp: 0,
                 abp: 0,
@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 powerDown: 0,
             },
             bob: {
-                eth: 6000,
-                purNtz: 1200,
+                eth: 12000,
+                purNtz: 6000,
                 ntz: 0,
                 powerUp: 0,
                 abp: 0,
