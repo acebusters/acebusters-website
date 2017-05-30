@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: terms
 ---
 
 # Acebusters Terms of Use 
 
 ## Terms of Use ("Terms") 
 
-### Last updated: (30.5.217)
+### Last updated: (30.5.2017)
 
 Please read these Terms of Use ("Terms", "Terms of Use") carefully before using the http://www.acebusters.com website (the "Service") operated by Acebusters ("us", "we", or "our").
 

@@ -265,6 +265,10 @@ a:active {
     margin-bottom: 30px;
 }
 
+.terms {
+    padding-bottom: 10%;
+}
+
 .section-heading-spacer {
     float: left;
     width: 200px;
