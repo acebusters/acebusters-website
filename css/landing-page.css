@@ -149,15 +149,36 @@ a:active {
 
 .btn-cta {
     border: none;
-    padding: 0 5% 0 5%;
+    padding: 1% 3% 1% 3%;
     font-size: 32px;
     border-radius: 25px;
     background-color: #FD5E60 !important;
-    color: #FFF;
+    color: #FFF !important;
 }
 
 .btn-cta:hover {
     background-color: #C85C5C !important;
+    color: white !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.btn-cta:visted {
+    background-color: #C85C5C !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.btn-cta:active {
+    background-color: #C85C5C !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.btn-cta:link {
+    background-color: #C85C5C !important;
+    color: white !important;
+    text-decoration: none !important;
 }
 
 @media(max-width: 600px) {
@@ -524,7 +545,6 @@ a.btn.send-btn:hover{
     padding: 20px;
     border: 0px solid #ffffff !important;
     box-sizing: border-box !important;
-    padding-right: 0px !important;
 }
 
 #mlb2-3873850 .subscribe-form .form-section {
@@ -677,7 +697,6 @@ a.btn.send-btn:hover{
 #mlb2-3873850 .ml-block-success,
 #mlb2-3873850 form.ml-block-form {
     display: inline-block;
-    width: 50% !important;
 }
 
 @media (max-width: 600px) {
@@ -691,6 +710,7 @@ a.btn.send-btn:hover{
 }
 
 #mlb2-3873850 .subscribe-form.horizontal {
+    min-width: 30em;
     padding-bottom: 0px;
 }
 
