@@ -697,7 +697,13 @@ a.btn.send-btn:hover{
 #mlb2-3873850 .ml-block-success,
 #mlb2-3873850 form.ml-block-form {
     display: inline-block;
-    min-width: 30em;
+}
+
+@media (min-width: 600px) {
+    #mlb2-3873850 form.ml-block-form {
+        display: inline-block;
+        min-width: 30em;
+    }
 }
 
 @media (max-width: 600px) {
