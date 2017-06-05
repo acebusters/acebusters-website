@@ -707,10 +707,13 @@ a.btn.send-btn:hover{
     #mlb2-3873850 .subscribe-form {
         width: 100% !important;
     }
+
+    #mlb2-3873850 .subscribe-form.horizontal {
+        min-width: 30em;
+    }
 }
 
 #mlb2-3873850 .subscribe-form.horizontal {
-    min-width: 30em;
     padding-bottom: 0px;
 }
 
