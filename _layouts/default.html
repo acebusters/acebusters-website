@@ -152,6 +152,15 @@
                 eventLabel: $('#eMail').val() || "userEmail"
             });
         })
+
+        $('.join').click((e) => {
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Discord',
+                eventAction: 'join',
+                eventLabel: 'index_html'
+            });
+        })
     </script>
     
     <!-- Signup Form -->
