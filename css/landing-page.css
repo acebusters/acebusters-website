@@ -810,6 +810,10 @@ Main components
  color: #080B0F;   
 }
 
+.animation-loop {
+    width: 100%;
+}
+
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
     margin-top: 3em;
