@@ -48,6 +48,10 @@ a:active {
     }
 }
 
+.terms {
+    margin-top: 5em;
+}
+
 .topnav {
     font-size: 14px; 
     background-color: #080B0F;
