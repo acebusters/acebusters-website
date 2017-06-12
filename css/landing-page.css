@@ -231,6 +231,14 @@ a:active {
     padding: 10em 10em 10em 10em;
 }
 
+@media(max-width: 767px) {
+    .faq-container {
+        text-align: center;
+        margin-top: -5em;
+        padding: 2em 1em 2em 1em;
+    }    
+}
+
 .a-email {
     text-decoration: none;
 }
@@ -328,9 +336,9 @@ a:active {
         color:#080B0F;
 }
 
-@media(min-width:767px) {
+@media(max-width:767px) {
     .content-section-a {
-        padding: 12em;
+        padding: 0 2em 0 2em;
         color:#080B0F;
     }
 }
