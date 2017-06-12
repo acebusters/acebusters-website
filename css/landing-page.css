@@ -8,8 +8,10 @@ body,
 html {
     width: 100%;
     height: 100%;
-    background-attachment: fixed;
     background-color: #F6F8FA;
+    background-image:  url('../img/bg-pattern.png');
+    background-repeat: repeat;
+    z-index: 10000;
 }
 
 body,
@@ -54,7 +56,11 @@ a:active {
 
 #team {
     color: #FFFFFF;
-    background-color: #252838;
+}
+
+#timeline {
+    background-repeat: repeat;
+    background: url('../img/bg-pattern.png'), linear-gradient(to left,#C85C5C,#252838);
 }
 
 #team h2 {
@@ -199,7 +205,8 @@ a:active {
 
 .intro-header {
     padding-top: 10em; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    background-color: #252838;
+    background-repeat: repeat;
+    background: url('../img/bg-pattern.png'), linear-gradient(to left,#C85C5C,#252838);
 }
 
 .newslettet-section {
@@ -214,9 +221,22 @@ a:active {
 }
 
 .logo-container {
-    margin-top: -150px;
-    margin-left: -60px; 
+    text-align: center;
+    margin-top: -100px;
 }
+
+.logo-img {
+    width: 500px;
+    height: 500px;
+}
+
+@media(max-width: 893px) {
+    .logo-img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
 
 .intro-message {
     position: relative;
@@ -807,7 +827,7 @@ Main components
   left: 25px;
   height: 100%;
   width: 4px;
-  background: #FD5E60;
+  background: #FFF;
 }
 
 .cd-date {
@@ -868,6 +888,12 @@ Main components
     margin-bottom: 0;
   }
 }
+.tagline {
+    font-size: 22px;
+    color: #FFF;
+    text-align: center;
+}
+
 .cd-timeline-img {
   position: absolute;
   top: 8px;
