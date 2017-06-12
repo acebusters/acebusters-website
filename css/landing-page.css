@@ -54,6 +54,15 @@ a:active {
 
 #team {
     color: #FFFFFF;
+    background-color: #252838;
+}
+
+#team h2 {
+    color: #FFFFFF;
+}
+
+#team h4 {
+    color: #FFFFFF;
 }
 
 [v-cloak] {
@@ -189,10 +198,8 @@ a:active {
 }
 
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
-    font-size: 4em;
+    padding-top: 10em; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    background-color: #252838;
 }
 
 .newslettet-section {
@@ -207,9 +214,8 @@ a:active {
 }
 
 .logo-container {
-    padding-left: 25%;
-    padding-right: 20%;
-
+    margin-top: -150px;
+    margin-left: -60px; 
 }
 
 .intro-message {
@@ -241,10 +247,6 @@ a:active {
 }
 
 @media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
-
     .intro-message > h1 {
         font-size: 3em;
     }
@@ -272,8 +274,15 @@ a:active {
 }
 
 .content-section-a {
-    padding: 50px 0;
-    color:#080B0F;
+        padding: 6em;
+        color:#080B0F;
+}
+
+@media(min-width:767px) {
+    .content-section-a {
+        padding: 12em;
+        color:#080B0F;
+    }
 }
 
 .content-section-b {
