@@ -6,9 +6,9 @@ layout: faq
 </h2>
 <div class="collapse" id="faq1">
     <p class="lead">
-        Acebusters uses the Ethereum blockchain to manage players' funds. That means you are in complete control of your balance and it is always secure. Our tables are implemented as smart contracts (a piece of code running on the Ethereum blockchain), which means that at no point we have any control over the funds that you play with. You will be able to deposit and withdraw any amount at any time within a couple of minutes. 
+        Acebusters uses the Ethereum blockchain to manage players' funds. That means you are in complete control of your balance and it is always secure. Our tables are implemented as smart contracts (a piece of code running on the Ethereum blockchain), which means that at no point we have any control over the funds that you play with.
         <br/>
-        There is no counterparty risk in this model and comparable to the “black friday” become impossible.
+        There is no counterparty risk in this model and events comparable to the “black friday” become impossible.
     </p>
      
 </div>
