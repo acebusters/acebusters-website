@@ -63,10 +63,6 @@ a:active {
     background: url('../img/bg-pattern.png'), linear-gradient(to left,#C85C5C,#252838);
 }
 
-#team h2 {
-    color: #FFFFFF;
-}
-
 #team h4 {
     color: #FFFFFF;
 }
@@ -223,6 +219,36 @@ a:active {
 .logo-container {
     text-align: center;
     margin-top: -100px;
+}
+
+.faq-container {
+    text-align: center;
+    margin-top: -5em;
+    padding: 10em 10em 10em 10em;
+}
+
+.a-email {
+    text-decoration: none;
+}
+
+.a-email:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.a-email:visted {
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+.a-email:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.faq-container > h1 {
+    color: #FFF;
 }
 
 .logo-img {
@@ -817,7 +843,7 @@ Main components
   position: relative;
   padding: 2em 0;
   margin-top: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 2em;    
 }
 
 #cd-timeline::before {
@@ -828,6 +854,7 @@ Main components
   height: 100%;
   width: 4px;
   background: #FFF;
+  border-radius: 35%;
 }
 
 .cd-date {
