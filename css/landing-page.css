@@ -248,6 +248,11 @@ a:active {
     padding-bottom: 3em;
 }
 
+.logo-container-terms {
+    text-align: center;
+    margin-top: -100px;
+}
+
 .logo-container > h3 {
     color: white;
     margin-top: -3em;
