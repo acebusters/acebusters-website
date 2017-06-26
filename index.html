@@ -4,59 +4,20 @@ newsletter_sign_up: Thank you! Please check your e-mail to confirm your subscrip
 ---
 
 <!-- Header -->
-<a name="contact"></a>
 <div class="intro-header">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-12">
                 <div class="intro-message">
                     <div class="logo-container">
-                        <img class="logo-img" src="./img/header_logo.svg" alt="">
-                    </div> 
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="newslettet-section">
-                    <h3>Poker on Ethereum - Coming soon!</h3>
-                    <h3>Sign up for our newsletter!</h2>
-                    <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850">
-                        <div class="ml-vertical-align-center">
-                            <div class="subscribe-form ml-block-success" style="display:none;">
-                                <div class="form-section mb0">
-                                    <div style="text-align:center;padding: 20px; font-size:4em; color: #FFF">
-                                        <i class="fa fa-check fa-4" style="text-align:center;"></i>
-                                        <p> {{ page.newsletter_sign_up }}  </p>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST" target="_blank">
-                                <div class="subscribe-form horizontal">
-                                    <div class="form-section horizontal">
-                                        <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
-                                            <input type="text" name="fields[email]" class="newsletter-input form-control" placeholder="Email*" value="" id="eMail">
-                                        </div>
-                                    </div>
-                                    <div class="form-section horizontal button">
-                                        <button type="submit" class="primary btn-sign-up" id="sign-up">
-                                            Sign up
-                                        </button>
-                                        <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
-                                            <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
-                                        </button>
-                                    </div>
-                                    <div class="clearfix" style="clear: both;"></div>
-                                    <input type="hidden" name="ml-submit" value="1" />
-                                </div>
-                            </form>
-                            <script>
-                                function ml_webform_success_3873850() {
-                                    jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
-                                    jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
-                                };
-                            </script>
-                        </div>
-                    </div>      
+                        <img class="logo-img" src="./img/acebusters_logo_landing_page.svg" alt="Acebusters Logo">
+                        <h3>Play Poker on Ethereum</h3>
+                    </div>
+                    <div style="text-align:center;margin-top:-5em;">
+                        <p>
+                            <a class="primary btn-cta" href="https://discord.gg/7PesDTZ" target="_blank">Join Beta!</a> 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -253,6 +214,56 @@ newsletter_sign_up: Thank you! Please check your e-mail to confirm your subscrip
                             <li><a target="_blank" href="https://www.linkedin.com/in/johannbarbie/"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact section --> 
+        <a name="contact"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="newslettet-section">
+                        <h3 class="section-heading team-heading">Sign up for our newsletter !</h2>
+                        <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850">
+                            <div class="ml-vertical-align-center">
+                                <div class="subscribe-form ml-block-success" style="display:none;">
+                                    <div class="form-section mb0">
+                                        <div style="text-align:center;padding: 20px; font-size:4em; color: #FFF">
+                                            <i class="fa fa-check fa-4" style="text-align:center;"></i>
+                                            <p> {{ page.newsletter_sign_up }}  </p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST" target="_blank">
+                                    <div class="subscribe-form horizontal">
+                                        <div class="form-section horizontal">
+                                            <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
+                                                <input type="text" name="fields[email]" class="newsletter-input form-control" placeholder="Email*" value="" id="eMail">
+                                            </div>
+                                        </div>
+                                        <div class="form-section horizontal button">
+                                            <button type="submit" class="primary btn-sign-up" id="sign-up">
+                                                Sign up
+                                            </button>
+                                            <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
+                                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
+                                            </button>
+                                        </div>
+                                        <div class="clearfix" style="clear: both;"></div>
+                                        <input type="hidden" name="ml-submit" value="1" />
+                                    </div>
+                                </form>
+                                <script>
+                                    function ml_webform_success_3873850() {
+                                        jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
+                                        jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
+                                    };
+                                </script>
+                            </div>
+                        </div>      
                     </div>
                 </div>
             </div>
