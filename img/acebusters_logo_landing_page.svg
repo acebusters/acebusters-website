@@ -20,7 +20,7 @@
    sodipodi:docname="acebusters_logo_landing_page.svg"><metadata
      id="metadata149"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs147" /><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -33,15 +33,17 @@
      inkscape:window-width="1280"
      inkscape:window-height="751"
      id="namedview145"
-     showgrid="false"
-     inkscape:zoom="0.43457604"
-     inkscape:cx="129.68437"
-     inkscape:cy="431.6572"
+     showgrid="true"
+     inkscape:zoom="2.4583333"
+     inkscape:cx="511.99947"
+     inkscape:cy="630.57365"
      inkscape:window-x="0"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
      inkscape:current-layer="Ebene_1"
-     inkscape:snap-bbox="true" /><style
+     inkscape:snap-bbox="true"><inkscape:grid
+       type="xygrid"
+       id="grid7690" /></sodipodi:namedview><style
      type="text/css"
      id="style3">
 	.st0{fill:#252838;}
@@ -333,10 +335,11 @@
        inkscape:connector-curvature="0"
        style="fill:#ffffff" /></g><path
      class="st1"
-     d="m 518.70508,134.42881 -6.3,0 c -1.4,0 -2.6,-1.2 -2.6,-2.6 l 0,-6.3 c 0,-1.4 1.2,-2.6 2.6,-2.6 l 6.3,0 c 1.4,0 2.6,1.2 2.6,2.6 l 0,6.3 c 0,1.4 -1.1,2.6 -2.6,2.6 z"
+     d="m 528.98051,132.80169 -6.3,0 c -1.4,0 -2.6,-1.2 -2.6,-2.6 l 0,-6.3 c 0,-1.4 1.2,-2.6 2.6,-2.6 l 6.3,0 c 1.4,0 2.6,1.2 2.6,2.6 l 0,6.3 c 0,1.4 -1.1,2.6 -2.6,2.6 z"
      id="path121"
      inkscape:connector-curvature="0"
-     style="fill:#ff5c5c" /><g
+     style="fill:#ff5c5c"
+     inkscape:transform-center-x="7.322034" /><g
      id="g123"
      transform="translate(32.95,-16.271186)"><path
        class="st1"
