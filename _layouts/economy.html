@@ -15,7 +15,7 @@ layout: default
                     <li role="presentation" class="active"><a href="#alice" aria-controls="home" role="tab" data-toggle="tab">Alice</a></li>
                     <li role="presentation"><a href="#bob" aria-controls="profile" role="tab" data-toggle="tab">Bob</a></li>
                     <li role="presentation"><a href="#charlie" aria-controls="profile" role="tab" data-toggle="tab">Charlie</a></li>
-                    <li role="presentation"><a href="#eparams" aria-controls="profile" role="tab" data-toggle="tab">Foundation</a></li>
+                    <li role="presentation"><a href="#eparams" aria-controls="profile" role="tab" data-toggle="tab">Governing Council</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -169,20 +169,20 @@ layout: default
                     </div>
                     <div role="tabpanel" class="tab-pane" id="eparams">
                         <div class="form-group">
-                            <label for="ceilingPrice">Ceiling Price (x NTZ / 1 ETH)</label>
+                            <label for="ceilingPrice">Purchase Price (x NTZ / 1 ETH)</label>
                             <input type="number" class="form-control" id="ceilingPrice" v-model="ceilingPrice">
                         </div>
-                        <button class="btn btn-primary" id="set-ceiling" @click="setCeiling(ceilingPrice)">Set Ceiling Price</button>
+                        <button class="btn btn-primary" id="set-ceiling" @click="setCeiling(ceilingPrice)">Set Purchase Price</button>
                         <div class="form-group">
-                            <label for="floorPrice">Floor Price (1 ETH / y NTZ)</label>
+                            <label for="floorPrice">Sell Price (1 ETH / y NTZ)</label>
                             <input type="number" class="form-control" id="floorPrice" v-model="floorPrice">
                         </div>
-                        <button class="btn btn-primary" id="set-floor" @click="setFloor(floorPrice)">Set Floor Price</button>
+                        <button class="btn btn-primary" id="set-floor" @click="setFloor(floorPrice)">Set Sell Price</button>
                         <div class="form-group">
-                            <label for="burn">Burn NTZ</label>
+                            <label for="burn">Burn NTZ / dilute ABP</label>
                             <input type="number" class="form-control" id="burn" value="0"  v-model="burn">
                         </div>
-                        <button class="btn btn-primary" id="set-floor" @click="burnNtz(burn)">Burn</button>
+                        <button class="btn btn-primary" id="set-floor" @click="burnNtz(burn)">Burn / Dilute</button>
                         <div class="form-group">
                             <label for="allocate">Allocate Funds (ETH)</label>
                             <input type="number" class="form-control" id="allocate" v-model="allocate">
@@ -222,15 +222,15 @@ layout: default
                 <div class="well">
                     <h3>Power Contract</h3>
                     <div class="form-group">
-                        <label for="authorized-power">Authorized Shares (ABP)</label>
+                        <label for="authorized-power">Authorized Power (ABP)</label>
                         <input type="number" class="form-control" id="authorized-power" v-model="authorizedPower" disabled>
                     </div>
                     <div class="form-group">
-                        <label for="issued-power">Issued Shares (ABP)</label>
+                        <label for="issued-power">Issued Power (ABP)</label>
                         <input type="number" class="form-control" id="issued-power" v-model="issuedAbp" disabled>
                     </div>
                     <div class="form-group">
-                        <label for="outstanding-power">Outstanding Shares (ABP)</label>
+                        <label for="outstanding-power">Outstanding Power (ABP)</label>
                         <input type="number" class="form-control" id="outstanding-power" v-model="outstandingPower" disabled>
                     </div>
                 </div>

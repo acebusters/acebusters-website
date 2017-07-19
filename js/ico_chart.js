@@ -60,11 +60,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
         return this.authorizedPower / 2;
       },
       outstandingPower: function() {
-        return this.alice.abp + this.bob.abp + + this.charlie.abp;
+        return this.alice.abp + this.bob.abp + this.charlie.abp;
       },
       dataNtzPie: function() {
         return { 
-          labels: ['Alice\'s NTZ', 'Bob\'s NTZ', 'Charlie\'s NTZ', 'Power Pool'],
+          labels: ['Active Supply', 'Power Pool', 'Burn Pool'],
           datasets: [{
             label: 'NTZ Distribution',
             backgroundColor: [
@@ -77,13 +77,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
               'rgba(54, 162, 235, 1)',
               'rgba(255, 206, 86, 1)',
             ],
-            data: [this.alice.ntz, this.bob.ntz, this.charlie.ntz, this.powerPool]
+            data: [this.activeSupply, this.powerPool, this.burnPool]
           }]
         }
       },
       dataPowerPie: function() {
         return { 
-          labels: ['Alice\'s ABP', 'Bob\'s ABP', 'Charlie\'s ABP', 'Gaia Shares'],
+          labels: ['Alice\'s ABP', 'Bob\'s ABP', 'Charlie\'s ABP', 'Issued ABP'],
           datasets: [{
             label: 'Data Power',
             backgroundColor: [
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
               'rgba(54, 162, 235, 1)',
               'rgba(255, 206, 86, 1)',
             ],
-            data: [this.alice.abp, this.bob.abp, this.charlie.abp, this.authorizedPower - this.outstandingPower]
+            data: [this.alice.abp, this.bob.abp, this.charlie.abp, this.issuedAbp - this.outstandingPower]
           }]
         }
       },
