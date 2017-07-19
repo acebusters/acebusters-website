@@ -1,23 +1,18 @@
 ---
 layout: glossary
 ---
+
+#### Nuts (NTZ) ####
+
+The currency of our economy. You will buy Nuts (NTZ) from the Safe Token contract during our ICO. You will also use Nuts to play at the tables. 
     
 #### Acebuster Power Token (ABP) ####
 
 Represents a percentage of voting rights in our economy. You can convert Nuts to ABP and back. ABP’s are not transferable. Interested parties participating  in the token event will have the prerogative to convert their Nuts into Power before everyone else.
 
-#### Nuts (NTZ) ####
-
-The currency of our economy. You will buy Nuts (NTZ) from the Safe Token contract during our ICO. You will also use Nuts to play at the tables. 
-
-
 #### Token Event ####
 
 The period(s) in which we give out our Token (NTZ)
-
-####  Power Pool  #### 
-
- Nuts currently deposited bound in ABP’s.
 
 #### Active Supply ####
 
@@ -27,11 +22,15 @@ Nuts currently in circulation.
 
 Total amount of NTZ. Sum of the active supply and the power pool.
 
+####  Power Pool  #### 
+
+ Nuts currently deposited bound in ABP’s.
+
 #### Max Power #### 
 
 Not all NTZ can be converted to power as there would be no nuts to play with. Max Power represents a percentage of the total supply that can be converted to power. Currently fixed at 50%. 
 
-#### <a name="pookie"></a> Power Up #### 
+#### Power Up #### 
 
 Converting Nuts to Power. This happens instantly.
 
