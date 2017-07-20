@@ -87,6 +87,11 @@ a:active {
     background: url('../img/bg-pattern.png'), linear-gradient(to left,#C85C5C,#252838);
 }
 
+#partners {
+    background-repeat: repeat;
+    background: url('../img/bg-pattern.png'), linear-gradient(to left,#C85C5C,#252838);
+}
+
 #team h4 {
     color: #080B0F;
 }
@@ -176,6 +181,7 @@ a:active {
     border-top-right-radius: 25px !important;
     border-bottom-left-radius: 0px !important;
     border-top-left-radius: 0px !important;
+    color: #FFF;
 }
 
 .btn-sign-up:hover {
@@ -503,6 +509,10 @@ footer {
     color: #FFF;
 }
 
+.partner-item > a:hover {
+    color: #FFF;
+}
+
 .footer-item > a:active {
     color: #FFF !important;
 }
@@ -605,13 +615,13 @@ a.btn.send-btn:hover{
 
 .team-partner {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 65px;
+  margin-top: 65px;
 }
 
 .team-partner img {
   margin: 0 auto;
   max-width: 300px;
-  min-height: 100px;
   margin-bottom: 15px;
 }
 
