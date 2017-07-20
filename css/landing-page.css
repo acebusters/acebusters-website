@@ -181,7 +181,7 @@ a:active {
     border-top-right-radius: 25px !important;
     border-bottom-left-radius: 0px !important;
     border-top-left-radius: 0px !important;
-    color: #FFF;
+    color: #FFF;    
 }
 
 .btn-sign-up:hover {
@@ -621,7 +621,7 @@ a.btn.send-btn:hover{
 
 .team-partner img {
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 275px;
   margin-bottom: 15px;
 }
 
