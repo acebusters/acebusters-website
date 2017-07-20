@@ -475,6 +475,22 @@ footer {
     padding-right: 1em !important;
 }
 
+@media(max-width: 1000px) {
+    .footer-item {
+        font-size: 5em;
+        padding-left: 0.5em !important;
+        padding-right: 0.5em !important;
+    }
+}
+
+@media(max-width: 580px) {
+    .footer-item {
+        font-size: 2.5em;
+        padding-left: 0.5em !important;
+        padding-right: 0.5em !important;
+    }
+}
+
 .footer-item > a:link {
     color: #FD5E60;
 }
@@ -583,8 +599,28 @@ a.btn.send-btn:hover{
 
 .team-member img {
   margin: 0 auto;
-  max-width: 239px;
+  max-width: 200px;
   border: 7px solid white;
+}
+
+.team-partner {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team-partner img {
+  margin: 0 auto;
+  max-width: 300px;
+  min-height: 100px;
+  margin-bottom: 15px;
+}
+
+@media(max-width: 1100px) {
+    .team-member img {
+        margin: 0 auto;
+        max-width: 150px;
+        border: 7px solid white;
+    }
 }
 
 .fixed-margin {
