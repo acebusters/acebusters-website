@@ -14,6 +14,11 @@ html {
     z-index: 10000;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body,
 h1,
 h2,
@@ -195,25 +200,38 @@ a:active {
     border-radius: 25px;
     background-color: #FD5E60 !important;
     color: #FFF !important;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 700;
 }
 
-.btn-cta:hover {
+.btn-download {
+    border: none;
+    padding: 1% 2% 1% 2%;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #FD5E60 !important;
+    color: #FFF !important;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.btn:hover {
     background-color: #C85C5C !important;
     color: white !important;
     cursor: pointer;
 }
 
-.btn-cta:visted {
+.btn:visted {
     background-color: #C85C5C !important;
     color: white !important;
 }
 
-.btn-cta:active {
+.btn:active {
     background-color: #C85C5C !important;
     color: white !important;
 }
 
-.btn-cta:link {
+.btn:link {
     background-color: #C85C5C !important;
     color: white !important;
 }
@@ -1193,4 +1211,90 @@ Main components
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;
   }
+}
+/* timer stuff */
+
+.vue-countdown  {
+    color: #FFF;
+}
+
+.vue-countdown > li {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+}
+
+.headline-dark-bg {
+    color: #FFF;
+}
+
+.digit {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.ico-box {
+    background: #000000;
+    border-radius: 5px;
+    padding: 3em;
+    margin-top: 1em;
+    text-align: center;
+    min-height: 10em;
+}
+
+.ico-progress {
+    padding: 3em;
+}
+
+.progress-label {
+    height: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.funding-milestone-1 {
+    color: #FFF;
+    position: absolute;
+    min-width: 4em;
+    left: 0;
+}
+
+.funding-milestone-2 {
+    color: #FFF;
+    position: absolute;
+    min-width: 4em;
+    left: 70%;
+}
+
+.funding-milestone-3 {
+    color: #FFF;
+    position: absolute;
+    min-width: 4em;
+    right: 0%;
+}
+
+.progress-headline {
+    color: #FFF;
+}
+
+.total-value {
+    color: #FD5E60;
+}
+
+.power-event-descr {
+    color: #FFF;
+}
+
+.ico-content {
+    color: #FFF;
+    text-align: left;
+    padding: 3em;
+}
+
+.instuctions  {
+    list-style: none;
 }
