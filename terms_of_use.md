@@ -2,11 +2,8 @@
 layout: terms
 ---
 
-# Acebusters Terms of Use 
-
-## Terms of Use ("Terms") 
-
-### Last updated July 26, 2017
+# Acebusters Terms of Use
+(Last updated July 26, 2017)
 
 Welcome to the Acebusters website (the "Acebusters Site"). The Cyfin Technologies OU ("Cyfin Technologies") provides the Acebusters Site to you subject to the following terms of use ("Site Terms"). The Acebusters Site is offered to you conditioned on your acceptance without modification of the terms, conditions, and notices contained herein (the "Terms"). Your use of the Acebusters Site constitutes your agreement to all such Terms. Please read these terms carefully, and keep a copy of them for your reference. 
 
