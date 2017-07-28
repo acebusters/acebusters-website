@@ -1283,8 +1283,12 @@ Main components
     color: #FFF;
 }
 
-.total-value {
+.event-param {
     color: #FD5E60;
+}
+
+.event-param:hover {
+    cursor: help;
 }
 
 .power-event-descr {

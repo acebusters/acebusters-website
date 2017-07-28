@@ -134,12 +134,15 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     Vue.component('loading-bar', {
         template: `
-            <div>
-                <p class="total-value"> Hardcap : {{ store.hardCap }} </p>
-                <p class="total-value"> Softcap : {{ softCap }} </p>
-                <p class="total-value"> min Duration : {{ minDuration }} Days </p>
-                <p class="total-value"> max Duration: {{ maxDuration }} Days </p>
-                <p class="total-value"> raised: {{ amountRaised.toFixed(2) }} ETH </p>
+            <div style="padding: 5%;">
+                <div style="margin-bottom: 5%;">
+                    <p class="event-param" data-toggle="tooltip" :title="hardCapInfo"> Hardcap : {{ store.hardCap }} </p>
+                    <p class="event-param" data-toggle="tooltip" :title="softCapInfo"> Softcap : {{ softCap }} </p>
+                    <p class="event-param" data-toggle="tooltip" :title="minDuInfo"> min Duration : {{ minDuration }} Days </p>
+                    <p class="event-param" data-toggle="tooltip" :title="maxDuInfo"> max Duration: {{ maxDuration }} Days </p>
+                    <p class="event-param" data-toggle="tooltip" :title="aRaisedInfo"> raised: {{ amountRaised.toFixed(2) }} ETH </p>
+                </div>
+                
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="percent" aria-valuemin="0" aria-valuemax="100" v-bind:style="{ width: percent + '%' }">
                         <span class="sr-only">60% Complete</span>
@@ -183,6 +186,18 @@ document.addEventListener("DOMContentLoaded", function(e) {
             minDuration: function() {
                 return parseFloat(store.minDuration / 60 / 60 / 24);
             },
+            minDuInfo: function() {
+                return "The Event will be open for at least this time period";
+            },
+            softCapInfo: function() {
+                return "The Event will need to raise at least this amount";
+            },
+            maxDuInfo: function() {
+                return "The Event will be over after this time period";
+            },
+            aRaisedInfo: function() {
+                return "The amount in Ether that has been raised so far";
+            },
         },
         data() {
             return {
@@ -190,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 maxValue: 0, 
                 amountRaised: 0,
                 softCap: 0,
+                hardCapInfo: "The maximum amount of Ether that can be raised during this event",
             }
         },
     });
@@ -197,5 +213,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
     var timer = new Vue({
         delimiters:['<%', '%>'],
         el: '#ico-app',
+    });
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
     });
 });
