@@ -139,9 +139,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 <p class="total-value"> Softcap : {{ softCap }} </p>
                 <p class="total-value"> min Duration : {{ minDuration }} Days </p>
                 <p class="total-value"> max Duration: {{ maxDuration }} Days </p>
-                <p class="total-value"> raised: {{ amountRaised }} ETH </p>
+                <p class="total-value"> raised: {{ amountRaised.toFixed(2) }} ETH </p>
                 <div class="progress">
-                    {{percent}}
                     <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="percent" aria-valuemin="0" aria-valuemax="100" v-bind:style="{ width: percent + '%' }">
                         <span class="sr-only">60% Complete</span>
                     </div>
@@ -150,9 +149,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
                     <span class="funding-milestone-1"> 
                         0 ETH
                     </span>
-                    <div class="funding-milestone-2" v-if="store.hasStarted" v-bind:style="{ left: percent + '%' }"> 
-                        {{ amountRaised }} ETH
-                    </div>
                     <div class="funding-milestone-3"> 
                         {{ maxValue }} ETH
                     </div>
@@ -173,8 +169,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 store.softCap = parseFloat(web3.fromWei(values[3].toNumber()));
                 this.softCap = store.softCap;
                 store.reserve = web3.fromWei(values[1].toNumber());
-                store.initialReserve = values[2].toNumber();
-                this.amountRaised = parseFloat(store.reserve - store.initialReserve).toFixed(2);
+                store.initialReserve = web3.fromWei(values[2].toNumber());
+                this.amountRaised = store.reserve - store.initialReserve;
             });
         },
         computed: {
