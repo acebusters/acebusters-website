@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 <p class="total-value"> Softcap : {{ softCap }} </p>
                 <p class="total-value"> min Duration : {{ minDuration }} Days </p>
                 <p class="total-value"> max Duration: {{ maxDuration }} Days </p>
-                <p class="total-value"> raised: {{ amountRaised }} </p>
+                <p class="total-value"> raised: {{ amountRaised }} ETH </p>
                 <div class="progress">
                     {{percent}}
                     <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="percent" aria-valuemin="0" aria-valuemax="100" v-bind:style="{ width: percent + '%' }">
