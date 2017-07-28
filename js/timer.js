@@ -1,5 +1,5 @@
 /**
- * Show Chart of acebusters economy
+ * Show Data of Acebusters Economy
  */
 
 
@@ -51,7 +51,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
         data() {
             return {
                 now: Math.trunc((new Date()).getTime() / 1000),
+                icoStart: null,
+                icoEnd: null,
                 date: null,
+                anouncement: "",
             }
         },
         mounted() {
