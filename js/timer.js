@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         data() {
             return {
                 now: Math.trunc((new Date()).getTime() / 1000),
-                date: 1504915200,
+                date: null,
                 status: "",
                 state: null,
                 anouncement: "",
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 store.startTime = values[0].toNumber();
                 store.maxDuration = values[1].toNumber();
                 store.minDuration = values[2].toNumber();
-                this.state = 1;
+                this.state = values[3].toNumber();
                 this.status = store.stateStrings[this.state];
                 
 
