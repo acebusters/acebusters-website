@@ -2,22 +2,31 @@
 layout: default
 ---
 <script src="js/web3.js"></script>
+
 <script src="js/vue.min.js"></script>
+<script src="https://unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js"></script>
 <script src="js/timer.js"></script>
 
 <div class="intro-header" id="ico-app">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="ico-box center">
+                <div class="ico-box center ico-header">
                     <h2 class="headline-dark-bg">Acebusters Power Event #1</h2>
                     <p class="power-event-descr">
-                        lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        Acebusters is a decentralized poker platform, running on the Ethereum blockchain. 
+                        We are thriving to make online poker more secure by building a community that has full
+                        control over the platform itself. 
+                        We have created our own Token NTZ which you can purchase for ether during our upcoming power event.
+                        Nutz can be used to play at the tables and act as a tool of value transfer. After the Power Event, particpants can
+                        convert their Nutz to Power. Power gives you the opportunity to activly take part in the community by voting on
+                        future policies which are proposed by a governing council. If you want to know more about the structure of the event,
+                        please read this <a href="files/The Acebusters Economy.pdf">paper</a>.
                     </p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="ico-box center">
+                <div class="ico-box center ico-header">
                     <div>
                         <timer />
                     </div>
@@ -29,6 +38,24 @@ layout: default
                 <div class="ico-box">
                     <h2 class="headline-dark-bg center">Power Event Paramters</h2>
                     <loading-bar></loading-bar>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="ico-box center">
+                    <h2 class="headline-dark-bg">Soft Cap</h2>
+                    <div class="ico-content">       
+                        <soft-pie />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="ico-box center">
+                    <h2 class="headline-dark-bg">Hard Cap</h2>
+                    <div class="ico-content">       
+                        <soft-pie />
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,47 +100,40 @@ layout: default
                 <div class="ico-box center">
                     <h2 class="headline-dark-bg">Event FAQ</h2>
                     <div class="ico-content">
-                        <h2 role="button" data-toggle="collapse" href="#faq1" aria-expanded="false" aria-controls="faq1" class="faq-header">What are the benefits over a traditional poker platform?</h2>
+                        <h2 role="button" data-toggle="collapse" href="#faq1" aria-expanded="false" aria-controls="faq1" class="faq-header">Why should I invest?</h2>
                         <div class="collapse" id="faq1">
                             <p class="lead">
-                                Users control their bankroll using a wallet on the Ethereum blockchain. Smart contracts secure the stakes at the tables. Therefore no counterparty risk exists and events comparable to "Black Friday" become impossible.
+                                Over the past year we have invested heavily in our product and build a fully functioning prototype that leverages
+                                smart contracts to manage player funds. We have build a technology called multi party state channels. You can read the paper here.
+                                
+                                Furthermore, poker is an obvious application for Ethereum. The market, because it was hit by scams and scandles, offers a huge opportunity 
+                                to actually apply blockchain technology to fix a broken system. 
+                                Add to that an ethusiastic team of innvotors from both the blockchain and the poker world, who really want to make this happen, come and join us! 
                             </p>
                         </div>
 
-                        <h2 role="button" data-toggle="collapse" href="#faq2" aria-expanded="false" aria-controls="faq2" class="faq-header">How much is the rake?</h2>
+                        <h2 role="button" data-toggle="collapse" href="#faq2" aria-expanded="false" aria-controls="faq2" class="faq-header">What are Nutz?</h2>
                         <div class="collapse" id="faq2">
                             <p class="lead">
-                                The exact amount of the rake will be determined during the beta phase. The rake will be used exclusively to cover blockchain transaction fees. The remaining amount will be redistributed instantly to the affiliates. Hence the rake will be much lower than on any traditional platform.
+                                Nutz is a token we created which acts as a medium of exchange. Nutz are used to play at the tables.
                             </p>
                         </div>
 
-                        <h2 role="button" data-toggle="collapse" href="#faq3" aria-expanded="false" aria-controls="faq3" class="faq-header">Who can be an affiliate?</h2>
+                        <h2 role="button" data-toggle="collapse" href="#faq3" aria-expanded="false" aria-controls="faq3" class="faq-header">What is Power?</h2>
                         <div class="collapse" id="faq3">
                             <p class="lead">
-                                Anyone can be an affiliate. Once signed up, you will get a referral code which can be used to refer friends and peers. The referrer will earn the lion's share of the referee's rake.
+                                Nutz can be converted to power. Power represents your share of voting rights in the economy. 
                             </p>
                         </div>
 
-                        <h2 role="button" data-toggle="collapse" href="#faq5" aria-expanded="false" aria-controls="faq5" class="faq-header">What is Mental Poker?</h2>
+                        <h2 role="button" data-toggle="collapse" href="#faq5" aria-expanded="false" aria-controls="faq5" class="faq-header">What do you need the money for?</h2>
                         <div class="collapse" id="faq5">
                             <p class="lead">
-                                The Mental Poker Protocol is a technology which allows players in a peer-to-peer network a guaranteed fairly shuffled game as well as the certainty that no one can peek at your cards. Remember the UltimateBet super user scandal? This is a thing of the past. 
-                            </p>
-                        </div>
-
-                        <h2 role="button" data-toggle="collapse" href="#faq6" aria-expanded="false" aria-controls="faq6" class="faq-header">What are the next steps?</h2>
-                        <div class="collapse" id="faq6">
-                            <p class="lead">
-                                We have developed a prototype to showcase that our vision is technically feasible today. We are using payment channels for the real-time interactions at the table. Our next goal is the <a href="https://en.wikipedia.org/wiki/Mental_poker">Mental Poker</a> protocol implementation as well as different game types like SNGS, MTT, Pot Limit Omaha etc.
-                                <br>
-                                For next steps please also take a look at our <a href="/#timeline">timeline</a>.
-                            </p>
-                        </div>
-
-                        <h2 role="button" data-toggle="collapse" href="#faq9" aria-expanded="false" aria-controls="faq9" class="faq-header">I am intrigued. What do I do now with all my excitement?</h2>
-                        <div class="collapse" id="faq9">
-                            <p class="lead">
-                                Please sign up for our newsletter so you won’t miss any important announcement. Also please join our community on <a href="https://discord.gg/7PesDTZ">Discord</a>. It's totally free and you can ask us anything you want and you will also be updated on all the important topics regarding this venture! 
+                                Our main focus will be to build a mental poker protocol which is feasable in the real world. This will be our main focus. We do realize that we need 
+                                a big marketing budget in order to compete in this market. What is more valueable as a first step though, is building a tech that actually supports our claim
+                                and brings real improvements and incentives for players to switch to our platform. Thats why as a first step most of budget will go into the development of 
+                                our mental poker protocol. A p2p protocol that elimates the dealer counterparty. Our system is designed to potentially raise multiple rounds, with different focus
+                                for the distribution. 
                             </p>
                         </div>
                     </div>

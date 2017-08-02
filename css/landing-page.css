@@ -1291,6 +1291,10 @@ Main components
     cursor: help;
 }
 
+.ico-header {
+    min-height: 360px;
+}
+
 .power-event-descr {
     color: #FFF;
 }

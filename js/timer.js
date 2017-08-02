@@ -85,14 +85,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
         },
         mounted() {        
             // initialize date
-            this.date = 1504915200;
+            this.date = Math.trunc((new Date()).getTime() / 1000);
             
             var p1 = store.fromContract(event, 'startTime');
             var p2 = store.fromContract(event, 'maxDuration');
             var p3 = store.fromContract(event, 'minDuration');
             var p4 = store.fromContract(event, 'state');
-            
-
 
             Promise.all([p1, p2, p3, p4]).then(values => { 
                 store.startTime = values[0].toNumber();
@@ -100,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 store.minDuration = values[2].toNumber();
                 this.state = values[3].toNumber();
                 this.status = store.stateStrings[this.state];
-                
 
                 // check if ICO is over
                 if (this.state <= 1) {    
@@ -118,11 +115,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 if (store.startTime * 1000 > Date.now()) {
                     this.anouncement = "Token Event starts in ";
                     store.hasStarted = false;
-                    //this.date = Math.trunc(store.startTime);
+                    this.date = Math.trunc(store.startTime);
                 } else {
                     this.anouncement = "Token Event ends in ";
                     store.hasStarted = true;
-                    //this.date = Math.trunc(store.startTime + store.maxDuration);
+                    this.date = Math.trunc(store.startTime + store.maxDuration);
                 }
             },
         },
@@ -176,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
             var p2 = store.fromContract(token, 'reserve');
             var p3 = store.fromContract(event, 'initialReserve');
             var p4 = store.fromContract(event, 'softCap');
-
+            
             Promise.all([p1, p2, p3, p4]).then(values => { 
                 store.hardCap = parseFloat(web3.fromWei(values[0].toNumber()));
                 this.maxValue = store.hardCap;
@@ -223,12 +220,78 @@ document.addEventListener("DOMContentLoaded", function(e) {
         },
     });
 
+    Vue.component('soft-pie', {
+        extends: VueChartJs.Pie,
+        mixins: [VueChartJs.mixins.reactiveProp],
+        computed: {
+            pieData: function() {
+                return { 
+                labels: ['Active Supply', 'Power Pool', 'Burn Pool'],
+                datasets: [{
+                    label: 'NTZ Distribution',
+                    backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    ],
+                    borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    ],
+                    data: [40, 40, 20]
+                }]
+                }
+            },
+        },
+        mounted () {
+            debugger;
+            this.renderChart(this.pieData, {responsive: true, maintainAspectRatio: false})
+        }    
+    });
+
+    Vue.component('soft-pie', {
+        extends: VueChartJs.Pie,
+        mixins: [VueChartJs.mixins.reactiveProp],
+        computed: {
+            pieData: function() {
+                return { 
+                labels: ['Founders Power', 'Investors Power', 'Burn Pool'],
+                datasets: [{
+                    label: 'NTZ Distribution',
+                    backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    ],
+                    borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    ],
+                    data: [40, 40, 20]
+                }]
+                }
+            },
+        },
+        mounted () {
+            this.renderChart(this.pieData, {responsive: true, maintainAspectRatio: false})
+        }    
+    });
+
     var timer = new Vue({
         delimiters:['<%', '%>'],
         el: '#ico-app',
     });
 
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip(); 
-    });
+    // Vue.component('nutz-pie', {
+    //     extends: VueChartJs.Pie,
+    //     mixins: [VueChartJs.mixins.reactiveProp],
+    //     mounted () {
+    //         this.renderChart(this.dataPowerPie, {responsive: true, maintainAspectRatio: false})
+    //     }    
+    // });
+    
+    $('[data-toggle="tooltip"]').tooltip(); 
+    
 });
