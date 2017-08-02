@@ -226,37 +226,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         computed: {
             pieData: function() {
                 return { 
-                labels: ['Active Supply', 'Power Pool', 'Burn Pool'],
-                datasets: [{
-                    label: 'NTZ Distribution',
-                    backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    ],
-                    borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    ],
-                    data: [40, 40, 20]
-                }]
-                }
-            },
-        },
-        mounted () {
-            debugger;
-            this.renderChart(this.pieData, {responsive: true, maintainAspectRatio: false})
-        }    
-    });
-
-    Vue.component('soft-pie', {
-        extends: VueChartJs.Pie,
-        mixins: [VueChartJs.mixins.reactiveProp],
-        computed: {
-            pieData: function() {
-                return { 
-                labels: ['Founders Power', 'Investors Power', 'Burn Pool'],
+                labels: ['Founders Nutz', 'Investors Nutz', 'Burn Pool'],
                 datasets: [{
                     label: 'NTZ Distribution',
                     backgroundColor: [
