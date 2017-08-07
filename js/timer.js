@@ -49,9 +49,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
     Vue.component('timer', {
         template: `
             <div>
-                <h3 class="headline-dark-bg"> ICO Status: {{ status }} </h3>
+                <h3 class="headline-dark-bg"> Power Event Status: {{ status }} </h3>
                 <h3 class="headline-dark-bg">{{ anouncement }}</h3>
-                <ul class="vue-countdown" v-if="state <= 1 && state !== null">
+                <ul class="vue-countdown">
                     <li>
                         <p class="digit">{{ days | twoDigits }}</p>
                         <p class="text">days</p>
@@ -93,20 +93,20 @@ document.addEventListener("DOMContentLoaded", function(e) {
             var p4 = store.fromContract(event, 'state');
 
             Promise.all([p1, p2, p3, p4]).then(values => { 
-                store.startTime = values[0].toNumber();
+                store.startTime = 1504483200;
                 store.maxDuration = values[1].toNumber();
                 store.minDuration = values[2].toNumber();
                 this.state = values[3].toNumber();
                 this.status = store.stateStrings[this.state];
 
                 // check if ICO is over
-                if (this.state <= 1) {    
+                //if (this.state <= 1) {    
                     this.now = Math.trunc((new Date()).getTime() / 1000);    
                     setInterval(() => {
                         this.now = Math.trunc((new Date()).getTime() / 1000);
                         this.setTimer();
                     }, 1000);
-                }
+                //}
                 
             });
         },
@@ -220,47 +220,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
         },
     });
 
-    Vue.component('soft-pie', {
-        extends: VueChartJs.Pie,
-        mixins: [VueChartJs.mixins.reactiveProp],
-        computed: {
-            pieData: function() {
-                return { 
-                labels: ['Founders Nutz', 'Investors Nutz', 'Burn Pool'],
-                datasets: [{
-                    label: 'NTZ Distribution',
-                    backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    ],
-                    borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    ],
-                    data: [40, 40, 20]
-                }]
-                }
-            },
-        },
-        mounted () {
-            this.renderChart(this.pieData, {responsive: true, maintainAspectRatio: false})
-        }    
-    });
-
     var timer = new Vue({
         delimiters:['<%', '%>'],
         el: '#ico-app',
     });
-
-    // Vue.component('nutz-pie', {
-    //     extends: VueChartJs.Pie,
-    //     mixins: [VueChartJs.mixins.reactiveProp],
-    //     mounted () {
-    //         this.renderChart(this.dataPowerPie, {responsive: true, maintainAspectRatio: false})
-    //     }    
-    // });
     
     $('[data-toggle="tooltip"]').tooltip(); 
     
