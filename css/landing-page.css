@@ -4,6 +4,61 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+@font-face {
+  font-family: osb;
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: osbi;
+  src: url('../fonts/OpenSans-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: oseb;
+  src: url('../fonts/OpenSans-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: osebi;
+  src: url('../fonts/OpenSans-ExtraBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: osi;
+  src: url('../fonts/OpenSans-Italic.ttf');
+}
+
+@font-face {
+  font-family: osl;
+  src: url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: osli;
+  src: url('../fonts/OpenSans-LightItalic.ttf');
+}
+
+@font-face {
+  font-family: osr;
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: ossb;
+  src: url('../fonts/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: ossbi;
+  src: url('../fonts/OpenSans-SemiBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: st;
+  src: url('../fonts/ShareTech-Regular.ttf');
+}
+
 body,
 html {
     width: 100%;
@@ -35,7 +90,7 @@ h1 {
 }
 
 a { 
-    color: #FD5E60;
+    color: #E01E40;
     text-decoration: none !important;
 }
 
@@ -53,6 +108,24 @@ a:active {
 
 .bullet {
     margin-bottom: 5em;
+}
+
+.button-base {
+    background-color: #E01E40; /*for compatibility with older browsers*/
+    background: linear-gradient(to bottom,  #E01E40 0%,#E01E40 50%,#D00F3A 51%,#D00F3A 100%);
+    padding: 0.3em 1em 0.4em 1em;
+    border: solid #E01E40 1px;
+    font-family: st;
+    color: #FFF;
+    display: inline-block;
+    font-size: 1.5em;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+
+.button-base:hover {
+    color: #FFF;
+    cursor: pointer;
 }
 
 .button-join {
@@ -78,18 +151,27 @@ a:active {
 }
 
 .topnav {
-    font-size: 14px; 
-    background-color: #080B0F;
+    font-size: 10px; 
+    background-color: #212021;
     border: none;
 }
 
 #team {
-    color: #FFFFFF;
+    background-color: #E01E40;
+    color: #FFF;
+}
+
+#contact {
+    background-color: #212021;
+    color: #FFF;
+}
+
+.team-role {
+    font-family: st;
 }
 
 #timeline {
-    background-repeat: repeat;
-    background: url('../img/bg-pattern.png'), linear-gradient(to left,#C85C5C,#252838);
+    background-color: #212021;
 }
 
 #partners {
@@ -98,7 +180,8 @@ a:active {
 }
 
 #team h4 {
-    color: #080B0F;
+    font-family: st;
+    color: #FFF;
 }
 
 [v-cloak] {
@@ -124,6 +207,17 @@ a:active {
     }
 }
 
+.brand-link {
+    padding-top: 0.4em;
+    width: 100%;
+    height: 100%;
+}
+
+.brand-logo {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 .nav-item {
     font-weight: 400;
     color: #fff !important; 
@@ -131,11 +225,11 @@ a:active {
 
 .navbar-toggle { 
     border: none;
-    background-color: #080B0F !important;
+    background-color: #212021 !important;
 }
 
 .navbar-toggle:hover {
-    color: #FD5E60;
+    color: #E01E40;
 }
 
 .nav-item > a {
@@ -144,8 +238,8 @@ a:active {
     -webkit-box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
-    border-bottom: 2px solid #080B0F;
+    font-family: st;
+    border-bottom: 2px solid #212021;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.428571429;
@@ -153,13 +247,11 @@ a:active {
 
 .nav-item > a:hover {
     color: #efefef !important;
-    border-bottom:2px solid #FD5E60;
+    border-bottom:2px solid #E01E40;
 }
 
 .newsletter-input {
-    border-bottom-left-radius: 25px !important;
-    border-top-left-radius: 25px !important;
-    padding-left: 2em !important;
+    
 }
 
 @media(max-width: 600px) {
@@ -170,27 +262,18 @@ a:active {
 }
 
 .lead {
+    font-family: st;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 0px;
 }
 
 .sign-up {
-    padding-right: 0px !important;
-    border-bottom-left-radius: 25px !important;
-    border-top-left-radius: 25px !important;
+
 }
 
 .btn-sign-up {
-    border-bottom-right-radius: 25px !important;
-    border-top-right-radius: 25px !important;
-    border-bottom-left-radius: 0px !important;
-    border-top-left-radius: 0px !important;
     color: #FFF;    
-}
-
-.btn-sign-up:hover {
-    background-color: #C85C5C !important;
 }
 
 .btn-cta {
@@ -245,10 +328,27 @@ a:active {
 
 .intro-header {
     padding-top: 10em; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    background-repeat: repeat;
-    background: url('../img/bg-pattern.png'), linear-gradient(to left,#C85C5C,#252838);
+    background-color: #212021;
     padding-bottom: 9em;
 }
+
+.intro-buttons {
+    text-align: center;
+    margin-left: 7em;
+    margin-right: 7em;
+    padding-top: 18em;
+}
+
+@media(max-width: 1200px) {
+    .intro-buttons {
+        text-align: center;
+        margin-left: 10em;
+        margin-right: 10em;
+        padding-top: 2em;
+    }
+}
+
+
 
 .cta-discord { 
     font-size: 1.5em !important; 
@@ -344,20 +444,31 @@ a:active {
     }
 }
 
-
-.intro-message {
-    position: relative;
-}
-
-.intro-message > h1 {
-    margin: 0;
-    font-size: 5em;
-}
-
 .intro-divider {
     width: 400px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message {
+    font-family: st;
+    font-size: 4em;
+    padding: 0.5em;
+}
+
+.message-detail {
+    font-family: osr;
+    font-size: 1.5em;
+    padding: 1em 3em 1em 3em;  
+}
+
+
+
+.intro-sub-message {
+    font-family: st;
+    font-size: 1em;
+    color: #F8F8F8;
+    padding: 0 2em 2em 2em;
 }
 
 .intro-message > h3 {
@@ -400,6 +511,19 @@ a:active {
     letter-spacing: 2px;
 }
 
+.content-magenta {
+    padding: 6em;
+    color: #FFF;
+    background-color:#E01E40;
+}
+
+.content-purple {
+    padding: 6em;
+    color: #FFF;
+    text-align: center;
+    background-color:#321E36;
+}
+
 .content-section-a {
     padding: 6em;
     color:#080B0F;
@@ -420,10 +544,17 @@ a:active {
 
 .section-heading {
     margin-bottom: 30px;
+    font-family: st;
 }
 
 .terms {
     padding-bottom: 10%;
+}
+
+.main-headline {
+    color: #FFF;
+    text-align: center;
+    font-family: st;
 }
 
 .section-heading-spacer {
@@ -490,13 +621,14 @@ a:active {
 }
 
 .team-heading {
-    color: #080B0F;
+    color: #FFF;
+    font-family: st;
     text-align: center;
 }
 
 footer {
     padding: 1em 0;
-    background-color: #080B0F;
+    background-color: #212021;
 }
 
 .footer-item {
@@ -522,11 +654,11 @@ footer {
 }
 
 .footer-item > a:link {
-    color: #FD5E60;
+    color:#E01E40;
 }
 
 .footer-item > a:visited {
-    color: #FD5E60;
+    color: #E01E40;
 }
 
 .footer-item > a:hover {
@@ -684,113 +816,60 @@ a.btn.send-btn:hover{
 #mlb2-3873850 a:visited,
 #mlb2-3873850 a:focus,
 #mlb2-3873850 a:active {
-    overflow: visible;
-    position: static;
-    background: none;
-    border: none;
-    bottom: auto;
-    clear: none;
-    cursor: default;
-    float: none;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
-    text-indent: 0;
-    text-transform: none;
-    visibility: visible;
-    white-space: normal;
-    max-height: none;
-    max-width: none;
-    left: auto;
-    min-height: 0;
-    min-width: 0;
-    right: auto;
-    top: auto;
-    width: auto;
-    z-index: auto;
-    text-shadow: none;
-    box-shadow: none;
-    outline: medium none;
+    
 }
 
 #mlb2-3873850 a:hover {
-    cursor: pointer !important;
+    
 }
 
 #mlb2-3873850 h4 {
-    font-weight: normal;
+    
 }
 
 #mlb2-3873850 .subscribe-form {
-    padding: 20px;
-    border: 0px solid #ffffff !important;
-    box-sizing: border-box !important;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section {
-    margin-bottom: 20px;
-    width: 100%;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section.mb10 {
-    margin-bottom: 10px;
-    float: left;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section.mb0 {
-    color: #080B0F;
-    margin-bottom: 0px;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section h4 {
-    margin: 0px 0px 10px 0px !important;
-    padding: 0px !important;
-    color: #000000 !important;
-    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-size: 28px !important;
-    line-height: 100%;
-    text-align: left !important;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section p,
 #mlb2-3873850 .subscribe-form .form-section li {
-    line-height: 150%;
-    margin: 0px 0px 10px 0px;
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 14px !important;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section a {
-    font-size: 14px !important;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section .confirmation_checkbox {
-    line-height: 150%;
-    padding: 0px !important;
-    margin: 0px 0px 15px 0px !important;
-    color: #000000 !important;
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 12px !important;
-    font-weight: normal !important;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section .confirmation_checkbox input[type="checkbox"] {
-    margin-right: 5px !important;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section .form-group {
-    margin-bottom: 15px;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section .form-group label {
-    float: left;
-    margin-bottom: 10px;
-    width: 100%;
-    line-height: 100%;
-    font-weight: bold;
-    color: #000000 !important;
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 14px !important;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section .checkbox {
@@ -799,45 +878,23 @@ a.btn.send-btn:hover{
 }
 
 #mlb2-3873850 .subscribe-form .form-section .checkbox label {
-    color: #000000 !important;
-    font-family: 'Open Sans', sans-serif !important;
-    font-size: 14px !important;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section .checkbox input {
-    margin: 0px 5px 0px 0px;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section .checkbox input[type=checkbox] {
-    -webkit-appearance: checkbox;
+    
 }
 
 #mlb2-3873850.ml-subscribe-form .form-group .form-control {
-    width: 100%;
-    font-size: 13px;
-    padding: 10px 10px;
-    height: auto;
-    font-family: Arial;
-    border-radius: 0px;
-    border: 1px solid #cccccc !important;
-    color: #000000 !important;
-    background-color: #FFFFFF !important;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    clear: left;
+    
 }
 
 #mlb2-3873850.ml-subscribe-form button {
-    border: none !important;
-    cursor: pointer !important;
-    width: 100% !important;
-    height: 40px !important;
-    background-color: #FD5E60;
-    font-family: 'Arial', sans-serif !important;
-    font-size: 16px !important;
-    text-align: center !important;
-    padding: 0 !important;
+    
 }
 
 #mlb2-3873850.ml-subscribe-form button.gradient-on {
@@ -903,14 +960,11 @@ a.btn.send-btn:hover{
 #mlb2-3873850 .subscribe-form .form-section.horizontal {
     float: left;
     margin-bottom: 5px;
-    width: 70%;
+    width: 100%;
 }
 
 #mlb2-3873850 .subscribe-form .form-section.horizontal .form-group {
-    float: left;
-    width: 100%;
-    padding-right: 10px;
-    box-sizing: border-box;
+    
 }
 
 #mlb2-3873850 .subscribe-form .form-section.horizontal .form-group .form-control {
@@ -978,8 +1032,7 @@ Main components
   left: 25px;
   height: 100%;
   width: 4px;
-  background: #FFF;
-  border-radius: 35%;
+  background:#E01E40;
 }
 
 .cd-date {
@@ -988,7 +1041,7 @@ Main components
 }
 
 .cd-timeline-content > p {
- color: #080B0F;   
+ 
 }
 
 .animation-loop {
@@ -1049,11 +1102,11 @@ Main components
 .cd-timeline-img {
   position: absolute;
   top: 8px;
-  left: 12px;
-  width: 30px;
-  height: 30px;
+  left: 16px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #FD5E60, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px #E01E40, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .cd-timeline-img {
@@ -1062,9 +1115,9 @@ Main components
 
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
-    width: 30px;
-    height: 30px;
-    left: 50%;
+    width: 20px;
+    height: 20px;
+    left: 518px;
     margin-left: -15px;
     margin-top: 15px;
     /* Force Hardware Acceleration in WebKit */
@@ -1075,16 +1128,17 @@ Main components
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  border-radius: 0.5em;
   margin-right: 30px;
-  background-color: #FFF;
-  border: 1px solid #333C42;
+  color: #FFF;   
+  background-color: #212021;
+  border: 1px solid #FFF;
   padding: 1em;
+  font-family: st;
 }
 .cd-timeline-content .timeline-content-info {
   background: #2B343A;
   padding: 5px 10px;
-  color: #080B0F;
+  color: #FFF;
   font-size: 12px;
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.08);
   border-radius: 2px;
@@ -1116,10 +1170,10 @@ Main components
   justify-content: center;
 }
 .cd-timeline-content .content-skills li {
-  background: #40484D;
+  background: #FFF;
   display: inline-block;
   padding: 2px 10px;
-  color: #080B0F;
+  color: #FFF;
   margin: 3px 2px;
   text-align: center;
   flex-grow: 1;
@@ -1132,7 +1186,8 @@ Main components
 }
 
 .cd-timeline-content h2 {
-  color: #080B0F;
+  color: #FFF;
+  font-family: st;
   margin-top: 0;
   margin-bottom: 5px;
 }
@@ -1174,7 +1229,6 @@ Main components
 @media only screen and (min-width: 1170px) {
   .cd-timeline-content {
     color: white;
-    border-radius: 0.5em;
     margin-left: 0;
     padding: 1.6em;
     width: 36%;
@@ -1185,7 +1239,7 @@ Main components
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: #333C42;
+    border-left-color: #FFF;
   }
 
   .cd-timeline-content .cd-date {
@@ -1205,7 +1259,7 @@ Main components
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: #333C42;
+    border-right-color: #FFF;
   }
 
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
