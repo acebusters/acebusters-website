@@ -168,6 +168,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
         `,
         mounted() {
             var that = this;
+            debugger;
             // get hard cap
             var p1 = store.fromContract(event, 'hardCap');
             var p2 = store.fromContract(token, 'reserve');
