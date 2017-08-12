@@ -255,13 +255,6 @@ a:active {
     
 }
 
-@media(max-width: 600px) {
-    .newsletter-input {
-        border-bottom-right-radius: 25px !important;
-        border-top-right-radius: 25px !important;
-    }
-}
-
 .lead {
     font-family: st;
     font-size: 18px;
@@ -630,17 +623,21 @@ a:active {
 footer {
     padding: 1em 0;
     background-color: #212021;
+    border-top: 2px solid #FFF;
 }
 
 .footer-item {
-    font-size: 5em;
-    padding-left: 1em !important;
-    padding-right: 1em !important;
+    font-size: 4em;
+    max-width: 1.5em;
+    min-width: 1.5em;
+    max-height: 1.5em;
+    background-color: #FFF;
+    border-radius: 5%;
 }
 
 @media(max-width: 1000px) {
     .footer-item {
-        font-size: 5em;
+        font-size: 4em;
         padding-left: 0.5em !important;
         padding-right: 0.5em !important;
     }
@@ -648,7 +645,7 @@ footer {
 
 @media(max-width: 580px) {
     .footer-item {
-        font-size: 2.5em;
+        font-size: 4em;
         padding-left: 0.5em !important;
         padding-right: 0.5em !important;
     }
@@ -662,20 +659,9 @@ footer {
     color: #E01E40;
 }
 
-.footer-item > a:hover {
-    color: #FFF;
-}
-
-.partner-item > a:hover {
-    color: #FFF;
-}
-
-.footer-item > a:active {
-    color: #FFF !important;
-}
-
 .footer-icon-list {
     text-align: center;
+    margin-top: 3em;
 }
 
 p.copyright {
@@ -965,11 +951,13 @@ a.btn.send-btn:hover{
 }
 
 #mlb2-3873850 .subscribe-form .form-section.horizontal .form-group {
-    
+    font-family: st;
 }
 
 #mlb2-3873850 .subscribe-form .form-section.horizontal .form-group .form-control {
     height: 40px;
+    border-radius: 0;
+    border-bottom: 2px solid #FF5E5E;
 }
 
 #mlb2-3873850 .subscribe-form .form-section.horizontal.button {
