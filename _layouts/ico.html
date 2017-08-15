@@ -2,128 +2,486 @@
 layout: default
 ---
 <script src="js/web3.js"></script>
-
 <script src="js/vue.min.js"></script>
 <script src="https://unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js"></script>
 <script src="js/timer.js"></script>
 
-<div class="intro-header" id="ico-app">
-    <div class="container">
+<div >
+    <div class="intro-header">
+        <div class="container" id="ico-app">
+                <div class="row" >
+                    <div class="col-lg-12">
+                        <p class="intro-message" style="color: #E01E40;">
+                            JOIN THE FORCE FOR THE ONLINE POKER REVOLUTION.
+                        </p>
+                    </div>
+                    <div class="col-lg-7">
+                        <p class="intro-sub-message">
+                            A decentralized poker platform running on the ethereum blockchain
+                        </p>
+                        <timer />
+                    </div>
+                    <div class="col-lg-5">
+                        <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850  ico-subscribe">
+                            <div class="ml-vertical-align-center">
+                                <div class="subscribe-form ml-block-success" style="display:none;">
+                                    <div class="form-section mb0">
+                                        <div style="text-align:center;padding: 20px; font-size:4em;">
+                                            <i class="fa fa-check fa-4" style="text-align:center;"></i>
+                                            <p> {{ page.newsletter_sign_up }}  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST" target="_blank">
+                                    <div class="subscribe-form horizontal">
+                                        <div class="form-section horizontal">
+                                            <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
+                                                <input type="text" name="fields[email]" class="newsletter-input form-control" placeholder="Your Email Here" value="" id="eMail">
+                                            </div>
+                                        </div>
+                                        <div class="form-section horizontal">
+                                            <button type="submit" class="button-base" id="sign-up">
+                                                Sign up
+                                            </button>
+                                            <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
+                                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
+                                            </button>
+                                        </div>
+                                        <div class="clearfix" style="clear: both;"></div>
+                                        <input type="hidden" name="ml-submit" value="1" />
+                                    </div>
+                                </form>
+                                <script>
+                                    function ml_webform_success_3873850() {
+                                        jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
+                                        jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
+                                    };
+                                </script>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <div class="content-white">
         <div class="row">
-            <div class="col-md-6">
-                <div class="ico-box center ico-header">
-                    <h2 class="headline-dark-bg">Acebusters ICO #1</h2>
-                    <p class="power-event-descr">
-                        Acebusters is a decentralized poker platform, running on the Ethereum blockchain. 
-                        We are thriving to make online poker more secure by building a community that has full
-                        control over the platform itself. 
-                        We have created our own Token NTZ which you can purchase for ether during our upcoming ICO.
-                        Nutz can be used to play at the tables and act as a tool of value transfer. After the ICO, particpants can
-                        convert their Nutz to Power. Power gives you the opportunity to activly take part in the community by voting on
-                        future policies which are proposed by a governing council. If you want to know more about the structure of the ICO,
-                        please read this <a href="files/The Acebusters Economy.pdf">paper</a>.
+            <div class="col-lg-12 no-padding">
+                <p class="how-to-contribute">
+                    HOW TO CONTRIBUTE
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 banner-ico">
+                <p class="banner-ico-header">Hello World!</p>
+                <p class="banner-ico-text">Hello World!</p>
+            </div>
+            <div class="col-lg-4 banner-ico">
+                <p class="banner-ico-header">Hello World!</p>
+                <p class="banner-ico-text">Hello World!</p>
+            </div>
+            <div class="col-lg-4 banner-ico">
+                <p class="banner-ico-header">Hello World!</p>    
+                <p class="banner-ico-text">Hello World!</p>    
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-magenta">
+        <div class="row">
+            <div class="col-lg-6 no-padding">
+                <p class="intro-message-2">
+                    ONLINE POKER IS READY FOR A REVOLUTION.
+                </p>
+                <p class="intro-message-2">
+                    ACEBUSTERS IN A NUTSHELL.
+                </p>
+                <p class="intro-sub-message-2">
+                    Acebusters is a decentralized poker application (Dapp), 
+                    running on the Ethereum blockchain. We are thriving to make online poker more profitable and fun 
+                    again by creating a decentralized, innovative hybrid-token economy on a global scale.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-purple">
+        <div class="row">
+            <div class="col-lg-6 no-padding">
+                <div class="text-box">
+                    <p class="text-box-heading">
+                        DOUBLE YOUR POWER.
+                    </p>
+                    <p class="text-box-heading">
+                        Meet our innovative token system.
                     </p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="ico-box center ico-header">
-                    <div>
-                        <timer />
-                    </div>
+            <div class="col-lg-6 no-padding">
+                <div class="text-box">
+                    <p class="text-box-heading">
+                        WHY 2 TOKENS?
+                    </p>
+                    <p class="text-box-message">                    
+                        No one wants to win but loose due to market volatility, right? 
+                        At the same time we want players be involved in the growth of the economy. 
+                        Meet Nutz and Power.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="ico-box">
-                    <h2 class="headline-dark-bg center">ICO Paramters</h2>
-                    <loading-bar></loading-bar>
+        <div class="row text-box-row">
+            <div class="col-lg-6 no-padding">
+                <div class="text-box">
+                    <p class="text-box-heading">
+                        NUTZ (NTZ)
+                    </p>
+                    <p class="text-box-sub">
+                        Currency for games, bets and bankroll.
+                    </p>
+                    <p class="text-box-message">
+                        Meet our innovative token system.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 no-padding">
+                <div class="text-box">
+                    <p class="text-box-heading">
+                        POWER (ABP)
+                    </p>
+                    <p class="text-box-sub">
+                        Token for voting, share of DAPP
+                    </p>
+                    <p class="text-box-message">                    
+                        No one wants to win but loose due to market volatility, right? 
+                        At the same time we want players be involved in the growth of the economy. 
+                        Meet Nutz and Power.
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
+    
+    <div class="content-black">
         <div class="row">
-            <div class="col-md-12">
-                <div class="ico-box center">
-                    <div class="row">
-                        <div class="col-md-4">  
-                            <h2 class="headline-dark-bg">Event Terms</h2>
-                            <a class="primary btn btn-download" href="files/Acebusters_ICO.pdf" target="_blank">Download PDF</a> 
-                        </div>
-                        <div class="col-md-4">  
-                            <h2 class="headline-dark-bg">Economy Paper</h2>
-                            <a class="primary btn btn-download" href="files/The Acebusters Economy.pdf" target="_blank">Download PDF</a> 
-                        </div>
-                        <div class="col-md-4">  
-                            <h2 class="headline-dark-bg">Technical Paper</h2>
-                            <a class="primary btn btn-download" href="files/Acebusters_State_Channels.pdf" target="_blank">Download PDF</a> 
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-6 table-container">
+                <p class="intro-message-2">
+                    NUTZ TOKEN DETAILS
+                </p>
+                <table class="table ico-table">
+                    <tr>
+                        <td>Role of token:</td>
+                        <td>currency for games, bets, bankroll</td>
+                    </tr>
+                    <tr>
+                        <td>Token Supply:</td>
+                        <td>uncapped, backed by ETH in reserve</td>
+                    </tr>
+                    <tr>
+                        <td>Symbol:</td>
+                        <td>NTZ</td>
+                    </tr>
+                    <tr>
+                        <td>Discount in the Crowdsale:</td>
+                        <td>30,000 NTZ = 1 ETH (33%)</td>
+                    </tr> 
+                    <tr>
+                        <td>Initial Value:</td>
+                        <td>20,000 NTZ = 1 ETH</td>  
+                    </tr>
+                    <tr>
+                        <td>Blockchain:</td> 
+                        <td>Ethereum</td>   
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-6 no-padding">
+                <p class="intro-message-2 table-headliner">
+                    ENOUGH TALKING, IT’S TIME FOR NUMBERS. THE FACTS.
+                </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <div class="ico-box center">
-                    <h2 class="headline-dark-bg">Instructions</h2>
-                    <div class="ico-content">       
-                        <h2>1. Create Account</h2>
-                        <h2>2. Unblock Account</h2>
-                        <h2>3. Deposit Eth</h2>
-                        <h2>4. Purchase</h2>
-                        <h2>5. Wait till after ICO</h2>
-                        <h2>6. Power Up</h2>
-                        <h2>7. Have a warm and fuzzy feeling</h2>
-                    </div>
-                </div>
+            <div class="col-lg-6 table-container">
+                <p class="intro-message-2">
+                    POWER TOKEN DETAILS
+                </p>
+                <table class="table ico-table">
+                    <tr>
+                        <td>Role of token:</td>
+                        <td>share of Dapp, token for voting</td>
+                    </tr>
+                    <tr>
+                        <td>Token Supply:</td>
+                        <td>630.000</td>
+                    </tr>
+                    <tr>
+                        <td>Symbol:</td>
+                        <td>ABP</td>
+                    </tr>
+                    <tr>
+                        <td>Issuance in the crowdsale::</td>
+                        <td>70,000 ABP (10%) - 270,000 ABP</td>
+                    </tr> 
+                    <tr>
+                        <td>Blockchain:</td>
+                        <td>Ethereum</td>  
+                    </tr>
+                </table>
+            </div>
+            <div class="col-lg-6 no-padding">
+                <p class="intro-message-2">
+                    CROWDSALE ESSENTIALS
+                </p>
+                <table class="table ico-table">
+                    <tr>
+                        <td>Event start::</td>
+                        <td>1st Sep. 2017 @ 15:00 (UTC)</td>
+                    </tr>
+                    <tr>
+                        <td>Offering duration:</td>
+                        <td>3 days - 30 days</td>
+                    </tr>
+                    <tr>
+                        <td>Accepted currencies:</td>
+                        <td>ETH</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum goal:</td>
+                        <td>5,000 ETH</td>
+                    </tr> 
+                    <tr>
+                        <td>Maximum cap (approx.):</td>
+                        <td>30,000 ETH</td>  
+                    </tr>
+                    <tr>
+                        <td>How funds are held:</td> 
+                        <td>Multi-sig wallet held by escrow agents</td>   
+                    </tr>
+                    <tr>
+                        <td>Official Crowdsale Platform::</td> 
+                        <td>http://app.acebusters.com/</td>   
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-magenta">
+        <div class="row">
+            <div class="col-lg-5 no-padding">
+                <p class="intro-message-2">
+                    ROADMAP WITH <br>
+                    INVESTENT CLIFFS.
+                </p>
+                <p class="intro-message-2">
+                    OUR FUTURE.
+                </p>
+            </div>
+            <div class="col-lg-7">
+                <p class="">
+                    The contributions will be used for product and technical development, management, 
+                    operations, marketing, sales and PR and international expansion. 
+                    If we do not reach the minimum goal, we will return all invested funds to the investors.
+                </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <div class="ico-box center">
-                    <h2 class="headline-dark-bg">Event FAQ</h2>
-                    <div class="ico-content">
-                        <h2 role="button" data-toggle="collapse" href="#faq1" aria-expanded="false" aria-controls="faq1" class="faq-header">Why should I invest?</h2>
-                        <div class="collapse" id="faq1">
-                            <p class="lead">
-                                Over the past year we have invested heavily in our product and build a fully functioning prototype that leverages
-                                smart contracts to manage player funds. We have build a technology called multi party state channels. You can read the paper here.
-                                
-                                Furthermore, poker is an obvious application for Ethereum. The market, because it was hit by scams and scandles, offers a huge opportunity 
-                                to actually apply blockchain technology to fix a broken system. 
-                                Add to that an ethusiastic team of innvotors from both the blockchain and the poker world, who really want to make this happen, come and join us! 
-                            </p>
-                        </div>
-
-                        <h2 role="button" data-toggle="collapse" href="#faq2" aria-expanded="false" aria-controls="faq2" class="faq-header">What are Nutz?</h2>
-                        <div class="collapse" id="faq2">
-                            <p class="lead">
-                                Nutz is a token we created which acts as a medium of exchange. Nutz are used to play at the tables.
-                            </p>
-                        </div>
-
-                        <h2 role="button" data-toggle="collapse" href="#faq3" aria-expanded="false" aria-controls="faq3" class="faq-header">What is Power?</h2>
-                        <div class="collapse" id="faq3">
-                            <p class="lead">
-                                Nutz can be converted to power. Power represents your share of voting rights in the economy. 
-                            </p>
-                        </div>
-
-                        <h2 role="button" data-toggle="collapse" href="#faq5" aria-expanded="false" aria-controls="faq5" class="faq-header">What do you need the money for?</h2>
-                        <div class="collapse" id="faq5">
-                            <p class="lead">
-                                Our main focus will be to build a mental poker protocol which is feasable in the real world. This will be our main focus. We do realize that we need 
-                                a big marketing budget in order to compete in this market. What is more valueable as a first step though, is building a tech that actually supports our claim
-                                and brings real improvements and incentives for players to switch to our platform. Thats why as a first step most of budget will go into the development of 
-                                our mental poker protocol. A p2p protocol that elimates the dealer counterparty. Our system is designed to potentially raise multiple rounds, with different focus
-                                for the distribution. 
-                            </p>
-                        </div>
-                    </div>
+            <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li class="li complete">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">Abhi Sharma</span>
+                            </div>
+                            <div class="status">
+                                <p> Shift Created </p>
+                            </div>
+                        </li>
+                        <li class="li complete">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">PAM Admin</span>
+                            </div>
+                            <div class="status">
+                                <p> Email Sent </p>
+                            </div>
+                        </li>
+                        <li class="li complete">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">Aaron Rodgers</span>
+                            </div>
+                            <div class="status">
+                                <p> SIC Approval </p>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">PAM Admin</span>
+                            </div>
+                            <div class="status">
+                                <p> Shift Completed </p>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">PAM Admin</span>
+                            </div>
+                            <div class="status">
+                                <p> Shift Completed </p>
+                            </div>
+                        </li>
+                    </ul>  
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-purple">
+        <div class="row">
+            <div class="col-lg-6 no-padding">
+                <p class="intro-message-2">
+                    PROTECTING YOUR INVESTMENT.
+                </p>
+                <p class="intro-message-2">
+                    Introduction of Reserve and <br>
+                    Escrow Agents
+                </p>
+                <p class="intro-sub-message-2">
+                    Your investment is protected by our 3of4 multi-signature of escrow agents. 
+                    The raised investment will remain fully auditable in Reserve of Nutz contract After Crowdsale. 
+                    The Ether raised will be payed out in milestones one after the other as above and the first milestone will be payed out when the crowdsale ends. 
+                    So without an independent party signing, we will not be able to withdraw funds.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-black" id="distro-app">
+        <div class="row">
+            <div class="col-lg-12 no-padding">
+                <p class="intro-message-2">
+                    WHAT DO WE NEED THE MONEY FOR?
+                </p>
+                <p class="intro-message-2">
+                    How we use the first milestone
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="banner-chart" style="border-left: 20px solid #E01E40;">
+                    <p class="banner-chart-header">TECHNICAL DEVELOPMENT - 40%</p>
+                    <p class="banner-chart-text">Technical development costs of the upcoming service features, starting with the implementation of Sit and GO tournament.</p>
+                </div>
+                <div class="banner-chart" style="border-left: 20px solid #FFF;">
+                    <p class="banner-chart-header">PAYMENT OF BOUNTY EXPENSES - 20%</p>
+                    <p class="banner-chart-text">Paying back the contributors for bounties such as translation and bug discovery..</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <distro-pie />        
+            </div>
+            <div class="col-lg-4">
+                <div class="banner-chart" style="border-left: 20px solid #F8F8F8;">
+                    <p class="banner-chart-header">CROWDSALE CAMPAIGN COST - 15%</p>
+                    <p class="banner-chart-text">Cost of advertisement and PR.</p>
+                </div>
+                <div class="banner-chart" style="border-left: 20px solid #321E36;">
+                    <p class="banner-chart-header">MARKETING, SALES AND PR - 20%</p>
+                    <p class="banner-chart-text">First marketing phase, covering
+                            basic marketing operations, including advertising campaigns for user acquisition and branding.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-5 no-padding">
+                <p class="intro-message-2">
+                    IN IT FOR THE LONG RUN.
+                </p>
+                <p class="intro-message-2">
+                    Power Token Distribution
+                </p>
+                <p class="intro-sub-message-2">
+                        We only sell 10-30% of the total Power in this crowdsale, showing our commitment to the long-term success of the project. 
+                        We envision an economy controlled by its stakeholders through voting, hence requiring a high degree of smart money. 
+                        The Acebusters economy has the ability to execute further growth events in which we issue more Power (dilluting existing shares) and collect more capital to expand to new markets and build better products. We are commited to a sustainable growth path, selling power not all at once, but repeatedly, achieving the best price and finding high quality investors.
+                        We are prepared to give up our majority share when the Dapp has grown to sustainable on-chain governance by it’s stakeholders.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <distro-pie />        
+            </div>
+            <div class="col-lg-2">
+                <div class="banner-chart" style="border-left: 20px solid #E01E40;">
+                    <p class="banner-chart-text">Investors.</p>
+                </div>
+                <div class="banner-chart" style="border-left: 20px solid #F8F8F8;">
+                    <p class="banner-chart-text">
+                        Founders
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-white">
+        <div class="row">
+            <div class="col-lg-6 no-padding">
+                <p class="how-to-contribute">
+                    CRAVING FOR MORE<br>
+                    IN-DEPTHS DETAILS?
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <a class="button-base" href="files/The Acebusters Economy.pdf" target="_blank">
+                    Read Whitepaper
+                </a>
+            </div>
+            <div class="col-lg-3">
+                <a class="button-base" href="http://beta.acebusters.com" target="_blank">
+                    Join Beta
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content-purple">
+        <div class="row">
+            <div class="col-lg-6 no-padding">
+                <div class="text-box">
+                    <p class="text-box-heading">
+                        DOUBLE YOUR POWER.
+                    </p>
+                    <p class="text-box-heading">
+                        Meet our innovative token system.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="text-box">
+                    <p class="text-box-heading">
+                        DOUBLE YOUR POWER.
+                    </p>
+                    <p class="text-box-heading">
+                        Meet our innovative token system.
+                    </p>
+                    <p class="text-box-message">
+                        Meet our innovative token system.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="text-box">
+                    <p class="text-box-heading">
+                        DOUBLE YOUR POWER.
+                    </p>
+                    <p class="text-box-heading">
+                        Meet our innovative token system.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 
 

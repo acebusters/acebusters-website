@@ -22,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
         maxDuration: 0,
         minDuration: 0,
         hardCap: 0,
+        msg: "Hello Vue",
         initalReserve: 0,
         reserve: 0,
         stateStrings: ['Waiting', 'Collecting', 'Closed', 'Failed', 'Success',''],
         hasStarted: false,
         fromContract: function(contract , value) {
             return new Promise(function(resolve, reject) {
-                console.log(contract[value]);
                 contract[value].call(function(err, rsp) {
                     if (err) {
                         reject(err);
@@ -48,28 +48,27 @@ document.addEventListener("DOMContentLoaded", function(e) {
     
     Vue.component('timer', {
         template: `
-            <div>
-                <h3 class="headline-dark-bg"> Power Event Status: {{ status }} </h3>
-                <h3 class="headline-dark-bg">{{ anouncement }}</h3>
+            <div class="ico-timer">
+                <h3 class="headline-dark-bg timer timer-heading"> OUR CROWDSALE STARTS IN: </h3>
                 <ul class="vue-countdown">
                     <li>
-                        <p class="digit">{{ days | twoDigits }}</p>
-                        <p class="text">days</p>
+                        <p class="digit timer">{{ days | twoDigits }}</p>
+                        <p class="text timer">DAYS</p>
                     </li>
 
                     <li>
-                        <p class="digit">{{ hours | twoDigits }}</p>
-                        <p class="text">hours</p>
+                        <p class="digit timer">{{ hours | twoDigits }}</p>
+                        <p class="text timer">HOURS</p>
                     </li>
 
                     <li>
-                        <p class="digit">{{ minutes | twoDigits }}</p>
-                        <p class="text">Min</p>
+                        <p class="digit timer">{{ minutes | twoDigits }}</p>
+                        <p class="text timer">MIN</p>
                     </li>
 
                     <li>
-                        <p class="digit">{{ seconds | twoDigits }}</p>
-                        <p class="text">Sec</p>
+                        <p class="digit timer">{{ seconds | twoDigits }}</p>
+                        <p class="text timer">SEC</p>
                     </li>
                 </ul>
             </div>
@@ -136,94 +135,44 @@ document.addEventListener("DOMContentLoaded", function(e) {
             days() {
                 return Math.trunc((this.date - this.now) / 60 / 60 / 24)
             }
-
         }
     });
 
-    Vue.component('loading-bar', {
-        template: `
-            <div style="padding: 5%;">
-                <div style="margin-bottom: 5%;">
-                    <p class="event-param" data-toggle="tooltip" :title="hardCapInfo"> Hardcap : {{ store.hardCap }} </p>
-                    <p class="event-param" data-toggle="tooltip" :title="softCapInfo"> Softcap : {{ softCap }} </p>
-                    <p class="event-param" data-toggle="tooltip" :title="minDuInfo"> min Duration : {{ minDuration }} Days </p>
-                    <p class="event-param" data-toggle="tooltip" :title="maxDuInfo"> max Duration: {{ maxDuration }} Days </p>
-                    <p class="event-param" data-toggle="tooltip" :title="aRaisedInfo"> raised: {{ amountRaised.toFixed(2) }} ETH </p>
-                </div>
-                
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="percent" aria-valuemin="0" aria-valuemax="100" v-bind:style="{ width: percent + '%' }">
-                        <span class="sr-only">60% Complete</span>
-                    </div>
-                </div>
-                <div class="progress-label">
-                    <span class="funding-milestone-1"> 
-                        0 ETH
-                    </span>
-                    <div class="funding-milestone-3"> 
-                        {{ maxValue }} ETH
-                    </div>
-                </div>
-            </div>
-        `,
-        mounted() {
-            var that = this;
-            debugger;
-            // get hard cap
-            var p1 = store.fromContract(event, 'hardCap');
-            var p2 = store.fromContract(token, 'reserve');
-            var p3 = store.fromContract(event, 'initialReserve');
-            var p4 = store.fromContract(event, 'softCap');
-            
-            Promise.all([p1, p2, p3, p4]).then(values => { 
-                store.hardCap = parseFloat(web3.fromWei(values[0].toNumber()));
-                this.maxValue = store.hardCap;
-                store.softCap = parseFloat(web3.fromWei(values[3].toNumber()));
-                this.softCap = store.softCap;
-                store.reserve = web3.fromWei(values[1].toNumber());
-                store.initialReserve = web3.fromWei(values[2].toNumber());
-                this.amountRaised = store.reserve - store.initialReserve;
-            });
-        },
+    Vue.component('distro-pie', {
+        extends: VueChartJs.Doughnut,
+        mixins: [VueChartJs.mixins.reactiveProp],
         computed: {
-            percent: function() {
-                return ((this.amountRaised / this.maxValue) * 100).toFixed(2);
-            },
-            maxDuration: function() {
-                return parseFloat(store.maxDuration / 60 / 60 / 24);
-            },
-            minDuration: function() {
-                return parseFloat(store.minDuration / 60 / 60 / 24);
-            },
-            minDuInfo: function() {
-                return "The Event will be open for at least this time period";
-            },
-            hardCapInfo: function() {
-                return "The Event will be over after this amount has been raised";
-            },
-            softCapInfo: function() {
-                return "The Event will need to raise at least this amount";
-            },
-            maxDuInfo: function() {
-                return "The Event will be over after this time period";
-            },
-            aRaisedInfo: function() {
-                return "The amount in Ether that has been raised so far";
+            pieData: function() {
+                return { 
+                datasets: [{
+                    label: 'NTZ Distribution',
+                    backgroundColor: [
+                    
+                    ],
+                    borderColor: [
+                        '#E01E40',
+                        '#F8F8F8',
+                        '#321E36',
+                        '#FFFFFF'
+                    ],
+                    data: [40, 40, 20, 20]
+                }]
+                }
             },
         },
-        data() {
-            return {
-                store,
-                maxValue: 0, 
-                amountRaised: 0,
-                softCap: 0,
-            }
-        },
+        mounted () {
+            this.renderChart(this.pieData, {responsive: true, maintainAspectRatio: false})
+        }    
     });
 
-    var timer = new Vue({
+    var app = new Vue({
         delimiters:['<%', '%>'],
         el: '#ico-app',
+    });
+
+    var app2 = new Vue({
+        delimiters:['<%', '%>'],
+        el: '#distro-app',
     });
     
     $('[data-toggle="tooltip"]').tooltip(); 
