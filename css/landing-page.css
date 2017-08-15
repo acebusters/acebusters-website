@@ -126,6 +126,11 @@ a:active {
     font-size: 1.5em;
     width: 100%;
     margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.ico-cta {
+    margin-top: 50px;
 }
 
 .button-base:hover {
@@ -193,8 +198,9 @@ a:active {
   display:none;
 }
 
-.faq-header:hover {
-    color: #FD5E60;
+.faq-question {
+    font-size: 1.5em;
+    font-family: st;
 }
 
 .canvas-box {
@@ -582,6 +588,8 @@ a:active {
 
 .banner-ico-text {
     padding-left: 30px;
+    padding-right: 30px;
+    font-size: 0.7em;
     color: #212021;
 }
 
