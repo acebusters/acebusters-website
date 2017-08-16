@@ -1,0 +1,41 @@
+//main: main.scss
+
+form{
+  width: 100%;
+}
+
+.input-section{
+  width: calc(100% - 176px);
+  float: left;
+  @media(max-width: 767px){
+    width: 100%;
+    float: none;
+    margin-bottom: $gridSize*2+px;
+  }
+}
+.submit-section{
+  width: 160px;
+  margin-left: $gridSize*2+px;
+  float: left;
+  @media(max-width: 767px){
+    width: 100%;
+    float: none;
+    margin-bottom: $gridSize*2+px;
+  }
+}
+
+input.form-control{
+  font-family: osr;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 0px;
+  padding: 12px 12px 12px 16px;
+  height: 50px;
+  border: none;
+}
+
+.button-base{
+  font-weight: 100;
+  padding: 6px;
+}
