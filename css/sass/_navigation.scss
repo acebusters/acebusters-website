@@ -1,0 +1,68 @@
+//main: main.scss
+
+.nav{
+  li a{
+    font-family: st;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $ci_white;
+    &:hover, &:active, &:focus{
+      background: none;
+      border-bottom:2px solid $ci_magenta;
+    }
+  }
+}
+
+.navbar{
+  background-color: transparent;
+  padding: $gridSize*6+px $gridSize*12+px;
+  @include transition(padding 0.3s ease);
+  &.affix{
+    padding: $gridSize*1+px $gridSize*4+px;
+    background-color: $ci_dark;
+  }
+}
+
+.navbar-right{
+  margin-right: 0px !important;
+}
+
+.navbar-nav{
+  padding: 10px 0px;
+}
+
+.navbar-nav>li>a{
+  padding: 6px 15px !important;
+}
+
+.nav-item a{
+    font-weight: 400;
+    color: $ci_white;
+}
+
+.navbar-toggle {
+    border: none;
+    background-color: #212021 !important;
+}
+
+.navbar-toggle:hover {
+    color: #E01E40;
+}
+
+.nav-item > a {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: st;
+    border-bottom: 2px solid #212021;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.428571429;
+}
+
+.nav-item-button{
+  background: $ci_magenta;
+  border-radius: 6px !important;
+}

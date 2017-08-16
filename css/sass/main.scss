@@ -31,10 +31,10 @@
 //   src: url('../fonts/OpenSans-Italic.ttf');
 // }
 //
-// @font-face {
-//   font-family: osl;
-//   src: url('../fonts/OpenSans-Light.ttf');
-// }
+@font-face {
+  font-family: osl;
+  src: url('../fonts/OpenSans-Light.ttf');
+}
 //
 // @font-face {
 //   font-family: osli;
@@ -164,7 +164,6 @@ a:active {
 
 .topnav {
     font-size: 10px;
-    background-color: #212021;
     border: none;
 }
 
@@ -489,17 +488,7 @@ a:active {
     letter-spacing: 2px;
 }
 
-.content-magenta {
-    padding: 6em;
-    color: #FFF;
-    background-color:#E01E40;
-}
 
-.content-black {
-    padding: 6em;
-    color: #FFF;
-    background-color:#212021;
-}
 
 .table-container {
     padding-right: 50px;
@@ -519,77 +508,21 @@ a:active {
 }
 
 .content-purple {
-    padding: 6em;
     color: #FFF;
     background-color:#321E36;
 }
 
 .content-white {
-    padding: 6em;
     color: #321E36;
     background-color:#FFF;
-}
-
-.how-to-contribute {
-    font-size: 3em;
-    font-family: st
-}
-
-.banner-ico {
-    font-family: st;
-    min-height: 100px;
-    max-height: 100px;
-    border-left: 20px solid #E01E40;
-}
-
-.banner-chart {
-    font-family: st;
-    min-height: 100px;
-    max-height: 100px;
-    color: #FFF;
-}
-
-.banner-ico-header {
-    padding-left: 30px;
-    font-size: 1.5em;
-    color: #212021;
-}
-
-.banner-ico-text {
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 0.7em;
-    color: #212021;
-}
-
-.banner-chart-header {
-    padding-left: 30px;
-    font-size: 1.5em;
-    color: #FFF;
-}
-
-.banner-chart-text {
-    padding-left: 30px;
-    color: #FFF;
 }
 
 .text-box-row {
     margin-top: 50px;
 }
 
-.text-box {
-    font-family: st;
-    padding-right: 50px;
-}
-
 .text-box-heading {
     font-size: 3em;
-}
-
-.text-box-sub {
-    font-family: st;
-    font-size: 1.5em;
-
 }
 
 .content-section-a {
@@ -1346,23 +1279,6 @@ Main components
 }
 
 
-.timer-heading {
-    padding: 20px;
-}
-
-.ico-subscribe {
-    margin-top: 12em;
-}
-
-.digit {
-    font-size: 6em;
-    font-weight: 600;
-    line-height: 1.4;
-    color: #E01E40;
-    margin-bottom: 0;
-    padding: 10px;
-}
-
 .center {
     text-align: center;
 }
@@ -1548,6 +1464,9 @@ Main components
 
 body,html{
   font-family: osr;
+  font-weight: 100;
+  line-height: 1.7;
+  color: $ci_lblue;
 }
 
 h1,h2,h3,h4,h5{
@@ -1561,86 +1480,281 @@ h1,h2,h3,h4,h5{
 
 h1{
   font-weight: 100;
+  font-size: 4.8rem;
+  color: $ci_magentaalt;
 }
 
 h2{
+  font-size: 4.8rem;
+}
 
+.container-ace{
+  width:100% !important;
+  @media(min-width: 1920px){
+    width: 1024px !important;
+  }
+}
+
+.container-full {
+  margin: 0 auto;
+  width: 100% !important;
+}
+
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .row.equal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/****************************************************************************
+*  FORMS
+****************************************************************************/
+
+form{
+  width: 100%;
+}
+
+.input-section{
+  width: calc(100% - 176px);
+  float: left;
+  @media(max-width: 767px){
+    width: 100%;
+    float: none;
+    margin-bottom: $gridSize*2+px;
+  }
+}
+.submit-section{
+  width: 160px;
+  margin-left: $gridSize*2+px;
+  float: left;
+  @media(max-width: 767px){
+    width: 100%;
+    float: none;
+    margin-bottom: $gridSize*2+px;
+  }
+}
+
+input.form-control{
+  font-family: osr;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 0px;
+  padding: 12px 12px 12px 16px;
+  height: 50px;
+  border: none;
+}
+
+.button-base{
+  font-weight: 100;
+  padding: 6px;
 }
 
 /****************************************************************************
 *  NAVIGATION
 ****************************************************************************/
 
-
-.nav{
-  li a{
-    font-family: st;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    color: $ci_white;
-    &:hover, &:active, &:focus{
-      background: none;
-      border-bottom:2px solid $ci_magenta;
-    }
-  }
-}
-
-.navbar{
-  padding: $gridSize*4+px;
-  @include transition(all 0.3s ease);
-  &.affix{
-    padding: $gridSize*1+px $gridSize*4+px;
-  }
-}
-
-.navbar-right{
-  margin-right: 0px !important;
-}
-
-.navbar-nav{
-  padding: 10px 0px;
-}
-
-.navbar-nav>li>a{
-  padding: 6px 15px !important;
-}
-
-.nav-item a{
-    font-weight: 400;
-    color: $ci_white;
-}
-
-.navbar-toggle {
-    border: none;
-    background-color: #212021 !important;
-}
-
-.navbar-toggle:hover {
-    color: #E01E40;
-}
-
-.nav-item > a {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: st;
-    border-bottom: 2px solid #212021;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.428571429;
-}
-
-.nav-item-button{
-  background: $ci_magenta;
-  border-radius: 6px !important;
-}
+@import "navigation";
 
 /****************************************************************************
 *  SECTIONS
 ****************************************************************************/
 
+.container-fluid .row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.section{
+  position: relative;
+  padding: $gridSize*12+px $gridSize*12+px $gridSize*15+px $gridSize*12+px;
+  &.container-fluid{
+    padding: $gridSize*12+px $gridSize*12+15+px $gridSize*15+px $gridSize*12+15+px;
+  }
+  @media(max-width: 767px){
+    padding: $gridSize*2+px $gridSize*2+px $gridSize*4+px $gridSize*2+px;
+    &.container-fluid{
+      padding: $gridSize*2+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
+    }
+  }
+}
+
 .section-heading{
-  max-width: 450px;
+  max-width: 510px;
+}
+
+.content-magenta {
+    color: #FFF;
+    background-color:#E01E40;
+}
+
+.content-black {
+    color: #FFF;
+    background-color:#212021;
+}
+
+.content-white {
+    color: mgrey;
+    h1,h2,h3{
+      color: $ci_dgrey;
+    }
+    background-color:$ci_white;
+}
+
+.content-purple {
+    color: #FFF;
+    background-color:#321E36;
+}
+
+/*+++++++  HERO  +++++++++*/
+
+#ico-app{
+  position: relative;
+  height: 100%;
+}
+
+.intro-header{
+  height: 100vh;
+  width: 100vw;
+  padding: $gridSize*12+px $gridSize*12+px $gridSize*8+px $gridSize*12+px;
+  @media(max-width: 767px){
+    height: auto;
+    width: 100%;
+    padding: $gridSize*2+px $gridSize*2+px $gridSize*4+px $gridSize*2+px;
+    &.container-fluid{
+      padding: $gridSize*2+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
+    }
+    .countdown-row{
+      position: relative;
+    }
+  }
+}
+
+.hero-headline{
+  width: 100%;
+  padding: $gridSize*4+px;
+  span{
+    font-size: 2.0rem;
+    line-height: 1.6;
+    color: $ci_mgrey;
+    font-family: osl;
+    font-weight: 100;
+  }
+  @media(min-width: 768px){
+    max-width: 550px;
+    padding: 0;
+    margin-top: $gridSize*6+px;
+  }
+}
+
+.countdown-row{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  .text.timer{
+    text-align: left;
+    color: $ci_grey;
+    margin-top: -24px;
+  }
+}
+
+.digit {
+    font-size: 10rem;
+    font-weight: 100;
+    line-height: 1.4;
+    color: $ci_magentaalt;
+    margin-bottom: 0;
+    padding: 10px 10px 10px 0px;
+}
+
+.timer-heading {
+    padding: 0px;
+    letter-spacing: 0.4;
+    font-weight: 100;
+    color: $ci_grey;
+}
+
+.ico-subscribe {
+  margin-top: 11em;
+  @media(max-width: 1024px){
+    margin-top: 1em;
+  }
+}
+
+
+/*+++++++  ----  +++++++++*/
+
+$elements: 6;
+@for $i from 0 to $elements {
+  .contribution-steps .banner-ico:nth-child(#{$i}) {
+    &:before{
+      content: ''+$i+'';
+      display: block;
+      position: absolute;
+      height: 100%;
+      padding-top: 20px;
+      font-family: st;
+      font-size: 2.8rem;
+      color: $ci_white;
+      width: 30px;
+      vertical-align: middle;
+      text-align: center;
+      left: -30px;
+    }
+  }
+}
+
+
+.banner-ico {
+    min-height: 100px;
+    max-height: 100px;
+    border-left: 30px solid #E01E40;
+    p{
+      padding-left: $gridSize+px;
+    }
+}
+
+.banner-chart {
+    font-family: st;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.banner-ico-header {
+    font-size: 1.5em;
+    font-family: st;
+}
+
+.banner-ico-text {
+    padding-right: 30px;
+    font-size: 1.0rem;
+    color: $ci_grey;
+}
+
+.banner-chart-header {
+    padding-left: 30px;
+    font-size: 1.5em;
+    color: #FFF;
+}
+
+.banner-chart-text {
+    padding-left: 30px;
+    color: #FFF;
+}
+
+.poker-cards{
+  position: absolute;
+  right: $gridSize*12+px;
+  top: 15%;
+  img{
+    width: 380px;
+    float: right;
+  }
 }
