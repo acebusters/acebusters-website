@@ -21,6 +21,14 @@
     padding: $gridSize*1+px $gridSize*4+px;
     background-color: $ci_dark;
   }
+
+  @media(max-width: 767px){
+    padding: $gridSize*1+px $gridSize*1+px;
+    background-color: $ci_dark;
+    &.affix{
+      padding: $gridSize*1+px $gridSize*1+px;
+    }
+  }
 }
 
 .navbar-right{
@@ -42,7 +50,10 @@
 
 .navbar-toggle {
     border: none;
-    background-color: #212021 !important;
+    background-color: transparent;
+    right: 0;
+    z-index: 1100;
+    position:absolute;
 }
 
 .navbar-toggle:hover {
@@ -65,4 +76,8 @@
 .nav-item-button{
   background: $ci_magenta;
   border-radius: 6px !important;
+}
+
+.icon-bar{
+  background-color: $ci_white;
 }

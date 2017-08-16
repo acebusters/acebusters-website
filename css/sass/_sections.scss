@@ -1,0 +1,354 @@
+//main : main.scss
+
+.container-fluid .row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.section{
+  position: relative;
+  padding: $gridSize*14+px $gridSize*12+px $gridSize*18+px $gridSize*12+px;
+  &.container-fluid{
+    padding: $gridSize*14+px $gridSize*12+15+px $gridSize*18+px $gridSize*12+15+px;
+  }
+  @media(max-width: 767px){
+    padding: $gridSize*6+px $gridSize*4+px $gridSize*8+px $gridSize*4+px;
+    &.container-fluid{
+      padding: $gridSize*6+px $gridSize*4+15+px $gridSize*8+px $gridSize*4+15+px;
+    }
+  }
+
+  &.section-small{
+    padding: $gridSize*10+px $gridSize*12+px $gridSize*10+px $gridSize*12+px;
+    &.container-fluid{
+      padding: $gridSize*10+px $gridSize*12+15+px $gridSize*10+px $gridSize*12+15+px;
+    }
+    @media(max-width: 767px){
+      padding: $gridSize*2+px $gridSize*2+px $gridSize*4+px $gridSize*2+px;
+      &.container-fluid{
+        padding: $gridSize*2+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
+      }
+    }
+  }
+}
+
+.section-heading{
+  max-width: 510px;
+}
+
+.section hr{
+    margin: $gridSize*12+px 0;
+}
+
+.content-magenta {
+    color: #FFF;
+    background-color:#E01E40;
+}
+
+.content-black {
+    color: #FFF;
+    background-color:$ci_ddark;
+}
+
+.content-white {
+    color: mgrey;
+    h1,h2,h3{
+      color: $ci_dgrey;
+    }
+    background-color:$ci_white;
+}
+
+.content-purple {
+    color: #FFF;
+    background-color:#321E36;
+}
+
+/*+++++++  HERO  +++++++++*/
+
+#ico-app{
+  position: relative;
+  height: 100%;
+}
+
+.intro-header{
+  height: 100vh;
+  width: 100vw;
+  padding: $gridSize*12+px $gridSize*12+px $gridSize*8+px $gridSize*12+px;
+  @media(max-width: 767px){
+    height: auto;
+    width: 100%;
+    padding: $gridSize*2+px $gridSize*2+px $gridSize*4+px $gridSize*2+px;
+    &.container-fluid{
+      padding: $gridSize*2+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
+    }
+    .countdown-row{
+      position: relative;
+    }
+  }
+}
+
+.hero-headline{
+  width: 100%;
+  padding: $gridSize*4+px;
+  span{
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: $ci_mgrey;
+    font-family: osl;
+    font-weight: 100;
+  }
+  @media(max-width: 767px){
+    margin-top: 80px;
+    padding: $gridSize*2+px;
+  }
+  @media(min-width: 768px){
+    max-width: 550px;
+    padding: 0;
+    margin-top: $gridSize*6+px;
+  }
+}
+
+.countdown-row{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  .text.timer{
+    text-align: left;
+    color: $ci_grey;
+    margin-top: -24px;
+  }
+  @media(max-width: 767px){
+    margin: 0 auto;
+  }
+}
+
+.digit {
+    font-size: 7.2rem;
+    font-weight: 100;
+    line-height: 1.4;
+    color: $ci_magentaalt;
+    margin-bottom: 0;
+    padding: 10px 10px 10px 0px;
+    @media(max-width: 767px){
+      font-size: 2.4rem;
+    }
+}
+
+.timer-heading {
+    padding: 0px;
+    letter-spacing: 0.4;
+    font-weight: 100;
+    color: $ci_grey;
+}
+
+.ico-subscribe {
+  margin-top: 11em;
+  @media(max-width: 1024px){
+    margin-top: 1em;
+  }
+}
+
+
+/*+++++++  HOW TO  +++++++++*/
+
+$elements: 6;
+@for $i from 0 to $elements {
+  .contribution-steps .banner-ico:nth-child(#{$i}) {
+    &:before{
+      content: ''+$i+'';
+      display: block;
+      position: absolute;
+      height: 100%;
+      padding-top: 20px;
+      font-family: st;
+      font-size: 1.2rem;
+      color: $ci_white;
+      width: 30px;
+      vertical-align: middle;
+      text-align: center;
+      left: -30px;
+    }
+  }
+}
+
+.banner-ico {
+    min-height: 100px;
+    border-left: 30px solid #E01E40;
+    p{
+      padding-left: $gridSize+px;
+    }
+}
+
+.banner-small .banner-chart{
+  margin-bottom: $gridSize*2+px;
+}
+
+.banner-chart {
+    font-family: st;
+    margin-bottom: $gridSize*6+px;
+}
+
+.banner-ico-header {
+    font-size: 1.5em;
+    font-family: st;
+}
+
+.banner-ico-text {
+    padding-right: 30px;
+    font-size: 0.9rem;
+    color: $ci_grey;
+}
+
+
+.banner-chart-header {
+    padding-left: 30px;
+    font-size: 1.5em;
+    color: #FFF;
+}
+
+.banner-chart-text {
+    padding-left: 30px;
+    color: #FFF;
+}
+
+.pie-holder{
+  margin: 0 auto;
+  width: 78%;
+  margin-top: -16%;
+  &.pie-v-center{
+    margin-top: 0%;
+  }
+}
+
+/*+++++++  Nutzshell  +++++++++*/
+
+.poker-cards{
+  position: absolute;
+  right: $gridSize*12+px;
+  top: -10%;
+  img{
+    width: 380px;
+    float: right;
+  }
+  @media(max-width: 767px){
+    position: relative;
+    right: 0;
+    top: 10%;
+    margin: $gridSize*2+px auto;
+  }
+}
+
+/*+++++++  TWO TOKENS  +++++++++*/
+
+.text-box-sub{
+  font-size: 1.2rem;
+  color: $ci_grey;
+}
+
+.nutz-heading, .abp-heading{
+  padding-left: 72px;
+  position: relative;
+  margin-bottom: $gridSize*3+px;
+  &:before{
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    left: 0;
+    top: 7px;
+    height: 64px;
+    width: 80px;
+  }
+}
+
+.nutz-heading{
+  &:before{
+    background-image: url(../img/icons/nutz@2x.png);
+    top: 4px;
+    height: 70px;
+    width: 80px;
+  }
+}
+
+.abp-heading{
+  padding-left: 88px;
+  &:before{
+    background-image: url(../img/icons/abp@2x.png)
+  }
+}
+
+/*+++++++  FACTS  +++++++++*/
+
+.coin-divider{
+  position: absolute;
+  height: 120px;
+  width: 500px;
+  margin-left: -250px;
+  left: 50%;
+  top: 0;
+  margin-top: -60px;
+  background-image: url(../img/icons/coins@2x.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  @media(max-width: 767px){
+    width: 200px;
+    height: 80px;
+    left: auto;
+    margin: 0 auto;
+    margin-top: -40px;
+  }
+}
+
+.table-body{
+  background: $ci_dark;
+  padding: $gridSize*2+px;
+  border: 1px solid #95989A;
+  margin-top: $gridSize*4+px;
+  margin-bottom: $gridSize*8+px;
+}
+
+table{
+  border: none;
+  word-break: break-all;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  border: none;
+  border-bottom: 1px solid #95989A;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  padding-top: 16px;
+}
+
+table tr td:nth-child(even){
+  text-align: right;
+}
+
+.crowdsale-essentials{
+  margin-top: -90px;
+  @media(max-width: 767px){
+    margin-top: 0px;
+  }
+}
+
+/*+++++++  ----  +++++++++*/
+
+.escrow-image{
+  position: absolute;
+  right: -$gridSize*12+px;
+  top: 5%;
+  width: 650px;
+  float: right;
+}
+
+@media(max-width: 767px){
+  .escrow-image{
+    position: relative;
+    max-width: 100%;
+    right: -$gridSize*4+px;
+    margin-top: $gridSize*6+px;
+  }
+}
