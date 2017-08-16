@@ -231,39 +231,6 @@ a:active {
     margin-bottom: 1em;
 }
 
-.nav-item {
-    font-weight: 400;
-    color: #fff !important;
-}
-
-.navbar-toggle {
-    border: none;
-    background-color: #212021 !important;
-}
-
-.navbar-toggle:hover {
-    color: #E01E40;
-}
-
-.nav-item > a {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: st;
-    border-bottom: 2px solid #212021;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.428571429;
-}
-
-.nav-item > a:hover {
-    color: #efefef !important;
-    border-bottom:2px solid #E01E40;
-}
-
-
 .lead {
     font-family: st;
     font-size: 18px;
@@ -1567,7 +1534,17 @@ Main components
 *
 ****************************************************************************/
 
+/****************************************************************************
+*  IMPORT
+****************************************************************************/
+
+@import "variables";
 @import "colors";
+@import "mixins";
+
+/****************************************************************************
+*  GENERAL
+****************************************************************************/
 
 body,html{
   font-family: osr;
@@ -1589,6 +1566,80 @@ h1{
 h2{
 
 }
+
+/****************************************************************************
+*  NAVIGATION
+****************************************************************************/
+
+
+.nav{
+  li a{
+    font-family: st;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $ci_white;
+    &:hover, &:active, &:focus{
+      background: none;
+      border-bottom:2px solid $ci_magenta;
+    }
+  }
+}
+
+.navbar{
+  padding: $gridSize*4+px;
+  @include transition(all 0.3s ease);
+  &.affix{
+    padding: $gridSize*1+px $gridSize*4+px;
+  }
+}
+
+.navbar-right{
+  margin-right: 0px !important;
+}
+
+.navbar-nav{
+  padding: 10px 0px;
+}
+
+.navbar-nav>li>a{
+  padding: 6px 15px !important;
+}
+
+.nav-item a{
+    font-weight: 400;
+    color: $ci_white;
+}
+
+.navbar-toggle {
+    border: none;
+    background-color: #212021 !important;
+}
+
+.navbar-toggle:hover {
+    color: #E01E40;
+}
+
+.nav-item > a {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: st;
+    border-bottom: 2px solid #212021;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.428571429;
+}
+
+.nav-item-button{
+  background: $ci_magenta;
+  border-radius: 6px !important;
+}
+
+/****************************************************************************
+*  SECTIONS
+****************************************************************************/
 
 .section-heading{
   max-width: 450px;
