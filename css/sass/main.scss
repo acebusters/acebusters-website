@@ -1,5 +1,8 @@
 //out: ../landing-page.css
 
+@import "variables";
+@import "flex";
+
 /*
  * Start Bootstrap - Landing Page (http://startbootstrap.com/)
  * Copyright 2013-2016 Start Bootstrap
@@ -417,14 +420,12 @@ a:active {
 
 .intro-message {
     font-family: st;
-    font-size: 4em;
     padding-left: 20px;
     color: #F8F8F8;
 }
 
 .intro-message-2 {
     font-family: st;
-    font-size: 3em;
     color: #F8F8F8;
 }
 
@@ -463,7 +464,6 @@ a:active {
 
 @media(max-width:767px) {
     .intro-message > h1 {
-        font-size: 3em;
     }
 
     ul.intro-social-buttons > li {
@@ -499,8 +499,8 @@ a:active {
 }
 
 .ico-table {
-    font-family: st;
-    border: 1px solid #FFF;
+    font-family: osr;
+    font-size: 1.0rem;
 }
 
 .no-padding {
@@ -542,6 +542,14 @@ a:active {
 .section-heading {
     margin-bottom: 30px;
     font-family: st;
+    &.section-heading-big h2{
+      font-size: 3.8rem;
+    }
+}
+
+.section-heading-right{
+  margin-right: 0;
+  float: right;
 }
 
 .terms {
@@ -1353,32 +1361,49 @@ Main components
 .timeline {
     list-style-type: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     margin-top: 5em;
   }
 
   .li {
     transition: all 200ms ease-in;
+    width: 16.66666%;
   }
 
   .timestamp {
     margin-bottom: 20px;
-    padding: 0px 40px;
+    padding: 0px 0px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     font-weight: 100;
   }
 
   .status {
     font-family: st;
-    padding: 40px 40px;
-    display: flex;
-    justify-content: center;
+    padding: 40px 40px 40px 0px;
+    // display: flex;
+    // justify-content: left;
+    text-align: left;
     border-top: 2px solid #D6DCE0;
     position: relative;
     transition: all 200ms ease-in;
+    span, p{
+      width: 100%;
+    }
+    span{
+      display: block;
+      font-family: st;
+      font-size: 1.0rem;
+      margin-bottom: $gridSize+px;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+    p{
+      font-family: osr;
+      font-size: 0.8rem;
+    }
   }
   .status h4 {
     font-weight: 600;
@@ -1392,7 +1417,7 @@ Main components
     border: 1px solid #ddd;
     position: absolute;
     top: -15px;
-    left: 42%;
+    left: 0%;
     transition: all 200ms ease-in;
   }
 
@@ -1412,6 +1437,7 @@ Main components
   .milestone-horizontal {
       font-family: st;
       margin-bottom: 2em;
+      text-transform: uppercase;
   }
 
   @media (min-device-width: 320px) and (max-device-width: 700px) {
@@ -1450,7 +1476,6 @@ Main components
 *  IMPORT
 ****************************************************************************/
 
-@import "variables";
 @import "colors";
 @import "mixins";
 
@@ -1465,12 +1490,13 @@ body,html{
   color: $ci_lblue;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  font-size: 1.0rem;
 }
 
 h1,h2,h3,h4,h5{
   font-weight: 100;
   font-family: st;
+  margin-top: 0px;
   span{
     display: block;
     color: $ci_lgrey;
@@ -1479,16 +1505,24 @@ h1,h2,h3,h4,h5{
 
 h1{
   font-weight: 100;
-  font-size: 4.8rem;
+  font-size: 2.7rem;
   color: $ci_magentaalt;
 }
 
 h2{
-  font-size: 4.8rem;
+  font-size: 2.7rem;
 }
 
 h3{
-  font-size: 3.6rem;
+  font-size: 2.0rem;
+}
+
+.margin-32{
+  margin-bottom: $gridSize*4+px;
+}
+
+.margin-48{
+  margin-bottom: $gridSize*6+px;
 }
 
 .container-ace{
@@ -1503,10 +1537,24 @@ h3{
   width: 100% !important;
 }
 
+.container-fluid {
+  position: relative;
+  @media(min-width: 1680px){
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 .equal {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
+}
+
+.center-vertical{
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
 }
 
 @media (min-width: 768px) {
@@ -1549,10 +1597,27 @@ h3{
       padding: $gridSize*2+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
     }
   }
+
+  &.section-small{
+    padding: $gridSize*10+px $gridSize*12+px $gridSize*10+px $gridSize*12+px;
+    &.container-fluid{
+      padding: $gridSize*10+px $gridSize*12+15+px $gridSize*10+px $gridSize*12+15+px;
+    }
+    @media(max-width: 767px){
+      padding: $gridSize*2+px $gridSize*2+px $gridSize*4+px $gridSize*2+px;
+      &.container-fluid{
+        padding: $gridSize*2+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
+      }
+    }
+  }
 }
 
 .section-heading{
   max-width: 510px;
+}
+
+.section hr{
+    margin: $gridSize*12+px 0;
 }
 
 .content-magenta {
@@ -1562,7 +1627,7 @@ h3{
 
 .content-black {
     color: #FFF;
-    background-color:#212021;
+    background-color:$ci_ddark;
 }
 
 .content-white {
@@ -1606,7 +1671,7 @@ h3{
   width: 100%;
   padding: $gridSize*4+px;
   span{
-    font-size: 2.0rem;
+    font-size: 1.4rem;
     line-height: 1.6;
     color: $ci_mgrey;
     font-family: osl;
@@ -1631,7 +1696,7 @@ h3{
 }
 
 .digit {
-    font-size: 10rem;
+    font-size: 7.2rem;
     font-weight: 100;
     line-height: 1.4;
     color: $ci_magentaalt;
@@ -1654,7 +1719,7 @@ h3{
 }
 
 
-/*+++++++  ----  +++++++++*/
+/*+++++++  HOW TO  +++++++++*/
 
 $elements: 6;
 @for $i from 0 to $elements {
@@ -1666,7 +1731,7 @@ $elements: 6;
       height: 100%;
       padding-top: 20px;
       font-family: st;
-      font-size: 2.8rem;
+      font-size: 1.2rem;
       color: $ci_white;
       width: 30px;
       vertical-align: middle;
@@ -1678,17 +1743,19 @@ $elements: 6;
 
 .banner-ico {
     min-height: 100px;
-    max-height: 100px;
     border-left: 30px solid #E01E40;
     p{
       padding-left: $gridSize+px;
     }
 }
 
+.banner-small .banner-chart{
+  margin-bottom: $gridSize*2+px;
+}
+
 .banner-chart {
     font-family: st;
-    min-height: 100px;
-    max-height: 100px;
+    margin-bottom: $gridSize*6+px;
 }
 
 .banner-ico-header {
@@ -1698,9 +1765,10 @@ $elements: 6;
 
 .banner-ico-text {
     padding-right: 30px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: $ci_grey;
 }
+
 
 .banner-chart-header {
     padding-left: 30px;
@@ -1713,34 +1781,118 @@ $elements: 6;
     color: #FFF;
 }
 
+.pie-holder{
+  margin: 0 auto;
+  width: 78%;
+  margin-top: -16%;
+  &.pie-v-center{
+    margin-top: 0%;
+  }
+}
+
+/*+++++++  Nutzshell  +++++++++*/
+
 .poker-cards{
   position: absolute;
   right: $gridSize*12+px;
-  top: 15%;
+  top: -10%;
   img{
     width: 380px;
     float: right;
   }
 }
 
+/*+++++++  TWO TOKENS  +++++++++*/
+
+.text-box-sub{
+  font-size: 1.2rem;
+  color: $ci_grey;
+}
+
+.nutz-heading, .abp-heading{
+  padding-left: 72px;
+  position: relative;
+  margin-bottom: $gridSize*3+px;
+  &:before{
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    left: 0;
+    top: 7px;
+    height: 64px;
+    width: 80px;
+  }
+}
+
+.nutz-heading{
+  &:before{
+    background-image: url(../img/icons/nutz@2x.png);
+    top: 4px;
+    height: 70px;
+    width: 80px;
+  }
+}
+
+.abp-heading{
+  padding-left: 88px;
+  &:before{
+    background-image: url(../img/icons/abp@2x.png)
+  }
+}
+
+/*+++++++  FACTS  +++++++++*/
+
 .coin-divider{
   position: absolute;
-  height: 80px;
+  height: 120px;
   width: 500px;
   margin-left: -250px;
   left: 50%;
   top: 0;
-  margin-top: -40px;
+  margin-top: -60px;
   background-image: url(../img/icons/coins@2x.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.table-body{
+  background: $ci_dark;
+  padding: $gridSize*2+px;
+  border: 1px solid #95989A;
+  margin-top: $gridSize*4+px;
+  margin-bottom: $gridSize*8+px;
+}
+
+table{
+  border: none;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  border: none;
+  border-bottom: 1px solid #95989A;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  padding-top: 16px;
+}
+
+table tr td:nth-child(even){
+  text-align: right;
+}
+
+.crowdsale-essentials{
+  margin-top: -90px;
+}
+
+/*+++++++  ----  +++++++++*/
+
 .escrow-image{
   position: absolute;
-  right: 0;
-  top: 25%;
+  right: -$gridSize*12+px;
+  top: 5%;
   img{
     width: 80%;
     float: right;

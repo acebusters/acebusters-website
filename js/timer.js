@@ -145,18 +145,62 @@ document.addEventListener("DOMContentLoaded", function(e) {
             pieData: function() {
                 return {
                 datasets: [{
-                    label: 'NTZ Distribution',
+                    label: 'Milestone Distribution',
                     backgroundColor: [
-
+                      'rgba(230,230,230,0.59)',
+                      'rgba(153,153,153,0.59)',
+                      'rgba(77,77,77,0.59)',
+                      'rgba(224,30,64,0.59)'
                     ],
+                    borderWidth: 5,
+                    borderRadius: 0,
+                    borderColor: [
+                        'rgb(230,230,230)',
+                        'rgb(153,153,153)',
+                        'rgb(77,77,77)',
+                        '#E01E40'
+                    ],
+                    data: [15, 20, 20, 40],
+                    options: {
+                      tooltips: {
+                        enabled: false
+                      }
+                    }
+                }],
+                }
+            },
+        },
+        mounted () {
+            this.renderChart(this.pieData, {responsive: true, maintainAspectRatio: false})
+        }
+    });
+
+    Vue.component('power-pie', {
+        extends: VueChartJs.Doughnut,
+        mixins: [VueChartJs.mixins.reactiveProp],
+        computed: {
+            pieData: function() {
+                return {
+                datasets: [{
+                    label: 'Power Distribution',
+                    backgroundColor: [
+                      'rgba(224,30,64,0.59)',
+                      'rgba(230,230,230,0.59)'
+                    ],
+                    borderWidth: 5,
+                    borderRadius: 0,
                     borderColor: [
                         '#E01E40',
-                        '#F8F8F8',
-                        '#321E36',
-                        '#FFFFFF'
+                        'rgb(230,230,230)'
+
                     ],
-                    data: [40, 40, 20, 20]
-                }]
+                    data: [30,70],
+                    options: {
+                      tooltips: {
+                        enabled: false
+                      }
+                    }
+                }],
                 }
             },
         },
