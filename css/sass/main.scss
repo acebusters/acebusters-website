@@ -1410,6 +1410,9 @@ Main components
       font-family: osr;
       font-size: 0.8rem;
     }
+    @media(max-width: 767px){
+      padding: 40px 0px 40px 40px;
+    }
   }
   .status h4 {
     font-weight: 600;
@@ -1425,6 +1428,9 @@ Main components
     top: -15px;
     left: 0%;
     transition: all 200ms ease-in;
+    @media(max-width: 767px){
+      display: none;
+    }
   }
 
   .li.complete .status {
@@ -1444,6 +1450,10 @@ Main components
       font-family: st;
       margin-bottom: 2em;
       text-transform: uppercase;
+      @media(max-width: 767px){
+        width: 80px;
+        display: block;
+      }
   }
 
   @media (min-device-width: 320px) and (max-device-width: 700px) {
@@ -1555,9 +1565,11 @@ h3{
 }
 
 .equal {
-  display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
+  @media(min-width: 768px){
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+  }
 }
 
 .center-vertical{

@@ -26,7 +26,10 @@
     @media(max-width: 767px){
       padding: $gridSize*2+px $gridSize*2+px $gridSize*4+px $gridSize*2+px;
       &.container-fluid{
-        padding: $gridSize*2+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
+        padding: $gridSize*4+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
+      }
+      h3{
+        text-align: center;
       }
     }
   }
@@ -330,6 +333,30 @@ table tr td:nth-child(even){
 .crowdsale-essentials{
   margin-top: -90px;
   @media(max-width: 767px){
+    margin-top: 0px;
+  }
+}
+
+@media(max-width:767px){
+  [class*='col-'] {
+    margin-bottom: $gridSize*6+px !important;
+  }
+  [class*='col-']:last-child {
+    margin-bottom: 0px !important;
+  }
+  #facts{
+    padding-top: $gridSize*12+px;
+    h2{
+      text-align: left;
+    }
+    .container-fluid{
+      padding: 0px;
+    }
+  }
+  #tokensystem{
+    padding-bottom: $gridSize*12+px;
+  }
+  .ico-cta{
     margin-top: 0px;
   }
 }
