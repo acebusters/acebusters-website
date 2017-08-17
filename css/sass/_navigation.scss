@@ -21,7 +21,9 @@
     padding: $gridSize*1+px $gridSize*4+px;
     background-color: $ci_dark;
   }
-
+  @media(max-width: 960px){
+    padding: $gridSize*6+px $gridSize*6+px;
+  }
   @media(max-width: 767px){
     padding: $gridSize*1+px $gridSize*1+px;
     background-color: $ci_dark;

@@ -85,13 +85,16 @@
       padding: $gridSize*2+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
     }
   }
-  @media(max-width: 1280px){
+  @media(max-width: 1366px){
     .countdown-row{
       position: relative;
       margin-top: 50px;
     }
     .ico-subscribe{
       margin-top: 0px;
+    }
+    .digit{
+      font-size: 3.2rem;
     }
   }
 }
@@ -117,6 +120,21 @@
   }
 }
 
+@media(min-width: 1920px){
+  .hero-headline{
+    max-width: 1200px;
+  }
+  h1{
+    font-size: 6.9rem;
+  }
+}
+
+@media(min-width: 1920px){
+  .container-fluid{
+    width: 1400px;
+  }
+}
+
 .countdown-row{
   position: absolute;
   width: 100%;
@@ -138,6 +156,9 @@
     color: $ci_magentaalt;
     margin-bottom: 0;
     padding: 10px 10px 10px 0px;
+    @media(max-width: 960px){
+      font-size: 3.4rem;
+    }
     @media(max-width: 767px){
       font-size: 2.4rem;
     }
