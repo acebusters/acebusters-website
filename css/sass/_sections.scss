@@ -84,8 +84,14 @@
     &.container-fluid{
       padding: $gridSize*2+px $gridSize*2+15+px $gridSize*4+px $gridSize*2+15+px;
     }
+  }
+  @media(max-width: 1280px){
     .countdown-row{
       position: relative;
+      margin-top: 50px;
+    }
+    .ico-subscribe{
+      margin-top: 0px;
     }
   }
 }
