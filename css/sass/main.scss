@@ -578,6 +578,10 @@ a:active {
     font-family: dejavu;
     font-size: 4.2rem;
     text-transform: uppercase;
+    @media(max-width: 767px){
+      font-size: 2.4rem;
+      word-wrap: break-word;
+    }
 }
 
 .section-heading-spacer {
@@ -667,16 +671,18 @@ footer {
 @media(max-width: 1000px) {
     .footer-item {
         font-size: 4em;
-        padding-left: 0.5em !important;
-        padding-right: 0.5em !important;
+        li{
+          margin-left: 0px;
+        }
     }
 }
 
 @media(max-width: 580px) {
     .footer-item {
-        font-size: 4em;
-        padding-left: 0.5em !important;
-        padding-right: 0.5em !important;
+        font-size: 2.5em;
+        li{
+          margin-left: 0px;
+        }
     }
 }
 
@@ -689,8 +695,20 @@ footer {
 }
 
 .footer-icon-list {
-    text-align: center;
-    margin-top: 3em;
+    text-align: right;
+    li{
+      margin-left: $gridSize*2+px;
+      @media(max-width: 1000px){
+        margin-left: 0px;
+      }
+    }
+    a{
+      display: block;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      margin-top: -5px;
+    }
 }
 
 p.copyright {
@@ -781,7 +799,7 @@ a.btn.send-btn:hover{
 
 .team-member img {
   margin: 0 auto;
-  max-width: 200px;
+  max-width: 140px;
   border: 7px solid white;
 }
 
@@ -1636,6 +1654,11 @@ h3{
     color: $ci_magenta;
     font-size: 4.8rem;
   }
+  @media(max-width: 767px){
+    h1{
+      font-size: 2.6rem;
+    }
+  }
 }
 
 .hero-bottom-row{
@@ -1647,11 +1670,23 @@ h3{
     bottom: 0;
     right: 0;
   }
+  @media(max-width: 767px){
+    position: relative;
+    margin-top: 160px;
+    .intro-buttons{
+      position: relative;
+    }
+  }
 }
 
 .advantages{
   [class*='col-']{
     padding: $gridSize*6+px;
+  }
+  @media(max-width: 767px){
+    [class*='col-']{
+      padding: $gridSize*1+px;
+    }
   }
 }
 
