@@ -2,6 +2,8 @@
 
 @import "variables";
 @import "flex";
+@import "colors";
+@import "mixins";
 
 /*
  * Start Bootstrap - Landing Page (http://startbootstrap.com/)
@@ -62,6 +64,11 @@
 @font-face {
   font-family: st;
   src: url('../fonts/ShareTech-Regular.ttf');
+}
+
+@font-face {
+  font-family: dejavu;
+  src: url('../fonts/DejavuTF-Regular.ttf');
 }
 
 body,
@@ -302,16 +309,19 @@ a:active {
 
 .intro-buttons {
     text-align: center;
-    margin-left: 7em;
-    margin-right: 7em;
     padding-top: 18em;
+    width: 200px;
+    float: right;
+    @media(max-width: 960px){
+      width: 100%;
+      float: none;
+      margin-top: $gridSize*4+px;
+    }
 }
 
 @media(max-width: 1200px) {
     .intro-buttons {
         text-align: center;
-        margin-left: 10em;
-        margin-right: 10em;
         padding-top: 2em;
     }
 }
@@ -565,7 +575,9 @@ a:active {
 .main-headline {
     color: #FFF;
     text-align: center;
-    font-family: st;
+    font-family: dejavu;
+    font-size: 4.2rem;
+    text-transform: uppercase;
 }
 
 .section-heading-spacer {
@@ -1006,8 +1018,8 @@ a.btn.send-btn:hover{
 }
 
 .cd-container {
-  width: 90%;
-  max-width: 1080px;
+  width: 100%;
+  // max-width: 1080px;
   margin: 0 auto;
   padding: 0 10%;
   border-radius: 2px;
@@ -1027,6 +1039,7 @@ Main components
 #cd-timeline {
   position: relative;
   padding: 2em 0;
+  padding-top: 0;
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -1042,8 +1055,7 @@ Main components
 }
 
 .cd-date {
-    color: #080B0F;
-    font-size: 0.6em !important;
+  color: $ci_magenta;
 }
 
 .cd-timeline-content > p {
@@ -1056,7 +1068,8 @@ Main components
 
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
-    margin-top: 3em;
+    margin: 0;
+    margin-top: -100px;
     margin-bottom: 3em;
   }
 
@@ -1112,7 +1125,7 @@ Main components
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #E01E40, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 8px #E01E40;
 }
 
 .cd-timeline-img {
@@ -1121,11 +1134,12 @@ Main components
 
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
-    width: 20px;
-    height: 20px;
-    left: 518px;
-    margin-left: -15px;
-    margin-top: 15px;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    margin-left: -5px;
+    margin-top: -5px;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
@@ -1218,8 +1232,6 @@ Main components
   right: 100%;
   height: 0;
   width: 0;
-  border: 7px solid transparent;
-  border-right: 7px solid #333C42;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1230,6 +1242,11 @@ Main components
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 14px;
     font-size: 0.875rem;
+    position: absolute;
+    top: $gridSize*2+px;
+    right: $gridSize*2+px;
+    text-align: right;
+    color: $ci_magenta;
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -1238,38 +1255,48 @@ Main components
     margin-left: 0;
     padding: 1.6em;
     width: 36%;
-    margin: 0 5%;
+    // margin: 0 5%;
   }
 
   .cd-timeline-content::before {
-    top: 24px;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: #fff;
+    right: -30%;
     left: 100%;
-    border-color: transparent;
-    border-left-color: #FFF;
   }
 
   .cd-timeline-content .cd-date {
     width: 100%;
-    left: 110%;
-    top: 6px;
     font-size: 16px;
     font-size: 1rem;
   }
 
-  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+  .cd-timeline-block:nth-child(odd) .cd-timeline-content {
     float: right;
   }
 
-  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
-    top: 24px;
-    left: auto;
+  .cd-timeline-block:nth-child(odd) .cd-timeline-content::before {
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: #fff;
+    left: -30%;
     right: 100%;
-    border-color: transparent;
-    border-right-color: #FFF;
   }
 
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+  .cd-timeline-block:nth-child(odd) .cd-timeline-content .cd-read-more {
     float: right;
+  }
+}
+
+
+@media(max-width:767px){
+  #cd-timeline{
+    width: 120%;
+    left: -10%;
+    right: -10%;
   }
 }
 /* timer stuff */
@@ -1492,8 +1519,7 @@ Main components
 *  IMPORT
 ****************************************************************************/
 
-@import "colors";
-@import "mixins";
+
 
 /****************************************************************************
 *  GENERAL
@@ -1507,6 +1533,7 @@ body,html{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.0rem;
+  // overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5{
@@ -1534,6 +1561,7 @@ h2{
 
 h3{
   font-size: 2.0rem;
+  text-transform: uppercase;
 }
 
 .margin-32{
@@ -1593,6 +1621,39 @@ h3{
 ****************************************************************************/
 
 @import "navigation";
+
+/****************************************************************************
+*  Landing Page
+****************************************************************************/
+
+.landing-page{
+  width: 100%;
+  .container{
+    height: 100%;
+    position: relative;
+  }
+  h1{
+    color: $ci_magenta;
+    font-size: 4.8rem;
+  }
+}
+
+.hero-bottom-row{
+  position: absolute;
+  bottom: $gridSize*6+px;
+  .intro-buttons{
+    padding-top:  2em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.advantages{
+  [class*='col-']{
+    padding: $gridSize*6+px;
+  }
+}
 
 /****************************************************************************
 *  SECTIONS
