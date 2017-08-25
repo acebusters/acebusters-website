@@ -1,5 +1,5 @@
 ---
-layout: ico
+layout: crowdsale
 ---
 <h2>How our ICO works</h2>
 
