@@ -1420,6 +1420,9 @@ Main components
   .li {
     transition: all 200ms ease-in;
     width: 16.66666%;
+    @media(max-width: 767px){
+      width: 100%;
+    }
   }
 
   .timestamp {
@@ -1687,6 +1690,12 @@ h3{
     [class*='col-']{
       padding: $gridSize*1+px;
     }
+  }
+}
+
+@media(max-width:767px){
+  [class*='col-']{
+    padding: $gridSize*1+px 0 $gridSize*1+px 0;
   }
 }
 
