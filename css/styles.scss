@@ -1,6 +1,59 @@
 ---
 ---
 
+button {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+a {
+  &.a-email,
+  &:not([class]) {
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+      color: #E01E40;
+    }
+  }
+}
+.advantages {
+  a {
+    color: #fff;
+    &:not([class]) {
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.nav li {
+  > a {
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+      color: #fff;
+    }
+  }
+  .nav-item-button {
+    border-bottom: none;
+    &:hover,
+    &:active,
+    &:focus {
+      background: #E31041;
+      border-bottom: none;
+    }
+  }
+}
+
 .table {
   word-break: normal;
 }

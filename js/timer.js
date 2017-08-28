@@ -47,95 +47,66 @@ document.addEventListener("DOMContentLoaded", function(e) {
     });
 
     Vue.component('timer', {
-        template: `
-            <div class="ico-timer">
-                <h3 class="headline-dark-bg timer timer-heading"> OUR CROWDSALE STARTS IN: </h3>
-                <ul class="vue-countdown">
-                    <li>
-                        <p class="digit timer">{{ days | twoDigits }}:</p>
-                        <p class="text timer">DAYS</p>
-                    </li>
+      template: `
+        <div class="ico-timer">
+          <h3 class="headline-dark-bg timer timer-heading"> OUR CROWDSALE STARTS IN: </h3>
+          <ul class="vue-countdown">
+            <li>
+              <p class="digit timer">{{ days | twoDigits }}:</p>
+              <p class="text timer">DAYS</p>
+            </li>
 
-                    <li>
-                        <p class="digit timer">{{ hours | twoDigits }}:</p>
-                        <p class="text timer">HOURS</p>
-                    </li>
+            <li>
+              <p class="digit timer">{{ hours | twoDigits }}:</p>
+              <p class="text timer">HOURS</p>
+            </li>
 
-                    <li>
-                        <p class="digit timer">{{ minutes | twoDigits }}:</p>
-                        <p class="text timer">MIN</p>
-                    </li>
+            <li>
+              <p class="digit timer">{{ minutes | twoDigits }}:</p>
+              <p class="text timer">MIN</p>
+            </li>
 
-                    <li>
-                        <p class="digit timer">{{ seconds | twoDigits }}</p>
-                        <p class="text timer">SEC</p>
-                    </li>
-                </ul>
-            </div>
-        `,
-        data() {
-            return {
-                now: Math.trunc((new Date()).getTime() / 1000),
-                date: null,
-                status: "",
-                state: null,
-                anouncement: "",
-            }
+            <li>
+              <p class="digit timer">{{ seconds | twoDigits }}</p>
+              <p class="text timer">SEC</p>
+            </li>
+          </ul>
+        </div>
+      `,
+      computed: {
+        usableDate () {
+          return Math.trunc(Date.parse(this.date) / 1000)
         },
-        mounted() {
-            // initialize date
-            this.date = Math.trunc((new Date()).getTime() / 1000);
-
-            var p1 = store.fromContract(event, 'startTime');
-            var p2 = store.fromContract(event, 'maxDuration');
-            var p3 = store.fromContract(event, 'minDuration');
-            var p4 = store.fromContract(event, 'state');
-
-            Promise.all([p1, p2, p3, p4]).then(values => {
-                store.startTime = 1504483200;
-                store.maxDuration = values[1].toNumber();
-                store.minDuration = values[2].toNumber();
-                this.state = values[3].toNumber();
-                this.status = store.stateStrings[this.state];
-
-                // check if ICO is over
-                //if (this.state <= 1) {
-                    this.now = Math.trunc((new Date()).getTime() / 1000);
-                    setInterval(() => {
-                        this.now = Math.trunc((new Date()).getTime() / 1000);
-                        this.setTimer();
-                    }, 1000);
-                //}
-
-            });
+        seconds () {
+          return (this.usableDate - this.now) % 60
         },
-        methods: {
-            setTimer: function() {
-                if (store.startTime * 1000 > Date.now()) {
-                    this.anouncement = "Token Event starts in ";
-                    store.hasStarted = false;
-                    this.date = Math.trunc(store.startTime);
-                } else {
-                    this.anouncement = "Token Event ends in ";
-                    store.hasStarted = true;
-                    this.date = Math.trunc(store.startTime + store.maxDuration);
-                }
-            },
+        minutes () {
+          return Math.trunc((this.usableDate - this.now) / 60) % 60
         },
-        computed: {
-            seconds() {
-                return Math.trunc(this.date - this.now) % 60
-            },
-            minutes() {
-                return Math.trunc((this.date - this.now) / 60) % 60
-            },
-            hours() {
-                return Math.trunc((this.date - this.now) / 60 / 60) % 24
-            },
-            days() {
-                return Math.trunc((this.date - this.now) / 60 / 60 / 24)
-            }
+        hours () {
+          return Math.trunc((this.usableDate - this.now) / 60 / 60) % 24
+        },
+        days () {
+          return Math.trunc((this.usableDate - this.now) / 60 / 60 / 24)
         }
+      },
+      data () {
+        return {
+          now: Math.trunc((new Date()).getTime() / 1000)
+        }
+      },
+      methods: {
+        twoDigits (number) {
+          if (number < 10) return '0' + number
+          else return number
+        }
+      },
+      mounted () {
+        window.setInterval(() => {
+          this.now = Math.trunc((new Date()).getTime() / 1000)
+        }, 1000)
+      },
+      props: ['date', 'units']
     });
 
     Vue.component('distro-pie', {
