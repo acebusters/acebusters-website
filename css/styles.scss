@@ -1,6 +1,28 @@
 ---
 ---
 
+.intro-header {
+  &._midblock {
+    display: table;
+    &:after {
+      content: '';
+      display: table-cell;
+      vertical-align: middle;
+      width: 0;
+      height: 100%;
+    }
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+}
+
+.logo-container-terms {
+  margin: 0;
+}
+
 button {
   &:focus {
     outline: none;
@@ -79,7 +101,7 @@ a {
 
 @media (max-width: 767px) {
   .intro-header {
-    &._min {
+    &._midblock {
       padding-top: 65px;
     }
   }
