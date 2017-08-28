@@ -24,6 +24,17 @@
   }
 }
 
+@media (max-width: 767px) {
+  .intro-header {
+    &._min {
+      padding-top: 65px;
+    }
+  }
+  .faq-container {
+    margin-top: 0;
+  }
+}
+
 @media only screen and (min-width: 1170px) {
   .cd-timeline-content {
     width: 72%;
