@@ -1,6 +1,81 @@
 ---
 ---
 
+.intro-header {
+  &._midblock {
+    display: table;
+    &:after {
+      content: '';
+      display: table-cell;
+      vertical-align: middle;
+      width: 0;
+      height: 100%;
+    }
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+}
+
+.logo-container-terms {
+  margin: 0;
+}
+
+button {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+a {
+  &.a-email,
+  &:not([class]) {
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+      color: #E01E40;
+    }
+  }
+}
+.advantages {
+  a {
+    color: #fff;
+    &:not([class]) {
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.nav li {
+  > a {
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:visited,
+    &:active {
+      color: #fff;
+    }
+  }
+  .nav-item-button {
+    border-bottom: none;
+    &:hover,
+    &:active,
+    &:focus {
+      background: #E31041;
+      border-bottom: none;
+    }
+  }
+}
+
 .table {
   word-break: normal;
 }
@@ -21,6 +96,17 @@
     .intro-buttons {
       position: static;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-header {
+    &._midblock {
+      padding-top: 65px;
+    }
+  }
+  .faq-container {
+    margin-top: 0;
   }
 }
 
