@@ -180,16 +180,4 @@ document.addEventListener("DOMContentLoaded", function(e) {
         }
     });
 
-    var app = new Vue({
-        delimiters:['<%', '%>'],
-        el: '#ico-app',
-    });
-
-    var app2 = new Vue({
-        delimiters:['<%', '%>'],
-        el: '#distro-app',
-    });
-
-    $('[data-toggle="tooltip"]').tooltip();
-
 });
