@@ -1,5 +1,7 @@
 ---
 layout: faq
+title: Acebusters - FAQ
+description: Acebusters - Do You have any questions? Have a look at our knowledge base.
 ---
 
 <h2 role="button" data-toggle="collapse" href="#faq1" aria-expanded="false" aria-controls="faq1" class="faq-header">What are the benefits over a traditional poker platform?</h2>
@@ -26,7 +28,7 @@ layout: faq
 <h2 role="button" data-toggle="collapse" href="#faq5" aria-expanded="false" aria-controls="faq5" class="faq-header">What is Mental Poker?</h2>
 <div class="collapse" id="faq5">
   <p class="lead">
-    The Mental Poker Protocol is a technology which allows players in a peer-to-peer network a guaranteed fairly shuffled game as well as the certainty that no one can peek at your cards. Remember the UltimateBet super user scandal? This is a thing of the past. 
+    The Mental Poker Protocol is a technology which allows players in a peer-to-peer network a guaranteed fairly shuffled game as well as the certainty that no one can peek at your cards. Remember the UltimateBet super user scandal? This is a thing of the past.
   </p>
 </div>
 
@@ -42,6 +44,6 @@ layout: faq
 <h2 role="button" data-toggle="collapse" href="#faq9" aria-expanded="false" aria-controls="faq9" class="faq-header">I am intrigued. What do I do now with all my excitement?</h2>
 <div class="collapse" id="faq9">
   <p class="lead">
-    Please sign up for our newsletter so you won’t miss any important announcement. Also please join our community on <a href="https://discord.gg/7PesDTZ">Discord</a>. It's totally free and you can ask us anything you want and you will also be updated on all the important topics regarding this venture! 
+    Please sign up for our newsletter so you won’t miss any important announcement. Also please join our community on <a href="https://discord.gg/7PesDTZ">Discord</a>. It's totally free and you can ask us anything you want and you will also be updated on all the important topics regarding this venture!
   </p>
 </div>

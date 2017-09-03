@@ -1,6 +1,8 @@
 ---
 layout: default
 newsletter_sign_up: Thank you! Please check your e-mail to confirm your subscription!
+title: Acebusters - Poker on the Ethereum blockchain
+description: Acebusters - A decentralized poker platform running on the ethereum blockchain.
 ---
 
 <!-- Header -->
@@ -20,7 +22,7 @@ newsletter_sign_up: Thank you! Please check your e-mail to confirm your subscrip
                     <a class="button-base" href="files/acebusters_whitepaper_v095.pdf" target="_blank">
                         Read Whitepaper
                     </a>
-                    <a class="button-base" href="https://dapp.acebusters.com" target="_blank">
+                    <a class="button-base" v-bind:href="'https://dapp.acebusters.com'+refId" target="_blank">
                         Play Poker
                     </a>
                 </div>
@@ -51,9 +53,9 @@ newsletter_sign_up: Thank you! Please check your e-mail to confirm your subscrip
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="main-headline">
+                <h2 class="main-headline">
                     a pair of nutz beats everything!
-                </h1>
+                </h2>
             </div>
         </div>
     </div>
@@ -111,7 +113,7 @@ newsletter_sign_up: Thank you! Please check your e-mail to confirm your subscrip
             </a>
         </div>
         <div class="col-sm-3">
-            <a class="button-base ico-cta" href="http://beta.acebusters.com" target="_blank">
+            <a class="button-base ico-cta" v-bind:href="'https://dapp.acebusters.com'+refId" target="_blank">
                 Play Poker
             </a>
         </div>
@@ -205,7 +207,7 @@ newsletter_sign_up: Thank you! Please check your e-mail to confirm your subscrip
 </section>
 <!-- Team Section -->
 <a name="team"></a>
-<section id="team" class="section">
+<section ref="team" id="team" class="section">
   <div class="container-fluid">
     <div class="row" style="margin-48">
       <div class="col-sm-12">

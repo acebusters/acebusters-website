@@ -2,7 +2,6 @@
 layout: default
 ---
 <script src="js/web3.js"></script>
-<script src="js/vue.min.js"></script>
 <script src="https://unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js"></script>
 <script src="js/timer.js"></script>
 
@@ -78,7 +77,7 @@ layout: default
         <div class="row section-content contribution-steps equal">
             <div class="col-sm-4 banner-ico">
                 <p class="banner-ico-header">CREATE AN ACCOUNT</p>
-                <p class="banner-ico-text">Sign up at <a target="_blank" href="https://dapp.acebusters.com/register">dapp.acebusters.com</a> to create an account. If you don’t have a referral code yet, join our <a target="_blank" href="https://discordapp.com/invite/7PesDTZ">Discord community</a> to receive one.</p>
+                <p class="banner-ico-text">Sign up at <a target="_blank" v-bind:href="'https://dapp.acebusters.com'+refId">dapp.acebusters.com</a> to create an account. If you don’t have a referral code yet, join our <a target="_blank" href="https://discordapp.com/invite/7PesDTZ">Discord community</a> to receive one.</p>
             </div>
             <div class="col-sm-4 banner-ico">
                 <p class="banner-ico-header">CHARGE YOUR ACCOUNT</p>
@@ -286,7 +285,7 @@ layout: default
                       </tr>
                       <tr>
                           <td>Official Crowdsale Platform:</td>
-                          <td><a target="_blank" href="https://dapp.acebusters.com/register">dapp.acebusters.com</a></td>
+                          <td><a target="_blank" v-bind:href="'https://dapp.acebusters.com'+refId">dapp.acebusters.com</a></td>
                       </tr>
                   </table>
                 </div>
@@ -486,7 +485,7 @@ layout: default
                 </a>
             </div>
             <div class="col-sm-3">
-                <a class="button-base ico-cta" href="https://dapp.acebusters.com" target="_blank">
+                <a class="button-base ico-cta" v-bind:href="'https://dapp.acebusters.com'+refId" target="_blank">
                     Play Poker
                 </a>
             </div>
@@ -510,7 +509,7 @@ layout: default
                         Why should I invest?
                     </h3>
                     <p class="text-box-message">
-                        You should invest if you agree that online poker is a broken market 
+                        You should invest if you agree that online poker is a broken market
                         and blockchain is the the technology that can fix this system!
                     </p>
                 </div>
@@ -521,9 +520,9 @@ layout: default
                     <p class="text-box-message">
                         We have build and beta tested web client, with tables implemented as smart contracts
                         using multi party state channels.
-                        These contracts have been reviewed and approved by a third party (ambisafe). If you 
+                        These contracts have been reviewed and approved by a third party (ambisafe). If you
                         play poker on Acebusters today your funds are always secure and you have full control
-                        over your banroll aswell as your withdrawels and deposits. 
+                        over your banroll aswell as your withdrawels and deposits.
                     </p>
                 </div>
             </div>
@@ -532,7 +531,7 @@ layout: default
                     <h3>What is your next big goal of development?</h3>
                     <p class="text-box-message">
                         We are working on a mental poker protocol which also eliminates the dealer counterparty.
-                        Playing on Acebusters will then be fully autonomous. 
+                        Playing on Acebusters will then be fully autonomous.
                     </p>
                 </div>
             </div>
@@ -545,9 +544,9 @@ layout: default
                         Is there a cap?
                     </h3>
                     <p class="text-box-message">
-                        While there is a cap in Power tokens, NTZ can be bought at any time 
+                        While there is a cap in Power tokens, NTZ can be bought at any time
                         and will be dilluted. If you want to hold a fixed share of the Acebusters
-                        DAPP you need to convert your NTZ into ABP after the sale. 
+                        DAPP you need to convert your NTZ into ABP after the sale.
                     </p>
                 </div>
             </div>
@@ -555,8 +554,8 @@ layout: default
                 <div class="text-box">
                     <h3>What exactly is the difference between NTZ and ABP?</h3>
                     <p class="text-box-message">
-                        ABP can be seen as the investor token while NTZ is the token for 
-                        the players. NTZ are transferable while ABPs are not. ABP is a fixed 
+                        ABP can be seen as the investor token while NTZ is the token for
+                        the players. NTZ are transferable while ABPs are not. ABP is a fixed
                         share of the economy. NTZ will be dilluted. NTZ can be powerd up (immediatly)
                         and powered down (over a period of 3 months).
                     </p>
@@ -566,9 +565,9 @@ layout: default
                 <div class="text-box">
                     <h3>Why do you only give away 30%?</h3>
                     <p class="text-box-message">
-                        This crowdsale can be regarded as our initial offering of ABP. 
+                        This crowdsale can be regarded as our initial offering of ABP.
                         We plan to have future rounds where we give out more ABP. All holders of
-                        ABP will not be dilluted. Please read our whitepaper for further details. 
+                        ABP will not be dilluted. Please read our whitepaper for further details.
                     </p>
                 </div>
             </div>

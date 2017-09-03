@@ -6,12 +6,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
     <meta name="author" content="">
     <meta property="og:url" content="http://www.acebusters.com/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Acebusters - Who you gonna call?">
-    <meta property="og:description" content="The Poker Revolution: Making online Poker fair and secure.">
     <meta property="og:image" content="http://www.acebusters.com/img/ab_logo_white.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="&#64;ace_busters">
@@ -22,7 +19,7 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="/img/ab_logo.png" />
 
-    <title>Acebusters - Poker on the Ethereum blockchain</title>
+    {% seo %}
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -69,7 +66,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7SBXCK"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
+  <div id="app">
     <!-- Navigation -->
     <nav class="navbar navbar-fixed-top topnav" role="navigation" data-spy="affix" data-offset-top="20">
         <div class="topnav">
@@ -96,16 +93,16 @@
                     <a href="bounties">Bounties</a>
                   </li>
                   <li class="nav-item " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <a href="/#team">Team</a>
+                    <a href="/#team" v-smooth-scroll>Team</a>
                   </li>
                   <li class="nav-item" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <a href="/#contact">Contact</a>
+                    <a href="/#contact" v-smooth-scroll>Contact</a>
                   </li>
                   <li class="nav-item" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <a href="faq">FAQ</a>
                   </li>
                   <li class="nav-item" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <a href="https://dapp.acebusters.com/" class="nav-item-button" target="_blank">Play</a>
+                    <a v-bind:href="'https://dapp.acebusters.com'+refId" class="nav-item-button" target="_blank">Play</a>
                   </li>
                 </ul>
             </div>
@@ -128,36 +125,43 @@
             </div>
         </div>
     </footer>
+  </div>
 
-    <!-- Validation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.8/validator.min.js"></script>
+  <!-- Validation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.8/validator.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Vue.js Core -->
+  <script src="js/vue.min.js"></script>
+  <!-- Vue smooth scroll plugin -->
+  <script src="js/vue-smooth-scroll.min.js"></script>
+  <!-- Main vue app -->
+  <script src="js/main.js"></script>
 
-    <!-- GA Events -->
-    <script>
-        $('#sign-up').click((e) => {
-            ga('send', {
-                hitType: 'event',
-                eventCategory: 'Newsletter',
-                eventAction: 'Sign-Up',
-                eventLabel: "newsletter_signup"
-            });
-        })
+  <!-- GA Events -->
+  <script>
+    $('#sign-up').click((e) => {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Newsletter',
+        eventAction: 'Sign-Up',
+        eventLabel: "newsletter_signup"
+      });
+    })
 
-        $('.join').click((e) => {
-            ga('send', {
-                hitType: 'event',
-                eventCategory: 'Discord',
-                eventAction: 'join',
-                eventLabel: 'discord_join'
-            });
-        })
-    </script>
+    $('.join').click((e) => {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Discord',
+        eventAction: 'join',
+        eventLabel: 'discord_join'
+      });
+    })
+  </script>
 
-    <!-- Signup Form -->
-    <script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.min.js?v6be3a4e2d3872f68a1a9e8036ceaea6b"></script>
+  <!-- Signup Form -->
+  <script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.min.js?v6be3a4e2d3872f68a1a9e8036ceaea6b"></script>
 </body>
 
 </html>

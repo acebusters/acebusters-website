@@ -2,11 +2,10 @@
 layout: default
 ---
 <script src='js/ico_chart.js'></script>
-<script src="js/vue.min.js"></script>
 <script src="https://unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js"></script>
 <div class="content-section-a">
     <div class="container" id="app">
-        <div class="row">    
+        <div class="row">
             <!-- tabs for users -->
             <div class="ico-users">
 
@@ -24,7 +23,7 @@ layout: default
                         <h3>Alice's Wallet</h3>
                         <div class="row">
                             <div class="col-sm-4">
-                                <div> 
+                                <div>
                                     <div class="form-group">
                                         <label for="alice-eth">Balance (ETH)</label>
                                         <input type="number" class="form-control" id="alice-eth" v-model="alice.eth" disabled>
@@ -192,7 +191,7 @@ layout: default
                 </div>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-md-2">
                 <div class="well">
@@ -240,11 +239,10 @@ layout: default
             </div>
         </div>
         <div class="row">
-            
+
         </div>
     </div>
     <div class="container lead">
         {{ content }}
     </div>
 </div>
-
