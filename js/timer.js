@@ -118,17 +118,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 datasets: [{
                     label: 'Milestone Distribution',
                     backgroundColor: [
-                      'rgba(230,230,230,0.59)',
                       'rgba(153,153,153,0.59)',
-                      'rgba(77,77,77,0.59)',
+                      'rgba(50, 30, 54,0.59)',
+                      'rgba(230,230,230,0.59)',
                       'rgba(224,30,64,0.59)'
                     ],
                     borderWidth: 5,
                     borderRadius: 0,
                     borderColor: [
-                        'rgb(230,230,230)',
                         'rgb(153,153,153)',
-                        'rgb(77,77,77)',
+                        'rgb(50, 30, 54)',
+                        'rgb(230,230,230)',
                         '#E01E40'
                     ],
                     data: [15, 20, 20, 40],
