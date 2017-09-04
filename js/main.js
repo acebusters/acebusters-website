@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
   // JQuery logic
   $('[data-toggle="tooltip"]').tooltip();
 
+  function gtmUpdate(type) {
+    type == 'sub' && dataLayer.push({ 'event': 'subscription_success' });
+  }
+
   function matchExact(r, str) {
     var match = str.match(r);
     return match != null && str == match[0];

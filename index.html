@@ -377,11 +377,11 @@ description: Join Acebusters now! The decentralized economy to make online poker
                                 </div>
                             </div>
                         </div>
-                        <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST" target="_blank">
+                        <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST" target="_blank" data-toggle="validator">
                             <div class="subscribe-form horizontal">
                                 <div class="form-section horizontal">
                                     <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
-                                        <input type="text" name="fields[email]" class="newsletter-input form-control" placeholder="Your Email Here" value="" id="eMail">
+                                        <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" placeholder="Your Email Here" value="" id="eMail" required>
                                     </div>
                                 </div>
                                 <div class="form-section horizontal">
@@ -397,10 +397,11 @@ description: Join Acebusters now! The decentralized economy to make online poker
                             </div>
                         </form>
                         <script>
-                            function ml_webform_success_3873850() {
-                                jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
-                                jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
-                            };
+                          function ml_webform_success_3873850() {
+                            jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
+                            jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
+                            dataLayer.push({ 'event': 'subscription_success' });
+                          };
                         </script>
                     </div>
                 </div>

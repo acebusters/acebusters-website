@@ -105,6 +105,20 @@ ol {
     padding-left: 25px;
   }
 }
+.form-group {
+  &.has-error {
+    .form-control {
+      background-color: #fff0f0;
+      border-color: #FF5E5E !important;
+    }
+  }
+  .form-control {
+    border: 2px solid transparent;
+    border-bottom-color: #FF5E5E;
+    transition: all .3s;
+  }
+}
+
 @media (max-width: 991px) {
   .hero-bottom-row {
     .intro-buttons {
