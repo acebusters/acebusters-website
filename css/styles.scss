@@ -45,7 +45,17 @@ a {
     }
   }
 }
-.advantages {
+
+ul,
+ol {
+  &:not([class]) {
+    padding-left: 20px;
+  }
+}
+
+
+.advantages,
+.content-magenta {
   a {
     color: #fff;
     &:not([class]) {
