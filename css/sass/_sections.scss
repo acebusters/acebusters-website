@@ -48,8 +48,11 @@
     color: #FFF;
     background-color:#E01E40;
     a{
-      color: #fff;
+      color: #fff !important;
       text-decoration: underline !important;
+      &:hover{
+        color: #fff;
+      }
     }
 }
 
