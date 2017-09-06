@@ -22,7 +22,6 @@ bower_components/
 *.jar
 *.rar
 *.tar
-*.zip
 
 # Logs and databases #
 ######################
