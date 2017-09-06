@@ -119,6 +119,12 @@ ol {
   }
 }
 
+.row {
+  &.equal {
+    flex-wrap: nowrap;
+  }
+}
+
 @media (max-width: 991px) {
   .hero-bottom-row {
     .intro-buttons {
