@@ -1,6 +1,6 @@
 sass:
   sass_dir: css/sass
   style: compressed
-plugins:
+gems:
   - jekyll-sitemap
   - jekyll-seo-tag
