@@ -2,6 +2,7 @@
 layout: terms
 title: Acebusters - Terms
 description: Acebusters - These are our terms of use. Please read them carefully.
+permalink: terms
 ---
 
 # Acebusters Terms of Use
