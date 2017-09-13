@@ -168,21 +168,18 @@ document.addEventListener("DOMContentLoaded", function(e) {
           var that = this;
           // get hard cap
           var p1 = store.fromContract(event, 'hardCap');
-          var p2 = store.fromContract(token, 'reserve'); //Needs to be changed according to refactored model.
+          var p2 = store.fromContract(token, 'owner');
           var p3 = store.fromContract(event, 'initialReserve');
           var p4 = store.fromContract(event, 'softCap');
-
 
           Promise.all([p1, p2, p3, p4]).then(values => {
               store.hardCap = parseFloat(web3.fromWei(values[0].toNumber()));
               this.maxValue = store.hardCap;
               store.softCap = parseFloat(web3.fromWei(values[3].toNumber()));
               this.softCap = store.softCap;
-              store.reserve = web3.fromWei(values[1].toNumber());
+              store.reserve = web3.fromWei(web3.eth.getBalance(values[1])).toNumber();
               store.initialReserve = web3.fromWei(values[2].toNumber());
               this.amountRaised = store.reserve - store.initialReserve;
-
-
           });
       },
       computed: {
