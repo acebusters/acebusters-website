@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     Vue.component('timer', {
       template: `
-        <div class="ico-timer" v-show="state == 0">
+        <div class="ico-timer" v-show="state == 0 && !isTimeUp">
           <h3 class="headline-dark-bg timer timer-heading"> OUR CROWDSALE STARTS IN: </h3>
           <ul class="vue-countdown">
             <li>
@@ -75,25 +75,22 @@ document.addEventListener("DOMContentLoaded", function(e) {
         </div>
       `,
       computed: {
-        usableDate () {
-          return Math.trunc(Date.parse(this.date) / 1000)
-        },
         seconds () {
-          return (this.usableDate - this.now) % 60
+          return (this.date - this.now) % 60
         },
         minutes () {
-          return Math.trunc((this.usableDate - this.now) / 60) % 60
+          return Math.trunc((this.date - this.now) / 60) % 60
         },
         hours () {
-          return Math.trunc((this.usableDate - this.now) / 60 / 60) % 24
+          return Math.trunc((this.date - this.now) / 60 / 60) % 24
         },
         days () {
-          return Math.trunc((this.usableDate - this.now) / 60 / 60 / 24)
+          return Math.trunc((this.date - this.now) / 60 / 60 / 24)
         }
       },
       watch: {
         now (val) {
-          if (val > this.usableDate && !this.isTimeUp) {
+          if (val > this.date && !this.isTimeUp) {
             this.isTimeUp = true
           }
         }
@@ -101,7 +98,10 @@ document.addEventListener("DOMContentLoaded", function(e) {
       data () {
         return {
           now: Math.trunc((new Date()).getTime() / 1000),
-          state: 0
+          state: 0,
+          isTimeUp: false,
+          startTime: null,
+          date: new Date()
         }
       },
       methods: {
@@ -125,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
         Promise.all([p1, p2, p3, p4]).then(values => {
+            this.date = values[0].toNumber();
             store.startTime = values[0].toNumber();
             store.maxDuration = values[1].toNumber();
             store.minDuration = values[2].toNumber();
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 
       },
-      props: ['date', 'units']
+      props: ['units']
     });
 
     Vue.component('loading-bar', {
@@ -175,10 +176,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
           </div>
       `,
       mounted() {
-          window.setInterval(() => {
-            this.now = Math.trunc((new Date()).getTime() / 1000)
-          }, 1000)
-
 
           var that = this;
           // get hard cap
@@ -231,9 +228,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
           aRaisedInfo: function() {
               return "The amount in Ether that has been raised so far";
           },
-          usableDate () {
-            return Math.trunc(Date.parse(this.date) / 1000)
-          }
       },
       data() {
           return {
@@ -241,16 +235,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
               maxValue: 0,
               amountRaised: 0,
               softCap: 0,
-              now: Math.trunc((new Date()).getTime() / 1000),
               state: 0
           }
-      },
-      watch: {
-        now (val) {
-          if (val > this.usableDate && !this.isTimeUp) {
-            this.isTimeUp = true
-          }
-        }
       },
       props: ['date']
     });
