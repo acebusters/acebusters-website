@@ -1,0 +1,18 @@
+- title: home
+  url: /
+
+- title: crowdsale
+  url: /crowdsale
+
+- title: bounties
+  url: /bounties
+
+- title: team
+  url: \#team
+
+- title: contact
+  url: \#contact
+
+- title: help
+  url: http://help.acebusters.com
+  target: _blank

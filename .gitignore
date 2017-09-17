@@ -67,6 +67,7 @@ sftp-config*
 
 # Build #
 #########
+Gemfile.lock
 dist/
 coverage/
 .tmp/
