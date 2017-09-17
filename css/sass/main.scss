@@ -75,8 +75,7 @@ body,
 html {
     width: 100%;
     height: 100%;
-    background-color: #F6F8FA;
-    background-image:  url('../img/bg-pattern.png');
+    background-color: $ci-ddark;
     background-repeat: repeat;
     z-index: 10000;
 }
