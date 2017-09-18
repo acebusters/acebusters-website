@@ -1,175 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
-<head>
+  {% include head.html %}
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="">
-    <meta property="og:url" content="http://www.acebusters.com/"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Acebusters - Poker on the Ethereum Blockchain"/>
-    <meta property="og:description" content="Join Acebusters now! The decentralized economy to make online poker profitable, fair and secure. Poker on the Ethereum blockchain. Ace or bust!"/>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7SBXCK"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="app">
 
-    {% if page.image %}
-      <meta property="og:image" content="http://www.acebusters.com/img/social/{{ page.image }}">
-    {% else %}
-      <meta property="og:image" content="http://www.acebusters.com/img/social/AB_facebook_OG_Crowdsale.png">
-    {% endif %}
+      <!-- Navigation -->
+      {% include navbar.html %}
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="&#64;ace_busters">
-    <meta name="twitter:creator" content="&#64;ace_busters">
-    <meta name="twitter:title" content="Acebusters - Poker on the Ethereum Blockchain">
-    <meta name="twitter:description" content="Join Acebusters now! The decentralized economy to make online poker profitable, fair and secure. Poker on the Ethereum blockchain. Ace or bust!">
-    <meta name="twitter:image" content="http://www.acebusters.com/img/social/AB_twitter_card@2x.png">
+      <!-- Page Content -->
 
-    <link rel="shortcut icon" type="image/x-icon" href="/img/ab_logo.png" />
+      {{ content }}
 
-    {% seo %}
+      <!-- Footer -->
+      {% include footer.html %}
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    </div>
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="css/fontello.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- jQuery -->
+    <script src="{{ site.baseurl }}/js/jquery.js"></script>
 
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+    <!-- Validation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.8/validator.min.js"></script>
+    <!-- Vue.js Core -->
+    <script src="{{ site.baseurl }}/js/vue.min.js"></script>
+    <!-- Web3 plugin -->
+    <script src="{{ site.baseurl }}/js/web3.js"></script>
+    <!-- Vue smooth scroll plugin -->
+    <!-- Vue smooth scroll plugin -->
+    <script src="{{ site.baseurl }}/js/vue-smooth-scroll.min.js"></script>
+    <!-- Vue chart plugin -->
+    <script src="https://unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js"></script>
+    <script src="{{ site.baseurl }}/js/timer.js"></script>
+    <!-- Main vue app -->
+    <script src="{{ site.baseurl }}/js/main.js"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T7SBXCK');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google Analytics -->
+    <!-- GA Events -->
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-98848213-1', 'auto');
-        ga('send', 'pageview');
+      $('#sign-up').click((e) => {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Newsletter',
+          eventAction: 'Sign-Up',
+          eventLabel: "newsletter_signup"
+        });
+      })
+
+      $('.join').click((e) => {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Discord',
+          eventAction: 'join',
+          eventLabel: 'discord_join'
+        });
+      })
     </script>
-</head>
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7SBXCK"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <div id="app">
-    <!-- Navigation -->
-    <nav class="navbar navbar-fixed-top topnav" role="navigation" data-spy="affix" data-offset-top="20">
-        <div class="topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="/" class="brand-link">
-                    <img src="img/ab_logo_white.png" class="brand-logo" width="30" height="30" alt="">
-                    <img src="img/ab_type_white.png" class="brand-logo" height="20" alt="">
-                </a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right nav-list">
-                  <li class="nav-item" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <a href="crowdsale">Crowdsale</a>
-                  </li>
-                  <li class="nav-item " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <a href="bounties">Bounties</a>
-                  </li>
-                  <li class="nav-item " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <a href="/#team" v-smooth-scroll>Team</a>
-                  </li>
-                  <li class="nav-item" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <a href="/#contact" v-smooth-scroll>Contact</a>
-                  </li>
-                  <li class="nav-item" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <a href="http://help.acebusters.com" target="_blank">Help</a>
-                  </li>
-                  <li class="nav-item" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <a v-bind:href="appUrl()" class="nav-item-button" target="_blank">Play</a>
-                  </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-    <!-- Page Content -->
+    <!-- Signup Form -->
+    <script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.min.js?v6be3a4e2d3872f68a1a9e8036ceaea6b"></script>
+    <script>
+      var APP_ID = "z9xn3a6h";
 
-    {{ content }}
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p class="copyright text-muted small footer-text">Copyright &copy; Cyfin Technologies OU 2017. All Rights Reserved</p>
-                    <p class="copyright text-muted small footer-text"><a href="terms_of_use" >Terms of Use</a></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-  </div>
-
-  <!-- jQuery -->
-  <script src="js/jquery.js"></script>
-
-  <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- Validation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.8/validator.min.js"></script>
-  <!-- Vue.js Core -->
-  <script src="js/vue.min.js"></script>
-  <!-- Vue smooth scroll plugin -->
-  <script src="js/vue-smooth-scroll.min.js"></script>
-  <!-- Main vue app -->
-  <script src="js/main.js"></script>
-
-  <!-- GA Events -->
-  <script>
-    $('#sign-up').click((e) => {
-      ga('send', {
-        hitType: 'event',
-        eventCategory: 'Newsletter',
-        eventAction: 'Sign-Up',
-        eventLabel: "newsletter_signup"
-      });
-    })
-
-    $('.join').click((e) => {
-      ga('send', {
-        hitType: 'event',
-        eventCategory: 'Discord',
-        eventAction: 'join',
-        eventLabel: 'discord_join'
-      });
-    })
-  </script>
-
-  <!-- Signup Form -->
-  <script type="text/javascript" src="//static.mailerlite.com/js/w/webforms.min.js?v6be3a4e2d3872f68a1a9e8036ceaea6b"></script>
-</body>
-
+    window.intercomSettings = {
+        app_id: APP_ID
+      };
+    </script>
+    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/APP_ID';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+  </body>
 </html>
+

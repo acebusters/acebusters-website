@@ -125,6 +125,12 @@ ol {
   }
 }
 
+.team {
+  &-list {
+    margin-top: 32px;
+  }
+}
+
 @media (max-width: 991px) {
   .hero-bottom-row {
     .intro-buttons {
@@ -141,6 +147,39 @@ ol {
   }
   .faq-container {
     margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team {
+    &-list {
+      font-size: 0;
+      &__item {
+        display: inline-block;
+        vertical-align: top;
+        float: none;
+        font-size: 1rem;
+      }
+    }
+    &-member {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .advantages {
+    &-list {
+      font-size: 0;
+      &__item {
+        display: inline-block;
+        vertical-align: top;
+        float: none;
+        font-size: 1rem;
+      }
+    }
   }
 }
 

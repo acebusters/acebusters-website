@@ -1,0 +1,5 @@
+{% if include.target != null %}
+  <a v-bind:href="appUrl()" class="{{ include.class }}" target="{{ include.target }}">{{ site.data.buttons[include.text] }}</a>
+{% else %}
+  <a v-bind:href="appUrl()" class="{{ include.class }}" >{{ site.data.buttons[include.text] }}</a>
+{% endif %}

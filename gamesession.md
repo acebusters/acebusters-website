@@ -1,0 +1,4 @@
+---
+layout: gamesession
+permalink: livegamesession
+---

@@ -1,0 +1,18 @@
+- title: Главная
+  url: /
+
+- title: Контракты
+  url: /crowdsale
+
+- title: Бонусы
+  url: /bounties
+
+- title: Команда
+  url: \#team
+
+- title: Контакты
+  url: \#contact
+
+- title: Помощь
+  url: http://help.acebusters.com
+  target: _blank
