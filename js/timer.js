@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     Vue.component('loading-bar', {
       template: `
-          <div style="padding: 5%;">
+          <div>
               <div style="margin-bottom: 5%;">
               <h3 class="headline-dark-bg timer timer-heading"> CROWDSALE STATUS: {{ status }} </h3>
                   <p class="event-param" data-toggle="tooltip" :title="hardCapInfo"> Hardcap : {{ store.hardCap }} </p>
