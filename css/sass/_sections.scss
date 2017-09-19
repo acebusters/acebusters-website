@@ -434,6 +434,9 @@ Subscribe Landing Page
   }
   .input-section{
     width: calc(100% - 256px);
+    @media(max-width: 767px){
+      width: 100%;
+    }
   }
   .timer-heading{
     text-transform: none;
@@ -475,10 +478,30 @@ Subscribe Landing Page
 }
 
 iframe{
-  height: 100vh;
+  display: block;
+  margin: 0 auto;
+  @media(min-width: 1440px){
+    width: 720px;
+    height: 405px;
+  }
+  @media(max-width: 767px){
+    width: 100%;
+    height: 157.5px;
+  }
 }
 
 .mlEmailContainer{
   background: #fff;
   margin-top: 80px;
+}
+
+.video-button{
+  display: block;
+  margin-bottom: $gridSize*2+px;
+  font-size: 1.6rem;
+  &:before{
+    content: "\f144";
+    font-family: FontAwesome;
+    padding-right: 10px;
+  }
 }
