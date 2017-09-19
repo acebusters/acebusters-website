@@ -1,0 +1,4 @@
+---
+layout: affiliate
+permalink: affiliate
+---
