@@ -1,0 +1,502 @@
+---
+layout: default
+title: Acebusters - Crowdsale starting September 21st.
+description: Join the Acebusters crowdsale now! The decentralized economy to make online poker profitable, fair and secure. Poker on the Ethereum blockchain. Ace or bust!
+image: AB_facebook_OG_Crowdsale.png
+lang: ru
+---
+<script src="js/web3.js"></script>
+<script src="https://unpkg.com/vue-chartjs@2.6.0/dist/vue-chartjs.full.min.js"></script>
+<script src="js/timer.js"></script>
+
+<div>
+    <div class="intro-header section">
+        <div class="container container-ace" id="ico-app">
+                <div class="row hero-headline hero-headline-landin">
+                    <h1>
+                        ПОДДЕРЖИТЕ ДВИЖЕНИЕ ЗА РЕВОЛЮЦИЮ ОНЛАЙН ПОКЕРА
+                    </h1>
+                    <span>
+                        Децентрализованная покерная платформа на блокчейне Ethereum
+                    </span>
+                </div>
+                <div class="row countdown-row">
+
+                    <div class="col-md-6 no-padding">
+                      <timer date="September 21, 2017 13:00 UTC" />
+                    </div>
+
+                    <div class="col-md-6 no-padding">
+                        <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850  ico-subscribe">
+                            <div class="ml-vertical-align-center">
+                                <div class="subscribe-form ml-block-success" style="display:none;">
+                                    <div class="form-section mb0">
+                                        <div style="text-align:center;padding: 20px; font-size:4em;">
+                                            <i class="fa fa-check fa-4" style="text-align:center;"></i>
+                                            <p> {{ page.newsletter_sign_up }}  </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST" target="_blank" data-toggle="validator">
+                                    <div class="subscribe-form">
+                                        <div class="form-section input-section">
+                                            <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
+                                                <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" placeholder="Your Email Here" value="" id="eMail" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-section submit-section">
+                                            <button type="submit" class="button-base" id="sign-up">
+                                                Будьте в курсе
+                                            </button>
+                                            <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
+                                                <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
+                                            </button>
+                                        </div>
+                                        <div class="clearfix" style="clear: both;"></div>
+                                        <input type="hidden" name="ml-submit" value="1" />
+                                    </div>
+                                </form>
+                                <script>
+                                    function ml_webform_success_3873850() {
+                                      jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
+                                      jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
+                                      dataLayer.push({ 'event': 'subscription_success' });
+                                    };
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="content-white section">
+      <div class="container-fluid">
+        <div class="row section-heading">
+            <div class="col-sm-12 no-padding">
+                <h2 class="how-to-contribute">
+                    КАК ПРИСОЕДИНИТЬСЯ
+                </h2>
+            </div>
+        </div>
+        <div class="row section-content contribution-steps equal">
+
+            <div class="col-sm-3 banner-ico">
+                <p class="banner-ico-header">СОЗДАЙТЕ АККАУНТ</p>
+                <p class="banner-ico-text">Зарегистрируйтесь на <a target="_blank" v-bind:href="appUrl()">dapp.acebusters.com</a>. Если вам нужна помощь, подключайтесь к нашему <a target="_blank" href="https://discordapp.com/invite/7PesDTZ">сообществу в Discord</a>.</p>
+            </div>
+            <div class="col-sm-3 banner-ico">
+                <p class="banner-ico-header">ПОПОЛНИТЕ БАЛАНС</p>
+                <p class="banner-ico-text">Отправьте эфир на адрес, указаный в приложении. Если у вас нет эфира, используйте кнпоку Buy в приложении, чтобы обменять другую криптовалюту. Также вы можете купить эфир напрямую на фиатный деньги с помощью бирж и обменников, таких как Bitstamp или Coinbase.</p>
+            </div>
+            <div class="col-sm-3 banner-ico">
+              <p class="banner-ico-header">КУПИТЕ NTZ</p>
+              <p class="banner-ico-text">Во время краудсейл-кампании вы можете купить NTZ по сниженной цене 30000 NTZ за 1 ETH.</p>
+            </div>
+            <div class="col-sm-3 banner-ico">
+                <p class="banner-ico-header">POWER UP</p>
+                <p class="banner-ico-text">После окончания краудсейла вы сможете конвертировать ваши NTZ в ABP (мы называем это Power Up). Вы получите от 7 до 14 ABP за 1 ETH в зависимости о того, сколько средств мы привлечем во время кампании.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-magenta section">
+      <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-5 no-padding">
+              <div class="section-heading">
+                <h2 class="intro-message-2">
+                    ОНЛАЙН ПОКЕР ГОТОВ<br />К РЕВОЛЮЦИИ.
+                    <span>Acebusters in a Nutzshell.</span>
+                </h2>
+              </div>
+              <div class="section-content">
+                  Acebusters это децентрализованное приложение для игры в покер, работающее на блокчейне Ethereum. Мы создаём децентрализованную экономику, основанную на двух токенах, и за счёт этого стремимся сделать онлайн-покер классным и более профитным.
+              </div>
+            </div>
+            <div class="col-sm-7 no-padding poker-cards poker-cards-description">
+              <img src="img/poker_cards_white@2x.png" />
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-purple section" id="tokensystem">
+      <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-6 no-padding">
+              <div class="section-heading">
+                <h2 class="intro-message-2">
+                  УДВОЙТЕ СВОЮ СИЛУ.
+                  <span>Встречайте нашу инновационную систему двух токенов.</span>
+                </h2>
+              </div>
+            </div>
+            <div class="col-sm-4 col-sm-offset-2 no-padding">
+                <div class="text-box">
+                    <h3 class="text-box-heading">
+                        ЗАЧЕМ ДВА ТОКЕНА?
+                    </h3>
+                    <p class="text-box-message">
+                      Ни один игрок не хочет выигрывать за столом, но терять деньги из-за волатильности рынка, верно?
+                      В то же время мы хотим, чтобы инвесторы разделили с нами успех приложения.
+                      Встречайте Nutz и Power.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row text-box-row">
+            <div class="col-sm-5 no-padding">
+                <div class="text-box">
+                  <div class="text-box-heading nutz-heading">
+                    <h3>
+                        NUTZ (NTZ)
+                    </h3>
+                    <p class="text-box-sub">
+                        Валюта для игры, ставок и банкролла
+                    </p>
+                  </div>
+                  <div class="text-box-message">
+                      Токен позволяет игрокам принимать участие в игре и защищает их банкроллы от волатильности рынка.
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-5 col-sm-offset-2 no-padding">
+                <div class="text-box">
+                  <div class="text-box-heading abp-heading">
+                    <h3>
+                        POWER (ABP)
+                    </h3>
+                    <p class="text-box-sub">
+                         Доли в децентрализованном приложении и токен для голосования
+                    </p>
+                  </div>
+                  <div class="text-box-message">
+                    Токен для инвесторов и партнеров, позволяющий принимать участие в прцоессе управления приложением и получать прибыль от его роста.
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-black section" id="facts">
+      <div class="coin-divider"></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-sm-push-6 no-padding">
+            <div class=" section-heading section-heading-right">
+              <h2 class="intro-message-2 table-headliner">
+                  ХВАТИТ РАЗГОВОРОВ.<br> ВРЕМЯ ДЛЯ ЦИФР.
+                  <span>Факты.</span>
+              </h2>
+            </div>
+          </div>
+            <div class="col-sm-6 col-sm-pull-6">
+              <div class=" table-container">
+                <h3>
+                     Токен NUTZ
+                </h3>
+                <div class="table-body">
+                  <table class="table ico-table">
+                    <tr>
+                        <td>Код:</td>
+                        <td>NTZ</td>
+                    </tr>
+                    <tr>
+                        <td>Назначение токена:</td>
+                        <td>Валюта для игры, ставок и банкролла</td>
+                    </tr>
+                    <tr>
+                        <td>Количество токенов:</td>
+                        <td>Без ограничений, подкреплена резервами в ETH</td>
+                    </tr>
+                    <tr>
+                        <td>Начальная стоимость:</td>
+                        <td>20,000 NTZ = 1 ETH</td>
+                    </tr>
+                    <tr>
+                        <td>Бонус во время краудсейла:</td>
+                        <td>30,000 NTZ = 1 ETH (33%)</td>
+                    </tr>
+                    <tr>
+                        <td>Блокчейн:</td>
+                        <td>Ethereum</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+              <div class=" table-container">
+                <h3>
+                    Токен POWER
+                </h3>
+                <div class="table-body">
+                  <table class="table ico-table">
+                      <tr>
+                          <td>Код:</td>
+                          <td>ABP</td>
+                      </tr>
+                      <tr>
+                          <td>Назначение токена:</td>
+                          <td>Доли в децентрализованном приложении и токен для голосования</td>
+                      </tr>
+                      <tr>
+                          <td>Количество токенов:</td>
+                          <td>630,000 ABP</td>
+                      </tr>
+                      <tr>
+                          <td>Доступно во время краудсейла:</td>
+                          <td>70,000 - 270,000 ABP (10% - 30%)</td>
+                      </tr>
+                      <tr>
+                          <td>Блокчейн:</td>
+                          <td>Ethereum</td>
+                      </tr>
+                  </table>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6 crowdsale-essentials">
+              <div class="table-container">
+                <h3>
+                    ДЕТАЛИ КРАУДСЕЙЛА
+                </h3>
+                <div class="table-body">
+                  <table class="table ico-table">
+                      <tr>
+                          <td>Начало продажи:</td>
+                          <td>21ое сентября. 2017 @ 13:00 (UTC)</td>
+                      </tr>
+                      <tr>
+                          <td>Длительность:</td>
+                          <td>от 3 до 30 дней</td>
+                      </tr>
+                      <tr>
+                          <td>Принимаемые валюты:</td>
+                          <td>ETH</td>
+                      </tr>
+                      <tr>
+                          <td>Минимальная цель:</td>
+                          <td>5,000 ETH</td>
+                      </tr>
+                      <tr>
+                          <td>Максимальная цель (приблизительно):</td>
+                          <td>30,000 ETH</td>
+                      </tr>
+                      <tr>
+                          <td>Безопасность средств:</td>
+                          <td>Escrow с мультиподписью</td>
+                      </tr>
+                      <tr>
+                          <td>Официальная платформа:</td>
+                          <td><a target="_blank" v-bind:href="appUrl()">dapp.acebusters.com</a></td>
+                      </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-magenta section">
+      <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-5 no-padding section-heading">
+              <h2>
+                ДОРОЖНАЯ КАРТА <br>С ДОПОЛНИТЕЛЬНЫМИ ЦЕЛЯМИ
+                <span>Наше будущее.</span>
+              </h2>
+
+
+            </div>
+            <div class="col-sm-5 col-sm-offset-2 section-content">
+                Собранные средства будут использованы для разработки, развития и маркетинга продукта, а так же для выхода на международные рынки. Если минимальная цель не будет достигнута, инвесторы смогут получить обратно свои средства без потерь.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                    <ul class="timeline">
+                        <li class="li complete">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">5,000 ETH</span>
+                            </div>
+                            <div class="status">
+                                <span>Турниры Sit-and-Go</span>
+                                <p>SnG — очень популярный формат и будет одной из первых фич.</p>
+                            </div>
+                        </li>
+                        <li class="li complete">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">10,000 ETH</span>
+                            </div>
+                            <div class="status">
+                                <span>Ментальный покер</span>
+                                <p>Разработка эффективного протокола, гарантирующего честную раздачу и содержание карманных карт в секрете.</p>
+                            </div>
+                        </li>
+                        <li class="li complete">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">13,000 ETH</span>
+                            </div>
+                            <div class="status">
+                                <span>Trustless финансирование</span>
+                                <p>Escrow для турнирных байинов и автономное распределение выплат по результатам игры с помощью смарт-контракта.</p>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">16,000 ETH</span>
+                            </div>
+                            <div class="status">
+                                <span>Многостоловые турниры</span>
+                                <p>Проведение и прямые трансляции турниров с известными онлайн и офлайн профессионалами.</p>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">20,000 ETH</span>
+                            </div>
+                            <div class="status">
+                                <span>Ставки</span>
+                                <p>Зрители смогут делать ставки</p>
+                            </div>
+                        </li>
+                        <li class="li">
+                            <div class="timestamp">
+                            <span class="milestone-horizontal">30,000 ETH</span>
+                            </div>
+                            <div class="status">
+                                <span>Масштабная маркетинговая кампания</span>
+                                <p>Проведение глобальной PR-кампании и турниров с гарантированным призовым фондом.</p>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-purple section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 no-padding">
+            <div class="section-heading">
+              <h2 class="intro-message-2">
+                ВАШИ ИНВЕСТИЦИИ ПОД ЗАЩИТОЙ
+
+                  <span>Резерв и Escrow</span>
+              </h2>
+            </div>
+            <div class="section-content">
+              После распродажи ETH будут целиком доступны для аудита в резерве смарт-контракта Acebusters. Вывод средств из резерва доступен только множеством голосов (3 из 4) специально отобранной Escrow-группы. Escrow состоит из четырех человек, выбраных таким образом, чтобы представлять интересы и игроков и инвесторов. Escrow фнкционирует через мультиподпись 3-of-4.
+              Команда Acebusters будет подавать заявки Escrow на последовательные выплаты в соответствии с нашей дорожной картой. Таким образом, мы не сможем вывести средства из резерва без подписи независимой стороны.
+            </div>
+          </div>
+          <img src="img/graphics/escrow_3of4@2x.png" class="escrow-image" />
+        </div>
+      </div>
+    </div>
+
+    <div class="content-black section" id="distro-app">
+      <div class="container-fluid">
+        <div class="row margin-48">
+          <div class="col-sm-5 no-padding">
+            <div class="section-heading">
+              <h2>
+                ДЛЯ ЧЕГО НАМ <br>НУЖНЫ ДЕНЬГИ?
+                <span>Как мы используем средства из нашей первой выплаты</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="row margin-48">
+            <div class="col-sm-4">
+                <div class="banner-chart" style="border-left: 20px solid #E01E40;">
+                    <p class="banner-chart-header">РАЗРАБОТКА - 45%</p>
+                    <p class="banner-chart-text">Оплата затрат на исслелования и разработку ближайших фич, начиная с SnG турниров.</p>
+                </div>
+                <div class="banner-chart" style="border-left: 20px solid #FFF;">
+                    <p class="banner-chart-header">ВЫПЛАТА БАУНТИ - 20%</p>
+                    <p class="banner-chart-text">Выплаты участникам баунти-кампании за переводы, найденые ошибки и т.п.</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="pie-holder">
+                <distro-pie />
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="banner-chart" style="border-left: 20px solid #999;">
+                    <p class="banner-chart-header">КРАУДСЕЙЛ КАМПАНИЯ - 15%</p>
+                    <p class="banner-chart-text">Оплата рекламы и PR.</p>
+                </div>
+                <div class="banner-chart" style="border-left: 20px solid #321E36;">
+                    <p class="banner-chart-header">Маркетинг, продажи и PR - 20%</p>
+                    <p class="banner-chart-text">Первый этап маркетинга, включающий в себя базовые расходы, такие как разработка бренда и рекламные кампании для привлечения пользователей.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row equal" style="margin-top:56px;">
+          <div class="col-sm-5 no-padding">
+            <div class="section-heading">
+              <h2>
+                  МЫ ЗДЕСЬ НАДОЛГО
+                  <span>Распределение токенов Power.</span>
+              </h2>
+            </div>
+            <div class="section-content">
+              <p>Во время краудсейла будет продано 30% токенов Power. В то время как удерживать большинство токенов не принято, мы считаем это критически важно для стратегии роста Acebusters.</p>
+              <p>Привлекая только минимально необходимое количество средств, мы в первую очередь хотим заработать доверие игроков и инвесторов и доказать наши способности. Когда для выхода на новые рынки потребуется дополнительный капитал, мы сможем получить лучшую цену и привлечь высококачественных инвесторов во время будущих краудсейлов.</p>
+              <p>Команда нацелена на планомерное развитие и готова отдать большинство долей, когда для акционеров будет разработан эффективный процесс управления децентрализованным приложением.</p>
+            </div>
+          </div>
+            <div class="col-sm-4 col-sm-offset-1">
+              <div class="pie-holder pie-v-center">
+                <power-pie />
+              </div>
+            </div>
+            <div class="col-sm-2 center-vertical">
+              <div class="banner-charts banner-small">
+                <div class="banner-chart" style="border-left: 20px solid #E01E40;">
+                    <p class="banner-chart-text">Инвесторы - 30%</p>
+                </div>
+                <div class="banner-chart" style="border-left: 20px solid #F8F8F8;">
+                    <p class="banner-chart-text">
+                        Команда - 70%
+                    </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-white section section-small container-fluid">
+        <div class="row">
+            <div class="col-sm-6 no-padding">
+              <div class="section-heading section-heading-big">
+                <h2>
+                  ХОЧЕТСЯ <br>
+                  ПОДРОБНОСТЕЙ?
+                </h2>
+              </div>
+            </div>
+            <div class="col-sm-3">
+                <a class="button-base ico-cta" href="files/acebusters_whitepaper.pdf" target="_blank">
+                    Прочтите Whitepaper
+                </a>
+            </div>
+            <div class="col-sm-3">
+                <a class="button-base ico-cta" v-bind:href="appUrl()" target="_blank">
+                    Сыграйте в покер
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
