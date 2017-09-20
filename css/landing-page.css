@@ -1796,15 +1796,15 @@ Subscribe Landing Page
 .ml-block-success p {
   font-size: 1.8rem; }
 
-iframe {
+#video iframe {
   display: block;
   margin: 0 auto; }
   @media (min-width: 1440px) {
-    iframe {
+    #video iframe {
       width: 720px;
       height: 405px; } }
   @media (max-width: 767px) {
-    iframe {
+    #video iframe {
       width: 100%;
       height: 157.5px; } }
 
