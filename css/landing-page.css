@@ -219,6 +219,9 @@ a:active {
       float: none;
       margin-top: 32px; } }
 
+html[lang=ru] .intro-buttons {
+  width: 220px; }
+
 @media (max-width: 1200px) {
   .intro-buttons {
     text-align: center;

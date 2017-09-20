@@ -318,6 +318,11 @@ a:active {
     }
 }
 
+// more space for russian translation
+html[lang=ru] .intro-buttons {
+  width: 220px;
+}
+
 @media(max-width: 1200px) {
     .intro-buttons {
         text-align: center;
