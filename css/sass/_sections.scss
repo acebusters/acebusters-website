@@ -414,3 +414,82 @@ table tr td:nth-child(even){
     margin-top: $gridSize*6+px;
   }
 }
+
+/*+++++++  ----  +++++++++*/
+
+@media(min-width: 1023px){
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+  }
+}
+
+
+.progress-bar{
+  background-color: $ci_magenta;
+}
+
+.raised-param{
+  font-size: 2.6rem;
+  font-family: st;
+}
+
+.progress{
+  position: relative;
+}
+
+.milestone-soft{
+  position: absolute;
+  left: 16.66666666%;
+  height: 40px;
+  width: 2px;
+  background-color: $ci_dark;
+  top: -10px;
+}
+
+.progress-facts{
+  .event-param{
+    color: #fff;
+  }
+  color: #fff;
+}
+
+.countdown-row{
+  .button-base{
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    right: 0;
+    @media(max-width: 1023px){
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
+.milestones{
+  position: relative;
+  height: 20px;
+}
+
+.milestone-soft-cap{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: calc(16.66666666% - 5px);
+  border-radius: 200px;
+  @include transform(rotate(90deg));
+  background-color: #FFFF00;
+}
+
+.milestone-hard-cap{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: calc(100% - 5px);
+  border-radius: 200px;
+  @include transform(rotate(90deg));
+  background-color: #FFFF00;
+}

@@ -152,26 +152,24 @@ document.addEventListener("DOMContentLoaded", function(e) {
       template: `
           <div>
               <div style="margin-bottom: 5%;">
-              <h3 class="headline-dark-bg timer timer-heading"> CROWDSALE STATUS: {{ status }} </h3>
-                  <p class="event-param" data-toggle="tooltip" :title="hardCapInfo"> Hardcap : {{ store.hardCap }} </p>
-                  <p class="event-param" data-toggle="tooltip" :title="softCapInfo"> Softcap : {{ softCap }} </p>
-                  <p class="event-param" data-toggle="tooltip" :title="minDuInfo"> min Duration : {{ minDuration }} Days </p>
-                  <p class="event-param" data-toggle="tooltip" :title="maxDuInfo"> max Duration: {{ maxDuration }} Days </p>
-                  <p class="event-param" data-toggle="tooltip" :title="aRaisedInfo"> raised: {{ amountRaised.toFixed(2) }} ETH </p>
+              <p class="headline-dark-bg timer timer-heading"> CROWDSALE STATUS: {{ status }} </p>
+              <span class="raised-param" data-toggle="tooltip" :title="aRaisedInfo"> {{ amountRaised.toFixed(2) }} ETH | {{ store.hardCap.toFixed(2) }} ETH </span>
               </div>
-
+              <div class="milestones">
+                <div class="milestone-soft-cap"></div>
+                <div class="milestone-hard-cap"></div>
+              </div>
               <div class="progress">
                   <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="percent" aria-valuemin="0" aria-valuemax="100" v-bind:style="{ width: percent + '%' }">
                       <span class="sr-only">60% Complete</span>
                   </div>
+                  <div class="milestone-soft"></div>
               </div>
-              <div class="progress-label">
-                  <span class="funding-milestone-1">
-                      0 ETH
-                  </span>
-                  <div class="funding-milestone-3">
-                      {{ maxValue }} ETH
-                  </div>
+              <div class="progress-facts">
+                <span class="event-param" data-toggle="tooltip" :title="softCapInfo"> Softcap : {{ softCap }} </span> | 
+                <span class="event-param" data-toggle="tooltip" :title="hardCapInfo"> Hardcap : {{ store.hardCap }} </span> | 
+                <span class="event-param" data-toggle="tooltip" :title="minDuInfo"> min Duration : {{ minDuration }} Days </span> | 
+                <span class="event-param" data-toggle="tooltip" :title="maxDuInfo"> max Duration: {{ maxDuration }} Days </span>
               </div>
           </div>
       `,
