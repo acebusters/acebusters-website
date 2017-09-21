@@ -1,0 +1,58 @@
+---
+layout: default
+title: Acebusters - Bounties
+description: Acebusters - Earn yourself some Nutz with bug reporting, translations, community management or with our referral program.
+---
+
+{% assign data = site.data.bounties %}
+{% assign buttons = site.data.buttons %}
+
+<div>
+    <div class="intro-header landing-page section">
+      <div class="container container-ace">
+          <div class="row hero-bottom-row equal">
+              <div class="col-md-7 hero-bottom">
+                  <h1>
+                    {{ data.banner.title }}
+                  </h1>
+                  <span>
+                    {{ data.banner.subtitle }}
+                  </span>
+              </div>
+              <div class="col-md-5">
+                  <div class="intro-buttons">
+                    <a class="button-base" href="https://discordapp.com/invite/7PesDTZ" target="_blank">
+                        {{ buttons.askQuestion }}
+                    </a>
+                    <a class="button-base" href="{{ site.baseUrl }}/affiliate">
+                        {{ buttons.becomeAffilate }}
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="sections-wrap">
+        {% assign sorted_posts = site.posts | sort: 'order' %}
+        {% for post in sorted_posts %}
+            <section class="{% if post.type != null %}{{ post.type }}{% else %}content-magenta{% endif %} section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h2 class="content-title">
+                                <a href="{{ site.baseUrl}}{{ post.url }}">{{ post.title }}</a>
+                                <span>{{ post.subtitle }}</span>
+                            </h2>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="section-content">
+                                {{ post.excerpt }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {% endfor %}
+    </div>
+
+</div>

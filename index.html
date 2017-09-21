@@ -1,32 +1,28 @@
 ---
 layout: default
-newsletter_sign_up: Thank you! Please check your e-mail to confirm your subscription!
 title: Acebusters - Poker on the Ethereum blockchain
 description: Join Acebusters now! The decentralized economy to make online poker profitable, fair and secure. Poker on the Ethereum blockchain. Ace or bust!
+image: AB_twitter_card@2x.png
 ---
-<script src="js/timer.js"></script>
+
+{% assign data = site.data.index %}
+{% assign buttons = site.data.buttons %}
 
 <!-- Header -->
 <section class="intro-header landing-page section">
     <div class="container container-ace">
         <div class="row hero-bottom-row equal">
             <div class="col-md-7 hero-bottom">
-              <a class="video-button" href="#video">WATCH THE VIDEO</a>
-                <h1>
-                    JOIN THE FORCE FOR THE ONLINE POKER REVOLUTION.
-                </h1>
-                <span>
-                    A decentralized poker platform running on the Ethereum blockchain
-                </span>
+                <a class="video-button" href="#video">{{ data.banner.watch }}</a>
+                <h1>{{ data.banner.title }}</h1>
+                <span>{{ data.banner.subtitle }}</span>
             </div>
             <div class="col-md-5">
                 <div class="intro-buttons">
-                    <a class="button-base" href="files/acebusters_whitepaper.pdf" target="_blank">
-                        Read Whitepaper
+                    <a class="button-base" href="{{ site.baseurl }}/files/acebusters_whitepaper.pdf" target="_blank">
+                        {{ buttons.readWhitepaper }}
                     </a>
-                    <a class="button-base" v-bind:href="appUrl()" target="_blank">
-                        Play Poker
-                    </a>
+                    {% include appLink.html text='playPoker' class='button-base' target='_blank' %}
                 </div>
             </div>
         </div>
@@ -34,59 +30,61 @@ description: Join Acebusters now! The decentralized economy to make online poker
 </section>
 
 <section class="content-white section subscribe-section">
-  <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4">
-          <timer date="September 21, 2017 13:00 UTC" />
-        </div>
-        <div class="col-md-8">
-          <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850  ico-subscribe">
-              <div class="ml-vertical-align-center">
-                  <div class="subscribe-form ml-block-success" style="display:none;">
-                      <div class="form-section mb0">
-                          <div style="text-align:center;padding: 20px; font-size:4em;">
-                              <i class="fa fa-check fa-4" style="text-align:center;"></i>
-                              <p> {{ page.newsletter_sign_up }}  </p>
-                          </div>
-                      </div>
-                  </div>
-                  <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST" target="_blank" data-toggle="validator">
-                      <div class="subscribe-form">
-                          <div class="form-section input-section">
-                              <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
-                                  <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" placeholder="Your Email Here" value="" id="eMail" required>
-                              </div>
-                          </div>
-                          <div class="form-section submit-section">
-                              <button type="submit" class="button-base" id="sign-up">
-                                  Keep Me Updated
-                              </button>
-                              <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <timer date="{{ site.data.timers.crowdsale }}" />
+            </div>
+            <div class="col-md-8">
+                <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850  ico-subscribe">
+                    <div class="ml-vertical-align-center">
+                        <div class="subscribe-form ml-block-success" style="display:none;">
+                            <div class="form-section mb0">
+                                <div style="text-align:center;padding: 20px; font-size:4em;">
+                                    <i class="fa fa-check fa-4" style="text-align:center;"></i>
+                                    <p> {{ site.data.messages.signUp }} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST"
+                            target="_blank" data-toggle="validator">
+                            <div class="subscribe-form">
+                                <div class="form-section input-section">
+                                    <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
+                                        <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
+                                            placeholder="{{ site.data.inputs.emailPl }}" value="" id="eMail" required>
+                                    </div>
+                                </div>
+                                <div class="form-section submit-section">
+                                    <button type="submit" class="button-base" id="sign-up">
+                                        {{ buttons.keepMeUp }}
+                                    </button>
+                                    <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
                                   <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
                               </button>
-                          </div>
-                          <div class="clearfix" style="clear: both;"></div>
-                          <input type="hidden" name="ml-submit" value="1" />
-                      </div>
-                  </form>
-                  <script>
-                      function ml_webform_success_3873850() {
-                        jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
-                        jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
-                        dataLayer.push({ 'event': 'subscription_success' });
-                      };
-                  </script>
-              </div>
-          </div>
+                                </div>
+                                <div class="clearfix" style="clear: both;"></div>
+                                <input type="hidden" name="ml-submit" value="1" />
+                            </div>
+                        </form>
+                        <script>
+                            function ml_webform_success_3873850() {
+                                jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
+                                jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
+                                dataLayer.push({ 'event': 'subscription_success' });
+                            };
+                        </script>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-  </div>
+    </div>
 </section>
 
 <section class="content-dark section" id="video">
     <div class="container-fluid">
         <div class="row">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/nEBEfePYFTQ" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nEBEfePYFTQ" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </section>
@@ -96,13 +94,12 @@ description: Join Acebusters now! The decentralized economy to make online poker
         <div class="row">
             <div class="col-md-6">
                 <h2 section-heading>
-                    WE FIX A BROKEN SYSTEM<br /> AND MAKE ONLINE POKER<br /> GREAT, AGAIN.
+                    {{ data.section1.title }}
                 </h2>
             </div>
             <div class="col-md-6">
                 <div class="section-content">
-                    Poker is perfect for Ethereum. The market, because it was hit by scams and scandles, offers a huge opportunity to actually apply blockchain technology to fix a broken system.
-                    Add to that an enthusiastic team of innovators from both the blockchain and the poker world, who really want to make this happen, come and join us!
+                    {{ data.section1.description }}
                 </div>
             </div>
         </div>
@@ -114,7 +111,7 @@ description: Join Acebusters now! The decentralized economy to make online poker
         <div class="row">
             <div class="col-sm-12">
                 <h2 class="main-headline">
-                    a pair of nutz beats everything!
+                    {{ data.section2.title }}
                 </h2>
             </div>
         </div>
@@ -124,154 +121,62 @@ description: Join Acebusters now! The decentralized economy to make online poker
 
 <section class="content-magenta section advantages">
   <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4">
-          <h3>Security of Funds</h3>
-          <p class="section-content">Through your wallet you are in control of your bankroll at any time. No banking counterparty.</p>
-        </div>
-        <div class="col-md-4">
-          <h3>Fair Games</h3>
-          <p class="section-content">
-              At Acebusters we are developing a cryptographic peer-to-peer protocol called <a target="_blank" href="https://en.wikipedia.org/wiki/Mental_poker">Mental Poker</a>. It ensures that the shuffle is fair and nobody can peek at your cards!
-              100% verifiable by anyone. </p>
-        </div>
-        <div class="col-md-4">
-            <h3>Autonomous Economy</h3>
-            <p class="section-content">Established online poker platforms create profits in ways that destroy trust with players. Acebusters is a jointly owned and autonomous controlled poker economy run by its players for its players.</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-          <h3>Become an Affiliate </h3>
-          <p class="section-content">Anyone can become an affiliate instantly. Earn up to 100% of rakeback for the players you bring to the platform and keep track of your earnings.</p>
-        </div>
-        <div class="col-md-4">
-          <h3>Trustless Staking</h3>
-          <p class="section-content">Smart contracts can act as escrows and are independent by definition. They can be set up for any kind of staking or sidebet scenario.</p>
-        </div>
-        <div class="col-md-4">
-          <h3>Privacy</h3>
-          <p class="section-content">As in other blockchain applications, there is no personal information shared. Your wallet is a pseudonymous identifier.</p>
-        </div>
+      <div class="advantages-list row">
+        {% for item in data.advantages %}
+            <div class="advantages-list__item col-md-4">
+                <h3>{{ item.title }}</h3>
+                <p class="section-content">{{ item.text }}</p>
+            </div>
+        {% endfor %}
     </div>
   </div>
 </section>
-<div class="content-white section section-small container-fluid">
-    <div class="row">
-        <div class="col-sm-6 no-padding">
-          <div class="section-heading section-heading-big">
-            <h2>
-              CRAVING FOR MORE<br>
-              IN-DEPTHS DETAILS?
-            </h2>
-          </div>
-        </div>
-        <div class="col-sm-3">
-            <a class="button-base ico-cta" href="files/acebusters_whitepaper.pdf" target="_blank">
-                Read Whitepaper
-            </a>
-        </div>
-        <div class="col-sm-3">
-            <a class="button-base ico-cta" v-bind:href="appUrl()" target="_blank">
-                Play Poker
-            </a>
+<div class="content-white section section-small">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 no-padding">
+              <div class="section-heading section-heading-big">
+                <h2>
+                  {{ data.sectionSmall.title }}
+                </h2>
+              </div>
+            </div>
+            <div class="col-sm-3">
+                <a class="button-base ico-cta" href="{{ site.baseurl }}/files/acebusters_whitepaper.pdf" target="_blank">
+                    {{ buttons.readWhitepaper }}
+                </a>
+            </div>
+            <div class="col-sm-3">
+                {% include appLink.html text='playPoker' class='button-base ico-cta' target='_blank' %}
+            </div>
         </div>
     </div>
 </div>
 <!-- /.content-section-a -->
-<section id="timeline" class=" section">
+<section id="timeline" class="section">
     <div class="container-fluid">
         <div class="row">
-            <div class="">
+            <div>
                 <h2 class="section-heading" style="color:#FFF">
-                  WE'RE IN IT FOR THE HEART.
-                  <span>Our Milestones.</span>
+                  {{ data.timeline.title }}
                 </h2>
             </div>
             <div id="cd-timeline" class="cd-container">
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img cd-picture">
+                {% for item in data.timeline.diagram %}
+                    <div class="cd-timeline-block">
+                        <div class="cd-timeline-img">
+                        </div>
+                        <div class="cd-timeline-content-wrap">
+                            <div class="cd-timeline-content">
+                                <h3>{{ item.title }}</h3>
+                                <span class="cd-date">{{ item.date }}</span>
+                                <p>{{ item.description }}</p>
+                                <!-- cd-timeline-content -->
+                            </div>
+                        </div>
                     </div>
-                    <div class="cd-timeline-content-wrap">
-                      <div class="cd-timeline-content">
-                        <h3>Inception</h3>
-                        <span class="cd-date">Jan 2017</span>
-                        <p>
-                          We decided to go all-in to make this happen. Total dedication to the project.
-                        </p> <!-- cd-timeline-content -->
-                      </div>
-                    </div>
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img cd-movie">
-                    </div> <!-- cd-timeline-img -->
-                    <div class="cd-timeline-content-wrap">
-                      <div class="cd-timeline-content">
-                        <h3>Closed beta!</h3>
-                        <span class="cd-date">April 2017</span>
-                        <p> Fixing the last crucial bugs in our game logic and improving user experience with a small group of dedicated testers. Thanks, guys!</p>
-                      </div> <!-- cd-timeline-content -->
-                    </div>
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img cd-picture">
-                    </div> <!-- cd-timeline-img -->
-
-                    <div class="cd-timeline-content-wrap">
-                      <div class="cd-timeline-content">
-                        <h3>Public beta!</h3>
-                        <span class="cd-date">May 2017</span>
-                        <p>
-                          Beta launch: 1,500 visitors and more than 10,000 hands played​ at our tables!
-                        </p>
-                      </div> <!-- cd-timeline-content -->
-                    </div>
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img cd-location">
-                    </div>
-                    <div class="cd-timeline-content-wrap">
-                      <div class="cd-timeline-content">
-                        <h3>Implement SNGs</h3>
-                        <span class="cd-date">Nov 2017</span>
-                        <p>
-                          Sit-and-Go (SNG) is a very popular format and it will be one of the first features we implement.
-                        </p>
-                      </div> <!-- cd-timeline-content -->
-                    </div>
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img cd-location">
-                    </div>
-                    <div class="cd-timeline-content-wrap">
-                      <div class="cd-timeline-content">
-                        <h3>Mental Poker</h3>
-                        <span class="cd-date">Nov 2017</span>
-                        <p>
-                          Acebusters will go totally mental. Decentralized, secure, p2p architecture with a guaranteed fairly shuffled deck. Awesome!
-                        </p>
-                      </div> <!-- cd-timeline-content -->
-                    </div>
-                </div> <!-- cd-timeline-block -->
-
-                <div class="cd-timeline-block">
-                    <div class="cd-timeline-img cd-location">
-                    </div>
-                    <div class="cd-timeline-content-wrap">
-                      <div class="cd-timeline-content">
-                        <h3>Global Campaign</h3>
-                        <span class="cd-date">Dec 2017</span>
-                        <p>
-                          In order to reach out to the global poker community we will launch a global marketing campaign.
-                        </p>
-                      </div> <!-- cd-timeline-content -->
-                    </div>
-                </div> <!-- cd-timeline-block -->
+                    <!-- cd-timeline-block -->
+                {% endfor %}
             </div> <!-- cd-timeline -->
         </div>
     </div>
@@ -279,133 +184,43 @@ description: Join Acebusters now! The decentralized economy to make online poker
 </section>
 <!-- Team Section -->
 <a name="team"></a>
-<section ref="team" id="team" class="section">
+<section ref="team" id="team" class="section team">
   <div class="container-fluid">
     <div class="row" style="margin-48">
       <div class="col-sm-12">
-        <h2 class="section-heading">WE’VE GOT BLOCKCHAINERS AND POKER LOVERS ALIKE. <span>Meet the team.</span></h2>
+        <h2 class="section-heading">{{ data.team.title }}</h2>
       </div>
     </div>
-      <div class="row" style="margin-top:32px;">
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/2.png" class="img-responsive img-circle" alt="Johann Barbie">
-                <h4>Johann Barbie</h4>
-                <p class="team-role">Blockchain Geek</p>
+      <div class="row team-list">
+        {% for member in data.team.members %}
+            <div class="team-list__item col-sm-3">
+                <div class="team-member">
+                    <img src="{{ site.baseurl }}/img/team/{{ member.img }}" class="img-responsive img-circle" alt="{{ member.name }}">
+                    <h4>{{ member.name }}</h4>
+                    <p class="team-role">{{ member.role }}</p>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/sunify.jpg" class="img-responsive img-circle" alt="Alex Lunyov">
-                <h4 class="team-headline">Alex Lunyov</h4>
-                <p class="team-role">Platform Engineer</p>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/mkroener.jpg" class="img-responsive img-circle" alt="Michael Kroener">
-                <h4>Michael Kroener</h4>
-                <p class="team-role">Marketing Analyst</p>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/victorm.jpg" class="img-responsive img-circle" alt="Victor Mateleshka">
-                <h4>Victor Mateleshka</h4>
-                <p class="team-role">QA Engineer</p>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/mayank.jpg" class="img-responsive img-circle" alt="Mayank Kumar">
-                <h4>Mayank Kumar</h4>
-                <p class="team-role">Smart Contract Engineer</p>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/1.png" class="img-responsive img-circle" alt="Helge Wieding">
-                <h4 class="team-headline">Helge Wieding</h4>
-                <p class="team-role">Poker Enthusiast</p>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/kosta.jpg" class="img-responsive img-circle" alt="Konstantin Korenkov">
-                <h4>Konstantin Korenkov</h4>
-                <p class="team-role">Backend Developer</p>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/calvin.jpg" class="img-responsive img-circle" alt="Calvin Hoenes">
-                <h4>Calvin Hoenes</h4>
-                <p class="team-role">Strategy Engineer</p>
-            </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="team-member">
-            <img src="img/team/kdanilova.jpg" class="img-responsive img-circle" alt="Kate Danilova">
-            <h4>Kate Danilova</h4>
-            <p class="team-role">Product Manager</p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/grabus.jpg" class="img-responsive img-circle" alt="Alexsey Grabov">
-                <h4 class="team-headline">Aleksey Grabov</h4>
-                <p class="team-role">UX Engineer</p>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/yar.jpg" class="img-responsive img-circle" alt="Yaroslav Volov">
-                <h4>Yaroslav Volov</h4>
-                <p class="team-role">Frontend Developer</p>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="team-member">
-                <img src="img/team/babz.jpg" class="img-responsive img-circle" alt="Barbara Scherer">
-                <h4>Barbara Scherer</h4>
-                <p class="team-role">Regulatory Affairs</p>
-            </div>
-        </div>
+        {% endfor %}
       </div>
   </div>
 </section>
-<div class="content-white section section-small container-fluid partners-section">
-    <div class="row">
-      <div class="col-sm-12" style="text-align:center;">
-        <div class="section-heading">
-          <h2>Partners</h2>
+<div class="content-white section section-small partners-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" style="text-align:center;">
+                <div class="section-heading">
+                    <h2>{{ data.partners.title }}</h2>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <a href="http://droidlabs.pro/" target="_blank">
-                <img src="img/partners/droidlabs.png">
-            </a>
-        </div>
-        <div class="col-sm-3">
-            <a href="http://kindbeetle.ru/" target="_blank">
-                <img src="img/partners/kindbeetle.png">
-            </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="https://www.ambisafe.co/" target="_blank">
-              <img src="img/partners/ambisafe.png">
-          </a>
-        </div>
-        <div class="col-sm-3">
-          <a href="https://www.ambisafe.co/" target="_blank">
-              <img src="img/partners/shapeshift.png">
-          </a>
+        <div class="row">
+            {% for item in data.partners.list %}
+                <div class="col-sm-3">
+                    <a href="{{ item.url }}" target="_blank">
+                        <img src="{{ site.baseUrl }}/img/partners/{{ item.img }}">
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -418,7 +233,7 @@ description: Join Acebusters now! The decentralized economy to make online poker
                 <h3 class="section-subheading text-muted" style="color:#FFF;">A hub of innovators.</h3>
                 <div class="col-sm-6">
                     <div class="team-partner">
-                        <img src="img/team/droidlabs.png">
+                        <img src="{{ site.baseurl }}/img/team/droidlabs.png">
                     </div>
                     <div class="team-partner">
                         <p class="text-muted" style="color:#FFF;">Technical Consultants</p>
@@ -431,7 +246,7 @@ description: Join Acebusters now! The decentralized economy to make online poker
                 </div>
                 <div class="col-sm-6">
                     <div class="team-partner">
-                        <img src="img/team/kindbeetle.png">
+                        <img src="{{ site.baseurl }}/img/team/kindbeetle.png">
                     </div>
                     <div class="team-partner">
                         <p class="text-muted" style="color:#FFF;margin-top:-34px;">Development Agency</p>
@@ -449,78 +264,71 @@ description: Join Acebusters now! The decentralized economy to make online poker
 <!-- contact section -->
 <a name="contact"></a>
 <section id="contact" class="section">
-  <div class="container-fluid">
-    <div class="row margin-48">
-      <div class="col-md-6">
-        <h2 class="section-heading">
-          STAY IN THE LOOP.
-          <span>Or join our conversation.</span>
-        </h2>
-      </div>
-      <div class="col-md-6">
-        <ul class="list-inline footer-icon-list">
-            <li class="footer-item">
-                <a href="https://github.com/acebusters" target="_blank"><i class="fa fa-github"></i></a>
-            </li>
-            <li class="footer-item">
-                <a href="https://discord.gg/7PesDTZ" target="_blank"><i class="icon-discord"></i></a>
-            </li>
-            <li class="footer-item">
-                <a href="https://twitter.com/ace_busters" target="_blank"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li class="footer-item">
-                <a href="https://www.facebook.com/acebusters.poker" target="_blank"><i class="fa fa-facebook"></i></a>
-            </li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-        <div class="col-md-7">
-            <div class="newslettet-section">
-                <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850">
-                    <div class="ml-vertical-align-center">
-                        <div class="subscribe-form ml-block-success" style="display:none;">
-                            <div class="form-section mb0">
-                                <div style="text-align:center;padding: 20px; font-size:4em;">
-                                    <i class="fa fa-check fa-4" style="text-align:center;"></i>
-                                    <p> {{ page.newsletter_sign_up }}  </p>
-                                </div>
-                            </div>
-                        </div>
-                        <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST" target="_blank" data-toggle="validator">
-                            <div class="subscribe-form horizontal">
-                                <div class="form-section horizontal">
-                                    <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
-                                        <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" placeholder="Your Email Here" value="" id="eMail" required>
+    <div class="container-fluid">
+        <div class="row margin-48">
+            <div class="col-md-6">
+                <h2 class="section-heading">
+                    {{ data.contact.title }}
+                </h2>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-inline footer-icon-list">
+                    {% for item in data.contact.socials %}
+                        <li class="footer-item">
+                            <a href="{{ item.url }}" target="_blank"><i class="{{ item.icon }}"></i></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="newslettet-section">
+                    <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850">
+                        <div class="ml-vertical-align-center">
+                            <div class="subscribe-form ml-block-success" style="display:none;">
+                                <div class="form-section mb0">
+                                    <div style="text-align:center;padding: 20px; font-size:4em;">
+                                        <i class="fa fa-check fa-4" style="text-align:center;"></i>
+                                        <p> {{ site.data.messages.signUp }} </p>
                                     </div>
                                 </div>
-                                <div class="form-section horizontal">
-                                    <button type="submit" class="button-base" id="sign-up">
-                                        Sign up
-                                    </button>
-                                    <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
+                            </div>
+                            <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST"
+                                target="_blank" data-toggle="validator">
+                                <div class="subscribe-form horizontal">
+                                    <div class="form-section horizontal">
+                                        <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
+                                            <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
+                                                placeholder="{{ site.data.inputs.emailPl }}" value="" id="eMail" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-section horizontal">
+                                        <button type="submit" class="button-base" id="sign-up">
+                                        {{ buttons.signUp }}
+                                        </button>
+                                        <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
                                         <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
                                     </button>
+                                    </div>
+                                    <div class="clearfix" style="clear: both;"></div>
+                                    <input type="hidden" name="ml-submit" value="1" />
                                 </div>
-                                <div class="clearfix" style="clear: both;"></div>
-                                <input type="hidden" name="ml-submit" value="1" />
-                            </div>
-                        </form>
-                        <script>
-                          function ml_webform_success_3873850() {
-                            jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
-                            jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
-                            dataLayer.push({ 'event': 'subscription_success' });
-                          };
-                        </script>
+                            </form>
+                            <script>
+                                function ml_webform_success_3873850() {
+                                    jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
+                                    jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
+                                    dataLayer.push({ 'event': 'subscription_success' });
+                                };
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-5">
-
-          If you have any questions feel free to contact us via our <a href="https://discordapp.com/invite/7PesDTZ">Discord Channel</a> or email us <a href="mailto:info@acebusters.com">here</a>
+            <div class="col-md-5">
+                {{ data.contact.info }}
+            </div>
         </div>
     </div>
-  </div>
 </section>

@@ -1,0 +1,247 @@
+banner:
+  title: JOIN THE FORCE FOR THE ONLINE POKER REVOLUTION.
+  subtitle: A decentralized poker platform on the Ethereum blockchain
+
+contribute:
+  title: HOW TO CONTRIBUTE
+  steps:
+    - class: col-sm-3
+      title: CREATE AN ACCOUNT
+      description: >
+        Sign up at <a target="_blank" v-bind:href="appUrl()">dapp.acebusters.com</a> to create an account. If you need any help, join our <a target="_blank" href="https://discordapp.com/invite/7PesDTZ">Discord community</a>.
+
+    - class: col-sm-3
+      title: CHARGE YOUR ACCOUNT
+      description: >
+        Send Ether to the address displayed on your account dashboard. If you don’t have Ether, use the Buy button we provide on the dashboard to convert any other cryptocurrency, or buy Ether directly with fiat at exchanges such as Bitstamp or Coinbase.
+
+    - class: col-sm-3
+      title: BUY NTZ
+      description: >
+        During the crowdsale you can buy NTZ for a discounted rate of 30.000 NTZ per ETH.
+
+    - class: col-sm-3
+      title: POWER UP
+      description: >
+        After the crowdsale you simply convert your NTZ to ABP (Power Up). You will receive between 7 and 14 ABP per ETH depending on how much we raise.
+
+infoSection:
+  img: poker_cards_white@2x.png
+  title: >
+    ONLINE POKER IS READY<br /> FOR A REVOLUTION.
+    <span>Acebusters in a Nutzshell.</span>
+  description: >
+    Acebusters is a decentralized poker application (Dapp),
+    running on the Ethereum blockchain. We are striving to make online poker fun and more profitable by creating a decentralized, innovative two-token economy.
+
+doubleToken:
+  title: >
+    DOUBLE YOUR POWER.
+    <span>Meet our innovative <br/> two-token system.</span>
+  why:
+    title: WHY 2 TOKENS?
+    description: >
+      No player wants to win but lose due to market volatility, right?
+      At the same time we want investors to participate in the success of the Dapp.
+      Meet Nutz and Power.
+  infoList:
+    - class: col-sm-5
+      icon: nutz-heading
+      title: NUTZ (NTZ)
+      subtitle: Currency for games, bets and bankroll
+      description: >
+        The players’ token that allows to join tables and protects players’ bankroll from market volatility.
+
+    - class: col-sm-5 col-sm-offset-2
+      icon: abp-heading
+      title: POWER (ABP)
+      subtitle: Shares in the Dapp and token for voting
+      description: >
+        The investors’ and affiliates’ token that allows to have a voice in the steering of the Dapp and profit from its growth.
+
+tokenDetails:
+  title: >
+    ENOUGH TALKING, IT’S TIME FOR NUMBERS.
+    <span>The facts.</span>
+  tables:
+    - class: col-sm-6 col-sm-pull-6
+      title: NUTZ TOKEN DETAILS
+      table:
+        - title: Symbol
+          description: NTZ
+
+        - title: Role of Token
+          description: Currency for games, bets, bankroll
+
+        - title: Token Supply
+          description: Uncapped, backed by ETH in reserve
+
+        - title: Initial Value
+          description: 20,000 NTZ = 1 ETH
+
+        - title: Discount during Crowdsale
+          description: 30,000 NTZ = 1 ETH (33%)
+
+        - title: Blockchain
+          description: Ethereum
+
+    - class: col-sm-6
+      title: POWER TOKEN DETAILS
+      table:
+        - title: Symbol
+          description: ABP
+
+        - title: Role of Token
+          description: Shares in the Dapp, token for voting
+
+        - title: Token Supply
+          description: 630,000 ABP
+
+        - title: Issuance in the Crowdsale
+          description: 70,000 - 270,000 ABP (10% - 30%)
+
+        - title: Blockchain
+          description: Ethereum
+
+    - class: col-sm-6 crowdsale-essentials
+      title: CROWDSALE ESSENTIALS
+      table:
+        - title: Event Start
+          description: 21st Sep. 2017 @ 13:00 (UTC)
+
+        - title: Offering Duration
+          description: 3 days - 30 days
+
+        - title: Accepted Currencies
+          description: ETH
+
+        - title: Minimum Goal
+          description: 5,000 ETH
+
+        - title: Maximum Cap (approx.)
+          description: 30,000 ETH
+
+        - title: Security of Funds
+          description: Multi-signature wallet of Escrow Council
+
+        - title: Official Crowdsale Platform
+          description: <a target="_blank" v-bind:href="appUrl()">dapp.acebusters.com</a>
+
+roadmap:
+  title: >
+    ROADMAP WITH <br>
+    STRETCH GOALS.
+    <span>Our future.</span>
+  description: >
+    The money raised will be used for product development, operations, marketing and international expansion. If the minimum goal is not reached, investors will be able to claim their funds back at no loss.
+  list:
+    - point: 5,000 ETH
+      title: Sit-and-Go Tournaments
+      description: >
+        SnG is a very popular format and it will be one of the first features.
+
+    - point: 10,000 ETH
+      title: Mental Poker Protocol
+      description: >
+        Development of an efficient protocol to guarantee a fair shuffle and protect the secrecy of the cards.
+
+    - point: 13,000 ETH
+      title: Trustless Staking
+      description: >
+        Escrow tournament buy-ins and autonomously distribute payouts based on game outcomes with the help of smart contracts.
+
+    - point: 16,000 ETH
+      title: Multi-table Tournaments
+      description: >
+        Host tournaments with well-known online and live tournament professionals and broadcast these events live.
+
+    - point: 20,000 ETH
+      title: Sidebets
+      description: >
+        Give some goodies to the railbirds!
+
+    - point: 30,000 ETH
+      title: Scalable global marketing campaign
+      description: >
+        Run a global PR campaign and tournaments with guaranteed price pools.
+
+protecting:
+  img: graphics/escrow_3of4@2x.png
+  title: >
+    PROTECTING YOUR INVESTMENT.
+    <span>Introduction of Reserve and <br>
+    Escrow Council</span>
+  description: >
+    The raised Ether will remain fully auditable in the reserve of the Acebusters smart contract after the crowdsale. Withdrawals from the reserve are limited to the Escrow Council, a team of four individuals carefully selected to represent the interests of players and investors. The council can only act by majority vote through a 3-of-4 multi-signature configuration.
+    The Acebusters team will apply to the council for milestone payments according to our roadmap one after the other. So without an independent party signing, we will not be able to withdraw reserve funds.
+
+charts:
+  title: >
+    WHAT DO WE NEED <br />THE MONEY FOR?
+    <span>How we use the first milestone.</span>
+  milestone:
+    label: Milestone Distribution
+    data:
+      bgc: [
+        'rgba(153,153,153, 0.59)',
+        'rgba(50, 30, 54, 0.59)',
+        'rgba(230,230,230, 0.59)',
+        'rgba(224,30,64, 0.59)'
+      ]
+      colors: [
+        'rgb(153,153,153)',
+        'rgb(50, 30, 54)',
+        'rgb(230,230,230)',
+        'rgb(224,30,64)'
+      ]
+      values: [15, 20, 20, 45]
+    info:
+      - item:
+          - title: CROWDSALE CAMPAIGN COST
+            description: >
+              Cost of advertisement and PR.
+
+          - title: MARKETING, SALES AND PR
+            description: >
+              First marketing phase, covering basic marketing operations, including advertising campaigns for user acquisition and branding.
+
+      - item:
+          type: chart
+
+      - item:
+          - title: TECHNICAL DEVELOPMENT
+            description: >
+              Research and development costs of the upcoming features, starting with the implementation of Sit-and-GO tournaments.
+
+          - title: PAYMENT OF BOUNTY EXPENSES
+            description: >
+              Paying the contributors for bounties such as translation and bug discovery.
+  power:
+    title: >
+      WE'RE IN IT FOR THE LONG RUN.
+      <span>Power Token Distribution.</span>
+    description:
+      - p: Up to 30% of the Dapp's Power tokens will be sold in this event. While keeping the bulk of tokens seems unusual, it is of strategic importance for Acebusters growth strategy.
+      - p: By raising only as much money as needed the founding team wants to build trust and prove its abilities with the players and investors first. When the expansion to new markets will require more capital we will be able to achieve a better price for the tokens and attract high quality investors in further sales events.
+      - p: The team is committed to a sustainable growth path, ready to give up its majority share when the Dapp has developed an effective governance process by its stakeholders.
+
+    label: Power Distribution
+    data:
+      labels: [
+        'Investors',
+        'Team'
+      ]
+      bgc: [
+        'rgba(224,30,64,0.59)',
+        'rgba(230,230,230,0.59)'
+      ]
+      colors: [
+        'rgb(224, 30, 64)',
+        'rgb(230,230,230)'
+      ]
+      values: [30, 70]
+
+moreDetails:
+  title: >
+    CRAVING FOR MORE<br>
+    IN-DEPTHS DETAILS?

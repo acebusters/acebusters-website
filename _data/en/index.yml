@@ -1,0 +1,160 @@
+banner:
+  title: JOIN THE FORCE FOR THE ONLINE POKER REVOLUTION.
+  subtitle: A decentralized poker platform running on the Ethereum blockchain
+  watch: WATCH THE VIDEO
+
+section1:
+  title: WE FIX A BROKEN SYSTEM<br /> AND MAKE ONLINE POKER<br /> GREAT, AGAIN.
+  description: >
+    Poker is perfect for Ethereum. The market, because it was hit by scams and scandles, offers a huge opportunity to actually apply blockchain technology to fix a broken system.
+    Add to that an ethusiastic team of innovators from both the blockchain and the poker world, who really want to make this happen, come and join us!
+
+section2:
+  title: a pair of nutz beats everything!
+
+advantages:
+  - title: Security of Funds
+    text: >
+      Through your wallet you are in control of your bankroll at any time. No banking counterparty.
+
+  - title: Fair Games
+    text: >
+      At Acebusters we are developing a cryptographic peer-to-peer protocol called <a target="_blank" href="https://en.wikipedia.org/wiki/Mental_poker">Mental Poker</a>. It ensures that the shuffle is fair and nobody can peek at your cards!
+      100% verifiable by anyone.
+
+  - title: Autonomous Economy
+    text: >
+      Established online poker platforms create profits in ways that destroy trust with players. Acebusters is a jointly owned and autonomous controlled poker economy run by its players for its players.
+
+  - title: Become an Affiliate
+    text: >
+      Anyone can become an affiliate instantly. Earn up to 100% of rakeback for the players you bring to the platform and keep track of your earnings.
+
+  - title: Trustless Staking
+    text: >
+      Smart contracts can act as escrows and are independent by definition. They can be set up for any kind of staking or sidebet scenario.
+
+  - title: Privacy
+    text: >
+      As in other blockchain applications, there is no personal information shared. Your wallet is a pseudonymous identifier.
+
+sectionSmall:
+  title: CRAVING FOR MORE<br>IN-DEPTHS DETAILS?
+
+timeline:
+  title: WE'RE IN IT FOR THE HEART. <span>Our Milestones.</span>
+  diagram:
+    - title: Inception
+      date: Jan 2017
+      description: >
+        We decided to go all-in to make this happen. Total dedication to the project.
+
+    - title: Closed beta!
+      date: May 2017
+      description: >
+        Fixing the last crucial bugs in our game logic and improving user experience with a small group of dedicated testers. Thanks, guys!
+
+    - title: Public beta!
+      date: Jun 2017
+      description: >
+        Where we are today! Everybody now has access to our beta. We will gain valuable insights and feedback in this period.
+        The smart contracts will be tested thoroughly.
+        This is all still happening on the Ethereum testnet.
+
+    - title: Implement SNGs
+      date: Sep 2017
+      description: >
+        Sit-and-Go (SNG) is a very popular format and it will be one of the first features we implement.
+
+    - title: Mental Poker
+      date: Nov 2017
+      description: >
+        Acebusters will go totally mental. Decentralized, secure, p2p architecture with a guaranteed fairly shuffled deck. Awesome!
+
+    - title: Global Campaign
+      date: Dec 2017
+      description: >
+        In order to reach out to the global poker community we will launch a global marketing campaign.
+
+team:
+  title: WE’VE GOT BLOCKCHAINERS AND POKER LOVERS ALIKE. <span>Meet the team.</span>
+  members:
+    - name: Johann Barbie
+      role: Blockchain Geek
+      img: 2.png
+
+    - name: Alex Lunyov
+      role: Platform Engineer
+      img: sunify.jpg
+
+    - name: Michael Kroener
+      role: Marketing Analyst
+      img: mkroener.jpg
+
+    - name: Victor Mateleshka
+      role: QA Engineer
+      img: victorm.jpg
+
+    - name: Mayank Kumar
+      role: Smart Contract Engineer
+      img: mayank.jpg
+
+    - name: Helge Wieding
+      role: Poker Enthusiast
+      img: 1.png
+
+    - name: Konstantin Korenkov
+      role: Backend Developer
+      img: kosta.jpg
+
+    - name: Calvin Hoenes
+      role: Strategy Engineer
+      img: calvin.jpg
+
+    - name: Kate Danilova
+      role: Product Manager
+      img: kdanilova.jpg
+
+    - name: Aleksey Grabov
+      role: UX Engineer
+      img: grabus.jpg
+
+    - name: Yaroslav Volov
+      role: Frontend Developer
+      img: yar.jpg
+
+    - name: Barbara Scherer
+      role: Regulatory Affairs
+      img: babz.jpg
+
+partners:
+  title: Partners
+  list:
+    - url: http://droidlabs.pro/
+      img: droidlabs.png
+
+    - url: http://kindbeetle.ru/
+      img: kindbeetle.png
+
+    - url: https://www.ambisafe.co/
+      img: ambisafe.png
+
+    - url: https://www.ambisafe.co/
+      img: shapeshift.png
+
+contact:
+  title: STAY IN THE LOOP. <span>Or join our conversation.</span>
+  socials:
+    - url: https://github.com/acebusters
+      icon: fa fa-github
+
+    - url: https://discord.gg/7PesDTZ
+      icon: icon-discord
+
+    - url: https://twitter.com/ace_busters
+      icon: fa fa-twitter
+
+    - url: https://www.facebook.com/acebusters.poker
+      icon: fa fa-facebook
+  info: >
+    If you have any questions feel free to contact us via our <a href="https://discordapp.com/invite/7PesDTZ">Discord Channel</a> or email us <a href="mailto:info@acebusters.com">here</a>

@@ -1,4 +1,3 @@
 ---
 layout: economy
-permalink: economy
 ---
