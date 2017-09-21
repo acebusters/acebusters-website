@@ -493,3 +493,10 @@ table tr td:nth-child(even){
   @include transform(rotate(90deg));
   background-color: #FFFF00;
 }
+
+.timer-heading-launch{
+  font-size: 1.4rem;
+  span{
+    color: $ci_magenta;
+  }
+}

@@ -150,28 +150,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     Vue.component('timer-post-launch', {
           template: `
             <div class="ico-timer" v-show="!isTimeUp && now >= 1505984353">
-              <h3 class="headline-dark-bg timer timer-heading"> OUR CROWDSALE ENDS IN: </h3>
-              <ul class="vue-countdown">
-                <li>
-                  <p class="digit timer">{{ days | twoDigits }}:</p>
-                  <p class="text timer">DAYS</p>
-                </li>
-
-                <li>
-                  <p class="digit timer">{{ hours | twoDigits }}:</p>
-                  <p class="text timer">HOURS</p>
-                </li>
-
-                <li>
-                  <p class="digit timer">{{ minutes | twoDigits }}:</p>
-                  <p class="text timer">MIN</p>
-                </li>
-
-                <li>
-                  <p class="digit timer">{{ seconds | twoDigits }}</p>
-                  <p class="text timer">SEC</p>
-                </li>
-              </ul>
+              <p class="headline-dark-bg timer timer-heading timer-heading-launch"> GUARANTEED PARTICIPATION UNTIL: <span>{{ days | twoDigits }}d : {{ hours | twoDigits }}h : {{ minutes | twoDigits }}m : {{ seconds | twoDigits }}s</span></p>
             </div>
           `,
           computed: {
@@ -250,7 +229,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
       template: `
           <div>
               <div style="margin-bottom: 5%;" v-show="now >= 1505984353">
-              <p class="headline-dark-bg timer timer-heading"> CROWDSALE STATUS: {{ status }} </p>
               <span class="raised-param" data-toggle="tooltip" :title="aRaisedInfo"> {{ amountRaised.toFixed(2) }} ETH | {{ store.hardCap.toFixed(2) }} ETH </span>
               </div>
               <div class="milestones" v-show="now >= 1505984353">
@@ -267,7 +245,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
                 <span class="event-param" data-toggle="tooltip" :title="softCapInfo"> Softcap : {{ softCap }} </span> | 
                 <span class="event-param" data-toggle="tooltip" :title="hardCapInfo"> Hardcap : {{ store.hardCap }} </span> | 
                 <span class="event-param" data-toggle="tooltip" :title="minDuInfo"> min Duration : {{ minDuration }} Days </span> | 
-                <span class="event-param" data-toggle="tooltip" :title="maxDuInfo"> max Duration: {{ maxDuration }} Days </span>
+                <span class="event-param" data-toggle="tooltip" :title="maxDuInfo"> max Duration: {{ maxDuration }} Days </span> |
+                <span class="event-param"> STATUS: {{ status }} </p>
               </div>
           </div>
       `,
