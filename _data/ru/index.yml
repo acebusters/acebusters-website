@@ -1,83 +1,79 @@
 banner:
-  title: JOIN THE FORCE FOR THE ONLINE POKER REVOLUTION.
-  subtitle: A decentralized poker platform running on the Ethereum blockchain
-  watch: WATCH THE VIDEO
+  title: ПОДДЕРЖИТЕ ДВИЖЕНИЕ ЗА РЕВОЛЮЦИЮ ОНЛАЙН ПОКЕРА.
+  subtitle: Децентрализованная покерная платформа на блокчейне Ethereum
+  watch: СМОТРЕТЬ ВИДЕО
 
 section1:
-  title: WE FIX A BROKEN SYSTEM<br /> AND MAKE ONLINE POKER<br /> GREAT, AGAIN.
+  title: МЫ ИСПРАВЛЯЕМ ИСПОРЧЕННУЮ СИСТЕМУ И ДЕЛАЕМ ОНЛАЙН-ПОКЕР ЛУЧШЕ
   description: >
-    Poker is perfect for Ethereum. The market, because it was hit by scams and scandles, offers a huge opportunity to actually apply blockchain technology to fix a broken system.
-    Add to that an ethusiastic team of innovators from both the blockchain and the poker world, who really want to make this happen, come and join us!
+    Покер идеален для Ethereum. Обманы и скандалы на этом рынке создают огромную возможность применения блокчейн технологий для исправления испорченной системы онлайн-покера. Плюс команда энтузиастов-инноваторов из мира блокчейна и покера, которая хочет претворить это в жизнь. Присоединяйтесь к нам!
 
 section2:
-  title: a pair of nutz beats everything!
+  title: nutz бъет всё
 
 advantages:
-  - title: Security of Funds
+  - title: Безопасность средств
     text: >
-      Through your wallet you are in control of your bankroll at any time. No banking counterparty.
+      Ваш банкролл всегда в вашем личном кошельке. Никто не имеет доступа к вашим средствам.
 
-  - title: Fair Games
+  - title: Честная игра
     text: >
-      At Acebusters we are developing a cryptographic peer-to-peer protocol called <a target="_blank" href="https://en.wikipedia.org/wiki/Mental_poker">Mental Poker</a>. It ensures that the shuffle is fair and nobody can peek at your cards!
-      100% verifiable by anyone.
+      В Acebusters мы разрабатываем реализацию <a target="_blank" href="https://en.wikipedia.org/wiki/Mental_poker">Ментального покера</a>. Это криптографический пиринговый протокол, позволяющий гарантировать, что раздача честная и никому не доступны ваши карманные карты. На 100% открыт для проверки всем желающим.
 
-  - title: Autonomous Economy
+  - title: Автономная экономика
     text: >
-      Established online poker platforms create profits in ways that destroy trust with players. Acebusters is a jointly owned and autonomous controlled poker economy run by its players for its players.
+      Традиционные платформы онлайн-покера зарабатывают, подрывая доверие игроков. Автономная экономика Acebusters принадлежит игрокам и управляется ими в их же интересах.
 
-  - title: Become an Affiliate
+  - title: Программа для партнерев
     text: >
-      Anyone can become an affiliate instantly. Earn up to 100% of rakeback for the players you bring to the platform and keep track of your earnings.
+      Любой может стать партнером. Зарабатывайте до 100% рейкбека игроков, которых пришли на платформу по вашей рекомендации.
 
-  - title: Trustless Staking
+  - title: Финансирование, не требующее доверия
     text: >
-      Smart contracts can act as escrows and are independent by definition. They can be set up for any kind of staking or sidebet scenario.
+      Смарт-контракты могут выступать в качестве escrow и по определению независимы. Они могут быть использованы для любого рода финансового обеспечения и ставок.
 
-  - title: Privacy
+  - title: Приватность
     text: >
-      As in other blockchain applications, there is no personal information shared. Your wallet is a pseudonymous identifier.
+      Как и в других блокчейн-приложениях, личная информация отается приватной. Ваш кошелек выступает в роли псевдонимного идентификатора.
 
 sectionSmall:
-  title: CRAVING FOR MORE<br>IN-DEPTHS DETAILS?
+  title: БОЛЬШЕ ДЕТАЛЕЙ?
 
 timeline:
-  title: WE'RE IN IT FOR THE HEART. <span>Our Milestones.</span>
+  title: WE'RE IN IT FOR THE HEART. <span>Наша дорожная карта.</span>
   diagram:
-    - title: Inception
-      date: Jan 2017
+    - title: Зарождение
+      date: Январь 2017
       description: >
-        We decided to go all-in to make this happen. Total dedication to the project.
+        Мы решили пойти ва-банк для реализации проекта. Полная концентрация на проекте
 
-    - title: Closed beta!
-      date: May 2017
+    - title: Закрытая бета!
+      date: Май 2017
       description: >
-        Fixing the last crucial bugs in our game logic and improving user experience with a small group of dedicated testers. Thanks, guys!
+        Исправление последний критических ошибок в игровой логике и улучшение юзабилити с помощью небольшой группы тестировщиков. Спасибо, парни!
 
-    - title: Public beta!
-      date: Jun 2017
+    - title: Открытая бета!
+      date: Июнь 2017
       description: >
-        Where we are today! Everybody now has access to our beta. We will gain valuable insights and feedback in this period.
-        The smart contracts will be tested thoroughly.
-        This is all still happening on the Ethereum testnet.
+        Текущее состояние. У любого есть доступ к нашей бета-версии. Мы собираем отзывы и инсайты о работе системы. Смарт-контракты тщательно тестируются. Мы все еще работаем на тестовой сети Ethereum.
 
-    - title: Implement SNGs
-      date: Sep 2017
+    - title: Поддержка SNG турниров
+      date: Сентябрь 2017
       description: >
-        Sit-and-Go (SNG) is a very popular format and it will be one of the first features we implement.
+        Sit-and-Go (SNG) — очень популярный формат и будет одной из наших первых фич.
 
-    - title: Mental Poker
-      date: Nov 2017
+    - title: Ментальный покер
+      date: Ноябрь 2017
       description: >
-        Acebusters will go totally mental. Decentralized, secure, p2p architecture with a guaranteed fairly shuffled deck. Awesome!
+        Acebuster станет полностью децентрализованым с пиринговой архитектурой, гарантирующей честные раздачи. Крутота!
 
-    - title: Global Campaign
-      date: Dec 2017
+    - title: Глобальная экспансия
+      date: Декабрь 2017
       description: >
-        In order to reach out to the global poker community we will launch a global marketing campaign.
+        Для охвата мирового покерного сообщества мы запустим масштабную рекламную кампанию.
 
 team:
-  title: WE’VE GOT BLOCKCHAINERS AND POKER LOVERS ALIKE. <span>Meet the team.</span>
+  title: МЫ КРИПТОФАНАТЫ И ЛЮБИТЕЛИ ПОКЕРА. <span>Команда.</span>
   members:
     - name: Johann Barbie
       role: Blockchain Geek
@@ -143,7 +139,7 @@ partners:
       img: shapeshift.png
 
 contact:
-  title: STAY IN THE LOOP. <span>Or join our conversation.</span>
+  title: БУДЬТЕ В КУРСЕ. <span>И присоединяйтесь к общению.</span>
   socials:
     - url: https://github.com/acebusters
       icon: fa fa-github
@@ -157,4 +153,4 @@ contact:
     - url: https://www.facebook.com/acebusters.poker
       icon: fa fa-facebook
   info: >
-    If you have any questions feel free to contact us via our <a href="https://discordapp.com/invite/7PesDTZ">Discord Channel</a> or email us <a href="mailto:info@acebusters.com">here</a>
+    Если у вас есть какие-либо вопросы, напишите нам на нашем <a href="https://discordapp.com/invite/7PesDTZ"> канале в Discord </a> или на <a href="mailto:info@acebusters.com">электронный адрес</a>
