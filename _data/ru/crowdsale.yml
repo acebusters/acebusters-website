@@ -70,7 +70,7 @@ tokenDetails:
           description: NTZ
 
         - title: Назначение токена
-          description: Валюта для игры, ставок и банкролл
+          description: Валюта для игры, ставок и банкролла
 
         - title: Количество токенов
           description: Без ограничений, подкреплен резервами в ETH
