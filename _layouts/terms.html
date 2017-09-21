@@ -3,14 +3,18 @@ layout: default
 title: Acebusters - Terms
 description: Acebusters - These are our terms of use. Please read them carefully.
 ---
+
+{% assign data = site.data.terms %}
+{% assign buttons = site.data.buttons %}
+
 <!-- Header -->
 <div class="intro-header _midblock">
   <div class="logo-container-terms">
-    <img class="logo-img" src="img/ab_logo_white.png" alt="Acebusters Logo">
-    <h3>Terms</h3>
+    <img class="logo-img" src="{{ site.baseUrl }}/img/{{ data.banner.img }}" alt="Acebusters Logo">
+    <h3>{{ data.banner.title }}</h3>
   </div>
 </div>
 
 <div class="container terms lead">
-  {{content}}
+  {{ content }}
 </div>

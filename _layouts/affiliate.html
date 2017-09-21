@@ -4,6 +4,9 @@ title: Acebusters - Affiliate Program.
 description: Acebusters - Earn yourself up to 5% of each investment with our referral program.
 ---
 
+{% assign data = site.data.affiliate %}
+{% assign buttons = site.data.buttons %}
+
 <div>
 
   <div class="intro-header landing-page section">
@@ -15,6 +18,10 @@ description: Acebusters - Earn yourself up to 5% of each investment with our ref
                 </h1>
                 <span>
                   In order to spread the word we're offering an affiliate program so that everyone can help make online poker more profitable, fair and secure.
+                  {{ data.banner.title }}
+                </h1>
+                <span>
+                  {{ data.banner.subtitle }}
                 </span>
             </div>
             <div class="col-md-5">
@@ -24,6 +31,10 @@ description: Acebusters - Earn yourself up to 5% of each investment with our ref
                     </a>
                     <a class="button-base" href="https://acebusters.typeform.com/to/VFN5n6" target="_blank">
                         Become an Affiliate
+                        {{ buttons.askQuestion }}
+                    </a>
+                    <a class="button-base" href="#affiliateform">
+                        {{ buttons.becomeAffilate }}
                     </a>
                 </div>
             </div>
@@ -46,6 +57,16 @@ description: Acebusters - Earn yourself up to 5% of each investment with our ref
         <div class="col-sm-4">
           <a class="button-base" href="files/acebusters_whitepaper.pdf">Download our Whitepaper</a>
         </div>
+        <h2>{{ data.mediakit.title }}</h2>
+      </div>
+      <div class="row">
+        {% for item in data.mediakit.docs %}
+          <div class="{{ item.class }}">
+            <a class="button-base" href="{{ site.baseUrl }}/files/{{ item.url }}">
+              {{ item.title }}
+            </a>
+          </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -54,6 +75,13 @@ description: Acebusters - Earn yourself up to 5% of each investment with our ref
     <div class="container-fluid">
       <div class="row section-heading">
         <h2>Become An Affiliate<span>Fill out the details below to receive your referral code.</span></h2>
+  <div class="content-magenta section section-small" id="affiliateform">
+    <div class="container-fluid">
+      <div class="row section-heading">
+        <h2>{{ data.affiliate.title }}</h2>
+        <p style="margin-top:16px;">
+          {{ data.affiliate.description }}
+        </p>
       </div>
       <div class="row">
         <div class="typeform-widget" data-url="https://acebusters.typeform.com/to/VFN5n6" style="width: 100%; height: 500px;" > </div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;" > powered by <a href="https://www.typeform.com/examples/?utm_campaign=VFN5n6&amp;utm_source=typeform.com-10153203-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded-poweredbytypeform&amp;utm_term=EN" style="color: #999" target="_blank">Typeform</a> </div>

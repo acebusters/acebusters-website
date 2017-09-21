@@ -2,5 +2,5 @@
 layout: crowdsale
 title: Acebusters - Crowdsale
 description: Acebusters - Join the force for the online poker revolution!
-permalink: crowdsale
+image: AB_facebook_OG_Crowdsale.png
 ---

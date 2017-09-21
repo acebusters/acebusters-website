@@ -1,0 +1,524 @@
+---
+layout: iframe
+---
+
+{% assign data = site.data.gamesession %}
+{% assign buttons = site.data.buttons %}
+
+<style type="text/css">
+  .ReadMsgBody {
+    width: 100%;
+  }
+
+  .ExternalClass {
+    width: 100%;
+  }
+
+  .ExternalClass * {
+    line-height: 100%;
+  }
+
+  .ExternalClass,
+  .ExternalClass p,
+  .ExternalClass td,
+  .ExternalClass div,
+  .ExternalClass span,
+  .ExternalClass font {
+    line-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body,
+  table,
+  td,
+  p,
+  a,
+  li {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  table td {
+    border-collapse: collapse;
+  }
+
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  p,
+  a,
+  li,
+  td,
+  blockquote {
+    mso-line-height-rule: exactly;
+  }
+
+  p,
+  a,
+  li,
+  td,
+  body,
+  table,
+  blockquote {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  img,
+  a img {
+    border: 0;
+    outline: none;
+    text-decoration: none;
+  }
+
+  img {
+    -ms-interpolation-mode: bicubic;
+  }
+
+  a[href^=tel],
+  a[href^=sms] {
+    color: inherit;
+    cursor: default;
+    text-decoration: none;
+  }
+
+  a[x-apple-data-detectors] {
+    color: inherit!important;
+    text-decoration: none!important;
+    font-size: inherit!important;
+    font-family: inherit!important;
+    font-weight: inherit!important;
+    line-height: inherit!important;
+  }
+
+  .mlEmailContainer {
+    max-width: 640px!important;
+  }
+
+  .mlContentContainer p a {
+    word-break: break-word;
+  }
+
+  @-moz-document url-prefix() {
+    .mlContentContainer p a {
+      word-break: break-all;
+    }
+  }
+
+  @media only screen and (min-width:768px) {
+    .mlEmailContainer {
+      width: 640px!important;
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    .mlTemplateContainer {
+      padding: 10px 10px 0 10px;
+    }
+    .mlContentTable {
+      width: 100%!important;
+      min-width: 200px!important;
+    }
+    /* -- */
+    .mlContentBlock {
+      float: none!important;
+      width: 100%!important;
+    }
+    /* -- */
+    .mlContentOuter {
+      padding-bottom: 0px!important;
+      padding-left: 25px!important;
+      padding-right: 25px!important;
+      padding-top: 25px!important;
+    }
+    /* -- */
+    .mlBottomContentOuter {
+      padding-bottom: 25px !important;
+    }
+    .mlLeftRightContentOuter {
+      padding-left: 5px!important;
+      padding-right: 5px!important;
+    }
+    .mlContentContainerOuter {
+      padding-left: 0px!important;
+      padding-right: 0px!important;
+    }
+    /* -- */
+    .mlContentContainer {
+      padding-left: 25px!important;
+      padding-right: 25px!important;
+    }
+    /* -- */
+    .mlContentButton a,
+    .mlContentButton span {
+      width: auto!important;
+    }
+    /* -- */
+    .mlContentImage img,
+    .mlContentRSS img {
+      height: auto!important;
+      width: 100%!important;
+    }
+    .mlContentImage {
+      height: 100%!important;
+      width: auto!important;
+    }
+    .mlContentLogo img {
+      height: auto!important;
+      width: 100%!important;
+    }
+    /* -- */
+    .mlContentContainer h1 {
+      font-size: 24px!important;
+      line-height: 125%!important;
+      margin-bottom: 0px!important;
+    }
+    /* -- */
+    .mlContentContainer h2 {
+      font-size: 18px!important;
+      line-height: 125%!important;
+      margin-bottom: 0px!important;
+    }
+    /* -- */
+    .mlContentContainer h3 {
+      font-size: 16px!important;
+      line-height: 125%!important;
+      margin-bottom: 0px!important;
+    }
+    /* -- */
+    .mlContentContainer p,
+    .mlContentContainer .mlContentRSS {
+      font-size: 16px!important;
+      line-height: 150%!important;
+    }
+    /* -- */
+    .mobileHide {
+      display: none!important;
+    }
+    /* -- */
+    .alignCenter {
+      height: auto!important;
+      text-align: center!important
+    }
+    /* -- */
+    .marginBottom {
+      margin-bottom: 25px!important;
+    }
+    /* -- */
+    .mlContentHeight {
+      height: auto!important;
+    }
+    .mlContentGap {
+      height: 25px!important;
+    }
+    .mlDisplayInline {
+      display: inline-block!important;
+      float: none!important;
+    }
+    body {
+      margin: 0px!important;
+      padding: 0px!important;
+    }
+    body,
+    table,
+    td,
+    p,
+    a,
+    li,
+    blockquote {
+      -webkit-text-size-adjust: none!important;
+    }
+  }
+</style>
+
+<!--[if !mso]><!-- -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#1c1c1c" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+  <tbody>
+    <tr>
+      <td class="mlTemplateContainer" align="center">
+        <table align="center" border="0" class="mlEmailContainer" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+          <tbody>
+            <tr>
+              <td align="center">
+                <!--<![endif]-->
+
+                <!-- Content starts here -->
+
+
+
+
+
+                <table align="center" width="640" class="mlContentTable" cellpadding="0" cellspacing="0" border="0" style="min-width: 640px; width: 640px;">
+                  <tbody>
+                    <tr>
+                      <td class="mlContentTable">
+                        <table width="640" class="mlContentTable" cellspacing="0" cellpadding="0" border="0" bgcolor="#ffffff" align="center" style="width: 640px;">
+                          <tbody>
+                            <tr>
+                              <td class="mlContentImage"> <img border="0" src="{{ site.baseUrl }}/img/graphics/AB_Mailerlite_2.png" width="640" height="115" alt="Acebusters"
+                                  style="display: block;"> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+
+
+                <table align="center" border="0" bgcolor="#FFFFFF" class="mlContentTable" cellspacing="0" cellpadding="0" style="background: #FFFFFF; min-width: 640px; width: 640px;"
+                  width="640" id="ml-block-63244957">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="640" class="mlContentTable" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #FFFFFF; width: 640px;">
+
+                          <tbody>
+                            <tr>
+
+                              <td align="center" class="mlContentContainer" style="padding: 5px 50px 5px 50px;">
+
+                                <h1 style="margin: 0px; font-family: &#39;Open Sans&#39;, Sans-Serif; font-weight: normal; font-size: 27px; text-decoration: none; line-height: 36px; color: #1c1c1c;">
+
+                                  <a href="https://dapp.acebusters.com/lobby" style="text-decoration: none; color: #1c1c1c">
+                                      {{ data.title }}
+                                  </a>
+
+                                </h1>
+
+                              </td>
+
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+
+
+                <table align="center" border="0" bgcolor="#FFFFFF" class="mlContentTable" cellspacing="0" cellpadding="0" style="background: #FFFFFF; min-width: 640px; width: 640px;"
+                  width="640" id="ml-block-63245529">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="640" class="mlContentTable" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #FFFFFF; width: 640px;">
+
+                          <tbody>
+                            <tr>
+
+                              <td align="center" class="mlContentContainer" style="padding: 5px 50px 5px 50px;">
+
+                                <h1 style="margin: 0px; font-family: &#39;Open Sans&#39;, Sans-Serif; font-weight: normal; font-size: 23px; text-decoration: none; line-height: 38px; color: #1c1c1c;">
+                                  {{ data.date }}
+                                </h1>
+
+                              </td>
+
+                            </tr>
+
+                          </tbody>
+                        </table>
+
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+
+
+                <table align="center" border="0" bgcolor="#FFFFFF" class="mlContentTable" cellspacing="0" cellpadding="0" style="background: #FFFFFF; min-width: 640px; width: 640px;"
+                  width="640" id="ml-block-63244959">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="640" class="mlContentTable" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #FFFFFF; width: 640px;">
+                          <tbody>
+                            <tr>
+                              <td align="left" class="mlContentContainer" style="padding: 15px 50px 5px 50px; font-family: &#39;Open Sans&#39;, Sans-Serif; font-size: 14px; color: #666666; line-height: 23px;">
+                                <p style="margin: 0px 0px 10px 0px;        line-height: 23px;">
+                                  {{ data.description }}
+                                </p>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+
+                <table align="center" border="0" bgcolor="#FFFFFF" class="mlContentTable" cellspacing="0" cellpadding="0" style="background: #FFFFFF; min-width: 640px; width: 640px;"
+                  width="640" id="ml-block-63244965">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="640" class="mlContentTable" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #FFFFFF; width: 640px;">
+                          <tbody>
+                            <tr>
+                              <td class="mlContentContainer" style="padding: 15px 50px 0px 50px;">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: initial; border-top: 1px solid #bbbbbb;">
+                                  <tbody>
+                                    <tr>
+                                      <td width="100%" height="15px"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+
+
+                <table align="center" border="0" bgcolor="#FFFFFF" class="mlContentTable" cellspacing="0" cellpadding="0" style="background: #FFFFFF; min-width: 640px; width: 640px;"
+                  width="640" id="ml-block-63244963">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="640" class="mlContentTable" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #FFFFFF; width: 640px;">
+                          <tbody>
+                            <tr>
+                              <td width="540" class="mlContentContainer" cellspacing="0" cellpadding="0" border="0" style="padding: 0px 50px 0px 50px; width: 540px;">
+                                <table width="255" class="mlContentBlock" cellspacing="0" cellpadding="0" border="0" align="left" style="width: 255px;">
+                                  <tbody>
+                                    <tr>
+                                      <td class="mlContentButton" align="center" style="padding: 15px 0px 15px 0px;">
+                                        <!--[if mso]>     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.acebusters.com/files/calendar/Acebusters%20Game%20Session_12_00_UTC.ics" style="height:44px;v-text-anchor:middle;width:255px;" arcsize="0%" stroke="f" fillcolor="#E31041">     <w:anchorlock/>     <v:shadow on="t" color="#C0392B" offset="0px 3px 0px 0px"></v:shadow>     <center>     <![endif]--><a href="{{ site.baseUrl }}/files/calendar/{{ data.wantToPlay[0].url}}"
+                                          class="button-1" style="background-color: #E31041;        color: #FFFFFF;        font-family: &#39;Open Sans&#39;, Sans-Serif;        font-size: 18px;        line-height: 24px;        display: inline-block;        border-radius: 0px;        text-align: center;        text-decoration: none;        font-weight: normal;        display: block;        margin: 0px 0px;        padding: 10px 0px;                    border-bottom:  3px solid #C0392B;width: 255px;">{{ data.wantToPlay[0].title }}</a>
+                                        <!--[if mso]>     </center>     </v:roundrect>     <![endif]-->
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <table width="255" class="mlContentBlock" cellspacing="0" cellpadding="0" border="0" align="right" style="width: 255px;">
+                                  <tbody>
+                                    <tr>
+                                      <td class="mlContentButton" align="center" style="padding: 15px 0px 15px 0px;">
+                                        <!--[if mso]>     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.acebusters.com/files/calendar/Acebusters%20Game%20Session_20_00_UTC.ics" style="height:44px;v-text-anchor:middle;width:255px;" arcsize="0%" stroke="f" fillcolor="#E31041">     <w:anchorlock/>     <v:shadow on="t" color="#C0392B" offset="0px 3px 0px 0px"></v:shadow>     <center>     <![endif]--><a href="{{ site.baseUrl }}/files/calendar/{{ data.wantToPlay[1].url}}"
+                                          class="button-3" style="background-color: #E31041;        color: #FFFFFF;        font-family: &#39;Open Sans&#39;, Sans-Serif;        font-size: 18px;        line-height: 24px;        display: inline-block;        border-radius: 0px;        text-align: center;        text-decoration: none;        font-weight: normal;        display: block;        margin: 0px 0px;        padding: 10px 0px;                    border-bottom:  3px solid #C0392B;width: 255px;">{{ data.wantToPlay[1].title }}</a>
+                                        <!--[if mso]>     </center>     </v:roundrect>     <![endif]-->
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+
+                <table align="center" border="0" bgcolor="#FFFFFF" class="mlContentTable" cellspacing="0" cellpadding="0" style="background: #FFFFFF; min-width: 640px; width: 640px;"
+                  width="640" id="ml-block-63244967">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="640" class="mlContentTable" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #FFFFFF; width: 640px;">
+                          <tbody>
+                            <tr>
+                              <td class="mlContentContainer" style="padding: 15px 50px 0px 50px;">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: initial; border-top: 1px solid #bbbbbb;">
+                                  <tbody>
+                                    <tr>
+                                      <td width="100%" height="15px"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+
+
+                <table align="center" border="0" bgcolor="#FFFFFF" class="mlContentTable" cellspacing="0" cellpadding="0" style="background: #FFFFFF; min-width: 640px; width: 640px;"
+                  width="640" id="ml-block-63246717">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="640" class="mlContentTable" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #FFFFFF; width: 640px;">
+                          <tbody>
+                            <tr>
+                              <td align="left" class="mlContentContainer" style="padding: 15px 50px 5px 50px; font-family: &#39;Open Sans&#39;, Sans-Serif; font-size: 14px; color: #666666; line-height: 23px;">
+                                <h2 style="line-height: 24px;        text-decoration: none;        font-weight: normal;        margin: 0px 0px 10px 0px;font-family: &#39;Open Sans&#39;, Sans-Serif; font-weight: normal; font-size: 18px; color: #000000; text-align: center;">
+                                  {{ data.howToJoin.title }}:
+                                </h2>
+                                <p style="margin: 0px 0px 10px 0px;        line-height: 23px;">&nbsp;</p>
+                                <ol style="margin-top: 0px;      margin-bottom: 10px;">
+                                  {% for li in data.howToJoin.list %}
+                                    <li style="line-height: 23px; margin-bottom: 25px;">{{ li.text }}</li>
+                                  {% endfor %}
+                                </ol>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+
+                <table align="center" border="0" bgcolor="#FFFFFF" class="mlContentTable" cellspacing="0" cellpadding="0" style="background: #FFFFFF; min-width: 640px; width: 640px;"
+                  width="640" id="ml-block-63244961">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="640" class="mlContentTable" bgcolor="#FFFFFF" cellspacing="0" cellpadding="0" border="0" align="center" style="background: #FFFFFF; width: 640px;">
+                          <tbody>
+                            <tr>
+                              <td class="mlContentContainer" style="padding: 15px 50px 0px 50px;">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: initial; border-top: 1px solid #bbbbbb;">
+                                  <tbody>
+                                    <tr>
+                                      <td width="100%" height="15px"></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>

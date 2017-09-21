@@ -1,0 +1,24 @@
+title: Acebusters Live Game Sessions
+date: Sept. 18th - 12:00 and 20:00 (UTC)
+description: >
+  Just in time before our crowdsale we'd like to invite you to a live play session on our platform
+  to play some hands with the team and check out our product first-hand. The best thing:
+  When you sign-up you <strong>get 1000 NTZ immediately for free</strong> so you can start
+  playing instantly.
+wantToPlay:
+  - title: I Want To Play at 12:00
+    url: Acebusters%20Game%20Session_12_00_UTC.ics
+
+  - title: I Want To Play at 20:00
+    url: Acebusters%20Game%20Session_20_00_UTC.ics
+
+howToJoin:
+  title: How to join
+  list:
+    - text: >
+        If you haven't signed up, yet: Go to <a target="_blank" href="https://dapp.acebusters.com">dapp.acebusters.com</a> to
+        create an account. If you need any help, join our <a href="https://discordapp.com/invite/7PesDTZ" target="_blank">Discord community</a>.
+    - text: >
+        Go to the lobby and choose a table to join
+    - text: >
+        Let's play!

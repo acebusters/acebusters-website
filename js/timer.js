@@ -272,74 +272,32 @@ document.addEventListener("DOMContentLoaded", function(e) {
       }
   });
 
-    Vue.component('distro-pie', {
+    Vue.component('chart-pie', {
         extends: VueChartJs.Doughnut,
         mixins: [VueChartJs.mixins.reactiveProp],
+        props: [
+          'data-label',
+          'data-colors',
+          'data-bgc',
+          'data-values'
+        ],
         computed: {
             pieData: function() {
-                return {
+              return {
                 datasets: [{
-                    label: 'Milestone Distribution',
-                    backgroundColor: [
-                      'rgba(153,153,153,0.59)',
-                      'rgba(50, 30, 54,0.59)',
-                      'rgba(230,230,230,0.59)',
-                      'rgba(224,30,64,0.59)'
-                    ],
-                    borderWidth: 5,
-                    borderRadius: 0,
-                    borderColor: [
-                        'rgb(153,153,153)',
-                        'rgb(50, 30, 54)',
-                        'rgb(230,230,230)',
-                        '#E01E40'
-                    ],
-                    data: [15, 20, 20, 40],
-                    options: {
-                      tooltips: {
-                        enabled: false
-                      }
-                    }
+                  label: this.dataLabel,
+                  backgroundColor: this.dataBgc.replace(/(\)\s*and\s)|(\),\s*and\s)|(\),\s)/g, ')!!').split('!!'),
+                  borderWidth: 5,
+                  borderRadius: 0,
+                  borderColor: this.dataColors.replace(/(\)\s*and\s)|(\),\s*and\s)|(\),\s)/g, ')!!').split('!!'),
+                  data: this.dataValues.replace(/(\s*and\s)|(,\s*and\s)|(,\s)/g, '!!').split('!!'),
                 }],
-                }
+              }
             },
         },
         mounted () {
-            this.renderChart(this.pieData, {responsive: true, maintainAspectRatio: false})
-        }
-    });
-
-    Vue.component('power-pie', {
-        extends: VueChartJs.Doughnut,
-        mixins: [VueChartJs.mixins.reactiveProp],
-        computed: {
-            pieData: function() {
-                return {
-                datasets: [{
-                    label: 'Power Distribution',
-                    backgroundColor: [
-                      'rgba(224,30,64,0.59)',
-                      'rgba(230,230,230,0.59)'
-                    ],
-                    borderWidth: 5,
-                    borderRadius: 0,
-                    borderColor: [
-                        '#E01E40',
-                        'rgb(230,230,230)'
-
-                    ],
-                    data: [30,70],
-                    options: {
-                      tooltips: {
-                        enabled: false
-                      }
-                    }
-                }],
-                }
-            },
-        },
-        mounted () {
-            this.renderChart(this.pieData, {responsive: true, maintainAspectRatio: false})
+          this.renderChart(this.pieData, {
+            responsive: true, maintainAspectRatio: false, tooltips: { enabled: false }})
         }
     });
 

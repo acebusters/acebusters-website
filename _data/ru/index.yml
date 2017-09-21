@@ -1,0 +1,156 @@
+banner:
+  title: ПОДДЕРЖИТЕ ДВИЖЕНИЕ ЗА РЕВОЛЮЦИЮ ОНЛАЙН ПОКЕРА.
+  subtitle: Децентрализованная покерная платформа на блокчейне Ethereum
+  watch: СМОТРЕТЬ ВИДЕО
+
+section1:
+  title: МЫ ИСПРАВЛЯЕМ ИСПОРЧЕННУЮ СИСТЕМУ И ДЕЛАЕМ ОНЛАЙН-ПОКЕР ЛУЧШЕ
+  description: >
+    Покер идеален для Ethereum. Обманы и скандалы на этом рынке создают огромную возможность применения блокчейн технологий для исправления испорченной системы онлайн-покера. Плюс команда энтузиастов-инноваторов из мира блокчейна и покера, которая хочет претворить это в жизнь. Присоединяйтесь к нам!
+
+section2:
+  title: nutz бъет всё
+
+advantages:
+  - title: Безопасность средств
+    text: >
+      Ваш банкролл всегда в вашем личном кошельке. Никто не имеет доступа к вашим средствам.
+
+  - title: Честная игра
+    text: >
+      В Acebusters мы разрабатываем реализацию <a target="_blank" href="https://en.wikipedia.org/wiki/Mental_poker">Ментального покера</a>. Это криптографический пиринговый протокол, позволяющий гарантировать, что раздача честная и никому не доступны ваши карманные карты. На 100% открыт для проверки всем желающим.
+
+  - title: Автономная экономика
+    text: >
+      Традиционные платформы онлайн-покера зарабатывают, подрывая доверие игроков. Автономная экономика Acebusters принадлежит игрокам и управляется ими в их же интересах.
+
+  - title: Программа для партнерев
+    text: >
+      Любой может стать партнером. Зарабатывайте до 100% рейкбека игроков, которых пришли на платформу по вашей рекомендации.
+
+  - title: Финансирование, не требующее доверия
+    text: >
+      Смарт-контракты могут выступать в качестве escrow и по определению независимы. Они могут быть использованы для любого рода финансового обеспечения и ставок.
+
+  - title: Приватность
+    text: >
+      Как и в других блокчейн-приложениях, личная информация отается приватной. Ваш кошелек выступает в роли псевдонимного идентификатора.
+
+sectionSmall:
+  title: БОЛЬШЕ ДЕТАЛЕЙ?
+
+timeline:
+  title: WE'RE IN IT FOR THE HEART. <span>Наша дорожная карта.</span>
+  diagram:
+    - title: Зарождение
+      date: Январь 2017
+      description: >
+        Мы решили пойти ва-банк для реализации проекта. Полная концентрация на проекте
+
+    - title: Закрытая бета!
+      date: Май 2017
+      description: >
+        Исправление последний критических ошибок в игровой логике и улучшение юзабилити с помощью небольшой группы тестировщиков. Спасибо, парни!
+
+    - title: Открытая бета!
+      date: Июнь 2017
+      description: >
+        Текущее состояние. У любого есть доступ к нашей бета-версии. Мы собираем отзывы и инсайты о работе системы. Смарт-контракты тщательно тестируются. Мы все еще работаем на тестовой сети Ethereum.
+
+    - title: Поддержка SNG турниров
+      date: Сентябрь 2017
+      description: >
+        Sit-and-Go (SNG) — очень популярный формат и будет одной из наших первых фич.
+
+    - title: Ментальный покер
+      date: Ноябрь 2017
+      description: >
+        Acebuster станет полностью децентрализованым с пиринговой архитектурой, гарантирующей честные раздачи. Крутота!
+
+    - title: Глобальная экспансия
+      date: Декабрь 2017
+      description: >
+        Для охвата мирового покерного сообщества мы запустим масштабную рекламную кампанию.
+
+team:
+  title: МЫ КРИПТОФАНАТЫ И ЛЮБИТЕЛИ ПОКЕРА. <span>Команда.</span>
+  members:
+    - name: Johann Barbie
+      role: Blockchain Geek
+      img: 2.png
+
+    - name: Alex Lunyov
+      role: Platform Engineer
+      img: sunify.jpg
+
+    - name: Michael Kroener
+      role: Marketing Analyst
+      img: mkroener.jpg
+
+    - name: Victor Mateleshka
+      role: QA Engineer
+      img: victorm.jpg
+
+    - name: Mayank Kumar
+      role: Smart Contract Engineer
+      img: mayank.jpg
+
+    - name: Helge Wieding
+      role: Poker Enthusiast
+      img: 1.png
+
+    - name: Konstantin Korenkov
+      role: Backend Developer
+      img: kosta.jpg
+
+    - name: Calvin Hoenes
+      role: Strategy Engineer
+      img: calvin.jpg
+
+    - name: Kate Danilova
+      role: Product Manager
+      img: kdanilova.jpg
+
+    - name: Aleksey Grabov
+      role: UX Engineer
+      img: grabus.jpg
+
+    - name: Yaroslav Volov
+      role: Frontend Developer
+      img: yar.jpg
+
+    - name: Barbara Scherer
+      role: Regulatory Affairs
+      img: babz.jpg
+
+partners:
+  title: Partners
+  list:
+    - url: http://droidlabs.pro/
+      img: droidlabs.png
+
+    - url: http://kindbeetle.ru/
+      img: kindbeetle.png
+
+    - url: https://www.ambisafe.co/
+      img: ambisafe.png
+
+    - url: https://www.ambisafe.co/
+      img: shapeshift.png
+
+contact:
+  title: БУДЬТЕ В КУРСЕ. <span>И присоединяйтесь к общению.</span>
+  socials:
+    - url: https://github.com/acebusters
+      icon: fa fa-github
+
+    - url: https://discord.gg/7PesDTZ
+      icon: icon-discord
+
+    - url: https://twitter.com/ace_busters
+      icon: fa fa-twitter
+
+    - url: https://www.facebook.com/acebusters.poker
+      icon: fa fa-facebook
+  info: >
+    Если у вас есть какие-либо вопросы, напишите нам на нашем <a href="https://discordapp.com/invite/7PesDTZ"> канале в Discord </a> или на <a href="mailto:info@acebusters.com">электронный адрес</a>

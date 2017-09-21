@@ -1,6 +1,102 @@
 ---
 ---
 
+// more space for russian translation
+html[lang=ru] {
+  // div,
+  // span,
+  // a,
+  // h1, h2, h3, h4, h5, h6 {
+  //   &:not([class^="icon-"]),
+  //   &:not([class*="icon-"]),
+  //   &:not([class="glyphicon"]),
+  //   &:not([class="fa"]) {
+  //     font-family: st, osr !important;
+  //   }
+  // }
+  .intro-buttons {
+    width: auto;
+  }
+}
+
+.language-dropdown {
+  font-family: st, osr !important;
+  .navbar-wrap & {
+    display: none;
+  }
+  .navbar-header & {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    border-color: #fff;
+    font-size: 16px;
+  }
+  &.open .dropdown-toggle,
+  .dropdown-toggle:hover,
+  .dropdown-toggle:focus,
+  .dropdown-toggle:active {
+    background: none !important;
+    outline: none;
+    box-shadow: none;
+  }
+  .dropdown-menu {
+    min-width: 100%;
+    padding: 0;
+    overflow: hidden;
+    > li {
+      &.active {
+        > a {
+          &,
+          &:hover,
+          &:focus {
+            background-color: #E31041;
+            color: #fff;
+          }
+        }
+      }
+
+      > a {
+        padding: 6px 12px;
+        font-size: 16px;
+        color: #333;
+      }
+    }
+  }
+}
+
+.sections-wrap {
+  .section {
+    &:not([class="content-white"]) {
+      .content-title {
+        a {
+          color: #fff;
+        }
+      }
+    }
+    .content-title {
+      a {
+        text-decoration: none !important;
+      }
+    }
+  }
+  .content-magenta {
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.related {
+  text-align: center;
+  &-posts {
+    display: inline-block;
+    list-style: none;
+  }
+}
+
 .hero-bottom-row {
   width: 100%;
 }
@@ -53,6 +149,12 @@ ol {
   }
 }
 
+.video-button {
+  display: inline-block;
+  &:visited {
+    color: #E01E40;
+  }
+}
 
 .advantages,
 .content-magenta {
@@ -70,6 +172,12 @@ ol {
 }
 
 .nav li {
+  &.active {
+    > a {
+      background: none;
+      border-bottom: 2px solid #E31041;
+    }
+  }
   > a {
     color: #fff;
     &:hover,
@@ -125,6 +233,12 @@ ol {
   }
 }
 
+.team {
+  &-list {
+    margin-top: 32px;
+  }
+}
+
 @media (max-width: 991px) {
   .hero-bottom-row {
     .intro-buttons {
@@ -144,7 +258,90 @@ ol {
   }
 }
 
+@media screen and (min-width: 640px) {
+  .navbar-header {
+    .language-dropdown {
+      margin-left: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .brand-link {
+    display: inline-block;
+    width: auto;
+    padding-top: 0.45em;
+  }
+  .brand-logo {
+    height: 18px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-header {
+    .language-dropdown {
+      display: none;
+    }
+  }
+  .navbar-wrap {
+    text-align: right;
+    .dropdown {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 15px;
+    }
+    .navbar-collapse.collapse {
+      display: inline-block !important;
+      vertical-align: middle;
+    }
+  }
+  .team {
+    &-list {
+      font-size: 0;
+      &__item {
+        display: inline-block;
+        vertical-align: top;
+        float: none;
+        font-size: 1rem;
+      }
+    }
+    &-member {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .milestone-chart {
+    [class^="col-"],
+    [class*="col-"] {
+      &:not(:last-of-type) {
+        float: right;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .advantages {
+    &-list {
+      font-size: 0;
+      &__item {
+        display: inline-block;
+        vertical-align: top;
+        float: none;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 1170px) {
+  .navbar-wrap {
+    .navbar-collapse.collapse {
+      margin-left: 15px;
+    }
+  }
   .cd-timeline-content {
     width: 72%;
     margin-right: 0;
