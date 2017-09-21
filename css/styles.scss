@@ -172,6 +172,12 @@ ol {
 }
 
 .nav li {
+  &.active {
+    > a {
+      background: none;
+      border-bottom: 2px solid #E31041;
+    }
+  }
   > a {
     color: #fff;
     &:hover,
