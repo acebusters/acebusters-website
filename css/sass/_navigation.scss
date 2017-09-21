@@ -2,7 +2,7 @@
 
 .nav{
   li a{
-    font-family: st;
+    font-family: st, osr;
     font-size: 1.0rem;
     text-transform: uppercase;
     color: $ci_white;
@@ -68,7 +68,7 @@
     -webkit-box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: st;
+    font-family: st, osr;
     border-bottom: 2px solid #212021;
     font-weight: 500;
     font-size: 14px;
