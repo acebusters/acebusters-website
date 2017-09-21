@@ -1,0 +1,27 @@
+banner:
+  title: Зарабатывайте до 5% за каждого приведенного инвестора.
+  subtitle: Мы предлагаем партнерскую программу, чтобы привлечь аудиторию и помочь сделать онлайн покер более прибыльным, честным и безопасным.
+
+mediakit:
+  title: >
+    Материалы.
+    <span>Все, что вам нужно.</span>
+  docs:
+    - class: col-sm-4
+      title: Об Acebusters на одной странице
+      url: AB_OnePager.pdf
+
+    - class: col-sm-4
+      title: Скачать весь набор
+      url: Acebusters_MediaKit.zip
+
+    - class: col-sm-4
+      title: Скачать Whitepaper
+      url: acebusters_whitepaper.pdf
+
+affiliate:
+  title: >
+    Станьте партнером
+    <span>Заполните форму ниже, чтобы получить ваш реферальный код.</span>
+  description: >
+    Мы рассмотрим вашу заявку как можно быстрее и вышлем ваш реферальный код на указанный вами электронный адрес.

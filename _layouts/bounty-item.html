@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+{% assign data = site.data.bounties %}
+{% assign buttons = site.data.buttons %}
+
+<div>
+  <div class="intro-header landing-page section">
+    <div class="container container-ace">
+        <div class="row hero-bottom-row equal">
+            <div class="col-md-7 hero-bottom">
+                <h1>
+                  {{ page.title }}
+                </h1>
+                <span>
+                  {{ page.subtitle }}
+                </span>
+            </div>
+            <div class="col-md-5">
+                <div class="intro-buttons">
+                    <a class="button-base" href="https://discordapp.com/invite/7PesDTZ" target="_blank">
+                      {{ buttons.askQuestion }}
+                    </a>
+                    <a class="button-base" href="{{ site.baseUrl }}/affiliate">
+                      {{ buttons.becomeAffilate }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <section class="content-magenta section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="section-content">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="content-black section">
+    <div class="container-fluid">
+      <div class="text-center">
+        <div class="related">
+          <h3>{{ data.other.title }}</h3>
+          <ul class="related-posts">
+            {% for post in site.related_posts limit:3 %}
+              <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                  {{ post.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div>

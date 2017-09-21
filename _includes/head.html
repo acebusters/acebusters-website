@@ -5,23 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% I18n_Headers %}
   <meta name="author" content="">
-  <meta property="og:url" content="http://www.acebusters.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Acebusters - Poker on the Ethereum Blockchain" />
-  <meta property="og:description" content="Join Acebusters now! The decentralized economy to make online poker profitable, fair and secure. Poker on the Ethereum blockchain. Ace or bust!" />
 
-  {% if page.image %}
-    <meta property="og:image" content="http://www.acebusters.com/img/social/{{ page.image }}">
-  {% else %}
-    <meta property="og:image" content="http://www.acebusters.com/img/social/AB_facebook_OG_Crowdsale.png">
+  {% if page.image == null %}
+    <meta property="og:image" content="{{ site.url }}/img/social/{{ site.image }}">
   {% endif %}
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="&#64;ace_busters">
   <meta name="twitter:creator" content="&#64;ace_busters">
-  <meta name="twitter:title" content="Acebusters - Poker on the Ethereum Blockchain">
-  <meta name="twitter:description" content="Join Acebusters now! The decentralized economy to make online poker profitable, fair and secure. Poker on the Ethereum blockchain. Ace or bust!">
-  <meta name="twitter:image" content="http://www.acebusters.com/img/social/AB_twitter_card@2x.png">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  {% if page.image %}
+    <meta name="twitter:image" content="{{ site.url }}/img/social/{{ page.image }}">
+  {% else %}
+    <meta name="twitter:image" content="{{ site.url }}/img/social/{{ site.image }}">
+  {% endif %}
 
   <!-- Icons -->
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/img/ab_logo.png">

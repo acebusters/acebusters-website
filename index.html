@@ -2,6 +2,7 @@
 layout: default
 title: Acebusters - Poker on the Ethereum blockchain
 description: Join Acebusters now! The decentralized economy to make online poker profitable, fair and secure. Poker on the Ethereum blockchain. Ace or bust!
+image: AB_twitter_card@2x.png
 ---
 
 {% assign data = site.data.index %}
@@ -12,6 +13,7 @@ description: Join Acebusters now! The decentralized economy to make online poker
     <div class="container container-ace">
         <div class="row hero-bottom-row equal">
             <div class="col-md-7 hero-bottom">
+                <a class="video-button" href="#video">{{ data.banner.watch }}</a>
                 <h1>{{ data.banner.title }}</h1>
                 <span>{{ data.banner.subtitle }}</span>
             </div>
@@ -31,7 +33,7 @@ description: Join Acebusters now! The decentralized economy to make online poker
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
-                <timer date="September 21, 2017" />
+                <timer date="{{ site.data.timers.crowdsale }}" />
             </div>
             <div class="col-md-8">
                 <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850  ico-subscribe">
@@ -79,6 +81,14 @@ description: Join Acebusters now! The decentralized economy to make online poker
     </div>
 </section>
 
+<section class="content-dark section" id="video">
+    <div class="container-fluid">
+        <div class="row">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nEBEfePYFTQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
 <section class="content-magenta section">
     <div class="container-fluid">
         <div class="row">
@@ -121,22 +131,24 @@ description: Join Acebusters now! The decentralized economy to make online poker
     </div>
   </div>
 </section>
-<div class="content-white section section-small container-fluid">
-    <div class="row">
-        <div class="col-sm-6 no-padding">
-          <div class="section-heading section-heading-big">
-            <h2>
-              {{ data.sectionSmall.title }}
-            </h2>
-          </div>
-        </div>
-        <div class="col-sm-3">
-            <a class="button-base ico-cta" href="{{ site.baseurl }}/files/acebusters_whitepaper.pdf" target="_blank">
-                {{ buttons.readWhitepaper }}
-            </a>
-        </div>
-        <div class="col-sm-3">
-            {% include appLink.html text='playPoker' class='button-base ico-cta' target='_blank' %}
+<div class="content-white section section-small">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 no-padding">
+              <div class="section-heading section-heading-big">
+                <h2>
+                  {{ data.sectionSmall.title }}
+                </h2>
+              </div>
+            </div>
+            <div class="col-sm-3">
+                <a class="button-base ico-cta" href="{{ site.baseurl }}/files/acebusters_whitepaper.pdf" target="_blank">
+                    {{ buttons.readWhitepaper }}
+                </a>
+            </div>
+            <div class="col-sm-3">
+                {% include appLink.html text='playPoker' class='button-base ico-cta' target='_blank' %}
+            </div>
         </div>
     </div>
 </div>
@@ -192,22 +204,24 @@ description: Join Acebusters now! The decentralized economy to make online poker
       </div>
   </div>
 </section>
-<div class="content-white section section-small container-fluid partners-section">
-    <div class="row">
-        <div class="col-sm-12" style="text-align:center;">
-            <div class="section-heading">
-                <h2>{{ data.partners.title }}</h2>
+<div class="content-white section section-small partners-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" style="text-align:center;">
+                <div class="section-heading">
+                    <h2>{{ data.partners.title }}</h2>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        {% for item in data.partners.list %}
-            <div class="col-sm-3">
-                <a href="{{ item.url }}" target="_blank">
-                    <img src="img/partners/{{ item.img }}">
-                </a>
-            </div>
-        {% endfor %}
+        <div class="row">
+            {% for item in data.partners.list %}
+                <div class="col-sm-3">
+                    <a href="{{ item.url }}" target="_blank">
+                        <img src="{{ site.baseUrl }}/img/partners/{{ item.img }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 <!-- partner section -->
