@@ -1,18 +1,21 @@
-- title: Главная
+- title: home
   url: /
 
-- title: Контракты
+- title: crowdsale
   url: /crowdsale
 
-- title: Бонусы
+- title: Become An Affiliate
+  url: /affiliate
+
+- title: bounties
   url: /bounties
 
-- title: Команда
+- title: team
   url: \#team
 
-- title: Контакты
+- title: contact
   url: \#contact
 
-- title: Помощь
+- title: help
   url: http://help.acebusters.com
   target: _blank

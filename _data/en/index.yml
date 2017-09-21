@@ -1,6 +1,7 @@
 banner:
   title: JOIN THE FORCE FOR THE ONLINE POKER REVOLUTION.
   subtitle: A decentralized poker platform running on the Ethereum blockchain
+  watch: WATCH THE VIDEO
 
 section1:
   title: WE FIX A BROKEN SYSTEM<br /> AND MAKE ONLINE POKER<br /> GREAT, AGAIN.
@@ -121,6 +122,10 @@ team:
     - name: Yaroslav Volov
       role: Frontend Developer
       img: yar.jpg
+
+    - name: Barbara Scherer
+      role: Regulatory Affairs
+      img: babz.jpg
 
 partners:
   title: Partners

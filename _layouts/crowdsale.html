@@ -2,24 +2,22 @@
 layout: default
 title: Acebusters - Crowdsale starting September 21st.
 description: Join the Acebusters crowdsale now! The decentralized economy to make online poker profitable, fair and secure. Poker on the Ethereum blockchain. Ace or bust!
-image: AB_facebook_OG_Crowdsale.png
 ---
+
+{% assign data = site.data.crowdsale %}
+{% assign buttons = site.data.buttons %}
 
 <div>
     <div class="intro-header section">
         <div class="container container-ace" id="ico-app">
                 <div class="row hero-headline hero-headline-landin">
-                    <h1>
-                        JOIN THE FORCE FOR THE ONLINE POKER REVOLUTION.
-                    </h1>
-                    <span>
-                        A decentralized poker platform on the Ethereum blockchain
-                    </span>
+                    <h1>{{ data.banner.title }}</h1>
+                    <span>{{ data.banner.subtitle }}</span>
                 </div>
                 <div class="row countdown-row">
 
                     <div class="col-md-6 no-padding">
-                      <timer date="September 21, 2017" />
+                      <timer date="{{ site.data.timers.crowdsale }}" />
                     </div>
 
                     <div class="col-md-6 no-padding">
@@ -29,7 +27,7 @@ image: AB_facebook_OG_Crowdsale.png
                                     <div class="form-section mb0">
                                         <div style="text-align:center;padding: 20px; font-size:4em;">
                                             <i class="fa fa-check fa-4" style="text-align:center;"></i>
-                                            <p> {{ page.newsletter_sign_up }}  </p>
+                                            <p>{{ site.data.messages.signUp }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -37,12 +35,12 @@ image: AB_facebook_OG_Crowdsale.png
                                     <div class="subscribe-form">
                                         <div class="form-section input-section">
                                             <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
-                                                <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" placeholder="Your Email Here" value="" id="eMail" required>
+                                                <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$" placeholder="{{ site.data.inputs.emailPl }}" value="" id="eMail" required>
                                             </div>
                                         </div>
                                         <div class="form-section submit-section">
                                             <button type="submit" class="button-base" id="sign-up">
-                                                Get Notified
+                                                {{ buttons.getNotified }}
                                             </button>
                                             <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
                                                 <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
@@ -70,24 +68,16 @@ image: AB_facebook_OG_Crowdsale.png
       <div class="container-fluid">
         <div class="row section-heading">
             <div class="col-sm-12 no-padding">
-                <h2 class="how-to-contribute">
-                    HOW TO CONTRIBUTE
-                </h2>
+                <h2 class="how-to-contribute">{{ data.contribute.title }}</h2>
             </div>
         </div>
         <div class="row section-content contribution-steps equal">
-            <div class="col-sm-4 banner-ico">
-                <p class="banner-ico-header">CREATE AN ACCOUNT</p>
-                <p class="banner-ico-text">Sign up at <a target="_blank" v-bind:href="appUrl()">dapp.acebusters.com</a> to create an account. If you need any help, join our <a target="_blank" href="https://discordapp.com/invite/7PesDTZ">Discord community</a>.</p>
-            </div>
-            <div class="col-sm-4 banner-ico">
-                <p class="banner-ico-header">CHARGE YOUR ACCOUNT</p>
-                <p class="banner-ico-text">Send Ether to the address displayed on your account dashboard. If you don’t have Ether, use the Buy button we provide on the dashboard to convert any other cryptocurrency, or buy Ether directly with fiat at exchanges such as Bitstamp or Coinbase.</p>
-            </div>
-            <div class="col-sm-4 banner-ico">
-                <p class="banner-ico-header">SAVE THE DATE</p>
-                <p class="banner-ico-text">21. September 2017! Add <a target="_blank" href="https://calendar.google.com/calendar/hosted/acebusters.com/event?action=TEMPLATE&amp;tmeid=MXQxc3VhNTV2djllMjg5cWRoMHY3NnU3OG0gam9oYW5uQGFjZWJ1c3RlcnMuY29t&amp;tmsrc=johann%40acebusters.com">this reminder</a> to your calendar  or subscribe to our <a target="_blank" href="http://www.acebusters.com/#contact">newsletter</a> and we’ll notify you when the crowdsale begins.</p>
-            </div>
+            {% for step in data.contribute.steps %}
+                <div class="{{ step.class }} banner-ico">
+                    <p class="banner-ico-header">{{ step.title }}</p>
+                    <p class="banner-ico-text">{{ step.description }}</p>
+                </div>
+            {% endfor %}
         </div>
       </div>
     </div>
@@ -98,17 +88,15 @@ image: AB_facebook_OG_Crowdsale.png
             <div class="col-sm-5 no-padding">
               <div class="section-heading">
                 <h2 class="intro-message-2">
-                    ONLINE POKER IS READY<br /> FOR A REVOLUTION.
-                    <span>Acebusters in a Nutzshell.</span>
+                    {{ data.infoSection.title }}
                 </h2>
               </div>
               <div class="section-content">
-                  Acebusters is a decentralized poker application (Dapp),
-                  running on the Ethereum blockchain. We are striving to make online poker fun and more profitable by creating a decentralized, innovative two-token economy.
+                  {{ data.infoSection.description }}
               </div>
             </div>
             <div class="col-sm-7 no-padding poker-cards poker-cards-description">
-              <img src="img/poker_cards_white@2x.png" />
+              <img src="{{ site.baseUrl }}/img/{{ data.infoSection.img }}" />
             </div>
         </div>
       </div>
@@ -120,55 +108,39 @@ image: AB_facebook_OG_Crowdsale.png
             <div class="col-sm-6 no-padding">
               <div class="section-heading">
                 <h2 class="intro-message-2">
-                    DOUBLE YOUR POWER.
-                    <span>Meet our innovative <br/> two-token system.</span>
+                    {{ data.doubleToken.title }}
                 </h2>
               </div>
             </div>
             <div class="col-sm-4 col-sm-offset-2 no-padding">
                 <div class="text-box">
                     <h3 class="text-box-heading">
-                        WHY 2 TOKENS?
+                        {{ data.doubleToken.why.title }}
                     </h3>
                     <p class="text-box-message">
-                        No player wants to win but lose due to market volatility, right?
-                        At the same time we want investors to participate in the success of the Dapp.
-                        Meet Nutz and Power.
+                        {{ data.doubleToken.why.description }}
                     </p>
                 </div>
             </div>
         </div>
         <div class="row text-box-row">
-            <div class="col-sm-5 no-padding">
-                <div class="text-box">
-                  <div class="text-box-heading nutz-heading">
-                    <h3>
-                        NUTZ (NTZ)
-                    </h3>
-                    <p class="text-box-sub">
-                        Currency for games, bets and bankroll
-                    </p>
-                  </div>
-                  <div class="text-box-message">
-                      The players’ token that allows to join tables and protects players’ bankroll from market volatility.
-                  </div>
+            {% for item in data.doubleToken.infoList %}
+                <div class="{{ item.class }} no-padding">
+                    <div class="text-box">
+                        <div class="text-box-heading {{ item.icon }}">
+                            <h3>
+                                {{ item.title }}
+                            </h3>
+                            <p class="text-box-sub">
+                                {{ item.subtitle }}
+                            </p>
+                        </div>
+                        <div class="text-box-message">
+                            {{ item.description }}
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-5 col-sm-offset-2 no-padding">
-                <div class="text-box">
-                  <div class="text-box-heading abp-heading">
-                    <h3>
-                        POWER (ABP)
-                    </h3>
-                    <p class="text-box-sub">
-                        Shares in the Dapp and token for voting
-                    </p>
-                  </div>
-                  <div class="text-box-message">
-                    The investors’ and affiliates’ token that allows to have a voice in the steering of the Dapp and profit from its growth.
-                  </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
       </div>
     </div>
@@ -177,121 +149,32 @@ image: AB_facebook_OG_Crowdsale.png
       <div class="coin-divider"></div>
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-6 col-sm-push-6 no-padding">
-            <div class=" section-heading section-heading-right">
-              <h2 class="intro-message-2 table-headliner">
-                  ENOUGH TALKING, IT’S TIME FOR NUMBERS.
-                  <span>The facts.</span>
-              </h2>
-            </div>
-          </div>
-            <div class="col-sm-6 col-sm-pull-6">
-              <div class=" table-container">
-                <h3>
-                    NUTZ TOKEN DETAILS
-                </h3>
-                <div class="table-body">
-                  <table class="table ico-table">
-                      <tr>
-                          <td>Symbol:</td>
-                          <td>NTZ</td>
-                      </tr>
-                      <tr>
-                          <td>Role of Token:</td>
-                          <td>Currency for games, bets, bankroll</td>
-                      </tr>
-                      <tr>
-                          <td>Token Supply:</td>
-                          <td>Uncapped, backed by ETH in reserve</td>
-                      </tr>
-                      <tr>
-                          <td>Initial Value:</td>
-                          <td>20,000 NTZ = 1 ETH</td>
-                      </tr>
-                      <tr>
-                          <td>Discount during Crowdsale:</td>
-                          <td>30,000 NTZ = 1 ETH (33%)</td>
-                      </tr>
-                      <tr>
-                          <td>Blockchain:</td>
-                          <td>Ethereum</td>
-                      </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-              <div class=" table-container">
-                <h3>
-                    POWER TOKEN DETAILS
-                </h3>
-                <div class="table-body">
-                  <table class="table ico-table">
-                      <tr>
-                          <td>Symbol:</td>
-                          <td>ABP</td>
-                      </tr>
-                      <tr>
-                          <td>Role of Token:</td>
-                          <td>Shares in the Dapp, token for voting</td>
-                      </tr>
-                      <tr>
-                          <td>Token Supply:</td>
-                          <td>630,000 ABP</td>
-                      </tr>
-                      <tr>
-                          <td>Issuance in the Crowdsale:</td>
-                          <td>70,000 - 270,000 ABP (10% - 30%)</td>
-                      </tr>
-                      <tr>
-                          <td>Blockchain:</td>
-                          <td>Ethereum</td>
-                      </tr>
-                  </table>
-                </div>
+            <div class="col-sm-6 col-sm-push-6 no-padding">
+                <div class=" section-heading section-heading-right">
+                <h2 class="intro-message-2 table-headliner">
+                    {{ data.tokenDetails.title }}
+                </h2>
                 </div>
             </div>
-            <div class="col-sm-6 crowdsale-essentials">
-              <div class="table-container">
-                <h3>
-                    CROWDSALE ESSENTIALS
-                </h3>
-                <div class="table-body">
-                  <table class="table ico-table">
-                      <tr>
-                          <td>Event Start:</td>
-                          <td>21st Sep. 2017 @ 13:00 (UTC)</td>
-                      </tr>
-                      <tr>
-                          <td>Offering Duration:</td>
-                          <td>3 days - 30 days</td>
-                      </tr>
-                      <tr>
-                          <td>Accepted Currencies:</td>
-                          <td>ETH</td>
-                      </tr>
-                      <tr>
-                          <td>Minimum Goal:</td>
-                          <td>5,000 ETH</td>
-                      </tr>
-                      <tr>
-                          <td>Maximum Cap (approx.):</td>
-                          <td>30,000 ETH</td>
-                      </tr>
-                      <tr>
-                          <td>Security of Funds:</td>
-                          <td>Multi-signature wallet of Escrow Council</td>
-                      </tr>
-                      <tr>
-                          <td>Official Crowdsale Platform:</td>
-                          <td><a target="_blank" v-bind:href="appUrl()">dapp.acebusters.com</a></td>
-                      </tr>
-                  </table>
+            {% for item in data.tokenDetails.tables %}
+                <div class="{{ item.class }}">
+                    <div class=" table-container">
+                    <h3>
+                        {{ item.title }}
+                    </h3>
+                    <div class="table-body">
+                        <table class="table ico-table">
+                            {% for table in item.table %}
+                                <tr>
+                                    <td>{{ table.title }}:</td>
+                                    <td>{{ table.description }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    </div>
                 </div>
-              </div>
-            </div>
+            {% endfor %}
         </div>
       </div>
     </div>
@@ -301,74 +184,28 @@ image: AB_facebook_OG_Crowdsale.png
         <div class="row">
             <div class="col-sm-5 no-padding section-heading">
               <h2>
-                ROADMAP WITH <br>
-                STRETCH GOALS.
-                <span>Our future.</span>
+                {{ data.roadmap.title }}
               </h2>
-
             </div>
             <div class="col-sm-5 col-sm-offset-2 section-content">
-                The money raised will be used for product development, operations, marketing and international expansion. If the minimum goal is not reached, investors will be able to claim their funds back at no loss.
+                {{ data.roadmap.description }}
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
-                    <ul class="timeline">
+                <ul class="timeline">
+                    {% for item in data.roadmap.list %}
                         <li class="li complete">
                             <div class="timestamp">
-                            <span class="milestone-horizontal">5,000 ETH</span>
+                            <span class="milestone-horizontal">{{ item.point }}</span>
                             </div>
                             <div class="status">
-                                <span>Sit-and-Go Tournaments</span>
-                                <p>SnG is a very popular format and it will be one of the first features.</p>
+                                <span>{{ item.title }}</span>
+                                <p>{{ item.description }}</p>
                             </div>
                         </li>
-                        <li class="li complete">
-                            <div class="timestamp">
-                            <span class="milestone-horizontal">10,000 ETH</span>
-                            </div>
-                            <div class="status">
-                                <span>Mental Poker Protocol</span>
-                                <p>Development of an efficient protocol to guarantee a fair shuffle and protect the secrecy of the cards.</p>
-                            </div>
-                        </li>
-                        <li class="li complete">
-                            <div class="timestamp">
-                            <span class="milestone-horizontal">13,000 ETH</span>
-                            </div>
-                            <div class="status">
-                                <span>Trustless Staking</span>
-                                <p>Escrow tournament buy-ins and autonomously distribute payouts based on game outcomes with the help of smart contracts.</p>
-                            </div>
-                        </li>
-                        <li class="li">
-                            <div class="timestamp">
-                            <span class="milestone-horizontal">16,000 ETH</span>
-                            </div>
-                            <div class="status">
-                                <span>Multi-table Tournaments</span>
-                                <p>Host tournaments with well-known online and live tournament professionals and broadcast these events live.</p>
-                            </div>
-                        </li>
-                        <li class="li">
-                            <div class="timestamp">
-                            <span class="milestone-horizontal">20,000 ETH</span>
-                            </div>
-                            <div class="status">
-                                <span>Sidebets</span>
-                                <p>Give some goodies to the railbirds!</p>
-                            </div>
-                        </li>
-                        <li class="li">
-                            <div class="timestamp">
-                            <span class="milestone-horizontal">30,000 ETH</span>
-                            </div>
-                            <div class="status">
-                                <span>Scalable global marketing campaign</span>
-                                <p>Run a global PR campaign and tournaments with guaranteed price pools.</p>
-                            </div>
-                        </li>
-                    </ul>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
       </div>
@@ -380,17 +217,14 @@ image: AB_facebook_OG_Crowdsale.png
           <div class="col-sm-6 no-padding">
             <div class="section-heading">
               <h2 class="intro-message-2">
-                  PROTECTING YOUR INVESTMENT.
-                  <span>Introduction of Reserve and <br>
-                  Escrow Council</span>
+                  {{ data.protecting.title }}
               </h2>
             </div>
             <div class="section-content">
-              The raised Ether will remain fully auditable in the reserve of the Acebusters smart contract after the crowdsale. Withdrawals from the reserve are limited to the Escrow Council, a team of four individuals carefully selected to represent the interests of players and investors. The council can only act by majority vote through a 3-of-4 multi-signature configuration.
-              The Acebusters team will apply to the council for milestone payments according to our roadmap one after the other. So without an independent party signing, we will not be able to withdraw reserve funds.
+                {{ data.protecting.description }}
             </div>
           </div>
-          <img src="img/graphics/escrow_3of4@2x.png" class="escrow-image" />
+          <img src="{{ site.baseUrl }}/img/{{ data.protecting.img }}" class="escrow-image" />
         </div>
       </div>
     </div>
@@ -401,38 +235,45 @@ image: AB_facebook_OG_Crowdsale.png
           <div class="col-sm-5 no-padding">
             <div class="section-heading">
               <h2>
-                  WHAT DO WE NEED <br />THE MONEY FOR?
-                  <span>How we use the first milestone.</span>
+                  {{ data.charts.title }}
               </h2>
             </div>
           </div>
         </div>
         <div class="row margin-48">
-            <div class="col-sm-4">
-                <div class="banner-chart" style="border-left: 20px solid #E01E40;">
-                    <p class="banner-chart-header">TECHNICAL DEVELOPMENT - 45%</p>
-                    <p class="banner-chart-text">Research and development costs of the upcoming features, starting with the implementation of Sit-and-GO tournaments.</p>
-                </div>
-                <div class="banner-chart" style="border-left: 20px solid #FFF;">
-                    <p class="banner-chart-header">PAYMENT OF BOUNTY EXPENSES - 20%</p>
-                    <p class="banner-chart-text">Paying the contributors for bounties such as translation and bug discovery.</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="pie-holder">
-                <distro-pie />
-              </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="banner-chart" style="border-left: 20px solid #999;">
-                    <p class="banner-chart-header">CROWDSALE CAMPAIGN COST - 15%</p>
-                    <p class="banner-chart-text">Cost of advertisement and PR.</p>
-                </div>
-                <div class="banner-chart" style="border-left: 20px solid #321E36;">
-                    <p class="banner-chart-header">MARKETING, SALES AND PR - 20%</p>
-                    <p class="banner-chart-text">First marketing phase, covering
-                            basic marketing operations, including advertising campaigns for user acquisition and branding.</p>
-                </div>
+            <div class="milestone-chart">
+                {% for elem in data.charts.milestone.info %}
+                    {% assign col = forloop.index0 %}
+                    {% assign last = forloop.last %}
+                    <div class="col-sm-4">
+                        {% if elem.item.type == 'chart' %}
+                            <div class="pie-holder">
+                                <chart-pie
+                                    data-label="{{ data.charts.milestone.label }}"
+                                    data-colors="{{ data.charts.milestone.data.colors | array_to_sentence_string }}"
+                                    data-bgc="{{ data.charts.milestone.data.bgc | array_to_sentence_string }}"
+                                    data-values="{{ data.charts.milestone.data.values | array_to_sentence_string }}"/>
+                            </div>
+                        {% else %}
+                            {% for item in elem.item %}
+                                {% assign loopindex = forloop.index0 | plus: col %}
+                                {% assign length = forloop.length | plus: col %}
+                                {% assign endloopindex = length | minus: forloop.index %}
+                                {% if last %}
+                                    <div class="banner-chart" style="border-left: 20px solid {{ data.charts.milestone.data.colors[endloopindex] }};">
+                                        <p class="banner-chart-header">{{ item.title }} - {{ data.charts.milestone.data.values[endloopindex] }}%</p>
+                                        <p class="banner-chart-text">{{ item.description }}</p>
+                                    </div>
+                                {% else %}
+                                    <div class="banner-chart" style="border-left: 20px solid {{ data.charts.milestone.data.colors[loopindex] }};">
+                                        <p class="banner-chart-header">{{ item.title }} - {{ data.charts.milestone.data.values[loopindex] }}%</p>
+                                        <p class="banner-chart-text">{{ item.description }}</p>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                {% endfor %}
             </div>
         </div>
         <hr>
@@ -440,31 +281,31 @@ image: AB_facebook_OG_Crowdsale.png
           <div class="col-sm-5 no-padding">
             <div class="section-heading">
               <h2>
-                  WE'RE IN IT FOR THE LONG RUN.
-                  <span>Power Token Distribution.</span>
+                  {{ data.charts.power.title }}
               </h2>
             </div>
             <div class="section-content">
-              <p>Up to 30% of the Dapp's Power tokens will be sold in this event. While keeping the bulk of tokens seems unusual, it is of strategic importance for Acebusters growth strategy.</p>
-              <p>By raising only as much money as needed the founding team wants to build trust and prove its abilities with the players and investors first. When the expansion to new markets will require more capital we will be able to achieve a better price for the tokens and attract high quality investors in further sales events.</p>
-              <p>The team is committed to a sustainable growth path, ready to give up its majority share when the Dapp has developed an effective governance process by its stakeholders.</p>
+                {% for item in data.charts.power.description %}
+                    <p>{{ item.p }}</p>
+                {% endfor %}
             </div>
           </div>
             <div class="col-sm-4 col-sm-offset-1">
               <div class="pie-holder pie-v-center">
-                <power-pie />
+                <chart-pie
+                    data-label="{{ data.charts.power.label }}"
+                    data-colors="{{ data.charts.power.data.colors | array_to_sentence_string }}"
+                    data-bgc="{{ data.charts.power.data.bgc | array_to_sentence_string }}"
+                    data-values="{{ data.charts.power.data.values | array_to_sentence_string }}"/>
               </div>
             </div>
             <div class="col-sm-2 center-vertical">
               <div class="banner-charts banner-small">
-                <div class="banner-chart" style="border-left: 20px solid #E01E40;">
-                    <p class="banner-chart-text">Investors - 30%</p>
-                </div>
-                <div class="banner-chart" style="border-left: 20px solid #F8F8F8;">
-                    <p class="banner-chart-text">
-                        Team - 70%
-                    </p>
-                </div>
+                {% for item in data.charts.power.data.labels %}
+                    <div class="banner-chart" style="border-left: 20px solid {{ data.charts.power.data.colors[forloop.index0] }};">
+                        <p class="banner-chart-text">{{ item }} - {{ data.charts.power.data.values[forloop.index0] }}%</p>
+                    </div>
+                {% endfor %}
               </div>
             </div>
         </div>
@@ -475,20 +316,17 @@ image: AB_facebook_OG_Crowdsale.png
             <div class="col-sm-6 no-padding">
               <div class="section-heading section-heading-big">
                 <h2>
-                  CRAVING FOR MORE<br>
-                  IN-DEPTHS DETAILS?
+                  {{ data.moreDetails.title }}
                 </h2>
               </div>
             </div>
             <div class="col-sm-3">
-                <a class="button-base ico-cta" href="files/acebusters_whitepaper.pdf" target="_blank">
-                    Read Whitepaper
+                <a class="button-base ico-cta" href="{{ site.baseUrl }}/files/acebusters_whitepaper.pdf" target="_blank">
+                    {{ buttons.readWhitepaper }}
                 </a>
             </div>
             <div class="col-sm-3">
-                <a class="button-base ico-cta" v-bind:href="appUrl()" target="_blank">
-                    Play Poker
-                </a>
+                {% include appLink.html text='playPoker' class='button-base ico-cta' target='_blank' %}
             </div>
         </div>
     </div>

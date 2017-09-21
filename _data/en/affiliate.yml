@@ -1,0 +1,27 @@
+banner:
+  title: Earn up to 5% for each referred investment made.
+  subtitle: In order to spread the word we're offering an affiliate program so that everyone can help make online poker more profitable, fair and secure.
+
+mediakit:
+  title: >
+    The media kit.
+    <span>All the assets you'll need to spread the word.</span>
+  docs:
+    - class: col-sm-4
+      title: Download the Acebusters OnePager
+      url: AB_OnePager.pdf
+
+    - class: col-sm-4
+      title: Download the full Media Kit
+      url: Acebusters_MediaKit.zip
+
+    - class: col-sm-4
+      title: Download our Whitepaper
+      url: acebusters_whitepaper.pdf
+
+affiliate:
+  title: >
+    Become An Affiliate
+    <span>Fill out the details below to receive your referral code.</span>
+  description: >
+    We will review your application ASAP and send a referral code via the email address you supply in the form.
