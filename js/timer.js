@@ -11,14 +11,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
     // set the provider you want from Web3.providers
     var web3= new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/ACEBUSTERS"));
 
-    var nutzAddr = "0xe1EDa226759825E236831714bcDc0ca0B21fd862 ";
-    var event = web3.eth.contract([{"constant":false,"inputs":[],"name":"startCollection","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"milestoneShares","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"nutzAddr","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"initialSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"tick","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"powerAddr","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"milestoneRecipients","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"minDuration","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"completeClosed","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"maxDuration","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"RATE_FACTOR","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"startTime","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"amountPower","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"stopCollection","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"softCap","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"state","outputs":[{"name":"","type":"uint8"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"discountRate","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"initialReserve","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"completeFailed","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"controllerAddr","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"hardCap","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"_controllerAddr","type":"address"},{"name":"_startTime","type":"uint256"},{"name":"_minDuration","type":"uint256"},{"name":"_maxDuration","type":"uint256"},{"name":"_softCap","type":"uint256"},{"name":"_hardCap","type":"uint256"},{"name":"_discount","type":"uint256"},{"name":"_amountPower","type":"uint256"},{"name":"_milestoneRecipients","type":"address[]"},{"name":"_milestoneShares","type":"uint256[]"}],"payable":false,"type":"constructor"}]).at("0x9e17852142B297B7D7919698fA8B7e382c43bEBD ");
-
-    var token = web3.eth.contract([{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_amountBabz","type":"uint256"}],"name":"approve","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"powerPool","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_amountBabz","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"powerAddr","type":"address"},{"name":"_holder","type":"address"},{"name":"_amountBabz","type":"uint256"}],"name":"powerDown","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"floor","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_amountBabz","type":"uint256"},{"name":"_data","type":"bytes"}],"name":"transData","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"ceiling","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_pullAddr","type":"address"},{"name":"_dest","type":"address"},{"name":"_amountWei","type":"uint256"}],"name":"asyncSend","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_amountBabz","type":"uint256"}],"name":"powerUp","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_amountBabz","type":"uint256"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_amountBabz","type":"uint256"},{"name":"_data","type":"bytes"}],"name":"transferFrom","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"activeSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_amountBabz","type":"uint256"},{"name":"_data","type":"bytes"}],"name":"transfer","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_price","type":"uint256"},{"name":"_amountBabz","type":"uint256"}],"name":"sell","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_price","type":"uint256"}],"name":"purchase","outputs":[],"payable":true,"type":"function"},{"constant":false,"inputs":[{"name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"purchaser","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Purchase","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"seller","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Sell","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"owner","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"}]).at(nutzAddr);
+    var nutzAddr = "0xe1EDa226759825E236831714bcDc0ca0B21fd862";
 
     var store = {
-        event,
-        token,
         icoStarts: null,
         icoEnds: null,
         maxDuration: 0,
@@ -29,16 +24,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
         reserve: 0,
         stateStrings: ['Waiting', 'Collecting', 'Closed', 'Failed', 'Success',''],
         hasStarted: false,
-        fromContract: function(contract , value) {
-            return new Promise(function(resolve, reject) {
-                contract[value].call(function(err, rsp) {
-                    if (err) {
-                        reject(err);
-                    }
-                    resolve(rsp);
-                })
-            })
-        },
     };
 
     Vue.filter('twoDigits', (value) => {
@@ -117,34 +102,24 @@ document.addEventListener("DOMContentLoaded", function(e) {
         }, 1000)
 
         var that = this;
-        var p1 = store.fromContract(event, 'startTime');
-        var p2 = store.fromContract(event, 'maxDuration');
-        var p3 = store.fromContract(event, 'minDuration');
-        var p4 = store.fromContract(event, 'state');
 
+        this.date = 1505997600 + 1200;
+        store.startTime = 1505997600;
+        store.maxDuration = 2592000;
+        store.minDuration = 259200;
+        that.state = 0;
+        that.status = store.stateStrings[0];
 
-
-        Promise.all([p1, p2, p3, p4]).then(values => {
-            this.date = values[0].toNumber() + 1200;
-            store.startTime = values[0].toNumber();
-            store.maxDuration = values[1].toNumber();
-            store.minDuration = values[2].toNumber();
-            that.state = values[3].toNumber();
-            that.status = store.stateStrings[this.state];
-
-            // check if ICO is over
-            if (this.state <= 1) {
+        // check if ICO is over
+        if (this.state <= 1) {
+            this.now = Math.trunc((new Date()).getTime() / 1000);
+            setInterval(() => {
                 this.now = Math.trunc((new Date()).getTime() / 1000);
-                setInterval(() => {
-                    this.now = Math.trunc((new Date()).getTime() / 1000);
-                    // this.setTimer();
-                }, 1000);
-            }
-
-        });
-
+                // this.setTimer();
+            }, 1000)
       }
-    });
+  }
+});
 
 
     Vue.component('timer-post-launch', {
@@ -196,40 +171,29 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
             var that = this;
 
-            var p1 = store.fromContract(event, 'startTime');
-            var p2 = store.fromContract(event, 'maxDuration');
-            var p3 = store.fromContract(event, 'minDuration');
-            var p4 = store.fromContract(event, 'state');
-
-
-
-            Promise.all([p1, p2, p3, p4]).then(values => {
-                this.date = values[0].toNumber() + values[2].toNumber();
-                store.startTime = values[0].toNumber();
-                store.maxDuration = values[1].toNumber();
-                store.minDuration = values[2].toNumber();
-                that.state = values[3].toNumber();
-                that.status = store.stateStrings[this.state];
-                // check if ICO is over
-                if (this.state <= 1) {
+            this.date = 1505997600 + 1200 + 259200;
+            store.startTime = 1505997600;
+            store.maxDuration = 2592000;
+            store.minDuration = 259200;
+            that.state = 1;
+            that.status = store.stateStrings[1];
+            // check if ICO is over
+            if (this.state <= 1) {
+                this.now = Math.trunc((new Date()).getTime() / 1000);
+                setInterval(() => {
                     this.now = Math.trunc((new Date()).getTime() / 1000);
-                    setInterval(() => {
-                        this.now = Math.trunc((new Date()).getTime() / 1000);
-                        // this.setTimer();
-                    }, 1000);
-                }
-
-            });
-
+                    // this.setTimer();
+                }, 1000);
+            }
 
           }
-        });
+      });
 
     Vue.component('loading-bar', {
       template: `
           <div>
               <div style="margin-bottom: 5%;" v-show="now >= 1505998800">
-              <span class="raised-param" data-toggle="tooltip" :title="aRaisedInfo"> {{ amountRaised.toFixed(2) }} ETH | {{ store.hardCap.toFixed(2) }} ETH </span>
+              <span class="raised-param" data-toggle="tooltip" :title="aRaisedInfo"> {{ amountRaised.toFixed(2) }} ETH | {{ store.hardCap }} ETH </span>
               </div>
               <div class="milestones" v-show="now >= 1505998800">
                 <div class="milestone-soft-cap"></div>
@@ -257,28 +221,19 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
           var that = this;
           // get hard cap
-          var p1 = store.fromContract(event, 'hardCap');
-          var p2 = store.fromContract(event, 'initialReserve');
-          var p3 = store.fromContract(event, 'softCap');
-          var p4 = store.fromContract(event, 'state');
-
-          Promise.all([p1, p2, p3, p4]).then(values => {
-              store.hardCap = parseFloat(web3.fromWei(values[0].toNumber()));
-              this.maxValue = store.hardCap;
-              store.softCap = parseFloat(web3.fromWei(values[2].toNumber()));
-              this.softCap = store.softCap;
-              web3.eth.getBalance(nutzAddr, function(error, result) {
-                if (!error) {
-                    store.reserve = web3.fromWei(result.toNumber());
-                    store.initialReserve = web3.fromWei(values[1].toNumber());
-                    that.amountRaised = (store.reserve - store.initialReserve);
-                }
-             });
-             that.state = values[3].toNumber();
-             that.status = store.stateStrings[this.state];
-
-         });
-      },
+          store.hardCap = parseFloat(30000);
+          this.maxValue = store.hardCap;
+          store.softCap = parseFloat(5000);
+          this.softCap = store.softCap;
+          web3.eth.getBalance(nutzAddr, function(error, result) {
+            if (!error) {
+                store.reserve = web3.fromWei(result).toNumber();
+                that.amountRaised = (store.reserve - 2.41975);
+            }
+          });
+          that.state = 1;
+          that.status = store.stateStrings[1];
+     },
       computed: {
           percent: function() {
               return ((this.amountRaised / this.maxValue) * 100).toFixed(2);
@@ -315,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
               now: Math.trunc((new Date()).getTime() / 1000)
           }
       }
-    });
+  });
 
     Vue.component('distro-pie', {
         extends: VueChartJs.Doughnut,
