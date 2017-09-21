@@ -198,7 +198,7 @@ $elements: 6;
       position: absolute;
       height: 100%;
       padding-top: 20px;
-      font-family: st, osr;
+      font-family: st;
       font-size: 1.2rem;
       color: $ci_white;
       width: 30px;
@@ -222,13 +222,13 @@ $elements: 6;
 }
 
 .banner-chart {
-    font-family: st, osr;
+    font-family: st;
     margin-bottom: $gridSize*6+px;
 }
 
 .banner-ico-header {
     font-size: 1.5em;
-    font-family: st, osr;
+    font-family: st;
 }
 
 .banner-ico-text {

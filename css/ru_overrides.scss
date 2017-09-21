@@ -1,0 +1,125 @@
+html[lang=ru] {
+  .footer-text {
+      font-family: osr;
+  }
+
+  .button-base {
+      font-family: osr;
+  }
+
+  .team-role {
+      font-family: osr;
+  }
+
+  #team h4 {
+      font-family: osr;
+  }
+
+  .faq-question {
+      font-family: osr;
+  }
+
+  .lead {
+      font-family: osr;
+  }
+
+  .intro-message {
+      font-family: osr;
+  }
+
+  .intro-message-2 {
+      font-family: osr;
+  }
+
+  .intro-sub-message {
+      font-family: osr;
+  }
+
+  .intro-sub-message-2 {
+      font-family: osr;
+  }
+
+  .section-heading {
+      font-family: osr;
+  }
+
+  .team-heading {
+      font-family: osr;
+  }
+
+  #mlb2-3873850 .subscribe-form .form-section.horizontal .form-group {
+      font-family: osr;
+  }
+
+  .cd-timeline-content {
+    font-family: osr;
+  }
+
+  .cd-timeline-content h2 {
+    font-family: osr;
+  }
+
+
+  .timer {
+      font-family: osr;
+  }
+
+  .ico-header-block {
+
+      font-family: osr;
+  }
+
+  .status {
+    font-family: osr;
+    span{
+      font-family: osr;
+    }
+  }
+
+  .li.complete .status {
+    font-family: osr;
+  }
+
+  .milestone-horizontal {
+      font-family: osr;
+  }
+
+  @media (min-device-width: 320px) and (max-device-width: 700px) {
+
+    .timestamp {
+      font-family: osr;
+    }
+
+  }
+
+  h1,h2,h3,h4,h5{
+    font-family: osr;
+  }
+
+  .nav{
+    li a{
+      font-family: osr;
+    }
+  }
+
+  .nav-item > a {
+      font-family: osr;
+  }
+
+  $elements: 6;
+  @for $i from 0 to $elements {
+    .contribution-steps .banner-ico:nth-child(#{$i}) {
+      &:before{
+        font-family: osr;
+      }
+    }
+  }
+
+  .banner-chart {
+      font-family: osr;
+  }
+
+  .banner-ico-header {
+      font-family: osr;
+  }
+}
