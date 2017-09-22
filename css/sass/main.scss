@@ -138,7 +138,17 @@ a:active {
     width: 100%;
     margin-bottom: 0.5em;
     text-align: center;
+    &.button-white{
+      background-color: $ci_lblue;
+      background: $ci_lblue;
+      color: $ci_ddark;
+      border: none;
+      &:hover{
+        color: $ci_ddark;
+      }
+    }
 }
+
 
 .ico-cta {
     margin-top: 50px;

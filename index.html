@@ -19,10 +19,13 @@ image: AB_twitter_card@2x.png
             </div>
             <div class="col-md-5">
                 <div class="intro-buttons">
-                    <a class="button-base" href="{{ site.baseurl }}/files/acebusters_whitepaper.pdf" target="_blank">
+                    <button class="button-base" data-toggle="modal" data-target="#investChooser">
+                        {{ buttons.joinCrowdsale }}
+                    </button>
+                    <a class="button-base button-white" href="{{ site.baseurl }}/files/acebusters_whitepaper.pdf" target="_blank">
                         {{ buttons.readWhitepaper }}
                     </a>
-                    {% include appLink.html text='playPoker' class='button-base' target='_blank' %}
+                    {% include appLink.html text='playPoker' class='button-base button-white' target='_blank' %}
                 </div>
             </div>
         </div>
