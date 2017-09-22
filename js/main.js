@@ -255,4 +255,29 @@ document.addEventListener('DOMContentLoaded', function (e) {
     localStorage.setItem('refId', refId);
     window.location.href = window.location.href.replace(/\/#ref.*/g, '');
   }
+
+  var $investForm = $('#invest-form');
+  $investForm.submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+    url: '//formspree.io/info@acebusters.com',
+    method: 'POST',
+    data: $(this).serialize(),
+    dataType: 'json',
+    beforeSend: function() {
+      $investForm.append('<div class="alert alert--loading">Sending message…</div>');
+    },
+    success: function(data) {
+      $investForm.find('.alert--loading').hide();
+      $investForm.fadeOut(300);
+      $('.invest-add').fadeIn(300);
+    },
+    error: function(err) {
+      $investForm.find('.alert--loading').hide();
+      $investForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+    }
+  });
+});
+
+
 });

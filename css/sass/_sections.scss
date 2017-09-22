@@ -590,3 +590,141 @@ Subscribe Landing Page
     padding-right: 10px;
   }
 }
+
+
+@media (min-width: 768px){
+  .modal-dialog {
+    width: 768px;
+    color: #000;
+  }
+}
+
+@media (min-width: 1024px){
+  .modal-dialog {
+    width: 1000px;
+  }
+}
+
+.button-help{
+  background: $ci_grey;
+  border-radius: 200px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 1.2rem;
+  margin-top: -12px;
+  text-align: center;
+  display: inline-block;
+}
+
+.modal-dialog{
+  color: #000;
+  p{
+    display: block;
+    margin-bottom: $gridSize*4+px;
+  }
+  [class*='col-']:first-child{
+    border-right: 1px solid #ccc;
+  }
+  input.field{
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 4px;
+    border-bottom: 2px solid $ci_magenta;
+  }
+  input{
+    margin-bottom: $gridSize*2+px;
+  }
+  a{
+    text-decoration: underline !important;
+  }
+}
+
+label.label-cbx{
+  display: block;
+  margin-bottom: $gridSize*2+px;
+}
+.modal-title{
+  text-align: center;
+}
+
+.invest-option{
+  padding: $gridSize*2+px;
+}
+
+.invest-add{
+  display: none;
+}
+
+.label-cbx {
+  user-select: none;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.label-cbx input:checked + .checkbox {
+  border-color: $ci_magenta;
+}
+.label-cbx input:checked + .checkbox svg path {
+  fill: $ci_magenta;
+}
+.label-cbx input:checked + .checkbox svg polyline {
+  stroke-dashoffset: 0;
+}
+.label-cbx:hover .checkbox svg path {
+  stroke-dashoffset: 0;
+}
+.label-cbx .checkbox {
+  position: relative;
+  top: 2px;
+  float: left;
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #C8CCD4;
+  border-radius: 3px;
+}
+.label-cbx .checkbox svg {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+.label-cbx .checkbox svg path {
+  fill: none;
+  stroke: $ci_magenta;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 71px;
+  stroke-dashoffset: 71px;
+  transition: all 0.6s ease;
+}
+.label-cbx .checkbox svg polyline {
+  fill: none;
+  stroke: #FFF;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 18px;
+  stroke-dashoffset: 18px;
+  transition: all 0.3s ease;
+}
+.label-cbx > span {
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+.cntr {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.invisible {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
