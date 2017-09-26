@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     Vue.component('timer-pre-launch', {
       template: `
-        <div class="ico-timer" v-show="!isTimeUp">
+        <div class="ico-timer" v-show="false">
           <h3 class="headline-dark-bg timer timer-heading"> OUR CROWDSALE STARTS IN: </h3>
           <ul class="vue-countdown">
             <li>
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     Vue.component('timer-post-launch', {
           template: `
-            <div class="ico-timer" v-show="!isTimeUp && now >= 1505998800">
+            <div class="ico-timer" v-show="false">
               <p class="headline-dark-bg timer timer-heading timer-heading-launch"> GUARANTEED PARTICIPATION UNTIL: <span>{{ days | twoDigits }}d : {{ hours | twoDigits }}h : {{ minutes | twoDigits }}m : {{ seconds | twoDigits }}s</span></p>
             </div>
           `,
