@@ -17,6 +17,16 @@ html[lang=ru] {
   .intro-buttons {
     width: auto;
   }
+
+  .subscribe-section {
+    .input-section {
+      width: calc(100% - 296px);
+    }
+
+    .submit-section {
+      width: 280px;
+    }
+  }
 }
 
 .language-dropdown {
