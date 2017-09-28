@@ -1,6 +1,8 @@
 play: Play
 playPoker: Play Poker
-readWhitepaper: Read Whitepaper
+readWhitepaper:
+  title: Read Whitepaper
+  url: acebusters_whitepaper.pdf
 signUp: Sign Up
 keepMeUp: Keep Me Updated
 getNotified: Get Notified

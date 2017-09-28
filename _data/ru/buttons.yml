@@ -1,6 +1,8 @@
 play: Играть
 playPoker: Играть в покер
-readWhitepaper: Прочитать Whitepaper
+readWhitepaper:
+  title: Прочитать Whitepaper
+  url: acebusters_whitepaper_ru.pdf
 signUp: Регистрация
 keepMeUp: Держите меня в курсе
 getNotified: Узнать о начале сбора
