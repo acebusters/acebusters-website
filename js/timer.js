@@ -193,22 +193,16 @@ document.addEventListener("DOMContentLoaded", function(e) {
       template: `
           <div>
               <div style="margin-bottom: 5%;" v-show="now >= 1505998800">
-              <span class="raised-param" data-toggle="tooltip" :title="aRaisedInfo"> {{ amountRaised.toFixed(2) }} ETH | {{ store.hardCap }} ETH </span>
-              </div>
-              <div class="milestones" v-show="now >= 1505998800">
-                <div class="milestone-soft-cap"></div>
-                <div class="milestone-hard-cap"></div>
+              <span class="raised-param" data-toggle="tooltip" :title="aRaisedInfo"> CROWDSALE RUNNING ({{ percent }}% distributed) </span>
               </div>
               <div class="progress" v-show="now >= 1505998800">
                   <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="percent" aria-valuemin="0" aria-valuemax="100" v-bind:style="{ width: percent + '%' }" v-show="now >= 1505998800">
                       <span class="sr-only">60% Complete</span>
                   </div>
-                  <div class="milestone-soft" v-show="now >= 1505998800"></div>
               </div>
               <div class="progress-facts" v-show="now >= 1505998800">
-                <span class="event-param" data-toggle="tooltip" :title="softCapInfo"> Softcap : {{ softCap }} </span> | 
-                <span class="event-param" data-toggle="tooltip" :title="hardCapInfo"> Hardcap : {{ store.hardCap }} </span> | 
-                <span class="event-param" data-toggle="tooltip" :title="minDuInfo"> min Duration : {{ minDuration }} Days </span> | 
+                <span class="event-param" data-toggle="tooltip" :title="softCapInfo"> Softcap : {{ softCap }} ETH</span> | 
+                <span class="event-param" data-toggle="tooltip" :title="hardCapInfo"> Hardcap : {{ store.hardCap }} ETH</span> | 
                 <span class="event-param" data-toggle="tooltip" :title="maxDuInfo"> max Duration: {{ maxDuration }} Days </span> |
                 <span class="event-param"> STATUS: {{ status }} </p>
               </div>
@@ -236,7 +230,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
      },
       computed: {
           percent: function() {
-              return ((this.amountRaised / this.maxValue) * 100).toFixed(2);
+              return (((630000 + this.amountRaised * 10) / 900000)*100).toFixed(2);
+              // return ((this.amountRaised / this.maxValue) * 100).toFixed(2);
+          },
+          distributed: function() {
+            return 630000 + this.amountRaised * 10;
           },
           maxDuration: function() {
               return parseFloat(store.maxDuration / 60 / 60 / 24);
