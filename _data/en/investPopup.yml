@@ -1,0 +1,18 @@
+chooseMethod: Choose method to invest
+signUpToInvest:
+  title: Sign Up to Invest
+  description: >
+    Our recommended option. You can buy NTZ during the crowdsale on our Dashboard and after the crowdsale you'll be able to exchange your NTZ to ABP in order to receive your shares.
+    If you need any assistance you can read the instructions on how to invest <a href="http://help.acebusters.com/how-to-participate-in-the-crowdsale/invest-using-the-acebusters-dapp-recommended" target="_blank">here</a> or join us on our <a href="https://discordapp.com/invite/7PesDTZ" target="_blank">Discord Channel</a>.
+  button: Sign Up
+sendToAddress:
+  title: Send to address directly
+  description: >
+    You can also send ETH to our address directly in order to receive NTZ.
+    In order to be able to convert your funds to ABP after the crowdsale, please enter your email-address and confirm you are not sending money from an exchange wallet.
+    <span style="color:#E31041">Fill out the form to reveal the address.</span>
+  confirmNoExchange: I confirm that I am not sending money from an exchange wallet. *required
+  button: Reveal Ether Address
+  address: Address
+  verifyAddress: Verify address
+close: Close
