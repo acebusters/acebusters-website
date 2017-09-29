@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//www.marudot.com//iCal Event Maker
+X-WR-CALNAME:Acebusters Live Game Session
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTAMP:20170928T183654Z
+UID:20170928T183654Z-990921567@marudot.com
+DTSTART;TZID="Etc/UTC":20170929T160000
+DTEND;TZID="Etc/UTC":20170929T170000
+SUMMARY:Acebusters Live Game Session
+URL:https%3A%2F%2Fdiscordapp.com%2Finvite%2F7PesDTZ
+DESCRIPTION:To celebrate the latest Dapp release we'd like invite you for a live game session! Play some hands with the team, ask your questions and check out our product first-hand. Come and join us!
+LOCATION:Discord Community Server ( https://discordapp.com/invite/7PesDTZ )
+END:VEVENT
+END:VCALENDAR
