@@ -241,6 +241,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
   // JQuery logic
   $('[data-toggle="tooltip"]').tooltip();
 
+  $('#modal-sign-up').on('click', function(){
+    dataLayer.push({ 'event': 'Modal_SignUp_Click' });
+  })
+
   function gtmUpdate(type) {
     type == 'sub' && dataLayer.push({ 'event': 'subscription_success' });
   }
@@ -271,10 +275,12 @@ document.addEventListener('DOMContentLoaded', function (e) {
       $investForm.find('.alert--loading').hide();
       $investForm.fadeOut(300);
       $('.invest-add').fadeIn(300);
+      dataLayer.push({ 'event': 'Reveal_ETH_Address_Success' });
     },
     error: function(err) {
       $investForm.find('.alert--loading').hide();
       $investForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+      dataLayer.push({ 'event': 'Reveal_ETH_Address_Error' });
     }
   });
 });

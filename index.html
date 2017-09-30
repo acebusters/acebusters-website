@@ -109,17 +109,26 @@ image: AB_twitter_card@2x.png
     </div>
 </section>
 
-<section class="content-purple center section">
+<div class="content-white section section-small partners-section">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12">
-                <h2 class="main-headline">
-                    {{ data.section2.title }}
-                </h2>
+            <div class="col-sm-12" style="text-align:center;">
+                <div class="section-heading">
+                    <h2>{{ data.partners.title }}</h2>
+                </div>
             </div>
         </div>
+        <div class="row">
+            {% for item in data.partners.list %}
+                <div class="col-sm-3">
+                    <a href="{{ item.url }}" target="_blank">
+                        <img src="{{ site.baseUrl }}/img/partners/{{ item.img }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-</section>
+</div>
 
 
 <section class="content-magenta section advantages">
@@ -134,27 +143,55 @@ image: AB_twitter_card@2x.png
     </div>
   </div>
 </section>
-<div class="content-white section section-small">
+
+<section class="content-purple center section">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6 no-padding">
-              <div class="section-heading section-heading-big">
-                <h2>
-                  {{ data.sectionSmall.title }}
+            <div class="col-sm-12">
+                <h2 class="main-headline">
+                    {{ data.section2.title }}
                 </h2>
-              </div>
-            </div>
-            <div class="col-sm-3">
-                <a class="button-base ico-cta" href="{{ site.baseurl }}/files/{{ buttons.readWhitepaper.url }}" target="_blank">
-                    {{ buttons.readWhitepaper.title }}
-                </a>
-            </div>
-            <div class="col-sm-3">
-                {% include appLink.html text='playPoker' class='button-base ico-cta' target='_blank' %}
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Team Section -->
+<a name="team"></a>
+<section ref="team" id="team" class="section team">
+  <div class="container-fluid">
+    <div class="row" style="margin-48">
+      <div class="col-sm-12">
+        <h2 class="section-heading">{{ data.team.title }}</h2>
+      </div>
+    </div>
+      <div class="row team-list">
+        <h3 class="team-category">Advisors</h3>
+        {% for advisor in data.team.advisors %}
+            <div class="team-list__item col-sm-3">
+                <div class="team-member">
+                    <img src="{{ site.baseurl }}/img/team/{{ advisor.img }}" class="img-responsive img-circle" alt="{{ advisor.name }}">
+                    <h4>{{ advisor.name }}</h4>
+                    <p class="team-role">{{ advisor.role }}</p>
+                </div>
+            </div>
+        {% endfor %}
+      </div>
+      <div class="row team-list">
+        <h3 class="team-category">Team</h3>
+        {% for member in data.team.members %}
+            <div class="team-list__item col-sm-3">
+                <div class="team-member">
+                    <img src="{{ site.baseurl }}/img/team/{{ member.img }}" class="img-responsive img-circle" alt="{{ member.name }}">
+                    <h4>{{ member.name }}</h4>
+                    <p class="team-role">{{ member.role }}</p>
+                </div>
+            </div>
+        {% endfor %}
+      </div>
+  </div>
+</section>
+
 <!-- /.content-section-a -->
 <section id="timeline" class="section">
     <div class="container-fluid">
@@ -185,85 +222,28 @@ image: AB_twitter_card@2x.png
     </div>
     <!-- /.container -->
 </section>
-<!-- Team Section -->
-<a name="team"></a>
-<section ref="team" id="team" class="section team">
-  <div class="container-fluid">
-    <div class="row" style="margin-48">
-      <div class="col-sm-12">
-        <h2 class="section-heading">{{ data.team.title }}</h2>
-      </div>
-    </div>
-      <div class="row team-list">
-        {% for member in data.team.members %}
-            <div class="team-list__item col-sm-3">
-                <div class="team-member">
-                    <img src="{{ site.baseurl }}/img/team/{{ member.img }}" class="img-responsive img-circle" alt="{{ member.name }}">
-                    <h4>{{ member.name }}</h4>
-                    <p class="team-role">{{ member.role }}</p>
-                </div>
-            </div>
-        {% endfor %}
-      </div>
-  </div>
-</section>
-<div class="content-white section section-small partners-section">
+
+<div class="content-white section section-small">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-12" style="text-align:center;">
-                <div class="section-heading">
-                    <h2>{{ data.partners.title }}</h2>
-                </div>
+            <div class="col-sm-6 no-padding">
+              <div class="section-heading section-heading-big">
+                <h2>
+                  {{ data.sectionSmall.title }}
+                </h2>
+              </div>
             </div>
-        </div>
-        <div class="row">
-            {% for item in data.partners.list %}
-                <div class="col-sm-3">
-                    <a href="{{ item.url }}" target="_blank">
-                        <img src="{{ site.baseUrl }}/img/partners/{{ item.img }}">
-                    </a>
-                </div>
-            {% endfor %}
+            <div class="col-sm-3">
+                <a class="button-base ico-cta" href="{{ site.baseurl }}/files/{{ buttons.readWhitepaper.url }}" target="_blank">
+                    {{ buttons.readWhitepaper.title }}
+                </a>
+            </div>
+            <div class="col-sm-3">
+                {% include appLink.html text='playPoker' class='button-base ico-cta' target='_blank' %}
+            </div>
         </div>
     </div>
 </div>
-<!-- partner section -->
-<!-- <section id="partners">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading team-heading" style="color:#FFF;">Partners</h2>
-                <h3 class="section-subheading text-muted" style="color:#FFF;">A hub of innovators.</h3>
-                <div class="col-sm-6">
-                    <div class="team-partner">
-                        <img src="{{ site.baseurl }}/img/team/droidlabs.png">
-                    </div>
-                    <div class="team-partner">
-                        <p class="text-muted" style="color:#FFF;">Technical Consultants</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="partner-item">
-                                <a target="_blank" href="http://droidlabs.pro/"><i class="fa fa-globe"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="team-partner">
-                        <img src="{{ site.baseurl }}/img/team/kindbeetle.png">
-                    </div>
-                    <div class="team-partner">
-                        <p class="text-muted" style="color:#FFF;margin-top:-34px;">Development Agency</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="partner-item">
-                                <a target="_blank" href="http://kindbeetle.ru/en/"><i class="fa fa-globe"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 <!-- contact section -->
 <a name="contact"></a>
 <section id="contact" class="section">
