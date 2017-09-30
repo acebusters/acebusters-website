@@ -75,12 +75,18 @@ timeline:
 team:
   title: МЫ КРИПТОФАНАТЫ И ЛЮБИТЕЛИ ПОКЕРА. <span>Наша команда.</span>
   advisors:
+    - name: Benedict Chan
+      role: Blockchain Advisor - Director of Engineering at BitGo, Inc.
+      img: advisors/chan.jpg
+
     - name: Alexander Anter
       role: Poker Advisor - WSOP Bracelet Winner
       img: advisors/anter.jpg
-    - name: Alexander Anter
-      role: Poker Advisor
-      img: advisors/anter.jpg
+
+    - name: Dauren Toleukhanov
+      role: Business Advisor - Director at Kazakhstan's Sovereign Wealth Fund
+      img: advisors/darraita.jpg
+      
   members:
     - name: Johann Barbie
       role: Главный по блокчейну

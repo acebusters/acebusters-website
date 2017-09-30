@@ -73,3 +73,4 @@ coverage/
 .tmp/
 .sass-cache/
 _site/*
+.asset-cache/

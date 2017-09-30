@@ -1,0 +1,18 @@
+chooseMethod: Выберите способ инвестирования
+signUpToInvest:
+  title: Через приложение
+  description: >
+    Рекомендуемый способ. Во время краудсейла вы сможете купить NTZ, а после краудсейла обменять NTZ на ABP, чтобы получить долю.
+    Если вам нужна помощь, прочтите <a href="http://help.acebusters.com/how-to-participate-in-the-crowdsale/invest-using-the-acebusters-dapp-recommended" target="_blank">руководство</a> или подключайтесь к <a href="https://discordapp.com/invite/7PesDTZ" target="_blank">нашему каналу в Discord</a>.
+  button: Зарегистрироваться
+sendToAddress:
+  title: Оплатить напрямую
+  description: >
+    Также вы можете просто перевести ETH на наш адрес и получить в обмен токены NTZ.
+    Чтобы конвертировать NTZ в ABP после краудсейла, пожалуйста оставьте ваш электронный адрес. Убедитесь, что вы не отправляете деньги с биржи.
+    <span style="color:#E31041">Заполните форму, чтобы увидеть адрес для перевода.</span>
+  confirmNoExchange: Я подтверждаю, что не перевожу деньги с биржи. *обязательно
+  button: Показать адрес
+  address: Адрес
+  verifyAddress: Проверить адрес
+close: Закрыть
