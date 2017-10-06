@@ -628,6 +628,12 @@ Subscribe Landing Page
   }
 }
 
+@media(min-width: 1920px){
+  .modal-dialog {
+    width: 1400px;
+  }
+}
+
 .button-help{
   background: $ci_grey;
   border-radius: 200px;
