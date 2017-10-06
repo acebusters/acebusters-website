@@ -319,7 +319,7 @@ a:active {
 .intro-buttons {
     text-align: center;
     padding-top: 18em;
-    width: 200px;
+    width: 100%;
     float: right;
     @media(max-width: 960px){
       width: 100%;
@@ -335,7 +335,11 @@ a:active {
     }
 }
 
-
+#whitepaperLangChooser{
+  a{
+    text-decoration: none !important;
+  }
+}
 
 .cta-discord {
     font-size: 1.5em !important;

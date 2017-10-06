@@ -22,9 +22,9 @@ image: AB_twitter_card@2x.png
                     <button class="button-base" data-toggle="modal" data-target="#investChooser">
                         {{ buttons.joinCrowdsale }}
                     </button>
-                    <a class="button-base button-white" href="{{ site.baseurl }}/files/{{ buttons.readWhitepaper.url }}" target="_blank">
+                    <button class="button-base button-white" data-toggle="modal" data-target="#whitepaperLangChooser">
                         {{ buttons.readWhitepaper.title }}
-                    </a>
+                    </button>
                     {% include appLink.html text='playPoker' class='button-base button-white' target='_blank' %}
                 </div>
             </div>
@@ -234,9 +234,9 @@ image: AB_twitter_card@2x.png
               </div>
             </div>
             <div class="col-sm-3">
-                <a class="button-base ico-cta" href="{{ site.baseurl }}/files/{{ buttons.readWhitepaper.url }}" target="_blank">
-                    {{ buttons.readWhitepaper.title }}
-                </a>
+              <button class="button-base ico-cta" data-toggle="modal" data-target="#whitepaperLangChooser">
+                  {{ buttons.readWhitepaper.title }}
+              </button>
             </div>
             <div class="col-sm-3">
                 {% include appLink.html text='playPoker' class='button-base ico-cta' target='_blank' %}
