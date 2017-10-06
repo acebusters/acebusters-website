@@ -83,6 +83,7 @@
 
 .intro-header{
   height: 100vh;
+  min-height: 686px;
   width: 100vw;
   padding: $gridSize*12+px $gridSize*12+px $gridSize*8+px $gridSize*12+px;
   @media(max-width: 767px){

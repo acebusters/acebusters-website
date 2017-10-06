@@ -1429,6 +1429,7 @@ input.form-control {
 
 .intro-header {
   height: 100vh;
+  min-height: 686px;
   width: 100vw;
   padding: 96px 96px 64px 96px; }
   @media (max-width: 767px) {
