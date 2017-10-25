@@ -29,7 +29,7 @@ aws s3 sync _site/ $S3_BUCKET --size-only --exclude "*" --include "*.*" --delete
 echo "Copying files with content type..."
 aws s3 sync _site/ $S3_BUCKET --size-only --content-type text/html --exclude "*.*" --delete --acl public-read | tee -a $TEMPFILE
 
-if [ "$DISTRIBUTION_ID" ]
+if [ "$DISTRIBUTION_ID" ]; then
   #invalidate only modified files
   echo "Invalidating CloudFront distribution..."
   grep "upload\|deleted" $TEMPFILE | sed -e "s|.*upload.*to $S3_BUCKET|/|" | sed -e "s|.*delete: $S3_BUCKET|/|" | sed -e 's/index.html//' | sed -e 's/\(.*\).html/\1/' | tr '\n' ' ' | xargs aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths
