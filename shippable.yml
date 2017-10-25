@@ -16,7 +16,7 @@ env:
 build:
   ci:
     - bundle install
-    - S3_BUCKET=$STAGING_BUCKET ./build.sh
+    - S3_BUCKET=$STAGING_BUCKET ./scripts/build.sh
 
 integrations:
 
