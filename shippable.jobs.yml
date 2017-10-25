@@ -1,0 +1,8 @@
+jobs:
+  - name:                   promoteToProduction
+    type:                   runSh
+    steps:
+      - IN:                 landing-pages
+        switch:             false
+      - TASK:
+        - script:           SOURCE=$STAGING_BUCKET DEST_BUCKET=$PRODUCTION_BUCKET ./scripts/copy.sh        
