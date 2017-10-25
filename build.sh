@@ -6,14 +6,16 @@
 #
 # Custom vars
 #
-export S3_BUCKET="s3://.../"
-export DISTRIBUTION_ID=...
+#S3_BUCKET="www-staging.acebusters.com"
+#DISTRIBUTION_ID=E3QZ021461XQL5
 ####################################
 
 set -e # halt script on error
-set -v # echo on
 
-export TEMPFILE='mktemp'
+S3_BUCKET=s3://$S3_BUCKET/
+
+TEMPFILE='mktemp'
+rm -f $TEMPFILE
 
 echo "Building site..."
 JEKYLL_ENV=production bundle exec jekyll build
@@ -23,7 +25,14 @@ find _site/ -type f ! -iname 'index.html' -iname '*.html' -print0 | while read -
 
 echo "Copying files to server..."
 aws s3 sync _site/ $S3_BUCKET --size-only --exclude "*" --include "*.*" --delete --acl public-read | tee -a $TEMPFILE
+
 echo "Copying files with content type..."
 aws s3 sync _site/ $S3_BUCKET --size-only --content-type text/html --exclude "*.*" --delete --acl public-read | tee -a $TEMPFILE
-#invalidate only modified files
-grep "upload\|deleted" $TEMPFILE | sed -e "s|.*upload.*to $S3_BUCKET|/|" | sed -e "s|.*delete: $S3_BUCKET|/|" | sed -e 's/index.html//' | sed -e 's/\(.*\).html/\1/' | tr '\n' ' ' | xargs aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths
+
+if [ "$DISTRIBUTION_ID" ]
+  #invalidate only modified files
+  echo "Invalidating CloudFront distribution..."
+  grep "upload\|deleted" $TEMPFILE | sed -e "s|.*upload.*to $S3_BUCKET|/|" | sed -e "s|.*delete: $S3_BUCKET|/|" | sed -e 's/index.html//' | sed -e 's/\(.*\).html/\1/' | tr '\n' ' ' | xargs aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths
+fi
+
+rm -f $TEMPFILE

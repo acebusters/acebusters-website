@@ -20,6 +20,24 @@ More information can be found in the [jekyll official documentation](https://jek
 
 ---
 
+S3 deployment
+-------------
+
+First, make sure you have AWS cli [installed and configured](http://docs.aws.amazon.com/cli/latest/userguide/installing.html) with ACCESS KEY and SECRET.
+
+Deploy to `www.acebusters.com` and invalidate CloudFront cache:
+```
+S3_BUCKET=www.acebusters.com DISTRIBUTION_ID=E3QZ021461XQL5 ./build.sh
+```
+
+Deploy to another bucket without touching the CloudFront cache:
+```
+S3_BUCKET=my-super-bucket ./build.sh
+```
+
+---
+
+
 Project Structure
 -----------------
 
