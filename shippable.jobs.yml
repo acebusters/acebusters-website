@@ -1,6 +1,16 @@
 jobs:
-  - name:                   promoteToProduction
-    type:                   runSh
+  # runCI job that builds and pushes artifact to S3
+  - name: landing-pages_runCI
+    type: runCI
     steps:
+      - OUT: staging_s3_files
+
+  - name: promoteToProduction
+    type: runCLI
+    steps:
+      - IN: landing-pages_runCI
+        switch: off
+      - IN: staging_s3_files
+        switch: off
       - TASK:
-        - script:           SOURCE=$STAGING_BUCKET DEST_BUCKET=$PRODUCTION_BUCKET ./scripts/copy.sh
+        - script: SOURCE=$STAGING_BUCKET DEST_BUCKET=$PRODUCTION_BUCKET ./scripts/copy.sh
