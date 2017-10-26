@@ -4,3 +4,4 @@ resources:
     integration: "landing-pages"
     pointer:
       sourceName: "$STAGING_BUCKET/"
+    seed:
