@@ -5,3 +5,4 @@ resources:
     pointer:
       sourceName: "$STAGING_BUCKET/"
     seed:
+      versionName: latest
