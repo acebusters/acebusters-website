@@ -1,8 +1,1 @@
 resources:
-  - name: staging_s3_files
-    type: file
-    integration: "landing-pages"
-    pointer:
-      sourceName: "$STAGING_BUCKET/"
-    seed:
-      versionName: latest
