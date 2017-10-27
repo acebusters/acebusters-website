@@ -1378,7 +1378,7 @@ input.form-control {
     padding: 112px 111px 144px 111px; }
   @media (max-width: 767px) {
     .section {
-      padding: 48px 42px 64px 42px; }
+      padding: 48px 32px 64px 32px; }
       .section.container-fluid {
         padding: 48px 47px 64px 47px; } }
   .section.section-small {
@@ -1431,7 +1431,6 @@ input.form-control {
   height: 100vh;
   min-height: 686px;
   width: 100vw;
-  margin: -15px;
   padding: 96px 96px 64px 96px; }
   @media (max-width: 767px) {
     .intro-header {
