@@ -1,1 +1,14 @@
 resources:
+  - name: website_s3_params
+    type: params
+    version:
+      params:
+        secure: PPMlkrJGmHlBDrkf8pALAeRtn9Iscvy4BDFjq/5Wu4WWEbDyTnTAmjdEQVQ6XtYIyC8cy4WdqSD0iVMRwPAbMffJKQ07CMak2nzqaBo8DqCBwWSCWYHIWSfEA54K+sZhJyBg3iyhdXaI7UUoLWlo6O60W6dbmWeHwKC3PywGJBCog5UheKnvRyKTmO1GQ/JXHO8P1uv9cl4fSQExVUAN/QFFZpp8U2+IH4toD9arWr5sqBRIbpPYRscRu3uw/aVprkzDc4ctUm6Ifm2duX+6tsb1oUPx1YpzHpPfImRGKfNZq1ZVmSrF3p0AdxB1g7vp3Y6B5s5fEaF6nuipfyRl+Q==
+        STAGING_BUCKET: "www-staging.acebusters.com"
+        PRODUCTION_BUCKET: "www.acebusters.com"
+
+  - name: website_s3_params_prod
+    type: params
+    version:
+      params:
+        DISTRIBUTION_ID: "E3QZ021461XQL5"
