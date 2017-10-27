@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e # halt script on error
+
 TEMPFILE='mktemp'
 rm -f $TEMPFILE
 
