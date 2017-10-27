@@ -12,8 +12,6 @@
 
 set -e # halt script on error
 
-S3_BUCKET=s3://$S3_BUCKET/
-
 echo "Building site..."
 JEKYLL_ENV=production bundle exec jekyll build
 
