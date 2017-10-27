@@ -19,5 +19,5 @@ echo "Removing .html extension"
 find _site/ -type f ! -iname 'index.html' -iname '*.html' -print0 | while read -d $'\0' f; do mv "$f" "${f%.html}"; done
 
 SOURCE=_site/ DEST_BUCKET=$S3_BUCKET ./scripts/copy.sh
-
-if [[ $? != 0 ]]; then exit $?; fi
+echo $?
+if [[ $? != 0 ]]; then echo "error!"; exit $?; fi
