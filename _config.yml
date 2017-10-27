@@ -30,3 +30,4 @@ languages: ['en', 'ru']
 default_lang: 'en'
 exclude_from_localization: ['clips', 'css', 'files', 'font', 'font-awesome', 'fonts', 'img', 'js']
 parallel_localization: true
+exclude: ['scripts']

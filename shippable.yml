@@ -5,7 +5,7 @@ rvm:
 
 branches:
   only:
-    - ci-test
+    - master
 
 build:
   ci:
