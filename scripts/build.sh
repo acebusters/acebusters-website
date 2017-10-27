@@ -11,6 +11,7 @@
 ####################################
 
 set -e # halt script on error
+set -v
 
 echo "Building site..."
 JEKYLL_ENV=production bundle exec jekyll build
@@ -20,4 +21,4 @@ find _site/ -type f ! -iname 'index.html' -iname '*.html' -print0 | while read -
 
 SOURCE=_site/ DEST_BUCKET=$S3_BUCKET ./scripts/copy.sh
 echo $?
-if [[ $? != 0 ]]; then echo "error!"; exit $?; fi
+if [ "$?" != 0 ]; then echo "error!"; exit $?; fi
