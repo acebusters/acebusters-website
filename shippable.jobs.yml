@@ -10,7 +10,7 @@ jobs:
       - IN: landing-pages_runCI
         switch: off
       - IN: website_s3_params
-      - IN: website_s3_params_prod
+      - IN: website_s3_prod_params
       - TASK:
         # copy website from staging bucket into production bucket and invalidate CloudFront distribution
         - script: SOURCE=$STAGING_BUCKET DEST_BUCKET=$PRODUCTION_BUCKET $LANDINGPAGES_RUNCI_STATE/copy.sh
