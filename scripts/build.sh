@@ -19,6 +19,6 @@ JEKYLL_ENV=production bundle exec jekyll build
 echo "Removing .html extension"
 find _site/ -type f ! -iname 'index.html' -iname '*.html' -print0 | while read -d $'\0' f; do mv "$f" "${f%.html}"; done
 
-SOURCE=_site/ DEST_BUCKET=$S3_BUCKET ./scripts/copy.sh
-echo $?
-if [ "$?" != 0 ]; then echo "error!"; exit $?; fi
+SOURCE=_site/ DEST_BUCKET=$S3_BUCKET ./scripts/copy.sh 2> err
+
+if [[ `grep -i error err` ]]; then cat err; exit 1; fi
