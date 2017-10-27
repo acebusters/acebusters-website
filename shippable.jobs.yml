@@ -4,8 +4,6 @@ jobs:
     steps:
       - IN: landing-pages_runCI
         switch: off
-      - IN: landing-pages_gitRepo
-        switch: off
       - TASK:
         - script: echo $STAGING_BUCKET
-        - script: SOURCE=$STAGING_BUCKET DEST_BUCKET=$PRODUCTION_BUCKET ./scripts/copy.sh
+        - script: SOURCE=$STAGING_BUCKET DEST_BUCKET=$PRODUCTION_BUCKET $LANDING_PAGES_RUNCI_STATE/scripts/copy.sh
