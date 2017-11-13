@@ -109,7 +109,7 @@ tokenDetails:
           description: 21ое сентября 2017 в 13:00 (UTC)
 
         - title: Длительность
-          description: от 3 до 30 дней
+          description: 90 дней
 
         - title: Принимаемые валюты
           description: ETH

@@ -192,18 +192,17 @@ document.addEventListener("DOMContentLoaded", function(e) {
     Vue.component('loading-bar', {
       template: `
           <div>
-              <div style="margin-bottom: 5%;" v-show="now >= 1505998800">
+              <div style="margin-bottom: 5%;">
               <span class="raised-param" data-toggle="tooltip" :title="aRaisedInfo"> CROWDSALE RUNNING ({{ percent }}% distributed) </span>
               </div>
-              <div class="progress" v-show="now >= 1505998800">
-                  <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="percent" aria-valuemin="0" aria-valuemax="100" v-bind:style="{ width: percent + '%' }" v-show="now >= 1505998800">
+              <div class="progress">
+                  <div class="progress-bar" role="progressbar" v-bind:aria-valuenow="percent" aria-valuemin="0" aria-valuemax="100" v-bind:style="{ width: percent + '%' }">
                       <span class="sr-only">60% Complete</span>
                   </div>
               </div>
-              <div class="progress-facts" v-show="now >= 1505998800">
+              <div class="progress-facts">
                 <span class="event-param" data-toggle="tooltip" :title="softCapInfo"> Softcap : {{ softCap }} ETH</span> | 
                 <span class="event-param" data-toggle="tooltip" :title="hardCapInfo"> Hardcap : {{ store.hardCap }} ETH</span> | 
-                <span class="event-param" data-toggle="tooltip" :title="maxDuInfo"> max Duration: {{ maxDuration }} Days </span> |
                 <span class="event-param"> STATUS: {{ status }} </p>
               </div>
           </div>

@@ -1,0 +1,32 @@
+language: ruby
+
+rvm:
+  - 2.3.3
+
+branches:
+  only:
+    - master
+
+build:
+  ci:
+    - bundle install
+    # build website and copy to staging bucket
+    - S3_BUCKET=$STAGING_BUCKET ./scripts/build.sh
+
+  on_success:
+    # copy scripts to the job state so that they can be used by downstream jobs
+    - cp ./scripts/copy.sh $LANDINGPAGES_RUNCI_STATE/copy.sh
+
+integrations:
+
+  notifications:
+    - integrationName: slack_chainfish
+      type: slack
+      recipients:
+        - "#ci"
+      branches:
+        only:
+          - master
+      on_success: change
+      on_failure: always
+      on_start: never
