@@ -1,0 +1,29 @@
+//main: main.scss
+
+
+.section .row{
+  opacity: 0.0;
+  @include transition(all 0.5s ease);
+}
+
+.section:nth-child(odd){
+  .row{
+    @include transform(translate3d(0%,0,0));
+  }
+}
+
+.section:nth-child(even){
+  .row{
+    @include transform(translate3d(0%,0,0));
+  }
+}
+
+.in-view.section .row{
+  opacity: 1.0;
+  @include transform(translate3d(0,0,0));
+}
+
+.in-view.section:nth-child(odd) .row, .in-view.section:nth-child(even) .row{
+  opacity: 1.0;
+  @include transform(translate3d(0,0,0));
+}

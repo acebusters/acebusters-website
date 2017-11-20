@@ -1,13 +1,55 @@
 banner:
-  title: OUR CROWDSALE FOR THE ONLINE POKER REVOLUTION IS LIVE NOW!
-  subtitle: A decentralized poker platform running on the Ethereum blockchain
+  title: WE BRING THE POKER<br>DREAM BACK TO LIFE.
+  subtitle: Acebusters - the first decentralized and fair poker<br> platform live on the ethereum mainnet.<br>More than 20k hands played.
   watch: WATCH THE VIDEO
 
 section1:
-  title: WE FIX A BROKEN SYSTEM<br /> AND MAKE ONLINE POKER<br /> GREAT, AGAIN.
+  title: On traditional poker platforms <span class="red">90% of users have a bad experience.</span>
   description: >
-    Poker is perfect for Ethereum. The market, because it was hit by scams and scandals, offers a huge opportunity to actually apply blockchain technology to fix a broken system.
-    Add to that an ethusiastic team of innovators from both the blockchain and the poker world, who really want to make this happen, come and join us!
+    On existing platforms, poker is just a slot machine<br>game not the skill game it’s supposed to be.<br>We’re here to change that.
+
+pttp:
+  title: <span class="red">Poker to the people.</span><br>Innovation of online poker.<br>On all ends.
+  description: >
+    Our decentralized and democratized platform builds on a next generation business model and  features fueled by the power of our custom token model and ethereum smart contracts.
+  image: pokertothepeople.svg
+
+ecology:
+  title: A unique business model for a <span class="red">great poker ecology.</span>
+  description: >
+    Instead of stashing revenue and sitting on all our gains, we redistribute the gains as dividends among users so you gain no matter if you win or loose.
+  image: ecology.svg
+
+blockchain:
+  title: Poker, <span class="red">a killer DApp</span><br>on the blockchain.
+  description: >
+    The power of the blockchain makes the perfect technology layer for online poker. To insure  satisfaction for all involved parties we spend a lot of effort on our token model, too.
+  image: blockchain.svg
+  benefits:
+    - image: liquidity.svg
+      name: Global liquidity
+    - image: access.svg
+      name: Global access
+    - image: transparency.svg
+      name: Transparency
+    - image: security.svg
+      name: Security of funds
+    - image: anonymity.svg
+      name: Anonymity
+
+tokenmodel:
+  title: Our token model.<br>More than just a commodity.
+  ntz:
+    short: NTZ
+    subtitle: The players’ token<br>aka your poker chips
+    description: Uncapped and fully backed by Ether to be less prone to market volatility
+  claim: >
+    WE BUILD A DEMOCRATIZED SYSTEM THAT BENEFITS BOTH, THE PLAYERS AND THE INVESTORS.
+  abp:
+    short: ABP
+    subtitle: The investors’<br>token
+    description: A share in the Acebusters economy. Token holders can participate in decision making on the platform.
+
 
 section2:
   title: a pair of nutz beats everything!
@@ -42,39 +84,32 @@ sectionSmall:
   title: CRAVING FOR MORE<br>IN-DEPTHS DETAILS?
 
 timeline:
-  title: WE'RE IN IT FOR THE HEART. <span>Our Milestones.</span>
+  title: <span class="red">Our Milestones.</span><br>What we accomplished and the future of Acebusters.
   diagram:
     - title: Inception
-      date: Jan 2017
+      date: Jan. '17
       description: >
         We decided to go all-in to make this happen. Total dedication to the project.
 
-    - title: Closed beta!
-      date: May 2017
+    - title: Public Beta!
+      date: Jun. '17
       description: >
-        Fixing the last crucial bugs in our game logic and improving user experience with a small group of dedicated testers. Thanks, guys!
+        We opened our DApp to the public and gathered valuable insights.
 
-    - title: Public beta!
-      date: Jun 2017
+    - title: V1.0
+      date: Sep. '17
       description: >
-        Where we are today! Everybody now has access to our beta. We will gain valuable insights and feedback in this period.
-        The smart contracts will be tested thoroughly.
-        This is all still happening on the Ethereum testnet.
+        Our first release on the ethereum mainnet.
 
-    - title: Implement SNGs
-      date: Sep 2017
+    - title: V2.0
+      date: Mar. '18
       description: >
-        Sit-and-Go (SNG) is a very popular format and it will be one of the first features we implement.
+         We implement our business model and focus on the crypto scene.
 
-    - title: Mental Poker
-      date: Nov 2017
+    - title: Mass Market
+      date: Q4 '18
       description: >
-        Acebusters will go totally mental. Decentralized, secure, p2p architecture with a guaranteed fairly shuffled deck. Awesome!
-
-    - title: Global Campaign
-      date: Dec 2017
-      description: >
-        In order to reach out to the global poker community we will launch a global marketing campaign.
+        We attack the mass market with a global campaign and educate the non crypto poker market
 
 team:
   title: WE’VE GOT BLOCKCHAINERS AND POKER LOVERS ALIKE. <span>Meet the team.</span>
@@ -168,4 +203,4 @@ contact:
     - url: https://www.facebook.com/acebusters.poker
       icon: fa fa-facebook
   info: >
-    If you have any questions feel free to contact us via our <a href="https://discordapp.com/invite/7PesDTZ">Discord Channel</a> or email us <a href="mailto:info@acebusters.com">here</a>
+    If you have any questions feel free <br>to contact us via our <a href="https://discordapp.com/invite/7PesDTZ">Discord Channel</a><br>or email us <a href="mailto:info@acebusters.com">here</a>

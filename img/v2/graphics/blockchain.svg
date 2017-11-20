@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="5079.5 4411.732 793.693 513.592">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #e31041;
+      }
+
+      .cls-2 {
+        stroke-width: 7px;
+      }
+
+      .cls-3 {
+        stroke-width: 5px;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        stroke: none;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" width="168" height="43"/>
+    </clipPath>
+  </defs>
+  <g id="Group_652" data-name="Group 652" transform="translate(5001 -52)">
+    <g id="Ellipse_2" data-name="Ellipse 2" class="cls-2" transform="translate(753 4672)">
+      <circle class="cls-6" cx="21.5" cy="21.5" r="21.5"/>
+      <circle class="cls-1" cx="21.5" cy="21.5" r="18"/>
+    </g>
+    <g id="Ellipse_3" data-name="Ellipse 3" class="cls-2" transform="translate(519 4506)">
+      <circle class="cls-6" cx="21.5" cy="21.5" r="21.5"/>
+      <circle class="cls-1" cx="21.5" cy="21.5" r="18"/>
+    </g>
+    <g id="Ellipse_4" data-name="Ellipse 4" class="cls-2" transform="translate(323 4506)">
+      <circle class="cls-6" cx="21.5" cy="21.5" r="21.5"/>
+      <circle class="cls-1" cx="21.5" cy="21.5" r="18"/>
+    </g>
+    <g id="Ellipse_5" data-name="Ellipse 5" class="cls-2" transform="translate(152 4673)">
+      <circle class="cls-6" cx="21.5" cy="21.5" r="21.5"/>
+      <circle class="cls-1" cx="21.5" cy="21.5" r="18"/>
+    </g>
+    <g id="Ellipse_6" data-name="Ellipse 6" class="cls-2" transform="translate(323 4855)">
+      <circle class="cls-6" cx="21.5" cy="21.5" r="21.5"/>
+      <circle class="cls-1" cx="21.5" cy="21.5" r="18"/>
+    </g>
+    <g id="Ellipse_7" data-name="Ellipse 7" class="cls-2" transform="translate(519 4855)">
+      <circle class="cls-6" cx="21.5" cy="21.5" r="21.5"/>
+      <circle class="cls-1" cx="21.5" cy="21.5" r="18"/>
+    </g>
+    <path id="Path_69" data-name="Path 69" class="cls-3" d="M5656.425,2660.78l-83.776,83.777" transform="translate(-4786 1939)"/>
+    <path id="Path_76" data-name="Path 76" class="cls-3" d="M5656.425,2660.78l-83.776,83.777" transform="translate(-5324 2231)"/>
+    <path id="Path_72" data-name="Path 72" class="cls-3" d="M5539,2754.5H5396.836" transform="translate(-4786 1939)"/>
+    <g id="Rectangle_55" data-name="Rectangle 55" class="cls-3" transform="translate(268 4613)">
+      <rect class="cls-6" width="343" height="168" rx="84"/>
+      <rect class="cls-1" x="2.5" y="2.5" width="338" height="163" rx="81.5"/>
+    </g>
+    <line id="Line_8" data-name="Line 8" class="cls-3" y2="91" transform="translate(774.5 4715.5)"/>
+    <line id="Line_9" data-name="Line 9" class="cls-3" y2="74" transform="translate(344.5 4781.5)"/>
+    <line id="Line_10" data-name="Line 10" class="cls-3" y2="74" transform="translate(540.5 4781.5)"/>
+    <line id="Line_11" data-name="Line 11" class="cls-3" y1="71" transform="translate(540.5 4542.5)"/>
+    <line id="Line_12" data-name="Line 12" class="cls-3" y1="71" transform="translate(344.5 4542.5)"/>
+    <line id="Line_13" data-name="Line 13" class="cls-3" x1="74" transform="translate(194.5 4697.5)"/>
+    <line id="Line_14" data-name="Line 14" class="cls-3" x2="71" transform="translate(562.5 4876.5)"/>
+    <line id="Line_16" data-name="Line 16" class="cls-3" x2="74" transform="translate(78.5 4693.5)"/>
+    <line id="Line_15" data-name="Line 15" class="cls-3" x2="48" y2="48" transform="translate(480.5 4465.5)"/>
+    <g id="Repeat_Grid_2" data-name="Repeat Grid 2" class="cls-4" transform="translate(356 4672)">
+      <g transform="translate(-339 -2733)">
+        <rect id="Rectangle_56" data-name="Rectangle 56" class="cls-5" width="24" height="43" rx="1" transform="translate(339 2733)"/>
+      </g>
+      <g transform="translate(-303 -2733)">
+        <rect id="Rectangle_56-2" data-name="Rectangle 56" class="cls-5" width="24" height="43" rx="1" transform="translate(339 2733)"/>
+      </g>
+      <g transform="translate(-267 -2733)">
+        <rect id="Rectangle_56-3" data-name="Rectangle 56" class="cls-5" width="24" height="43" rx="1" transform="translate(339 2733)"/>
+      </g>
+      <g transform="translate(-231 -2733)">
+        <rect id="Rectangle_56-4" data-name="Rectangle 56" class="cls-5" width="24" height="43" rx="1" transform="translate(339 2733)"/>
+      </g>
+      <g transform="translate(-195 -2733)">
+        <rect id="Rectangle_56-5" data-name="Rectangle 56" class="cls-5" width="24" height="43" rx="1" transform="translate(339 2733)"/>
+      </g>
+    </g>
+  </g>
+</svg>

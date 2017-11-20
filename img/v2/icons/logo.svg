@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5067.03 31 423.97 55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #eff800;
+        font-size: 22px;
+        font-family: SourceSansPro-Regular, Source Sans Pro;
+      }
+    </style>
+  </defs>
+  <g id="Group_649" data-name="Group 649" transform="translate(5001 -52)">
+    <g id="Group_47" data-name="Group 47" transform="translate(132.151 83)">
+      <path id="Path_1" data-name="Path 1" class="cls-1" d="M12.016,14.084,6.526,24.909H0L12.016.1,24.032,24.909h-6.37Z" transform="translate(0 -0.048)"/>
+      <path id="Path_2" data-name="Path 2" class="cls-1" d="M61.1,6.215a6.442,6.442,0,0,0-6.215,6.215A6.442,6.442,0,0,0,61.1,18.645V24.86A12.243,12.243,0,0,1,49.6,12.43,12.461,12.461,0,0,1,61.1,0Z" transform="translate(-23.911)"/>
+      <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-1" width="12.119" height="6.215" transform="translate(37.601)"/>
+      <rect id="Rectangle_2" data-name="Rectangle 2" class="cls-1" width="12.119" height="6.215" transform="translate(37.601 18.645)"/>
+      <path id="Path_3" data-name="Path 3" class="cls-1" d="M109.186,6.215v4.972a12.214,12.214,0,0,0-5.386,7.769V0h24.032V6.215Z" transform="translate(-50.039)"/>
+      <path id="Path_4" data-name="Path 4" class="cls-1" d="M115.816,24.212a7.3,7.3,0,0,0-6.008,3.159h18.024v6.215H103.8V30.427c0-6.629,5.594-12.327,12.016-12.327h11.6v6.112h-11.6Z" transform="translate(-50.039 -8.726)"/>
+      <path id="Path_5" data-name="Path 5" class="cls-1" d="M183.832,7.614A7.381,7.381,0,0,0,176.633,0H159.8V15.227h16.522a1.6,1.6,0,0,1,1.709,1.709,1.6,1.6,0,0,1-1.709,1.709H165.186V15.693H159.8V24.86h16.833a7.381,7.381,0,0,0,7.2-7.614,7.881,7.881,0,0,0-1.554-4.817A7.881,7.881,0,0,0,183.832,7.614Zm-7.458,2.02H165.238V6.215h11.135a1.6,1.6,0,0,1,1.709,1.709A1.6,1.6,0,0,1,176.374,9.633Z" transform="translate(-77.036)"/>
+      <path id="Path_6" data-name="Path 6" class="cls-1" d="M239.832,12.482c0,6.319-4.972,12.378-12.016,12.378-6.629,0-12.016-5.9-12.016-12.378V0h5.386V12.482a6.643,6.643,0,0,0,13.259,0V0h5.386Z" transform="translate(-104.032)"/>
+      <path id="Path_7" data-name="Path 7" class="cls-1" d="M276.947,6.215a1.64,1.64,0,0,0-1.761,1.709,1.694,1.694,0,0,0,1.761,1.709h9.789a7.145,7.145,0,0,1,7.147,7.355c0,4.351-3.211,7.924-7.147,7.924H270.68V18.645h16.056a1.615,1.615,0,0,0,1.761-1.709,1.728,1.728,0,0,0-1.761-1.709h-9.789A7.221,7.221,0,0,1,269.8,7.872C269.8,3.625,273.011,0,276.947,0h15.641V6.215Z" transform="translate(-130.064)"/>
+      <path id="Path_8" data-name="Path 8" class="cls-1" d="M322.6,6.215V.052h8.908V6.215Zm9.323,18.645V0h5.386V24.86Zm5.8-18.645V.052h8.908V6.215Z" transform="translate(-155.517)"/>
+      <path id="Path_9" data-name="Path 9" class="cls-1" d="M382.386,6.215v4.972A12.214,12.214,0,0,0,377,18.956V0h24.032V6.215Zm6.629,9.271a7.3,7.3,0,0,0-6.008,3.159h18.024V24.86H377V21.7c0-6.629,5.594-12.327,12.016-12.327h11.6v6.112h-11.6Z" transform="translate(-181.742)"/>
+      <rect id="Rectangle_3" data-name="Rectangle 3" class="cls-1" width="5.386" height="9.219" transform="translate(224.262 15.641)"/>
+      <path id="Path_10" data-name="Path 10" class="cls-1" d="M457.032,7.614A7.382,7.382,0,0,0,449.833,0H433V15.227h12.119a6.415,6.415,0,0,1,6.526,6.267V24.86h5.386V21.494a12.524,12.524,0,0,0-2.8-7.821A7.776,7.776,0,0,0,457.032,7.614Zm-7.458,2.02H438.438V6.215h11.135a1.626,1.626,0,0,1,1.709,1.709A1.626,1.626,0,0,1,449.574,9.633Z" transform="translate(-208.738)"/>
+      <path id="Path_11" data-name="Path 11" class="cls-1" d="M496.147,6.215a1.64,1.64,0,0,0-1.761,1.709,1.694,1.694,0,0,0,1.761,1.709h9.789a7.145,7.145,0,0,1,7.147,7.355c0,4.351-3.211,7.924-7.147,7.924H489.88V18.645h16.056a1.615,1.615,0,0,0,1.761-1.709,1.728,1.728,0,0,0-1.761-1.709h-9.789A7.221,7.221,0,0,1,489,7.872C489,3.625,492.211,0,496.147,0h15.641V6.215Z" transform="translate(-235.734)"/>
+    </g>
+    <g id="Group_48" data-name="Group 48" transform="translate(66.03 84.771)">
+      <path id="Path_57" data-name="Path 57" class="cls-1" d="M67,185.617H78.607L72.8,175.9Z" transform="translate(-52.102 -136.788)"/>
+      <path id="Path_58" data-name="Path 58" class="cls-1" d="M20.657,0,0,33.087l12.007,9.161,8.805-5.937,8.672,6.159,11.985-9.606Zm.022,6.27,5.337,8.405H15.409ZM29.373,38.29l-8.516-6.026-8.739,5.892L4.447,32.264l9.183-14.72H27.839l9.25,14.587Z"/>
+    </g>
+    <text id="the_cryptocurrency_poker_platform" data-name="the cryptocurrency poker platform" class="cls-2" transform="translate(132 110)"><tspan x="0" y="22">the cryptocurrency poker platform</tspan></text>
+  </g>
+</svg>

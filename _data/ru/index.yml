@@ -3,10 +3,19 @@ banner:
   subtitle: Децентрализованная покерная платформа на блокчейне Ethereum
   watch: СМОТРЕТЬ ВИДЕО
 
+# TO TRANSLATE
 section1:
-  title: МЫ ИСПРАВЛЯЕМ ИСПОРЧЕННУЮ СИСТЕМУ И ДЕЛАЕМ ОНЛАЙН-ПОКЕР ЛУЧШЕ
+  title: On traditional poker platforms <span class="red">90% of users have a bad experience.</span>
   description: >
-    Покер идеален для Ethereum. Рынок, на котором мошенники и скандалы — обычное дело, создает широкие возможности для применения блокчейн технологий. Они, в свою очередь, помогут очистить испорченную систему от скверны. Добавьте к этому команду энтузиастов-инноваторов из мира блокчейна и покера, которая готова претворить эту идею в жизнь. Присоединяйтесь к нам!
+    On existing platforms, poker is just a slot machine<br>game not the skill game it’s supposed to be.<br>We’re here to change that.
+
+pttp:
+  title: <span class="red">Poker to the people.</span><br>Innovation of online poker.<br>On all ends.
+  description: >
+    Our decentralized and democratized platform builds on a next generation business model and  features fueled by the power of our custom token model and ethereum smart contracts.
+  image: pokertothepeople.svg
+# ---
+
 
 section2:
   title: nutz бъет всё

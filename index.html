@@ -9,24 +9,21 @@ image: AB_twitter_card@2x.png
 {% assign buttons = site.data.buttons %}
 
 <!-- Header -->
-<section class="intro-header landing-page section">
+<section class="intro-header landing-page section" style="background-image:url(img/v2/graphics/bg.jpg);">
     <div class="container container-ace">
-        <div class="row hero-bottom-row equal">
-            <div class="col-md-7 hero-bottom">
-                <a class="video-button" href="#video">{{ data.banner.watch }}</a>
+        <div class="row">
                 <h1>{{ data.banner.title }}</h1>
                 <span>{{ data.banner.subtitle }}</span>
-            </div>
-            <div class="col-md-5">
-                <div class="intro-buttons">
-                    <button class="button-base" data-toggle="modal" data-target="#investChooser">
-                        {{ buttons.joinCrowdsale }}
-                    </button>
-                    <button class="button-base button-white" data-toggle="modal" data-target="#whitepaperLangChooser">
-                        {{ buttons.readWhitepaper.title }}
-                    </button>
-                    {% include appLink.html text='playPoker' class='button-base button-white' target='_blank' %}
-                </div>
+        </div>
+        <div class="row">
+            <div class="intro-buttons">
+                <button class="button-base" data-toggle="modal" data-target="#investChooser">
+                    {{ buttons.joinCrowdsale }}
+                </button>
+                <button class="button-base button-white" data-toggle="modal" data-target="#whitepaperLangChooser">
+                    {{ buttons.readWhitepaper.title }}
+                </button>
+                {% include appLink.html text='playPoker' class='button-base button-white' target='_blank' %}
             </div>
         </div>
     </div>
@@ -36,7 +33,7 @@ image: AB_twitter_card@2x.png
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
-                <timer date="{{ site.data.timers.crowdsale }}" />
+              <h2>{{ site.data.messages.signUpText }}</h2>
             </div>
             <div class="col-md-8">
                 <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850  ico-subscribe">
@@ -84,29 +81,138 @@ image: AB_twitter_card@2x.png
     </div>
 </section>
 
-<section class="content-dark section" id="video">
+<section class="content-dark section content-centered">
     <div class="container-fluid">
-        <div class="row">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/nEBEfePYFTQ" frameborder="0" allowfullscreen></iframe>
+      <div class="row">
+        <h2 class="section-heading">{{ data.section1.title }}</h2>
+        <div class="section-content">
+            {{ data.section1.description }}
         </div>
+        <div class="half-line">
+
+        </div>
+      </div>
     </div>
 </section>
 
-<section class="content-magenta section">
+<section class="content-dark section content-centered pttp">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6">
-                <h2 section-heading>
-                    {{ data.section1.title }}
-                </h2>
+      <div class="row row-eq-height">
+        <div class="col-md-6 section-artwork">
+          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.pttp.image }}" />
+        </div>
+        <div class="col-md-6 text-right">
+          <h2 class="section-heading">{{ data.pttp.title }}</h2>
+          <div class="section-content">
+              {{ data.pttp.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="content-dark section content-centered ecology">
+    <div class="container-fluid">
+      <div class="row row-eq-height">
+        <div class="col-md-6 section-artwork col-md-push-6">
+          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.ecology.image }}" />
+        </div>
+        <div class="col-md-6 text-left col-md-pull-6">
+          <h2 class="section-heading">{{ data.ecology.title }}</h2>
+          <div class="section-content">
+              {{ data.ecology.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="content-dark section content-centered blockchain">
+    <div class="container-fluid">
+      <div class="row row-eq-height">
+        <div class="col-md-6 section-artwork">
+          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.blockchain.image }}" />
+        </div>
+        <div class="col-md-6 text-right">
+          <h2 class="section-heading">{{ data.blockchain.title }}</h2>
+          <div class="section-content">
+              {{ data.blockchain.description }}
+          </div>
+        </div>
+      </div>
+      <div class="row features-list">
+        {% for item in data.blockchain.benefits %}
+            <div class="col-md-5ths col-xs-6">
+              <img src="{{ site.baseUrl }}/img/v2/icons/{{ item.image }}">
+              <span>{{item.name}}</span>
             </div>
-            <div class="col-md-6">
-                <div class="section-content">
-                    {{ data.section1.description }}
+        {% endfor %}
+      </div>
+    </div>
+</section>
+
+<section class="content-dark section content-centered tokenmodel">
+    <div class="container-fluid">
+      <h2 class="section-heading">{{ data.tokenmodel.title }}</h2>
+      <div class="row row-eq-height">
+        <div class="col-md-offset-1 col-md-3">
+          <img src="/img/v2/icons/model-nutz.svg" class="token-icon" />
+          <h3>{{ data.tokenmodel.ntz.short }}</h3>
+          <div class="section-content">
+            {{ data.tokenmodel.ntz.subtitle }}
+          </div>
+          <div class="section-description">
+            {{ data.tokenmodel.abp.description }}
+          </div>
+        </div>
+        <div class="col-md-4 vcenter">
+          <div class="token-claim">
+            {{ data.tokenmodel.claim }}
+          </div>
+        </div>
+        <div class="col-md-3">
+          <img src="/img/v2/icons/model-power.svg" class="token-icon" />
+          <h3>{{ data.tokenmodel.abp.short }}</h3>
+          <div class="section-content">
+            {{ data.tokenmodel.abp.subtitle }}
+          </div>
+          <div class="section-description">
+            {{ data.tokenmodel.abp.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<a name="team"></a>
+<section ref="team" id="team" class="section team section-dark">
+  <div class="container-fluid">
+      <div class="row team-list">
+        <h2 class="section-heading">The Advisors</h2>
+        {% for advisor in data.team.advisors %}
+            <div class="team-list__item col-sm-3">
+                <div class="team-member">
+                    <img src="{{ site.baseurl }}/img/team/{{ advisor.img }}" class="img-responsive img-circle" alt="{{ advisor.name }}">
+                    <h4>{{ advisor.name }}</h4>
+                    <p class="team-role">{{ advisor.role }}</p>
                 </div>
             </div>
-        </div>
-    </div>
+        {% endfor %}
+      </div>
+      <div class="row team-list">
+        <h2 class="section-heading">The Team</h2>
+        {% for member in data.team.members %}
+            <div class="team-list__item col-sm-3 col-xs-6">
+                <div class="team-member">
+                    <img src="{{ site.baseurl }}/img/team/{{ member.img }}" class="img-responsive img-circle" alt="{{ member.name }}">
+                    <h4>{{ member.name }}</h4>
+                    <p class="team-role">{{ member.role }}</p>
+                </div>
+            </div>
+        {% endfor %}
+      </div>
+  </div>
 </section>
 
 <div class="content-white section section-small partners-section">
@@ -131,142 +237,49 @@ image: AB_twitter_card@2x.png
 </div>
 
 
-<section class="content-magenta section advantages">
-  <div class="container-fluid">
-      <div class="advantages-list row">
-        {% for item in data.advantages %}
-            <div class="advantages-list__item col-md-4">
-                <h3>{{ item.title }}</h3>
-                <p class="section-content">{{ item.text }}</p>
-            </div>
-        {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="content-purple center section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="main-headline">
-                    {{ data.section2.title }}
-                </h2>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Team Section -->
-<a name="team"></a>
-<section ref="team" id="team" class="section team">
-  <div class="container-fluid">
-    <div class="row" style="margin-48">
-      <div class="col-sm-12">
-        <h2 class="section-heading">{{ data.team.title }}</h2>
-      </div>
-    </div>
-      <div class="row team-list">
-        <h3 class="team-category">Advisors</h3>
-        {% for advisor in data.team.advisors %}
-            <div class="team-list__item col-sm-3">
-                <div class="team-member">
-                    <img src="{{ site.baseurl }}/img/team/{{ advisor.img }}" class="img-responsive img-circle" alt="{{ advisor.name }}">
-                    <h4>{{ advisor.name }}</h4>
-                    <p class="team-role">{{ advisor.role }}</p>
-                </div>
-            </div>
-        {% endfor %}
-      </div>
-      <div class="row team-list">
-        <h3 class="team-category">Team</h3>
-        {% for member in data.team.members %}
-            <div class="team-list__item col-sm-3">
-                <div class="team-member">
-                    <img src="{{ site.baseurl }}/img/team/{{ member.img }}" class="img-responsive img-circle" alt="{{ member.name }}">
-                    <h4>{{ member.name }}</h4>
-                    <p class="team-role">{{ member.role }}</p>
-                </div>
-            </div>
-        {% endfor %}
-      </div>
-  </div>
-</section>
-
 <!-- /.content-section-a -->
 <section id="timeline" class="section">
     <div class="container-fluid">
         <div class="row">
             <div>
-                <h2 class="section-heading" style="color:#FFF">
+                <h2 class="section-heading text-center" style="color:#FFF;margin: 0 auto;">
                   {{ data.timeline.title }}
                 </h2>
             </div>
-            <div id="cd-timeline" class="cd-container">
+            <div id="cd-timeline" class="cd-container container">
+              <div class="row text-center">
                 {% for item in data.timeline.diagram %}
-                    <div class="cd-timeline-block">
-                        <div class="cd-timeline-img">
-                        </div>
-                        <div class="cd-timeline-content-wrap">
-                            <div class="cd-timeline-content">
-                                <h3>{{ item.title }}</h3>
-                                <span class="cd-date">{{ item.date }}</span>
-                                <p>{{ item.description }}</p>
-                                <!-- cd-timeline-content -->
-                            </div>
-                        </div>
-                    </div>
+
+                  <div class="col-md-5ths">
+                      <div class="timeline-content">
+                          <span class="cd-date">{{ item.date }}</span>
+                          <h3>{{ item.title }}</h3>
+                          <p>{{ item.description }}</p>
+                          <!-- cd-timeline-content -->
+                      </div>
+                  </div>
                     <!-- cd-timeline-block -->
                 {% endfor %}
+              </div>
             </div> <!-- cd-timeline -->
         </div>
     </div>
     <!-- /.container -->
 </section>
 
-<div class="content-white section section-small">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-6 no-padding">
-              <div class="section-heading section-heading-big">
-                <h2>
-                  {{ data.sectionSmall.title }}
-                </h2>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <button class="button-base ico-cta" data-toggle="modal" data-target="#whitepaperLangChooser">
-                  {{ buttons.readWhitepaper.title }}
-              </button>
-            </div>
-            <div class="col-sm-3">
-                {% include appLink.html text='playPoker' class='button-base ico-cta' target='_blank' %}
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- contact section -->
 <a name="contact"></a>
-<section id="contact" class="section">
+<section id="contact" class="section content-centered">
     <div class="container-fluid">
-        <div class="row margin-48">
-            <div class="col-md-6">
-                <h2 class="section-heading">
-                    {{ data.contact.title }}
-                </h2>
-            </div>
-            <div class="col-md-6">
-                <ul class="list-inline footer-icon-list">
-                    {% for item in data.contact.socials %}
-                        <li class="footer-item">
-                            <a href="{{ item.url }}" target="_blank"><i class="{{ item.icon }}"></i></a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+        <h2 class="section-heading">
+            {{ data.contact.title }}
+        </h2>
+        <div class="section-content">
+          {{ data.contact.info }}
         </div>
         <div class="row">
-            <div class="col-md-7">
-                <div class="newslettet-section">
+                <div class="newsletter-section">
                     <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850">
                         <div class="ml-vertical-align-center">
                             <div class="subscribe-form ml-block-success" style="display:none;">
@@ -280,13 +293,13 @@ image: AB_twitter_card@2x.png
                             <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST"
                                 target="_blank" data-toggle="validator">
                                 <div class="subscribe-form horizontal">
-                                    <div class="form-section horizontal">
+                                    <div class="form-section horizontal mail">
                                         <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
                                             <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
                                                 placeholder="{{ site.data.inputs.emailPl }}" value="" id="eMail" required>
                                         </div>
                                     </div>
-                                    <div class="form-section horizontal">
+                                    <div class="form-section horizontal submit">
                                         <button type="submit" class="button-base" id="sign-up">
                                         {{ buttons.signUp }}
                                         </button>
@@ -308,10 +321,15 @@ image: AB_twitter_card@2x.png
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-5">
-                {{ data.contact.info }}
-            </div>
+        </div>
+        <div class="row">
+            <ul class="footer-icon-list">
+                {% for item in data.contact.socials %}
+                    <li class="footer-item">
+                        <a href="{{ item.url }}" target="_blank"><i class="{{ item.icon }}"></i></a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </section>
