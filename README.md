@@ -27,12 +27,12 @@ First, make sure you have AWS cli [installed and configured](http://docs.aws.ama
 
 Deploy to `www.acebusters.com` and invalidate CloudFront cache:
 ```
-S3_BUCKET=www.acebusters.com DISTRIBUTION_ID=E3QZ021461XQL5 ./scripts/build.sh
+S3_BUCKET=s3://www.acebusters.com/ DISTRIBUTION_ID=E3QZ021461XQL5 ./scripts/build.sh
 ```
 
 Deploy to another bucket without touching the CloudFront cache:
 ```
-S3_BUCKET=my-super-bucket ./scripts/build.sh
+S3_BUCKET=s3://my-super-bucket/ ./scripts/build.sh
 ```
 
 ---
