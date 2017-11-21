@@ -6,16 +6,18 @@ rvm:
 branches:
   only:
     - master
+    - revamp
 
 build:
   ci:
     - bundle install
     # build website and copy to staging bucket
-    - S3_BUCKET=$STAGING_BUCKET ./scripts/build.sh
+    - if [ "$BRANCH" == "master" ]; then S3_BUCKET=$STAGING_BUCKET ./scripts/build.sh; fi
+    - if [ "$BRANCH" == "revamp" ]; then S3_BUCKET=s3://v2.acebusters.com/ ./scripts/build.sh; fi
 
   on_success:
     # copy scripts to the job state so that they can be used by downstream jobs
-    - cp ./scripts/copy.sh $LANDINGPAGES_RUNCI_STATE/copy.sh
+    - if [ "$BRANCH" == "master" ]; then cp ./scripts/copy.sh $LANDINGPAGES_RUNCI_STATE/copy.sh; fi
 
 integrations:
 
