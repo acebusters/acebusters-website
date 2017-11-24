@@ -126,27 +126,6 @@ a:active {
     margin-bottom: 5em;
 }
 
-.button-base {
-    background-color: #EFF800; /*for compatibility with older browsers*/
-    padding: 0.3em 2em 0.4em 2em;
-    border: none;
-    font-family: st;
-    color: #000;
-    display: inline-block;
-    font-size: 1.0em;
-    margin-bottom: 0.5em;
-    text-align: center;
-    border-radius: 0;
-    &.button-white{
-      background-color: $ci_lblue;
-      background: $ci_lblue;
-      color: $ci_ddark;
-      border: none;
-      &:hover{
-        color: $ci_ddark;
-      }
-    }
-}
 
 // BOOTSTRAP 5-col
 .col-xs-5ths,
@@ -190,9 +169,74 @@ a:active {
     margin-top: 50px;
 }
 
-.button-base:hover {
-    color: #FFF;
-    cursor: pointer;
+
+.button-base {
+  background: transparent;
+    padding: 0.3em 2em 0.4em 2em;
+    border: none;
+    font-family: st;
+    color: #000;
+    display: inline-block;
+    font-size: 1.0em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    border-radius: 0;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: #EFF800; /*for compatibility with older browsers*/
+    }
+    &.button-white::before{
+      background-color: $ci_lblue;
+      background: $ci_lblue;
+      color: $ci_ddark;
+      border: none;
+      &:hover{
+        color: $ci_ddark;
+      }
+    }
+}
+
+.button-base {
+  position: relative;
+  @include transition(all 0.12s ease);
+}
+
+.button-base::after {
+  content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	background: $ci_ddark;
+	opacity: 0;
+  @include transform(scaleY(1));
+  @include transform-origin(0% 100%);
+  @include transition(all 0.12s ease);
+}
+
+.section-dark .button-base::after{background-color: $ci_magenta;}
+
+.button-base:hover,
+.button-base:active {
+	color: #FFF;
+}
+
+.button-base:hover::after {
+	opacity: 1;
+  @include transform(scaleY(1));
+}
+
+.button-base:active::after {
+	opacity: 1;
+  @include transform(scaleY(1));
 }
 
 .button-join {
@@ -1766,6 +1810,10 @@ h3{
       font-size: 2.6rem;
     }
   }
+}
+
+.header-80{
+    height: 80vh !important;
 }
 
 .hero-bottom-row{

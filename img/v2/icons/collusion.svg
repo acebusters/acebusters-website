@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="9392 5572 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e31041;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="collusion" transform="translate(9169 -52)">
+    <rect id="Rectangle_63" data-name="Rectangle 63" class="cls-1" width="120" height="120" rx="6" transform="translate(223 5624)"/>
+    <path id="Path_95" data-name="Path 95" class="cls-2" d="M50.521,32.327h.166c9.937-1.242,16.644-3.6,16.644-6.293,0-3.022-8.446-5.631-20.412-6.707L42.075,2.6,34.622,8.81,26.756,2.6,22.119,19.285C10.029,20.362,1.5,22.97,1.5,25.993c0,2.567,6.128,4.844,15.319,6.128" transform="translate(250.084 5646.4)"/>
+    <path id="Path_96" data-name="Path 96" class="cls-2" d="M68.6,76.4c1.656.041,3.4.083,5.134.083h.248c1.076,0,2.153,0,3.229-.041" transform="translate(210.766 5603.155)"/>
+    <path id="Path_97" data-name="Path 97" class="cls-2" d="M39.5,74.107h0c-.538-.083-1.076-.124-1.615-.207-.787.662-.414,1.491-.414,2.36,0,2.277,2.319,3.354,6.21,3.726,4.554.414,7.039-.869,7.039-3.726a2.569,2.569,0,0,0-.373-1.325c-3.188-.124-6.169-.331-8.984-.621C40.746,74.273,40.125,74.19,39.5,74.107Z" transform="translate(229.056 5604.62)"/>
+    <path id="Path_98" data-name="Path 98" class="cls-2" d="M88.5,76.553c0,2.277,2.733,3.726,6.624,3.726s7.039-1.035,7.039-3.312c0-.787.041-1.946-.662-2.567-3.809.455-8.115.787-12.669.869A2.818,2.818,0,0,0,88.5,76.553Z" transform="translate(199.104 5604.327)"/>
+    <path id="Path_99" data-name="Path 99" class="cls-2" d="M41.5,112.6s3.312,18.217,11.593,22.772" transform="translate(226.646 5581.943)"/>
+    <path id="Path_100" data-name="Path 100" class="cls-2" d="M101.093,112.6S97.781,130.817,89.5,135.372" transform="translate(198.519 5581.943)"/>
+  </g>
+</svg>

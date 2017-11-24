@@ -1,0 +1,40 @@
+banner:
+  title: ACEBUSTERS FOR INVESTORS
+  subtitle: learn how you benefit from investing into our<br>unique poker ecology.
+
+share:
+  title: We are not your average hyped 10x crowdsale. <span>There’s more.</span>
+  economy:
+    title: Economy share
+    description: >
+      You benefit directly from our growing economy. The more players play and deposit, the higher your shares’ value.
+  revenue:
+    title: Revenue share
+    description: >
+      You benefit from every hand that is being played on our platform. You remember the term “the house always wins”, right? Now you can be the house.
+
+market:
+  title: With more than 1.5 Billion USD in revenue, online poker is more than just a niche market.
+  description: >
+    Online poker has a huge potential for disruption. On existing platforms, poker is just a slot machine game not the skill game it’s supposed to be. We’re here to change that with a new business model, beneficial for both: the players and the investors.
+
+blockchain:
+  title: Poker is the perfect fit for blockchain/crypto. And we are  first with a running product.
+  description: >
+    We are ahead of our competition. We pioneered real-time cash games on the Ethereum blockchain,  developed our own cost-efficient technology to handle table transactions and already more than 20k hands have been played on our platform. Next step: global liquidity.
+
+
+
+features:
+  title: And there’s <span class="red">more</span>.
+  list:
+    - image: collusion.svg
+      name: Collusion Prevention
+    - image: bot.svg
+      name: Bot Prevention
+    - image: rng.svg
+      name: Transparent RNG
+    - image: mental.svg
+      name: Mental Poker
+    - image: staking.svg
+      name: Trustless Staking

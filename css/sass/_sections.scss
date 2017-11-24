@@ -40,6 +40,16 @@
   max-width: 750px;
 }
 
+.content-light{
+  background-color: #F5FBFF;
+  h2,h3,h4{
+    color: #1C1C1C;
+  }
+  .features-list{
+    color: #1c1c1c;
+  }
+}
+
 .section-artwork{
   @include flexbox;
   @include align-items(center);

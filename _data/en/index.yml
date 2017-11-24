@@ -42,13 +42,13 @@ tokenmodel:
   ntz:
     short: NTZ
     subtitle: The players’ token<br>aka your poker chips
-    description: Uncapped and fully backed by Ether to be less prone to market volatility
+    description: Uncapped and fully backed by Ether to be less prone to market volatility. NTZ is the entry point to our economy.
   claim: >
     WE BUILD A DEMOCRATIZED SYSTEM THAT BENEFITS BOTH, THE PLAYERS AND THE INVESTORS.
   abp:
     short: ABP
     subtitle: The investors’<br>token
-    description: A share in the Acebusters economy. Token holders can participate in decision making on the platform.
+    description: A share in the Acebusters economy. Token holders can participate in decision making on the platform. You can get ABP by exchanging your NTZ in our dashboard.
 
 
 section2:
