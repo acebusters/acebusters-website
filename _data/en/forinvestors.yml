@@ -3,7 +3,7 @@ banner:
   subtitle: learn how you benefit from investing into our<br>unique poker ecology.
 
 share:
-  title: We are not your average hyped 10x crowdsale. <span>There’s more.</span>
+  title: We are not your average<br>hyped 10x crowdsale.<br><span>There’s more.</span>
   economy:
     title: Economy share
     description: >
@@ -14,27 +14,29 @@ share:
       You benefit from every hand that is being played on our platform. You remember the term “the house always wins”, right? Now you can be the house.
 
 market:
-  title: With more than 1.5 Billion USD in revenue, online poker is more than just a niche market.
+  title: With <span>more than 1.5 Billion USD in revenue</span>, online poker is more than just a niche market.
+  image: billion.svg
   description: >
     Online poker has a huge potential for disruption. On existing platforms, poker is just a slot machine game not the skill game it’s supposed to be. We’re here to change that with a new business model, beneficial for both: the players and the investors.
 
 blockchain:
-  title: Poker is the perfect fit for blockchain/crypto. And we are  first with a running product.
+  title: Poker is the <span>perfect fit for the blockchain</span>. And we are the first with a running product.
+  image: cryptopoker.svg
   description: >
-    We are ahead of our competition. We pioneered real-time cash games on the Ethereum blockchain,  developed our own cost-efficient technology to handle table transactions and already more than 20k hands have been played on our platform. Next step: global liquidity.
-
-
+    We are ahead of our competition. We pioneered real-time cash games on the Ethereum blockchain, developed our own cost-efficient technology to handle table transactions. Already more than 20k were played on mainnet while our competition still dabbles on testnet. Next step: global liquidity.
 
 features:
-  title: And there’s <span class="red">more</span>.
+  title: Your Benefits in a<br><span>Nutzshell</span>
   list:
-    - image: collusion.svg
-      name: Collusion Prevention
-    - image: bot.svg
-      name: Bot Prevention
-    - image: rng.svg
-      name: Transparent RNG
-    - image: mental.svg
-      name: Mental Poker
-    - image: staking.svg
-      name: Trustless Staking
+    - name: Economy Share
+      description: The value of your tokens will increase with the growing amount of players’ deposits in our ecology.
+    - name: Token Value
+      description: The value of your tokens will grow with the increasing price of the NTZ tokens on the markets.
+    - name: Revenue Share
+      description: Additionally to the increasing value of your tokens, you will benefit from the revenue Acebusters is generating  in form of dividends.
+    - name: Voting Rights
+      description: With holding ABP, you become part of the Acebusters Community and 	get your hands on the steering wheel of the Dapp through voting rights.
+    - name: Security of Funds
+      description: Your funds are safe through our ESCROW-Council. The raised Ether will remain in the smart contract. Without an independent party signing, we will not be able to withdraw reserve funds.
+    - name: Safe Bet
+      description: Unlike our competitors, we raise money with the first running product on the Ethereum mainnet, built by a team of obsessive poker players and experienced blockchain geeks. And we are in it for the long run.

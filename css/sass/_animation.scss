@@ -6,6 +6,11 @@
   @include transition(all 0.5s ease);
 }
 
+.section.no-animation .row{
+  opacity: 1.0;
+  @include transition(all 0.5s ease);
+}
+
 .section:nth-child(odd){
   .row{
     @include transform(translate3d(0%,0,0));

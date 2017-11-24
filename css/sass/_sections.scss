@@ -36,6 +36,19 @@
   }
 }
 
+.section.section-small{
+  padding: $gridSize*2+px $gridSize*12+px $gridSize*2+px $gridSize*12+px;
+  &.container-fluid{
+    padding: $gridSize*2+px $gridSize*12+15+px $gridSize*2+px $gridSize*12+15+px;
+  }
+  @media(max-width: 767px){
+    padding: $gridSize*2+px $gridSize*4+px $gridSize*2+px $gridSize*4+px;
+    &.container-fluid{
+      padding: $gridSize*2+px $gridSize*4+15+px $gridSize*2+px $gridSize*4+15+px;
+    }
+  }
+}
+
 .section-heading{
   max-width: 750px;
 }
@@ -871,6 +884,13 @@ label.label-cbx{
   background-color: #95989A;
   margin: 0 auto;
   margin-top: 128px;
+}
+
+.divider-line-80{
+  width: 80%;
+  height: 1px;
+  background-color: #95989A;
+  margin: 36px auto;
 }
 
 .newsletter-section{

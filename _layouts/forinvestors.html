@@ -8,25 +8,77 @@ description: learn how you benefit from investing into our unique poker ecology.
 {% assign buttons = site.data.buttons %}
 
 <!-- Header -->
-<section class="intro-header landing-page section header-80" style="background-image:url(img/v2/graphics/bg.jpg);">
+<section class="intro-header landing-page section" style="background-image:url(img/v2/graphics/bg.jpg);">
   <div class="container container-ace">
       <div class="row">
               <h1>{{ data.banner.title }}</h1>
               <span>{{ data.banner.subtitle }}</span>
       </div>
+      <div class="row">
+          <div class="intro-buttons">
+              <button class="button-base" data-toggle="modal" data-target="#investChooser">
+                  {{ buttons.joinCrowdsale }}
+              </button>
+              <button class="button-base button-white" data-toggle="modal" data-target="#whitepaperLangChooser">
+                  {{ buttons.readWhitepaper.title }}
+              </button>
+              {% include appLink.html text='playPoker' class='button-base button-white' target='_blank' %}
+          </div>
+      </div>
   </div>
 </section>
 
-<section class="content-light section content-centered skill">
+<section class="content-dark section content-centered skill">
+    <div class="before">
+      {{ data.share.readable }}
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <h2 class="section-heading">{{ data.share.title }}</h2>
+      </div>
+      <div class="row row-eq-height text-center">
+        <div class="col-md-4 col-md-offset-1">
+          <h3>{{ data.share.economy.title }}</h3>
+          <div class="section-content">
+              {{ data.share.economy.description }}
+          </div>
+        </div>
+        <div class="col-md-4 col-md-offset-2">
+          <h3>{{ data.share.revenue.title }}</h3>
+          <div class="section-content">
+              {{ data.share.revenue.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="content-dark section content-centered access text-right">
     <div class="container-fluid">
       <div class="row row-eq-height">
         <div class="col-md-6 section-artwork">
-          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.skill.image }}" />
+          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.market.image }}" />
         </div>
-        <div class="col-md-6 text-right">
-          <h2 class="section-heading">{{ data.skill.title }}</h2>
+        <div class="col-md-6">
+          <h2 class="section-heading">{{ data.market.title }}</h2>
           <div class="section-content">
-              {{ data.skill.description }}
+              {{ data.market.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="content-dark section content-centered chain text-left">
+    <div class="container-fluid">
+      <div class="row row-eq-height">
+        <div class="col-md-6 section-artwork col-md-push-6">
+          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.blockchain.image }}" />
+        </div>
+        <div class="col-md-6 text-left col-md-pull-6">
+          <h2 class="section-heading">{{ data.blockchain.title }}</h2>
+          <div class="section-content">
+              {{ data.blockchain.description }}
           </div>
         </div>
       </div>
@@ -66,9 +118,47 @@ description: learn how you benefit from investing into our unique poker ecology.
     </div>
 </section>
 
+<section class="content-dark section content-centered features">
+    <div class="container-fluid">
+      <div class="row row-eq-height text-center">
+        <h2 class="section-heading">{{ data.features.title }}</h2>
+      </div>
+      <div class="row features-list">
+        {% for item in data.features.list %}
+            <div class="col-md-4 col-sm-6 col-xs-12" style="padding: 16px; margin-bottom: 24px;">
+              <h3>{{item.name}}</h3>
+              <span style="display:block; max-width: 350px; margin: 0 auto;">{{item.description}}</span>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+</section>
+
+<section class="content-dark section section-small no-animation">
+    <div class="container-fluid">
+      <div class="divider-line-80"></div>
+      <div class="row row-eq-height">
+        <div class="col-md-4">
+          <button class="button-base button-full" data-toggle="modal" data-target="#investChooser">
+              {{ buttons.joinCrowdsale }}
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="button-base button-white button-full" data-toggle="modal" data-target="#whitepaperLangChooser">
+              {{ buttons.readWhitepaper.title }}
+          </button>
+        </div>
+        <div class="col-md-4">
+          {% include appLink.html text='playPoker' class='button-base button-red button-full' target='_blank' %}
+        </div>
+      </div>
+      <div class="divider-line-80"></div>
+    </div>
+</section>
+
 <!-- contact section -->
 <a name="contact"></a>
-<section id="contact" class="section content-light content-centered">
+<section id="contact" class="section content-dark content-centered">
     <div class="container-fluid">
         <h2 class="section-heading">
             {{ site.data.index.contact.title }}

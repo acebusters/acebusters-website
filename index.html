@@ -184,6 +184,28 @@ image: AB_twitter_card@2x.png
     </div>
 </section>
 
+<section class="content-dark section section-small no-animation">
+    <div class="container-fluid">
+      <div class="divider-line-80"></div>
+      <div class="row row-eq-height">
+        <div class="col-md-4">
+          <button class="button-base button-full" data-toggle="modal" data-target="#investChooser">
+              {{ buttons.joinCrowdsale }}
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="button-base button-white button-full" data-toggle="modal" data-target="#whitepaperLangChooser">
+              {{ buttons.readWhitepaper.title }}
+          </button>
+        </div>
+        <div class="col-md-4">
+          {% include appLink.html text='playPoker' class='button-base button-red button-full' target='_blank' %}
+        </div>
+      </div>
+      <div class="divider-line-80"></div>
+    </div>
+</section>
+
 <!-- Team Section -->
 <a name="team"></a>
 <section ref="team" id="team" class="section team section-dark">
@@ -236,7 +258,6 @@ image: AB_twitter_card@2x.png
     </div>
 </div>
 
-
 <!-- /.content-section-a -->
 <section id="timeline" class="section section-dark">
     <div class="container-fluid">
@@ -266,7 +287,6 @@ image: AB_twitter_card@2x.png
     </div>
     <!-- /.container -->
 </section>
-
 
 <!-- contact section -->
 <a name="contact"></a>

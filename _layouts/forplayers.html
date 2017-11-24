@@ -8,7 +8,7 @@ description: learn how we are better than other traditional online poker platfor
 {% assign buttons = site.data.buttons %}
 
 <!-- Header -->
-<section class="intro-header landing-page section header-80" style="background-image:url(img/v2/graphics/bg.jpg);">
+<section class="intro-header landing-page section" style="background-image:url(img/v2/graphics/bg.jpg);">
   <div class="container container-ace">
       <div class="row">
               <h1>{{ data.banner.title }}</h1>
@@ -17,13 +17,13 @@ description: learn how we are better than other traditional online poker platfor
   </div>
 </section>
 
-<section class="content-light section content-centered skill">
+<section class="content-light section content-centered skill text-right">
     <div class="container-fluid">
       <div class="row row-eq-height">
         <div class="col-md-6 section-artwork">
           <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.skill.image }}" />
         </div>
-        <div class="col-md-6 text-right">
+        <div class="col-md-6">
           <h2 class="section-heading">{{ data.skill.title }}</h2>
           <div class="section-content">
               {{ data.skill.description }}
@@ -33,13 +33,13 @@ description: learn how we are better than other traditional online poker platfor
     </div>
 </section>
 
-<section class="content-light section content-centered house">
+<section class="content-light section content-centered house text-left">
     <div class="container-fluid">
       <div class="row row-eq-height">
         <div class="col-md-6 section-artwork col-md-push-6">
           <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.house.image }}" />
         </div>
-        <div class="col-md-6 text-left col-md-pull-6">
+        <div class="col-md-6 col-md-pull-6">
           <h2 class="section-heading">{{ data.house.title }}</h2>
           <div class="section-content">
               {{ data.house.description }}
@@ -49,13 +49,13 @@ description: learn how we are better than other traditional online poker platfor
     </div>
 </section>
 
-<section class="content-light section content-centered access">
+<section class="content-light section content-centered access text-right">
     <div class="container-fluid">
       <div class="row row-eq-height">
         <div class="col-md-6 section-artwork">
           <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.access.image }}" />
         </div>
-        <div class="col-md-6 text-right">
+        <div class="col-md-6">
           <h2 class="section-heading">{{ data.access.title }}</h2>
           <div class="section-content">
               {{ data.access.description }}
@@ -65,13 +65,13 @@ description: learn how we are better than other traditional online poker platfor
     </div>
 </section>
 
-<section class="content-light section content-centered house">
+<section class="content-light section content-centered house text-left">
     <div class="container-fluid">
       <div class="row row-eq-height">
         <div class="col-md-6 section-artwork col-md-push-6">
           <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.security.image }}" />
         </div>
-        <div class="col-md-6 text-left col-md-pull-6">
+        <div class="col-md-6 col-md-pull-6">
           <h2 class="section-heading">{{ data.security.title }}</h2>
           <div class="section-content">
               {{ data.security.description }}
@@ -94,6 +94,28 @@ description: learn how we are better than other traditional online poker platfor
             </div>
         {% endfor %}
       </div>
+    </div>
+</section>
+
+<section class="content-light section section-small no-animation">
+    <div class="container-fluid">
+      <div class="divider-line-80"></div>
+      <div class="row row-eq-height">
+        <div class="col-md-4">
+          <button class="button-base button-full" data-toggle="modal" data-target="#investChooser">
+              {{ buttons.joinCrowdsale }}
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="button-base button-white button-full" data-toggle="modal" data-target="#whitepaperLangChooser">
+              {{ buttons.readWhitepaper.title }}
+          </button>
+        </div>
+        <div class="col-md-4">
+          {% include appLink.html text='playPoker' class='button-base button-red button-full' target='_blank' %}
+        </div>
+      </div>
+      <div class="divider-line-80"></div>
     </div>
 </section>
 

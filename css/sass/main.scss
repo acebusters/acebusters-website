@@ -114,7 +114,6 @@ a:hover {
 }
 
 a:visited {
-    color: #FFF;
     text-decoration: none !important;
 }
 
@@ -200,11 +199,23 @@ a:active {
         color: $ci_ddark;
       }
     }
+    &.button-white{
+      border: 1px solid #1c1c1c;
+    }
+    &.button-red{
+      background-color: $ci_magenta;
+      color: #fff !important;
+    }
 }
 
 .button-base {
   position: relative;
   @include transition(all 0.12s ease);
+}
+
+.button-full{
+  width: 100%;
+  display: block;
 }
 
 .button-base::after {
@@ -1702,6 +1713,13 @@ h1,h2,h3,h4,h5{
   }
 }
 
+.modal{
+  font-size: 0.7rem;
+  h1,h2,h3,h4,h5{
+    color: #1c1c1c;
+  }
+}
+
 h1{
   font-weight: 100;
   font-size: 2.7rem;
@@ -1775,6 +1793,25 @@ h3{
 
 .text-center{
   text-align: center;
+}
+
+.section.text-center{
+  text-align: center;
+  @include justify-content(flex-start);
+}
+
+.section.text-left{
+  text-align: left !important;
+  .section-artwork{
+    @include justify-content(flex-end);
+  }
+}
+
+.section.text-right{
+  text-align: right !important;
+  .section-artwork{
+    @include justify-content(flex-start);
+  }
 }
 
 /****************************************************************************
