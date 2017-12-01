@@ -69,14 +69,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: st;
-    border-bottom: 2px solid #212021;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.428571429;
 }
 
 .nav-item-button{
-  background: $ci_magenta;
+  background: $ci_yellow;
+  color: #000 !important;
   border-radius: 6px !important;
 }
 

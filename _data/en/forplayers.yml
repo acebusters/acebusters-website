@@ -1,0 +1,41 @@
+banner:
+  title: ACEBUSTERS FOR PLAYERS
+  subtitle: learn how we are better than other traditional<br>online poker platforms
+
+skill:
+  title: We make online <span class="red">poker the<br>skill game</span> that it always <br>was, again.
+  image: skillgame.svg
+  description: >
+    Remember when famous players tried the bankroll challenge in online poker and failed? That’s for a big part due to consistent cash-in the house takes. Remember the house always wins? We fix that.
+
+house:
+  title: Our unique poker ecology <span class="red">makes you the house.</span>
+  image: house.svg
+  description: >
+    We’re through with monolithic structures. After all, why shouldn’t everyone that makes our platform great, benefit from it? That’s why we are redistributing our revenue directly to users.
+
+access:
+  title: We overcome walls and borders and make online poker <span class="red">a global game</span>, again.
+  image: wall.svg
+  description: >
+    With the power of our ERC20 token and the global adoption of the ethereum blockchain, we will overcome restricted liquidity and access and become a global player. Of course, we stay within legal boundaries.
+
+security:
+  title: We never touch your bankroll. <span class="red">You’re always in control of your funds</span> without any third party involved.
+  image: wallet.svg
+  description: >
+    You can use your own wallet to manage your bankroll. Games take place directly as smart contracts between you and your opponents so there is no third party in between.
+
+features:
+  title: And there’s <span class="red">more</span>.
+  list:
+    - image: collusion.svg
+      name: Collusion Prevention
+    - image: bot.svg
+      name: Bot Prevention
+    - image: rng.svg
+      name: Transparent RNG
+    - image: mental.svg
+      name: Mental Poker
+    - image: staking.svg
+      name: Trustless Staking

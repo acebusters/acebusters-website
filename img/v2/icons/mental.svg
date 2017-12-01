@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10421 5572 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e31041;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="mental" transform="translate(9169 -52)">
+    <rect id="Rectangle_63" data-name="Rectangle 63" class="cls-1" width="120" height="120" rx="6" transform="translate(1252 5624)"/>
+    <path id="Path_754" data-name="Path 754" class="cls-2" d="M38.447,9.45V4.889a3.286,3.286,0,0,0-3.306-3.306L4.931,1.5A3.313,3.313,0,0,0,1.626,4.806L1.5,60.958a3.286,3.286,0,0,0,3.306,3.306l30.21.084a3.288,3.288,0,0,0,3.264-2.762l-.126.335a3.282,3.282,0,0,1-4.184,2.134" transform="translate(1288.489 5648.853)"/>
+    <path id="Path_755" data-name="Path 755" class="cls-2" d="M101.409,24.308,89.567,20.5l-.126,51.55a2.21,2.21,0,0,1-.042.544L103.543,28.45A3.321,3.321,0,0,0,101.409,24.308Z" transform="translate(1237.368 5637.803)"/>
+  </g>
+</svg>

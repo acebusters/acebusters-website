@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5224 5074 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e31041;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="liquidity" transform="translate(5001 -52)">
+    <rect id="Rectangle_63" data-name="Rectangle 63" class="cls-1" width="120" height="120" rx="6" transform="translate(223 5126)"/>
+    <path id="Path_79" data-name="Path 79" class="cls-2" d="M36.7,42.727a17.728,17.728,0,0,0-1.073-5.609C31.716,23.2,18.351,0,18.351,0S.727,26.592.035,42.346h0c0,.312-.035.623-.035.935a18.351,18.351,0,0,0,36.7,0Z" transform="translate(262.649 5154.855)"/>
+  </g>
+</svg>

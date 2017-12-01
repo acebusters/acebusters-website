@@ -1,4 +1,5 @@
 //= require jquery
+//= require in-view.min
 //= require bootstrap.min
 //= require vue.min
 //= require web3

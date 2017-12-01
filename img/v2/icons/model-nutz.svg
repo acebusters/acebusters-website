@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5326 6083 210 210">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f8f8f8;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #e31041;
+        stroke-width: 7px;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="model-nutz" transform="translate(5001 -52)">
+    <path id="Path_59" data-name="Path 59" class="cls-1" d="M56.188,74.058V44.275L32.667,30.5,9.2,44.275V74.058H56.188Z" transform="translate(397.346 6169.511)"/>
+    <path id="Path_60" data-name="Path 60" class="cls-1" d="M28.476,116.8H0v18.784L28.476,149.36h0l28.531-13.775V116.8Z" transform="translate(401.537 6130.199)"/>
+    <path id="Path_61" data-name="Path 61" class="cls-1" d="M48.286,180.707l-1.361.653-1.361-.653L42.841,179.4,40.5,194.482H53.35L51.008,179.4Z" transform="translate(383.088 6101.683)"/>
+    <path id="Path_62" data-name="Path 62" class="cls-1" d="M45.564,13.775l1.361-.653,1.361.653,2.722,1.307L53.35,0H40.5l2.341,15.082Z" transform="translate(383.088 6183.404)"/>
+    <g id="Ellipse_8" data-name="Ellipse 8" class="cls-2" transform="translate(325 6135)">
+      <circle class="cls-3" cx="105" cy="105" r="105"/>
+      <circle class="cls-4" cx="105" cy="105" r="101.5"/>
+    </g>
+  </g>
+</svg>

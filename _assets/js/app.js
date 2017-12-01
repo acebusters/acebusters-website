@@ -283,7 +283,17 @@ document.addEventListener('DOMContentLoaded', function (e) {
       dataLayer.push({ 'event': 'Reveal_ETH_Address_Error' });
     }
   });
+
 });
+
+inview = inView('.section')
+  .on('enter', el => {
+    $(el).addClass('in-view');
+  })
+  .on('exit', el => {
+    $(el).removeClass('in-view');
+  });
+inView.offset(250);
 
 
 });
