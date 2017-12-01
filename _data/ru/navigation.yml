@@ -1,8 +1,8 @@
-- title: На главную
-  url: /
+- title: For players
+  url: /forplayers
 
-- title: Краудсейл
-  url: /crowdsale
+- title: For investors
+  url: /forinvestors
 
 - title: Стать партнером
   url: /affiliate
