@@ -15,7 +15,7 @@ aws s3 sync $SOURCE $DEST_BUCKET --size-only --content-type text/html --exclude 
 
 if [ "$DISTRIBUTION_ID" ]; then
   echo "Invalidating CloudFront distribution..."
-  grep "upload\|deleted\|copy" $TEMPFILE | sed -e "s|.*upload.*to $DEST_BUCKET|/|" | sed -e "s|.*delete: $DEST_BUCKET|/|" | sed -e "s|.*copy: $SOURCE|/|" | sed -e "s|to .*||" | sed -e 's/index.html//' | sed -e 's/\(.*\).html/\1/' | tr '\n' ' ' | xargs aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths
+  aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths '/*'
 fi
 
 rm -f $TEMPFILE
