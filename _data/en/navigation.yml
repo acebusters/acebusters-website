@@ -1,10 +1,10 @@
-- title: home
-  url: /
+- title: For players
+  url: /forplayers
 
-- title: Buy Tokens
-  url: /crowdsale
+- title: For investors
+  url: /forinvestors
 
-- title: Become An Affiliate
+- title: Affiliates
   url: /affiliate
 
 - title: bounties

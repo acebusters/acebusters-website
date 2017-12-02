@@ -114,7 +114,6 @@ a:hover {
 }
 
 a:visited {
-    color: #FFF;
     text-decoration: none !important;
 }
 
@@ -126,26 +125,41 @@ a:active {
     margin-bottom: 5em;
 }
 
-.button-base {
-    background-color: #E01E40; /*for compatibility with older browsers*/
-    background: linear-gradient(to bottom,  #E01E40 0%,#E01E40 50%,#D00F3A 51%,#D00F3A 100%);
-    padding: 0.3em 1em 0.4em 1em;
-    border: solid #E01E40 1px;
-    font-family: st;
-    color: #FFF;
-    display: inline-block;
-    font-size: 1.5em;
-    width: 100%;
-    margin-bottom: 0.5em;
-    text-align: center;
-    &.button-white{
-      background-color: $ci_lblue;
-      background: $ci_lblue;
-      color: $ci_ddark;
-      border: none;
-      &:hover{
-        color: $ci_ddark;
-      }
+
+// BOOTSTRAP 5-col
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
     }
 }
 
@@ -154,9 +168,86 @@ a:active {
     margin-top: 50px;
 }
 
-.button-base:hover {
-    color: #FFF;
-    cursor: pointer;
+
+.button-base {
+  background: transparent;
+    padding: 0.3em 2em 0.4em 2em;
+    border: none;
+    font-family: st;
+    color: #000;
+    display: inline-block;
+    font-size: 1.0em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    border-radius: 0;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: #EFF800; /*for compatibility with older browsers*/
+    }
+    &.button-white::before{
+      background-color: $ci_lblue;
+      background: $ci_lblue;
+      color: $ci_ddark;
+      border: none;
+      &:hover{
+        color: $ci_ddark;
+      }
+    }
+    &.button-white{
+      border: 1px solid #1c1c1c;
+    }
+    &.button-red{
+      background-color: $ci_magenta;
+      color: #fff !important;
+    }
+}
+
+.button-base {
+  position: relative;
+  @include transition(all 0.12s ease);
+}
+
+.button-full{
+  width: 100%;
+  display: block;
+}
+
+.button-base::after {
+  content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	background: $ci_ddark;
+	opacity: 0;
+  @include transform(scaleY(1));
+  @include transform-origin(0% 100%);
+  @include transition(all 0.12s ease);
+}
+
+.section-dark .button-base::after{background-color: $ci_magenta;}
+
+.button-base:hover,
+.button-base:active {
+	color: #FFF;
+}
+
+.button-base:hover::after {
+	opacity: 1;
+  @include transform(scaleY(1));
+}
+
+.button-base:active::after {
+	opacity: 1;
+  @include transform(scaleY(1));
 }
 
 .button-join {
@@ -186,14 +277,8 @@ a:active {
     border: none;
 }
 
-#team {
-    background-color: #E01E40;
-    color: #FFF;
-}
 
 #contact {
-    background-color: #212021;
-    color: #FFF;
 }
 
 .team-role {
@@ -201,7 +286,6 @@ a:active {
 }
 
 #timeline {
-    background-color: #212021;
 }
 
 #partners {
@@ -211,7 +295,25 @@ a:active {
 
 #team h4 {
     font-family: st;
-    color: #FFF;
+    color: $ci_magenta;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+#team .section-heading{
+  margin-bottom: 96px;
+}
+
+.team-list{
+  @media(max-width: 768px){
+    font-size: 70%;
+    .team-member img{
+      max-width: 72px;
+    }
+    h2{
+      text-align: center;
+    }
+  }
 }
 
 [v-cloak] {
@@ -314,13 +416,14 @@ a:active {
     padding-top: 10em; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     background-color: #212021;
     padding-bottom: 9em;
+    text-align: center;
 }
 
 .intro-buttons {
     text-align: center;
-    padding-top: 18em;
     width: 100%;
     float: right;
+    margin-top: 48px;
     @media(max-width: 960px){
       width: 100%;
       float: none;
@@ -347,7 +450,7 @@ a:active {
 
 .newsletter-section {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     text-align: center;
     color: #f8f8f8;
 }
@@ -668,49 +771,35 @@ a:active {
 
 footer {
     padding: 1em 0;
-    background-color: #212021;
-    border-top: 2px solid #FFF;
 }
 
 .footer-item {
-    font-size: 4em;
+    font-size: 2.0rem;
     max-width: 1.5em;
     min-width: 1.5em;
     max-height: 1.5em;
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 5%;
-}
-
-@media(max-width: 1000px) {
-    .footer-item {
-        font-size: 4em;
-        li{
-          margin-left: 0px;
-        }
+    @include transition(all 0.3s ease);
+    &:hover{
+      background-color: $ci_magenta;
+      a:link, a:visited {
+          color:#fff;
+      }
     }
 }
 
-@media(max-width: 580px) {
-    .footer-item {
-        font-size: 2.5em;
-        li{
-          margin-left: 0px;
-        }
-    }
+
+.footer-item > a:link, .footer-item > a:visited {
+    color:#000;
 }
 
-.footer-item > a:link {
-    color:#E01E40;
-}
-
-.footer-item > a:visited {
-    color: #E01E40;
-}
 
 .footer-icon-list {
-    text-align: right;
+    text-align: center;
     li{
       margin-left: $gridSize*2+px;
+      display: inline-block;
       @media(max-width: 1000px){
         margin-left: 0px;
       }
@@ -726,7 +815,6 @@ footer {
 
 p.copyright {
     width: 100%;
-    margin-top: 2em;
     text-align: center;
 }
 
@@ -736,9 +824,9 @@ section {
   padding: 100px 0;
 }
 section h2.section-heading {
-  font-size: 40px;
+  font-size: 56px;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 48px;
 }
 section h3.section-subheading {
   font-size: 16px;
@@ -754,6 +842,17 @@ section h3.section-subheading {
 margin-bottom: 30px;
 }
 
+.form-control{
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+}
+
+.form-control:active, .form-control:focus{
+  border-bottom: 2px solid $ci_magenta;
+}
+
 #contactForm .form-control {
     display: block;
     width: 100%;
@@ -764,7 +863,8 @@ margin-bottom: 30px;
     color: #555;
     background-color: #1e2429;
     background-image: none;
-    border: 0;
+    border: none;
+    box-shadow: none;
     border-top: 2px solid transparent;
     border-radius: 0;
     -webkit-box-shadow: none;
@@ -817,8 +917,8 @@ a.btn.send-btn:hover{
 
 .team-member img {
   margin: 0 auto;
-  max-width: 140px;
-  border: 7px solid white;
+  max-width: 100px;
+  border: 3px solid #3E3E3E;
 }
 
 .team-partner {
@@ -833,13 +933,6 @@ a.btn.send-btn:hover{
   margin-bottom: 15px;
 }
 
-@media(max-width: 1100px) {
-    .team-member img {
-        margin: 0 auto;
-        max-width: 150px;
-        border: 7px solid white;
-    }
-}
 
 .fixed-margin {
     width: 100%;
@@ -990,8 +1083,6 @@ a.btn.send-btn:hover{
 
 @media (min-width: 600px) {
     #mlb2-3873850 form.ml-block-form {
-        display: inline-block;
-        min-width: 30em;
     }
 }
 
@@ -1012,7 +1103,6 @@ a.btn.send-btn:hover{
 #mlb2-3873850 .subscribe-form .form-section.horizontal {
     float: left;
     margin-bottom: 5px;
-    width: 100%;
 }
 
 #mlb2-3873850 .subscribe-form .form-section.horizontal .form-group {
@@ -1022,7 +1112,10 @@ a.btn.send-btn:hover{
 #mlb2-3873850 .subscribe-form .form-section.horizontal .form-group .form-control {
     height: 40px;
     border-radius: 0;
-    border-bottom: 2px solid #FF5E5E;
+    border: none;
+    box-shadow: none;
+    padding: 28px;
+
 }
 
 #mlb2-3873850 .subscribe-form .form-section.horizontal.button {
@@ -1036,6 +1129,18 @@ a.btn.send-btn:hover{
 
 .padding-1 {
     padding: 1em;
+}
+
+.mail{
+  width: 60%;
+  input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+}
+
+.submit{
+  width: 40%;
 }
 
 @media (max-width: 600px) {
@@ -1076,18 +1181,51 @@ Main components
   position: relative;
   padding: 2em 0;
   padding-top: 0;
-  margin-top: 2em;
+  margin-top: 192px;
   margin-bottom: 2em;
+  font-size: 80%;
 }
 
 #cd-timeline::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 25px;
-  height: 100%;
-  width: 4px;
-  background:#E01E40;
+  top: -48px;
+  height: 1px;
+  width: 100%;
+  background:$ci_magenta;
+}
+
+#cd-timeline .col-md-5ths::before{
+  content: '';
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  left: 50%;
+  margin-left: -18px;
+  margin-top: -18px;
+  top: -48px;
+  border-radius: 200px;
+  background-color: $ci_magentaalt;
+}
+
+@media only screen and (max-width: 970px) {
+  #cd-timeline{
+    margin-top: 64px;
+    &::before{
+      left: 0px;
+      height: 100%;
+      width: 1px;
+      background:$ci_magenta;
+    }
+    .col-md-5ths::before{
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      margin-top: -12px;
+      top: -16px;
+      padding: 16px;
+    }
+  }
 }
 
 .cd-date {
@@ -1103,19 +1241,9 @@ Main components
 }
 
 @media only screen and (min-width: 1170px) {
-  #cd-timeline {
-    margin: 0;
-    margin-top: -100px;
-    margin-bottom: 3em;
-  }
 
-
-
-  #cd-timeline::before {
-    left: 50%;
-    margin-left: -2px;
-  }
 }
+
 .cd-timeline-block {
   position: relative;
   margin: 2em 0;
@@ -1568,10 +1696,10 @@ body,html{
   font-family: osr;
   font-weight: 100;
   line-height: 1.7;
-  color: $ci_lblue;
+  color: #B2B2B2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
   // overflow-x: hidden;
 }
 
@@ -1579,9 +1707,16 @@ h1,h2,h3,h4,h5{
   font-weight: 100;
   font-family: st;
   margin-top: 0px;
+  color: #fff;
   span{
-    display: block;
-    color: $ci_lgrey;
+    color: $ci_magenta;
+  }
+}
+
+.modal{
+  font-size: 0.7rem;
+  h1,h2,h3,h4,h5{
+    color: #1c1c1c;
   }
 }
 
@@ -1600,7 +1735,6 @@ h2{
 
 h3{
   font-size: 2.0rem;
-  text-transform: uppercase;
 }
 
 .margin-32{
@@ -1649,6 +1783,37 @@ h3{
   }
 }
 
+.text-right{
+  text-align: right;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.section.text-center{
+  text-align: center;
+  @include justify-content(flex-start);
+}
+
+.section.text-left{
+  text-align: left !important;
+  .section-artwork{
+    @include justify-content(flex-end);
+  }
+}
+
+.section.text-right{
+  text-align: right !important;
+  .section-artwork{
+    @include justify-content(flex-start);
+  }
+}
+
 /****************************************************************************
 *  FORMS
 ****************************************************************************/
@@ -1667,19 +1832,25 @@ h3{
 
 .landing-page{
   width: 100%;
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
   .container{
-    height: 100%;
     position: relative;
   }
   h1{
     color: $ci_magenta;
-    font-size: 4.8rem;
+    font-size: 4.6rem;
   }
   @media(max-width: 767px){
     h1{
       font-size: 2.6rem;
     }
   }
+}
+
+.header-80{
+    height: 80vh !important;
 }
 
 .hero-bottom-row{
@@ -1722,6 +1893,7 @@ h3{
 ****************************************************************************/
 
 @import "sections";
+@import "animation";
 
 /****************************************************************************
 *  MOBILE EXTRA

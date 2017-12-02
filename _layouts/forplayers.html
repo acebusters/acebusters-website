@@ -1,0 +1,186 @@
+---
+layout: default
+title: ACEBUSTERS FOR PLAYERS
+description: learn how we are better than other traditional online poker platforms
+---
+
+{% assign data = site.data.forplayers %}
+{% assign buttons = site.data.buttons %}
+
+<!-- Header -->
+<section class="intro-header landing-page section" style="background-image:url(img/v2/graphics/bg.jpg);">
+  <div class="container container-ace">
+      <div class="row">
+              <h1>{{ data.banner.title }}</h1>
+              <span>{{ data.banner.subtitle }}</span>
+      </div>
+  </div>
+</section>
+
+<section class="content-light section content-centered skill text-right">
+    <div class="container-fluid">
+      <div class="row row-eq-height">
+        <div class="col-md-6 section-artwork">
+          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.skill.image }}" />
+        </div>
+        <div class="col-md-6">
+          <h2 class="section-heading">{{ data.skill.title }}</h2>
+          <div class="section-content">
+              {{ data.skill.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="content-light section content-centered house text-left">
+    <div class="container-fluid">
+      <div class="row row-eq-height">
+        <div class="col-md-6 section-artwork col-md-push-6">
+          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.house.image }}" />
+        </div>
+        <div class="col-md-6 col-md-pull-6">
+          <h2 class="section-heading">{{ data.house.title }}</h2>
+          <div class="section-content">
+              {{ data.house.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="content-light section content-centered access text-right">
+    <div class="container-fluid">
+      <div class="row row-eq-height">
+        <div class="col-md-6 section-artwork">
+          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.access.image }}" />
+        </div>
+        <div class="col-md-6">
+          <h2 class="section-heading">{{ data.access.title }}</h2>
+          <div class="section-content">
+              {{ data.access.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="content-light section content-centered house text-left">
+    <div class="container-fluid">
+      <div class="row row-eq-height">
+        <div class="col-md-6 section-artwork col-md-push-6">
+          <img src="{{ site.baseUrl }}/img/v2/graphics/{{ data.security.image }}" />
+        </div>
+        <div class="col-md-6 col-md-pull-6">
+          <h2 class="section-heading">{{ data.security.title }}</h2>
+          <div class="section-content">
+              {{ data.security.description }}
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="content-light section content-centered features">
+    <div class="container-fluid">
+      <div class="row row-eq-height text-center">
+        <h2 class="section-heading">{{ data.features.title }}</h2>
+      </div>
+      <div class="row features-list">
+        {% for item in data.features.list %}
+            <div class="col-md-5ths col-xs-6">
+              <img src="{{ site.baseUrl }}/img/v2/icons/{{ item.image }}">
+              <span>{{item.name}}</span>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+</section>
+
+<section class="content-light section section-small no-animation">
+    <div class="container-fluid">
+      <div class="divider-line-80"></div>
+      <div class="row row-eq-height">
+        <div class="col-md-4">
+          <button class="button-base button-full" data-toggle="modal" data-target="#investChooser">
+              {{ buttons.joinCrowdsale }}
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button class="button-base button-white button-full" data-toggle="modal" data-target="#whitepaperLangChooser">
+              {{ buttons.readWhitepaper.title }}
+          </button>
+        </div>
+        <div class="col-md-4">
+          {% include appLink.html text='playPoker' class='button-base button-red button-full' target='_blank' %}
+        </div>
+      </div>
+      <div class="divider-line-80"></div>
+    </div>
+</section>
+
+<!-- contact section -->
+<a name="contact"></a>
+<section id="contact" class="section content-light content-centered">
+    <div class="container-fluid">
+        <h2 class="section-heading">
+            {{ site.data.index.contact.title }}
+        </h2>
+        <div class="section-content">
+          {{ site.data.index.contact.info }}
+        </div>
+        <div class="row">
+                <div class="newsletter-section">
+                    <div id="mlb2-3873850" class="ml-subscribe-form ml-subscribe-form-3873850">
+                        <div class="ml-vertical-align-center">
+                            <div class="subscribe-form ml-block-success" style="display:none;">
+                                <div class="form-section mb0">
+                                    <div style="text-align:center;padding: 20px; font-size:4em;">
+                                        <i class="fa fa-check fa-4" style="text-align:center;"></i>
+                                        <p> {{ site.data.messages.signUp }} </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="ml-block-form" action="//app.mailerlite.com/webforms/submit/h6z7g3" data-id="257102" data-code="h6z7g3" method="POST"
+                                target="_blank" data-toggle="validator">
+                                <div class="subscribe-form horizontal">
+                                    <div class="form-section horizontal mail">
+                                        <div class="form-group sign-up ml-field-email ml-validate-required ml-validate-email">
+                                            <input type="email" name="fields[email]" class="newsletter-input form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,6}$"
+                                                placeholder="{{ site.data.inputs.emailPl }}" value="" id="eMail" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-section horizontal submit">
+                                        <button type="submit" class="button-base" id="sign-up">
+                                        {{ buttons.signUp }}
+                                        </button>
+                                        <button disabled="disabled" style="display: none;" type="button" class="loading btn-sign-up">
+                                        <img src="//static.mailerlite.com/images/rolling.gif" width="20" height="20" style="width: 20px; height: 20px;">
+                                    </button>
+                                    </div>
+                                    <div class="clearfix" style="clear: both;"></div>
+                                    <input type="hidden" name="ml-submit" value="1" />
+                                </div>
+                            </form>
+                            <script>
+                                function ml_webform_success_3873850() {
+                                    jQuery('.ml-subscribe-form-3873850 .ml-block-success').show();
+                                    jQuery('.ml-subscribe-form-3873850 .ml-block-form').hide();
+                                    dataLayer.push({ 'event': 'subscription_success' });
+                                };
+                            </script>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+            <ul class="footer-icon-list">
+                {% for item in site.data.index.contact.socials %}
+                    <li class="footer-item">
+                        <a href="{{ item.url }}" target="_blank"><i class="{{ item.icon }}"></i></a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

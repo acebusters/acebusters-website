@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="5910 5074 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e31041;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="transparency" transform="translate(5001 -52)">
+    <rect id="Rectangle_63" data-name="Rectangle 63" class="cls-1" width="120" height="120" rx="6" transform="translate(909 5126)"/>
+    <path id="Path_93" data-name="Path 93" class="cls-2" d="M84.1,1.5a20.428,20.428,0,0,1,20.448,20.448" transform="translate(888.994 5155.5)"/>
+    <path id="Path_94" data-name="Path 94" class="cls-2" d="M76,21.948A20.448,20.448,0,1,1,55.548,1.5" transform="translate(917.546 5155.5)"/>
+    <line id="Line_23" data-name="Line 23" class="cls-2" x1="20.865" y2="20.865" transform="translate(938.458 5192.053)"/>
+  </g>
+</svg>
