@@ -6,19 +6,19 @@ skill:
   title: We make online <span class="red">poker the<br>skill game</span> that it always <br>was, again.
   image: skillgame.svg
   description: >
-    Remember when famous players tried the bankroll challenge in online poker and failed? That’s for a big part due to consistent cash-in the house takes. Remember the house always wins? We fix that.
+    Did you know that some well known players once tried the bankroll challenge and failed? That’s for a big part due to consistent cash-in the house takes. We fix that.
 
 house:
-  title: Our unique poker ecology <span class="red">makes you the house.</span>
+  title: A Platform built <span class="red">by the community for the community.</span>
   image: house.svg
   description: >
-    We’re through with monolithic structures. After all, why shouldn’t everyone that makes our platform great, benefit from it? That’s why we are redistributing our revenue directly to users.
+    We’re through with monolithic structures. After all, why shouldn’t everyone that makes our platform great, benefit from it? Become part of the movement, get voting rights and revenue share.
 
 access:
   title: We overcome walls and borders and make online poker <span class="red">a global game</span>, again.
   image: wall.svg
   description: >
-    With the power of our ERC20 token and the global adoption of the ethereum blockchain, we will overcome restricted liquidity and access and become a global player. Of course, we stay within legal boundaries.
+    The open and borderless nature of blockchain will allow players from all over the world to connect and create the largest poker liquidity pool seen to date. Unstoppable.
 
 security:
   title: We never touch your bankroll. <span class="red">You’re always in control of your funds</span> without any third party involved.
