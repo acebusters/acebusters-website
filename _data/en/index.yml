@@ -17,7 +17,7 @@ pttp:
 ecology:
   title: A unique business model for a <span class="red">great poker ecology.</span>
   description: >
-    Instead of stashing revenue and sitting on all our gains, we redistribute the gains as dividends among users so you gain no matter if you win or loose.
+    Instead of stashing revenue and sitting on all our gains, we redistribute the gains as dividends among users so you gain no matter if you win or lose.
   image: ecology.svg
 
 blockchain:
