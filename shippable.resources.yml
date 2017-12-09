@@ -3,7 +3,8 @@ resources:
     type: params
     version:
       params:
-        secure: PPMlkrJGmHlBDrkf8pALAeRtn9Iscvy4BDFjq/5Wu4WWEbDyTnTAmjdEQVQ6XtYIyC8cy4WdqSD0iVMRwPAbMffJKQ07CMak2nzqaBo8DqCBwWSCWYHIWSfEA54K+sZhJyBg3iyhdXaI7UUoLWlo6O60W6dbmWeHwKC3PywGJBCog5UheKnvRyKTmO1GQ/JXHO8P1uv9cl4fSQExVUAN/QFFZpp8U2+IH4toD9arWr5sqBRIbpPYRscRu3uw/aVprkzDc4ctUm6Ifm2duX+6tsb1oUPx1YpzHpPfImRGKfNZq1ZVmSrF3p0AdxB1g7vp3Y6B5s5fEaF6nuipfyRl+Q==
+        # AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+        secure: NaHNYxf7DLMFdFDzOJRLTLH2wiD9KpyYq/hIbPK6O14ebXR4rrYYFudakPd1SsYyxd5/wagfgJh0oWd49XQQPCNp/FJEiDHGviZ1+9o69rhc8aQJYMO7BwWreGnTVW93j7RuxbpdiAXln/ozuzgBfc6AcNdeGAMUpaEDG3iRvmiF8wKhjHDDbeoDahhAco+baT5HOtZtX/L2geRs1Xg3lrGcmYBMFqmMAHEWe437de6muPbLXm2fL8khDlZi3S41P6TiRXQpwwx4WHdwyYtmhHkMoxLh6BtGCgAdj/Z4TU1PVoOeyctWSseDwJDk2iL994wFVOSPj1bEBZ3va4VGow==
         STAGING_BUCKET: "s3://www-staging.acebusters.com/"
         PRODUCTION_BUCKET: "s3://www.acebusters.com/"
 
