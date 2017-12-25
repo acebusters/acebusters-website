@@ -31,7 +31,7 @@ description: Acebusters - Earn yourself some Nutz with bug reporting, translatio
       </div>
     </div>
     <div class="sections-wrap">
-        {% assign sorted_posts = site.posts | sort: 'order' %}
+        {% assign sorted_posts = site.categories['bounty'] | sort: 'order' %}
         {% for post in sorted_posts %}
             <section class="{% if post.type != null %}{{ post.type }}{% else %}content-magenta{% endif %} section">
                 <div class="container-fluid">
