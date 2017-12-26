@@ -20,6 +20,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-polyglot
   - jekyll-assets
+  - jekyll-timeago
 
 permalink: /:title
 
