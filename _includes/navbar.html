@@ -50,8 +50,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right nav-list">
+              {% assign path_parts = page.url|split:"/" %}
+              {% capture path_pref %}/{{ path_parts[1] }}{% endcapture %}
               {% for link in site.data.navigation %}
-                <li class="nav-item{% if page.url == link.url || page.url == site.baseurl %} active{% endif %}">
+                <li class="nav-item{% if path_pref == link.url %} active{% endif %}">
                   {% if link.target != null %}
                     <a href="{{ link.url }}" target="{{ link.target }}">{{ link.title }}</a>
                   {% else %}
