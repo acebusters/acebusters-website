@@ -2,6 +2,7 @@
 layout: blog_post
 title:  Acebusters welcomes Dauren Toleukhanov, Director at Kazakhstan's Sovereign Wealth Fund, and Alexander Anter, WSOP gold bracelet winner to our Advisory Board.
 date:   2017-10-04 20:27:00 +0200
+permalink: /blog/:title
 categories: blog
 ---
 

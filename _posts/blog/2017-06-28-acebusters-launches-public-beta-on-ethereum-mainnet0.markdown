@@ -1,7 +1,8 @@
 ---
 layout: blog_post
-title:  "Acebusters launches public beta for poker on Ethereum!"
+title:  Acebusters launches public beta for poker on Ethereum!
 date:   2017-06-28 15:41:00 +0200
+permalink: /blog/:title
 categories: blog
 ---
 
