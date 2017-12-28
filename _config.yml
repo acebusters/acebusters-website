@@ -21,6 +21,7 @@ plugins:
   - jekyll-polyglot
   - jekyll-assets
   - jekyll-timeago
+  - jekyll-time-to-read
 
 permalink: /:title
 

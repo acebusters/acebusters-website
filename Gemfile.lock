@@ -37,6 +37,8 @@ GEM
       jekyll (~> 3.3)
     jekyll-sitemap (1.1.1)
       jekyll (~> 3.3)
+    jekyll-time-to-read (0.1.2)
+      jekyll
     jekyll-timeago (0.9.2)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
@@ -72,6 +74,7 @@ DEPENDENCIES
   jekyll-polyglot
   jekyll-seo-tag
   jekyll-sitemap
+  jekyll-time-to-read
   jekyll-timeago
 
 BUNDLED WITH

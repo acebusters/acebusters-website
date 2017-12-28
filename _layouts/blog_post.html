@@ -2,10 +2,14 @@
 layout: default
 ---
 
-<div class="container blog">
-  <h2 class="content-title">{{ page.title }}</h2>
-  <small>{{ page.date | timeago }}</small>
-  <div class="content">
+<div class="container blog blog-post">
+  <h2 class="blog-post__title">{{ page.title }}</h2>
+  <div class="blog-post__meta">
+    <div class="blog-post__date">Published {{ page.date | timeago }}</div>
+    <div class="blog-post__time-to-read"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> {{ content | reading_time_as_i }} read</div>
+  </div>
+
+  <div class="blog-post__content">
   {{ content }}
   </div>
 </div>

@@ -2484,16 +2484,32 @@ label.label-cbx {
 .blog {
   margin-top: 3em;
   padding-top: 3em; }
-  .blog .content {
-    margin-top: 1em; }
-  .blog .content img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: none; }
 
 .blog-item {
   margin-bottom: 3em; }
+  .blog-item .blog-item__title {
+    font-size: 2rem; }
+  .blog-item .blog-item__date {
+    font-size: 1rem; }
+  .blog-item .blog-item__time-to-read {
+    font-size: 0.8rem; }
+
+.blog-post .blog-post__meta {
+  display: flex;
+  align-items: center; }
+.blog-post .blog-post__date {
+  font-size: 0.8rem;
+  margin-right: auto; }
+.blog-post .blog-post__time-to-read {
+  font-size: 0.8rem; }
+.blog-post .blog-post__content {
+  margin-top: 1em;
+  margin-bottom: 3rem; }
+.blog-post .blog-post__content img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: none; }
 
 @media (min-width: 768px) {
   .blog {
