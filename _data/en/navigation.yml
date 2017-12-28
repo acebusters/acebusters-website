@@ -16,6 +16,9 @@
 - title: contact
   url: \#contact
 
+- title: blog
+  url: /blog
+
 - title: help
   url: http://help.acebusters.com
   target: _blank

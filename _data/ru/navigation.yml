@@ -16,6 +16,9 @@
 - title: Контакты
   url: \#contact
 
+- title: Блог
+  url: /blog
+
 - title: Помощь
   url: http://help.acebusters.com
   target: _blank
