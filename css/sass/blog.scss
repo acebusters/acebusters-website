@@ -11,11 +11,15 @@
   }
 
   .blog-item__date {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .blog-item__time-to-read {
     font-size: 0.8rem;
+
+    .glyphicon {
+      top: 3px;
+    }
   }
 
 }
@@ -38,11 +42,16 @@
 
   .blog-post__time-to-read {
     font-size: 0.8rem;
+
+    .glyphicon {
+      top: 3px;
+    }
   }
 
   .blog-post__content {
     margin-top: 1em;
     margin-bottom: 3rem;
+    color: white;
   }
 
   .blog-post__content img {
