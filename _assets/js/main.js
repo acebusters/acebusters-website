@@ -5,4 +5,5 @@
 //= require web3
 //= require vue-smooth-scroll.min
 //= require timer
+//= require likely
 //= require app
