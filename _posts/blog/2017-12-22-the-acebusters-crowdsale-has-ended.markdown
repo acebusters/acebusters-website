@@ -36,7 +36,7 @@ Join our community as contributor here: https://goo.gl/JC734m
 
 Now that the Token Sale has formally ended your funds submitted to the crowdsale will be able to be claimed as a refund without any loss.
 
-Soon we are going to refund all the investors to the the same address used to invest from. Meanwhile, you can refund your contribution immediately by yourself using the dapp — please follow the steps below. If you have any further questions, please do not hesitate to shoot us a message.
+Soon we are going to refund all the investors to the same address used to invest from. Meanwhile, you can refund your contribution immediately by yourself using the dapp — please follow the steps below. If you have any further questions, please do not hesitate to shoot us a message.
 
    1. [Log into your Acebusters Account](https://dapp.acebusters.com/)
    2. [Go to the Exchange Tab in Your Dashboard](https://dapp.acebusters.com/dashboard/exchange)
