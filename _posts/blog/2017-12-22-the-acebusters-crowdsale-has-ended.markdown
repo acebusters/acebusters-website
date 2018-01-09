@@ -28,7 +28,7 @@ Stay tuned for more updates!
 
 If you would like to be involved in our journey, please fill out the form below to join our community. And as an early supporter of the Acebusters project, we fully intend to reward your loyalty and support. So, let’s stay in touch!
 
-Join our community as contributor here: https://goo.gl/JC734m
+Join our community as contributor [here](https://goo.gl/JC734m)
 
 ----
 
