@@ -7,7 +7,7 @@ description: Acebusters - Earn yourself some Nutz with bug reporting, translatio
 {% assign buttons = site.data.buttons %}
 
 <div class="container blog blog-item-list">
-    {% assign sorted_posts = site.categories['blog'] | sort: 'date' %}
+    {% assign sorted_posts = site.categories['blog'] | sort: 'date' | reverse %}
     {% for post in sorted_posts %}
         <div class="blog-item">
           <h3 class="blog-item__title"><a href="{{ site.baseUrl}}{{ post.url }}">{{ post.title }}</a></h3>
