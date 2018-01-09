@@ -6,6 +6,7 @@ permalink: /blog/:title
 categories: blog
 ---
 
+![Keep calm and roll with the punches]({{ "/img/blog/keep-calm-and-roll-with-the-punches-23.png" }})
 
 We did not complete our crowdsale. But that doesn't hold us back from moving on!
 
