@@ -6,8 +6,6 @@ permalink: /blog/:title
 categories: blog
 ---
 
-![Keep calm and roll with the punches]({{ "/img/blog/keep-calm-and-roll-with-the-punches-23.png" }})
-
 We did not complete our crowdsale. But that doesn't hold us back from moving on!
 
 We would like to **thank you for all your support** for the Acebusters Token Sale. Despite great efforts from you, our supporters and from the whole Acebusters community, unfortunately **we did not reach the minimum goal required** for the Crowdsale to complete.
