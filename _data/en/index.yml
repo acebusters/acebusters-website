@@ -194,8 +194,8 @@ contact:
     - url: https://github.com/acebusters
       icon: fa fa-github
 
-    - url: https://discord.gg/7PesDTZ
-      icon: icon-discord
+    - url: https://t.me/acebusters
+      icon: fa fa-telegram
 
     - url: https://twitter.com/ace_busters
       icon: fa fa-twitter
@@ -203,4 +203,4 @@ contact:
     - url: https://www.facebook.com/acebusters.poker
       icon: fa fa-facebook
   info: >
-    If you have any questions feel free <br> to contact us via our <a href="https://discordapp.com/invite/7PesDTZ">Discord Channel</a><br> or email us <a href="mailto:info@acebusters.com">here</a>
+    If you have any questions feel free <br> to contact us via our <a href="https://t.me/acebusters">Telegram Channel</a><br> or email us <a href="mailto:info@acebusters.com">here</a>
