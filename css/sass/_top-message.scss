@@ -1,0 +1,18 @@
+.top-message {
+  height: 2.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fefefe;
+  text-align: center;
+  z-index: 1;
+
+  a {
+    line-height: 2.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+nav.navbar {
+  top: 2.5rem;
+}
