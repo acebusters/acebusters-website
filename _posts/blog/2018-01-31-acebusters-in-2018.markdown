@@ -1,0 +1,30 @@
+---
+layout: blog_post
+title:  "Acebusters in 2018: Exciting journey to the ideal poker world"
+date:   2018-01-31 00:00:00
+permalink: /blog/:title
+categories: blog
+---
+
+Hello, Acebusters community! We recently added a blog section, so now all our news and announcements always will be available for you not only in our [Telegram channel](https://t.me/acebusters), but also here on acebusters.com. Never forget to check our blogs!
+
+As many of you already know, we ran an ICO in 2017 and it did not succeed. But we are not giving up and the development of Acebusters continues. We will just adjust a bit our exciting journey to the ideal poker world. So our next steps are:
+
+- Designing new flow of using Acebusters without registration through MetaMask
+- Implementing SNG (Sit-N-Go) tournaments on our platform
+- Fixing bugs and adding few new features (secret ones!)
+- Upgrading Acebusters.com website to make it more attractive and sexy
+- Helping our investors with the refunds
+
+While we were preparing for all mentioned above our team suddenly faced a new unavoidable challenge - the load of Ethereum mainnet increased dramatically over the last months and now all of us need to provide a new scalable solution. Current transaction fees make ideal poker experience on Acebusters impossible and we must find the way how to beat this dungeon dragon and move to the next level!
+
+We like and support Vitalik Buterin vision and his [Plasma concept](https://plasma.io/)!
+That’s basically how Parsec Labs project was born. While one part of our team will continue to work on Acebusters poker features, another part will try to build Plasma technology and apply for the Ethereum Scaling Grant!
+
+For this period Acebusters will be switched to Rinkeby Testing Network instead of Ethereum Main Network and will be used only as a showcase of our capabilities. We hope to provide a scalable solution over the next several months and make Acebusters poker platform shine!
+
+For more information about Parsec Labs and its goals, please check project’s [website](http://www.parseclabs.org) and follow Parsec Labs in [Telegram](https://t.me/parseclabs)! Stay tuned!  
+
+---
+
+[I invested into the Acebusters ICO, but it did not succeed. How to refund?](/blog/how-to-refund)
