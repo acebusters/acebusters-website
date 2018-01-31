@@ -4,6 +4,7 @@ title:  "Acebusters in 2018: Exciting journey to the ideal poker world"
 date:   2018-01-31 00:00:00
 permalink: /blog/:title
 categories: blog
+image: AB_acebusters_2018.png
 ---
 
 Hello, Acebusters community! We recently added a blog section, so now all our news and announcements always will be available for you not only in our [Telegram channel](https://t.me/acebusters), but also here on acebusters.com. Never forget to check our blogs!
