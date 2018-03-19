@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2018 by original authors @ fontello.com</metadata>
+<defs>
+<font id="parsec" horiz-adv-x="1000" >
+<font-face font-family="parsec" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="parsec" unicode="&#xe800;" d="M724-12c-36 34-87 60-113 60-58 0-100 46-84 97 14 40-73 144-121 144-34 0-88-78-76-110 6-14-8-30-30-36-30-8-43-26-43-67l0-56-62 60c-34 33-76 87-90 123-36 84-36 251 0 334 34 78 142 184 219 213 143 54 349 8 444-97 38-42 38-44 0-72-20-16-60-30-86-30-53 0-123-69-123-121 0-18 26-56 56-86 44-43 63-49 81-31 34 35 84-20 102-106 10-52 24-66 50-62 26 6 35-2 26-24-6-17 2-41 19-53 16-14 28-50 28-82 0-52-6-58-65-58-44 0-88 20-132 60z" horiz-adv-x="998" />
+</font>
+</defs>
+</svg>
