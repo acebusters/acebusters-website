@@ -6,18 +6,19 @@ rvm:
 branches:
   only:
     - master
-    - revamp
+
+env:
+  global:
+    # AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+    - secure: NaHNYxf7DLMFdFDzOJRLTLH2wiD9KpyYq/hIbPK6O14ebXR4rrYYFudakPd1SsYyxd5/wagfgJh0oWd49XQQPCNp/FJEiDHGviZ1+9o69rhc8aQJYMO7BwWreGnTVW93j7RuxbpdiAXln/ozuzgBfc6AcNdeGAMUpaEDG3iRvmiF8wKhjHDDbeoDahhAco+baT5HOtZtX/L2geRs1Xg3lrGcmYBMFqmMAHEWe437de6muPbLXm2fL8khDlZi3S41P6TiRXQpwwx4WHdwyYtmhHkMoxLh6BtGCgAdj/Z4TU1PVoOeyctWSseDwJDk2iL994wFVOSPj1bEBZ3va4VGow==
+    - PRODUCTION_BUCKET: "s3://www.acebusters.com/"
+    - DISTRIBUTION_ID: "E3QZ021461XQL5"
 
 build:
   ci:
     - bundle install
-    # build website and copy to staging bucket
-    - if [ "$BRANCH" == "master" ]; then S3_BUCKET=$STAGING_BUCKET ./scripts/build.sh; fi
-    - if [ "$BRANCH" == "revamp" ]; then S3_BUCKET=s3://v2.acebusters.com/ ./scripts/build.sh; fi
-
-  on_success:
-    # copy scripts to the job state so that they can be used by downstream jobs
-    - if [ "$BRANCH" == "master" ]; then cp ./scripts/copy.sh $LANDINGPAGES_RUNCI_STATE/copy.sh; fi
+    - aws configure set preview.cloudfront true
+    - S3_BUCKET=$PRODUCTION_BUCKET ./scripts/build.sh; fi
 
 integrations:
 
@@ -25,7 +26,7 @@ integrations:
     - integrationName: slack_chainfish
       type: slack
       recipients:
-        - "#ci"
+        - "#10_communications"
       branches:
         only:
           - master
